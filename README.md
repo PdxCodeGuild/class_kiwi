@@ -24,6 +24,11 @@ M-F 6:00 pm – 9:30 pm pst
 
 Capstone proposal due: May 13th, 2022  
 Presentation Day: June 10th, 2022  
+## General Labs Assigned:
+
+| Lab   | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
+| ----- | ---------------------- | ------------- | --------------------- | ------------- |
+| 00    | Getting Started        | 01 Feb        | 04 Feb                | 14 Feb        |
 
 ## Python Labs Assigned:
 
