@@ -1,7 +1,4 @@
-
-
-
-# Turtle
+# Lab 1: Turtle
 
 ## Explanation
 
@@ -91,6 +88,19 @@ i = 0
 while i < 4:
     forward(100)
     left(90)
+    i = i + 1
+
+done()
+```
+
+### Drawing a Circle with a Loop
+```python
+from turtle import *
+
+i = 0
+while i < 100:
+    forward(2)
+    left(360/100)
     i = i + 1
 
 done()
@@ -190,6 +200,3 @@ while i < 100:
 
 done()
 ```
-
-
-

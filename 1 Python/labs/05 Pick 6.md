@@ -1,4 +1,4 @@
-# Pick6
+# Lab 5: Pick6
 
 Have the computer play pick6 many times and determine net balance.
 
@@ -23,7 +23,7 @@ One function you might write is `pick6()` which will generate a list of 6 random
 2. Loop 100,000 times, for each loop:
 3. Generate a list of 6 random numbers representing the ticket
 4. Subtract 2 from your balance (you bought a ticket)
-5. Find how many numbers match
+5. Find how many numbers match 
 6. Add to your balance the winnings from your matches
 7. After the loop, print the final balance
 

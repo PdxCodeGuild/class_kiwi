@@ -1,11 +1,10 @@
+# Lab 9: Compute Automated Readability Index
 
-# Automated Readability Index
-
-Let's compute the [ARI](https://en.wikipedia.org/wiki/Automated_readability_index) for a given book. The automated readability index (ARI) is a formula for computing the U.S. grade level for a given block of text. The general formula to compute the ARI is as follows:
+Compute the ARI for a given body of text loaded in from a file. The automated readability index (ARI) is a formula for computing the U.S. grade level for a given block of text. The general formula to compute the ARI is as follows:
 
 ![ARI Formula](https://en.wikipedia.org/api/rest_v1/media/math/render/svg/878d1640d23781351133cad73bdf27bdf8bfe2fd)
 
-The score is computed by multiplying the number of characters divided by the number of words by 4.71, adding the number of words divided by the number of sentences multiplied by 0.5, and subtracting 21.43. If the result is a decimal, always round up, and if the result is higher than 14, it should be set to 14.
+The score is computed by multiplying the number of characters divided by the number of words by 4.71, adding the number of words divided by the number of sentences multiplied by 0.5, and subtracting 21.43. **If the result is a decimal, always round up.** Scores greater than 14 should be presented as having the same age and grade level as scores of 14.
 
 Scores correspond to the following ages and grad levels:
 
@@ -49,10 +48,11 @@ ari_scale = {
 ```
 
 The output should look something like the following:
-```
---------------------------------------------------------
-The ARI for gettysburg-address.txt is 12
-This corresponds to a 11th Grade level of difficulty
-that is suitable for an average person 16-17 years old.
---------------------------------------------------------
-```
+
+    --------------------------------------------------------
+
+    The ARI for gettysburg-address.txt is 12
+    This corresponds to a 11th Grade level of difficulty
+    that is suitable for an average person 16-17 years old.
+
+    --------------------------------------------------------

@@ -1,4 +1,4 @@
-# Rot Cipher
+# Lab 7: ROT Cipher
 
 Write a program that prompts the user for a string, and encodes it with ROT13. For each character, find the corresponding character, add it to an output string. Notice that there are 26 letters in the English language, so encryption is the same as decryption.
 
@@ -8,15 +8,8 @@ Write a program that prompts the user for a string, and encodes it with ROT13. F
 | English | a| b| c| d| e| f| g| h| i| j| k| l| m| n| o| p| q| r| s| t| u| v| w| x| y| z|
 | ROT+13  | n| o| p| q| r| s| t| u| v| w| x| y| z| a| b| c| d| e| f| g| h| i| j| k| l| m|
 
+<!-- To wrap around from index 25 to 0 use modulus %26 to give you the remainder -->
 
-## Version 2
+## Version 2 (optional)
 
-Allow the user to input the amount of rotation used in the encryption. (ROTN)
-
-## Version 3 (optional)
-
-Add support for capital letters, numbers, and special characters. These can be handled in two different ways:
-
-1. Capital letters can be rotated as well, numbers and special characters can be put directly into the output (e.g. "hello world!" becomes "uryyb jbeyq!").
-
-2. Instead of using an alphabet of just letters, include numbers, spaces, and special characters as well.
+Allow the user to input the amount of rotation used in the encryption / decryption.
