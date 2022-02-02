@@ -1,8 +1,4 @@
-
-
-
-
-# Searching and Sorting
+# Lab 11: Searching and Sorting
 
 
 [Big-O Notation](https://en.wikipedia.org/wiki/Big_O_notation) is a measure of the complexity of an algorithm, specifically how many steps an algorithm takes depending on the size of the input. For example, performing a linear search on a list of `n` elements takes, on average, `n/2` steps, so we say a linear search is `O(n)`. We throw away multiplicative and additive factors to characterize algorithms independently of the hardware it's running on. [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
