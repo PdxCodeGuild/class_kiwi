@@ -40,7 +40,7 @@ Add support for yards, and inches.
 1 inch is 0.0254 m
 ```
 
-## Version 4
+## Version 4 - optional
 
 Now we'll ask the user for the distance, the starting units, and the units to convert to.
 
