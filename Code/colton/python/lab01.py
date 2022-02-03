@@ -28,7 +28,7 @@ while True:
     except ValueError:
         continue
 
-# Version 2, 3, 4
+# Version 2, 3
 # Unit Converter allows user to input desired unit and distance to be converted to meters
 
 while True:
@@ -48,8 +48,8 @@ while True:
 
 
    
-
-
+# Version 4
+# Unit Converter allows user to input desired unit and distance to be converted to desired unit
 
 time.sleep(5)
 
