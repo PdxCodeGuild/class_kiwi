@@ -1,1 +1,3 @@
-Super cool new 🐞 feature!!!
+Hello Class Kiwi!
+
+I am excited to learn some Python!!!
