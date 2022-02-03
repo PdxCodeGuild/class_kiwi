@@ -20,6 +20,10 @@ conversions= {
     "inches": .0254
 }
 
+# def printkeys(dict):
+#     for keys in dict:
+#         print(keys, end=", ")
+#     print('[Use one of these values]')
 
 # Version 1
 # Gets user's value in feet, and returns value converted to meters
