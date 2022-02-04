@@ -35,13 +35,17 @@ print(metrics_dict)
 #Ask the user the distance or length of measurement to be converted.
 object_length = input('Enter the distance of measurement: ')
 #Ask the user to input the unit to be converted to meters. 
-units_measure = input(f'What are the unit of measurement? Convert into, {metrics_dict}: ')
+units_measure = input(f'What are the units of measurement? Choose from {metrics_dict}: ')
 #Associate user selection with the dictionary to prompt dictionary/conversion. 
 units_conv = metrics_dict [units_measure]
 #Convert the object_length to an integer. 
 object_length = int(object_length)
 #Calculate inputted 'object_length' with the 'units_conv'
-
 final_conv = object_length * units_conv
-
-print(f'{object_length} {units_measure} is {final_conv} in meters.')
+#create a new variable to convert units inputted by the user, to user selected output units. 
+v4user_output_selection = input(f'Select the desired units, you would like the distance to be converted into. Your options are, n\"{metrics_dict}": ')
+v4units_conv = metrics_dict[v4user_output_selection]
+version4_output = final_conv / v4units_conv
+#print(f'{object_length} {units_measure} is {final_conv} in meters.')
+# V4 print statement 
+print(f'{object_length} {units_measure} is {version4_output} {v4user_output_selection}.')
