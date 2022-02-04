@@ -3,6 +3,12 @@
 
 This lab will involve writing a program that allows the user to convert a number between units.
 
+Before we begin, let's run through our pre-lab checklist
+- Make sure you are on the main branch `git branch` or `git status`. If you are not on the main branch you can use `git checkout main` to move to the main branch.
+- Once on the main branch, run the command `git pull` to make sure you have the most up to date version of our repository.
+- Next we can create a branch for our lab. `git checkout -b yourname-lab1`. Replace yourname with your actual name :)
+- Now you should be all set to begin your lab.
+
 ## Version 1
 
 Ask the user for the number of feet, and print out the equivalent distance in meters. Hint: 1 ft is 0.3048 m. So we can get the output in meters by **multiplying the input distance by 0.3048**. Below is some sample input/output.
@@ -69,3 +75,11 @@ Below is some sample input/output:
 > what are the output units? mi
 100 ft is 0.0189394 mi
 ```
+
+
+## Turning in your lab
+- Make sure you are still on your lab branch with `git status`. This will also show you a list of files that have been modified.
+- Add any files you want git to keep track of using `git add filename`. Replace filename with the name of your file. You can also use `git add .` to add everything within the current folder.
+- Commit your work using `git commit -m "Your commit message"`. Make sure your commit message is descriptive and describes what has been changed during this commit.
+- Finally we can run the command `git push` to send our files up to Github. This may throw an error, but worry not, there will be a suggested command to run, simply copy and paste that command and you should be good to go.
+- Don't forget to visit Github and create a pull request to submit your work for review.
