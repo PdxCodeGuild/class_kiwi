@@ -84,8 +84,9 @@ else:
 
 '''
 
-# --- Version 4
+# --- Version 4      
 
+# !!!!!!!!!!!!!!!!!!!!!!  functions only for version 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!
 def feet_to_meters(x):
     converted_ft = x * .3048         
     return converted_ft  
