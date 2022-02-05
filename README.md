@@ -35,7 +35,7 @@ Presentation Day: June 10th, 2022
 | Lab   | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
 | ----- | ---------------------- | ------------- | --------------------- | ------------- |
 | 01    | Unit Converter         | 03 Feb        | 08 Feb                | 17 Feb        |
-| 02    | Average Numbers        |               |                       |               |
+| 02    | Average Numbers        | 04 Feb        | 09 Feb                | 18 Feb        |
 | 03    | Number To Phrase       |               |                       |               |
 | 04    | Blackjack Advice       |               |                       |               |
 | 05    | Pick 6                 |               |                       |               |
