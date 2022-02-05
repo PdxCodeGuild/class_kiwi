@@ -1,8 +1,11 @@
-#Unit Converter - Version 1
+# Unit Converter - Version 1
 #distance_to_convert = float(input('Enter the amount of feet to convert to meters: '))
 #converted_distance = distance_to_convert * 0.3048
 
 #print(f'{distance_to_convert} feet equals {converted_distance:.3f} meters.')
+
+
+
 
 # Unit Converter - Version 2
 
@@ -14,38 +17,60 @@
 #def main():
 
 #    while True:
-#        distance_to_convert = float(input('Enter the distance, as a number: '))  
-#        units_to_convert = input('What type of units are you converting: ')
-#        units_to_convert = units_to_convert.lower()
+#        
+#       try:
+#           distance_to_convert = float(input('Enter the distance, as a number: '))  
+#           units_to_convert = input('What type of units are you converting: ')
+#           units_to_convert = units_to_convert.lower()
 
-#        if units_to_convert in distances.keys():
-#            units_to_meters = distance_to_convert * distances.get(units_to_convert)
-#            print(f'{distance_to_convert} {units_to_convert} is equal to {units_to_meters} meters.')
-#            break
+#        except ValueError:
+#           print("Invalid input, please enter a valid numerical distance.")
+#           continue                     
+                
+#        if units_to_convert not in distances.keys():
+#           print('"Invalid choice, valid unit types are: feet, miles, meters, kilometers, yards or inches.")')
+
 #        else:
-#            print('Invalid unit, please try again.')
+#           units_to_meters = distance_to_convert * distances.get(units_to_convert)
+#           print(f'{distance_to_convert} {units_to_convert} is equal to {units_to_meters} meters.')
+#           break
+#
 #main()
+
+
+
+
 
 # Unit Converter - Version 3
 #distances = {'feet': 0.3048, 'miles': 1609.34, 'meters': 1.0, 'kilometers': 1000, 'yards': 0.9144, 'inches': 0.0254}
 
 #print('Welcome to the unit converter!')
-#print(f'This program can convert: feet, miles, meters, and kilometers.')
+#print(f'This program can convert: feet, miles, meters, kilometers, yards, inches.')
 
 #def main():
 
 #    while True:
-#        distance_to_convert = float(input('Enter the distance, as a number: '))  
-#        units_to_convert = input('What type of units are you converting: ')
-#        units_to_convert = units_to_convert.lower()
+#        
+#       try:
+#           distance_to_convert = float(input('Enter the distance, as a number: '))  
+#           units_to_convert = input('What type of units are you converting: ')
+#           units_to_convert = units_to_convert.lower()
 
-#        if units_to_convert in distances.keys():
-#            units_to_meters = distance_to_convert * distances.get(units_to_convert)
-#            print(f'{distance_to_convert} {units_to_convert} is equal to {units_to_meters} meters.')
-#            break
+#        except ValueError:
+#           print("Invalid input, please enter a valid numerical distance.")
+#           continue                     
+                
+#        if units_to_convert not in distances.keys():
+#           print('"Invalid choice, valid unit types are: feet, miles, meters, kilometers, yards or inches.")')
+
 #        else:
-#            print('Invalid unit, please try again.')
+#           units_to_meters = distance_to_convert * distances.get(units_to_convert)
+#           print(f'{distance_to_convert} {units_to_convert} is equal to {units_to_meters} meters.')
+#           break
+#
 #main()
+
+
 
 
 
