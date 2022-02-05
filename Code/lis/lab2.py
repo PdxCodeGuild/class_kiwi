@@ -8,8 +8,7 @@ num_sum = 0
 for num in nums:
     num_sum += num
     print("running sum: ", num_sum)
-    print("running average: ", num_sum/len(nums))
-
+print("average: ", (num_sum/len(nums)))
 
 
 # *** Version 2 ***
