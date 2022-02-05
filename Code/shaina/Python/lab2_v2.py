@@ -2,7 +2,6 @@
 import string
 
 # List items and length of list determined by user
-invalid = [list(string.punctuation), list(string.digits)]
 nums_list = []
 
 # Loop will continue until 'done' breaks loop
@@ -12,7 +11,8 @@ while True:
     if nums.lower() == 'done':
         break
 
-    elif nums in invalid:
+# Would like to exclude invalid entries, including spelled numbers.
+    elif nums.isnumeric() == False:   # Referenced W3Schools -pyton string methods for 'isnumeric' method
         print("Please enter a valid number or 'done'")
         continue
 
