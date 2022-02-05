@@ -8,16 +8,20 @@
 
 # #ask the user enter distance
 
+
+# ##Version1
+
 # distance = int(input("what is the distance? "))
-# #ask the user enter units
+#ask the user enter units
 
 # units = input("what is the units? ")
 
-# #convert the distance into meters
+#convert the distance into meters
 
 # print(distance)
 # print(units)
 
+# # # Version 2
 # if units == "ft":
 #     print(f"{distance} {units} is {distance * 0.348} m")
 # elif units == "mi":
@@ -27,20 +31,12 @@
 # elif units == "km":
 #     print(f"{distance} {units} is {distance * 1000} m")
 
-# # Version 3
+# # # Version 3
 
 # elif units == "yard":
 #     print(f"{distance} {units} is {distance * 0.9144} m")
 # elif units == "inch":
 #     print(f"{distance} {units} is {distance * 0.0254} m")
 
-
-
-num = 0
-while num < 12:
-    num = num + 1
-    print(num, 'Hello World!')
-
-
-
+#######################################################
 
