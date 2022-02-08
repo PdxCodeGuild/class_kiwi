@@ -24,7 +24,7 @@ def average_calc(nums):
     total = sum(nums)
 
     avg = total / digit_amt
-    round(avg, 3)
+    
     print(avg)
     return avg
 
