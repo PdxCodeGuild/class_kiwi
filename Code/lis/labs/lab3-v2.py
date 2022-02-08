@@ -33,7 +33,7 @@ digits = {
 }
 
 #create function
-def nums(input_number):
+def nums_100_to_999(input_number):
   if 100 <= input_number <= 999:
     first_digit = input_number // 100
     first_digit_text = digits[first_digit]
@@ -60,6 +60,6 @@ while True:
   input_number = int(input_number)
 
   #call function
-  print(nums(input_number))
+  print(nums_100_to_999(input_number))
 
     
