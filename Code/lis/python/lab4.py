@@ -21,7 +21,6 @@ card_values = {
 def blackjack(first_card, second_card, third_card): 
 
 # get dictionary values and add together
-  
   if all (key in card_values for key in (first_card, second_card, third_card) ):
     sum_value = (card_values[first_card] + card_values[second_card] + card_values[third_card])
     # determine classification of added values
@@ -45,11 +44,6 @@ third_card = input("What's your third card? ").upper()
 
 # call function
 print(blackjack(first_card, second_card, third_card))
-
-
-
-
-
 
 
 
