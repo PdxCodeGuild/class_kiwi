@@ -22,8 +22,10 @@ def phrase(num = int):
     
     if ones_digit == 0 and tens_digit == 0:
         return 'Zero'
-    if ones_digit == 0 and tens_digit > 0:
+    elif ones_digit == 0 and tens_digit > 0:
         return f'{tens[tens_digit]}'
+    elif num < 10:
+        return f'{ones[ones_digit]}'
     elif num == 11:
         return 'Eleven'
     elif num == 12:
