@@ -10,7 +10,7 @@ ones= user_num % 10
 
 
 # Base phrases for the tens place
-number_word_tens = ['zero','one', 'twenty', 'thirty', 'fourty', ' fifty', 'sixty', 'seventy', 'eighty', 'nintey']
+number_word_tens = ['zero','one', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'nintey']
 # Base digits for the ones place
 number_word_ones = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 # Base digits for teen values
@@ -29,14 +29,15 @@ else:
 '''
 
 
-
-
-
-
 '''
 VERSION 2
 
-user_num = int(input('Enter a whole number between 0-99: '))
+
+
+
+
+
+user_num = int(input('Enter a whole number between 0-999: '))
 # Collects the tens digit from the user input
 tens = user_num // 10
 # Collects the ones digit from the user input
@@ -44,7 +45,7 @@ ones= user_num % 10
 
 if user_num < 100:
     # Base phrases for the tens place
-    number_word_tens = ['zero','one', 'twenty', 'thirty', 'fourty', ' fifty', 'sixty', 'seventy', 'eighty', 'nintey']
+    number_word_tens = ['zero','one', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'nintey']
     # Base digits for the ones place
     number_word_ones = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     # Base digits for teen values
@@ -84,11 +85,11 @@ elif user_num >= 100:
     hunds = user_num_list[0]
     
     # All possible base values in english
-    number_word_tens = ['zero','one', 'twenty', 'thirty', 'fourty', ' fifty', 'sixty', 'seventy', 'eighty', 'nintey']
+    number_word_tens = ['zero','one', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'nintey']
 
     number_word_ones = ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
-    number_word_hunds = ['zero','One Hundered', 'Two Hundred', 'Three Hundered', 'Four Hundered', ' Five Hundered', 'Six Hundered', 'Seven Hundered', 'Eight Hundered', 'Nine Hundered']
+    number_word_hunds = ['zero','One Hundered', 'Two Hundred', 'Three Hundered', 'Four Hundered', 'Five Hundered', 'Six Hundered', 'Seven Hundered', 'Eight Hundered', 'Nine Hundered']
 
     number_word_teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
     # Checks if the user entered a teens digit
@@ -100,11 +101,14 @@ elif user_num >= 100:
     # Checks if user entered 100
     elif tens == 0:
         print( f"The number {user_num} is {number_word_hunds[hunds]}")
+    elif ones == 0:
+       
+       print( f"The number {user_num} is {number_word_hunds[hunds]} and {number_word_tens[tens].title()}") 
     else:
         print( f"The number {user_num} is {number_word_hunds[hunds]} and {number_word_tens[tens].title()} {number_word_ones[ones].title()}")
     
-
 '''
+
 
 
 
