@@ -30,17 +30,19 @@ if entry_int in number2phrase_dic:
 
 #Use modulus to extract ones and tens digits (hint) -- so you don't have to keep typing stuff out!
 #use .get() to access a value with a key
-elif entry_int not in number2phrase_dic:
+elif entry_int not in number2phrase_dic and entry_int < 100:
     ones_digit = entry_int % 10 # renders ones digit by giving the remainder
     tens_digit = int(entry_int /10) * 10 # Provides the coefficient *10 to recieve a tens digit 
+    print(number2phrase_dic.get(tens_digit), number2phrase_dic.get(ones_digit))
+
+elif entry_int not in number2phrase_dic and entry_int >= 100:
+    ones_digit = entry_int % 10 # renders ones digit by giving the remainder
+    tens_digit = int(entry_int /100) *10 # Provides the coefficient *10 to recieve a tens digit 
     hundreds_digit = (int(entry_int% 1000) // 100) * 100
     print(number2phrase_dic.get(hundreds_digit), number2phrase_dic.get(tens_digit), number2phrase_dic.get(ones_digit))
-
+    
 # ## Version 2
-
 # Handle numbers from 100-999.
-
-
 
 # ## Version 3 (optional)
 
