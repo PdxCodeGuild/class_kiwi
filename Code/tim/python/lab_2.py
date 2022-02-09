@@ -37,7 +37,8 @@ def average_calc(nums):
 # Here we seek to ask for an input of numbers 1 at a time. 
 
 numberlist = []
-user_pick = input("Please enter a number or 'done' " )
+# user_pick = input("Please enter a number or 'done' " )
+user_pick = ""
 while user_pick != "done":
     user_pick = input("Please enter a number or 'done' " )
     if user_pick == "done":
