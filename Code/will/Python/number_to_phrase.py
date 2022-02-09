@@ -107,7 +107,8 @@ tens = {1: 'ten',
 8: 'eighty ',
 9: 'ninety '
 }
-ones = {1: 'one',
+ones = {0: 'zero',
+1: 'one',
 2: 'two',
 3: 'three',
 4: 'four',
@@ -192,7 +193,7 @@ def main():
             number = int(input('Please enter a number: '))  
 
         except ValueError:
-            print('Letters and symbols are not excepted.')
+            print('Letters and symbols are not accepted.')
 
         else:
             phrase = number_to_phrase(number)
