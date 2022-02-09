@@ -11,7 +11,7 @@ Hampton12101@gmail.com
 # First let's start with taking the input
 # 
 
-user_input = int(input('Pick a number between 0-99: '))
+user_input = int(input('Pick a number between 0-999: '))
 
 # We will use Modulus to extract the ones and tens digits => index them to a list of strings
 
@@ -75,13 +75,14 @@ hundreds_english = ['',
 
 # 
 # {tens_english[tens_digit]}{ones_english[ones_digit]}')
-## tested hundreds_digit in seperate file, this will work.
+## tested hundreds_digit in separate file, this will work.
 if  user_input == 0:
     print ("zero")
 
-elif tens_digit == 1:
+elif tens_digit == 1 and hundreds_digit < 1:
     print(f'{tens_english[tens_digit]}')
-
+elif tens_digit == 1 and hundreds_digit > 1:
+    print(f'{hundreds_english[hundreds_digit]}{tens_english[tens_digit]}')
 # elif hundreds_digit == 0:
 #     print(f'{tens_english[tens_digit]}{ones_english[ones_digit]}')
 else:
