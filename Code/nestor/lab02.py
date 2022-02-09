@@ -11,7 +11,7 @@ for num in range(len(numbers)):
 num_sum = sum(numbers) // len(numbers)
 print(f"Average: {num_sum}")
    
-"""    
+
 #Version 2
 new_list = []
 # collecting user input for numbers in list
@@ -29,4 +29,3 @@ for item in new_list:
 # printing average of new number list 
 average = total / len(new_list) 
 print(average)
-"""
