@@ -29,6 +29,8 @@ def phrase(num):
     ones_digit = num%10
     phrase = f'{hundreds[huns_digit]} {tens[tens_digit]} {ones[ones_digit]}'
     
+    if ones_digit == 0 and tens_digit == 0 and huns_digit == 0:
+        return 'Zero'
     if tens_digit == 1 and ones_digit == 1:
         return f'{hundreds[huns_digit]} Eleven'
     elif tens_digit == 1 and ones_digit == 2:
