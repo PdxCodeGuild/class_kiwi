@@ -20,6 +20,7 @@ def generate_user_num(user_nums:list):
     return user_nums
     
 def pick6(interations:int):
+    '''Will Compare 6 numbers of your choosing to 6 randomly generated numbers'''
     while True: 
         cost = 0
         bank =  500000
@@ -27,26 +28,29 @@ def pick6(interations:int):
         random_nums = []
         generate_rand_num(random_nums)
         generate_user_num(user_nums)
-    
+
+        winings = 0
         for i in range(interations):
             win = 0
-            winings = 0
             cost += 2
-            for number in random_nums:
-                if number in user_nums:
+            # for number in random_nums:
+            #     if number in user_nums:  
+            for number in range(len(random_nums)):
+                if random_nums[number] == user_nums[number]:
                     win += 1
-                    if win == 1:
-                        winings += 4
-                    elif win == 2:
-                        winings += 7
-                    elif win == 3:
-                        winings += 100
-                    elif win == 4:
-                        winings += 50000
-                    elif win ==5:
-                        winings += 1000000
-                    elif win == 6:
-                        winings += 25000000
+            if win == 1:
+                winings += 4
+            elif win == 2:
+                winings += 7
+            elif win == 3:
+                winings += 100
+            elif win == 4:
+                winings += 50000
+            elif win ==5:
+                winings += 1000000
+            elif win == 6:
+                winings += 25000000        
+        
         bank -= cost
         if winings != 0:
             roi = (winings - cost)/ winings             # -- Version 2
@@ -60,7 +64,7 @@ def pick6(interations:int):
              break
 
 if __name__ == '__main__':
-    pick6(10)
+    pick6(100000)
 
 
 
