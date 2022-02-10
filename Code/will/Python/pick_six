@@ -1,0 +1,111 @@
+# Pick Six - Version 1
+import random
+
+# def pick_six():
+
+#     numbers = []
+
+#     for i in range(6):
+#         number = random.randint(1,99)
+#         numbers.append(number)
+
+#     return numbers
+
+# def main():
+
+#     winning_numbers = pick_six()
+#     balance = 0
+
+#     for i in range(100000):
+#         balance -= 2
+#         your_numbers = pick_six()
+#         matched_numbers = 0
+
+#         for x, y in zip(winning_numbers, your_numbers):
+
+#             if x == y:
+#                 matched_numbers +=1
+
+#                 if matched_numbers == 1:
+#                     balance += 4
+
+#                 elif matched_numbers == 2:
+#                     balance += 7
+                    
+#                 elif matched_numbers == 3:
+#                     balance += 100
+                    
+#                 elif matched_numbers == 4:
+#                     balance += 50000
+
+#                 elif matched_numbers == 5:
+#                     balance += 1000000
+
+#                 elif matched_numbers == 6:
+#                     balance += 25000000
+
+#     print(balance)
+
+# main()
+
+
+
+
+def pick_six():
+
+    numbers = []
+
+    for i in range(6):
+        number = random.randint(1,99)
+        numbers.append(number)
+
+    return numbers
+
+def main():
+
+    winning_numbers = pick_six()
+    balance = 0
+    money_spent = 0
+    earnings = 0
+
+    for i in range(100000):
+        balance -= 2
+        money_spent -= 2
+        your_numbers = pick_six()
+        matched_numbers = 0
+
+        for x, y in zip(winning_numbers, your_numbers):
+
+            if x == y:
+                matched_numbers +=1
+
+                if matched_numbers == 1:
+                    balance += 4
+                    earnings += 4
+
+                elif matched_numbers == 2:
+                    balance += 7
+                    earnings += 7
+
+                elif matched_numbers == 3:
+                    balance += 100
+                    earnings += 100
+
+                elif matched_numbers == 4:
+                    balance += 50000
+                    earnings += 50000
+
+                elif matched_numbers == 5:
+                    balance += 1000000
+                    earnings += 1000000
+
+                elif matched_numbers == 6:
+                    balance += 25000000
+                    earnings += 25000000
+
+
+    return_on_investment = (earnings - money_spent) / money_spent
+
+    print(f'Your end balance is ${balance}. You spent ${money_spent} and your ROI was {return_on_investment:.2f}.')
+
+main()
