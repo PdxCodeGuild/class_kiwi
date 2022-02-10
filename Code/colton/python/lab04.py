@@ -1,15 +1,15 @@
-# Let's write a python program to give basic blackjack playing advice during a game by asking the player for cards. First, ask the user for three playing cards (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K). Then, figure out the point value of each card individually. Number cards are worth their number, all face cards are worth 10. At this point, assume aces are worth 1. Use the following rules to determine the advice:
-
-#     Less than 17, advise to "Hit"
-#     Greater than or equal to 17, but less than 21, advise to "Stay"
-#     Exactly 21, advise "Blackjack!"
-#     Over 21, advise "Already Busted"
-
-# Print out the current total point value and the advice.
+'''         +-+#^#+--+#^#+--+#^#+-+             
+            Project: Blackjack Advice             ░░╚══╗░╔═╔════╝
+                 Version: 1.00                    ╚═╦═╗╠═╩═╩╗╔═╦═╗
+             Author: Colton Tatum                 ░░║▒╠╣▒▒▒▒╠╣▒║▒║
+          Email: TatumC4561@gmail.com             ╔═╩═╝╠═╦═╦╝╚═╩═╝
+                 Date: 2/8/22                     ░░╔══╝░╚═╚════╗
+            +-+#^#+--+#^#+--+#^#+-+
+'''
 
 import random
 import time
-from turtle import hideturtle
+
 
 
 card_values = {
@@ -33,18 +33,16 @@ card_values = {
 }
 
 
-dealer_hand = random.randint(15, 23)
+dealer_hand = random.randint(15, 23) # Generates likely hands for dealer
 
 
 cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
-random_card = random.choice(cards)
+random_card = random.choice(cards) # Generates card choice from list of cards
 
 
 
-# total += card_values[user_input]
 
-
-total = 0
+total = 0 
 while True:
     ### This will get user input and actively add them together, if they enter a value that equals more than 21 than it will print an error
     try:
@@ -258,6 +256,3 @@ while True:
 
 
 
-
-if __name__ == "__main__":
-    main()
