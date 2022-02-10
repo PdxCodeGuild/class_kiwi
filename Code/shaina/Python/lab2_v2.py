@@ -1,6 +1,4 @@
 # Lab 2: Version 2
-import string
-
 # List items and length of list determined by user
 nums_list = []
 
@@ -35,4 +33,5 @@ def average(num_sum):
     return num_average
 
 # Final message
-print(f'The average is {round(average(num_sum), 4)}')    
+print(f'The average is {round(average(num_sum), 4)}')
+    
