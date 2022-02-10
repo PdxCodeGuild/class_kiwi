@@ -51,12 +51,13 @@ def pick6(interations:int):
         if winings != 0:
             roi = (winings - cost)/ winings             # -- Version 2
             print(f' Your return on investment is {roi} and your cost was ${cost}')
+            print(f'\nyou won {win} times and made {winings}$ your new balance is {winings + bank}')
         else:
             print(f'\nYou had no winnings and your cost was ${cost}')    
             print(f'\nyou won {win} times and made {winings}$ your new balance is {winings + bank}') 
-            play_again = input("\nWould you like to play again? 'Q' for quit or any key to continue: ")
-            if play_again == 'q':
-                break
+        play_again = input("\nWould you like to play again? Press 'q' for quit or any key to continue: ")
+        if play_again.lower() == 'q':
+             break
 
 if __name__ == '__main__':
     pick6(10)
