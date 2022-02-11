@@ -127,7 +127,7 @@ def main():
             quit()
 
         else:                                                                                                                             # catch invalid inputs
-           print('Invalid input. Please enter start or quit.')
+           print('Invalid input. Please enter start or exit.')
            main()  
 
         continue_convert = input('Would you like to convert more values? Yes/No ')                                                        # ask user if they wish to repeat
