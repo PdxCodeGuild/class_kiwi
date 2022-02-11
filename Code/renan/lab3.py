@@ -6,10 +6,7 @@ from argparse import ONE_OR_MORE
 def get_number():
     '''Convert Numbers To Phrase'''
     
-    num = int(input("What Number: "))
-    
-    
-    
+    num = int(input("What Number: "))  
     
     one_dict= {
         1: "One",
@@ -21,10 +18,17 @@ def get_number():
         7: "Seven",
         8: "Eight",
         9: "Nine",
-        
-        
-    }
-
+        10: "Ten",
+        11: "Eleven",
+        12: "Tweleve",
+        13: "Thirteen",
+        14: "Fourteen",
+        15: "Fifteen",
+        16: "Sixteen",
+        17: "Seventeen",
+        18: "Eighteen",
+        19: "Nineteen",  
+    }     
     ten_dict= {
         1: "One",
         2: "Twenty",
@@ -35,21 +39,28 @@ def get_number():
         7: "Seveny",
         8: "Eighty",
         9: "Ninety",
-        
-        
-    }
-
-    tens_digit = num // 10
-    ones_digit = num % 10
+    }   
     
-    if (num) <= 9:
-         print(one_dict[ones_digit])
+  
+    tens_digit = num // 10 #If using 143 = 14
+    ones_digit = num % 10 # IF using 143 = 3 = one_dict[3]
+    hnds_digit = num // 100 #if using 143 =  one_dict[1]
+    
+    alternative = tens_digit % 10
+    # print(alternative, "alternative test")
+    
+    if num in range(0, 20):
+         print(one_dict[num])
+    
+    elif 20 < (num) <= 99:
+         print(ten_dict[tens_digit] +" " + one_dict[ones_digit]) 
          
-    elif (num) >= 20:
-        print(ten_dict[tens_digit] +" " + one_dict[ones_digit]) 
+    elif 100 < (num) <= 999:
+         print(one_dict[hnds_digit] + " hundred " + " " + ten_dict[alternative] + " " + one_dict[ones_digit])
+         
+       
     
 get_number()
-
 
 
     
