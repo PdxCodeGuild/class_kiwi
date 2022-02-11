@@ -23,18 +23,9 @@ for i in range(100000):
 
 # Calculate the matches   
     match = 0
-    if winning[0] == ticket[0]:
-        match += 1
-    if winning[1] == ticket[1]:
-        match += 1
-    if winning[2] == ticket[2]:
-        match += 1
-    if winning[3] == ticket[3]:
-        match += 1
-    if winning[4] == ticket[4]:
-        match += 1
-    if winning[5] == ticket[5]:
-        match += 1
+    for i in range(6):
+        if winning[i] == ticket[i]:
+            match += 1
 
 # Based on matches, add winnings to earnings
     if match == 1:
