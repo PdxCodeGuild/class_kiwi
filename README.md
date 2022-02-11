@@ -38,8 +38,8 @@ Presentation Day: June 10th, 2022
 | 02    | Average Numbers        | 04 Feb        | 09 Feb                | 18 Feb        |
 | 03    | Number To Phrase       | 07 Feb        | 11 Feb                | 21 Feb        |
 | 04    | Blackjack Advice       | 08 Feb        | 11 Feb                | 22 Feb        |
-| 05    | Pick 6                 |               |                       |               |
-| 06    | Credit Card Validation |               |                       |               |
+| 05    | Pick 6                 | 09 Feb        | 15 Feb                | 1 Mar         |
+| 06    | Credit Card Validation | 10 Feb        | 16 Feb                | 2 Mar         |
 | 07    | ROT13                  |               |                       |               |
 | 08    | Peaks And Valleys      |               |                       |               |
 | 09    | ARI                    |               |                       |               |
