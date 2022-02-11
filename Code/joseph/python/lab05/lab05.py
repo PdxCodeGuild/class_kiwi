@@ -41,5 +41,4 @@ def pick(x):
     print(f'Your expenses were ${expenses:.2f}')
     print(f'Your earnings were ${earnings:.2f}')
     print(f'Your ROI is {roi:.2%}')
-    #return w
 pick(100000)
