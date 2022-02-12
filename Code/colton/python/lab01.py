@@ -41,7 +41,7 @@ while True:
 # Version 2, 3
 # Unit Converter allows user to input desired unit and distance to be converted to meters
 while True:
-    print(conversions.keys()) # Prints usable keys for user to see
+    print(','.join(conversions.keys())) # Prints usable keys for user to see
     user_input = input("What unit would you like to convert to meters?  ").lower().strip()
     if user_input in conversions: # Looks for user_input in conversions keys
         
@@ -69,7 +69,7 @@ while True:
         user_int = float(input("What is the distance length of the unit you need to convert?:  "))
     
         while True:
-            print(conversions.keys()) # prints dictionary keys for user to see
+            print(', '.join(conversions.keys())) # prints dictionary keys for user to see
             user_input = input("What are the units?:  ").lower().strip()
             if user_input not in conversions: # if user_input isn't a dictionary key then repeat loop
                 continue
@@ -77,7 +77,7 @@ while True:
             elif user_input in conversions: # if user_input is a dictionary key move to next line
     
                 while True:
-                    print(conversions.keys()) # print keys for user to see
+                    print(', '.join(conversions.keys())) # print keys for user to see
                     user_convert = input("What unit would you like to convert to?:  ").lower().strip()
                     if user_convert not in conversions: # if user_convert is not in a key in conversions repeat loop
                         continue
@@ -97,4 +97,5 @@ while True:
     except ValueError: # If user_int is not a valid float it will repeat loop
         print("Please enter valid input")
         continue
+
 
