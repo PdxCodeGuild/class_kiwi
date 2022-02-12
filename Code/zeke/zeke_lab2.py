@@ -9,17 +9,55 @@
 
 # print(f"the avarage {num/ 7} ")
 
+########################################################
+
+# Version 1
+def average_list(num):
+    total=0
+    for number in num:
+        total = total + number 
+    return(total/len(num))
+
+
+# a = [1,2,3]
+# print(average_list(a))
+
+########################################################
 # num = [5,0,8,3,4,1,6]
 # total = 0
 # for numbers in num:
 #     print(numbers)
 #     total = numbers + total 
-# print(total)   
+#     #Provides me with the list of numbers and also adding each number together
+# print(total)  
 # a = len(num) 
+#     #len provides me with the count of each character in the list
 # print(a)
 
 # print(f'the average {round(total/a)}')
+#     # the round function allows me to the closes digit. I divided the total by the number of _ in the list.
 
+
+
+########################################################
+
+
+# Version 2
+# total = 0
+number_list = []
+while True:
+
+    numm=input(f'give me a number and or enter done: ' )
+    if numm == "done":
+        break
+    elif numm != "done":
+        # int(numm)
+        number_list.append(int(numm)) 
+        
+
+print(number_list)
+
+print(average_list(number_list))
 
 
 #find average of list of numbers(add all the numbers divide by how many numbers there are.)
@@ -109,15 +147,15 @@
 # c = len(list)
 # print(a / c)
 
-list = [3, 9, 8, 7, 9, 9, 8]
-total = 0
-for all_num in list:
-    print(all_num)
-    total = all_num + total
-print(total)
-average = total / len(list)
-print(average)
-print(f'{round(average)}')
+# list = [3, 9, 8, 7, 9, 9, 8]
+# total = 0
+# for all_num in list:
+#     print(all_num)
+#     total = all_num + total
+# print(total)
+# average = total / len(list)
+# print(average)
+# print(f'{round(average)}')
 
 
 
@@ -125,9 +163,33 @@ print(f'{round(average)}')
 
 
 
+# average a list of numbers
+#keep a running sum
+#divide / the sum by the number of elements
+#len
+#add all the numbers up than divide by how many numbers there are
+#for each element in _____do the following
+# num = int(5 + 0 + 8 + 3 + 4 + 1 + 6)
+# print(f'{num}')
 
 
 
+# def average_of_nums(nums):
+#     total = 0
+# # iterate over numbers
+
+# for num in nums:
+#     # keep track of running total
+#     total += num
+
+# # get average of all numbers
+#     average = total/ len(nums)
+
+# def main():
+# #output result
+#     nums = [5, 0, 8, 3, 4, 1, 6]
+
+#     print(f' The average of all numbers is {average:.2f}')
 
 
 
