@@ -16,27 +16,50 @@ Credit Card Num :4556737586899855
 
 def credit_card_num():
     while True:
+        # getting credit card info from user
         user_credit_card = input('Enter your credit card: ')
-        user_error = input(f'Is this correct? {user_credit_card}')
-        if user_error.title() == 'Yes':
+        user_error = input(f'Is this correct? y/n {user_credit_card} ')
+        if user_error.title() == 'Y':
             break
     credit_card_list = []
+    # converting credit card str into a list
     for num in user_credit_card:
         credit_card_list.append(int(num))
     return credit_card_list
 
 
-credit_card = credit_card_num()
+# creating the credit card 
+# credit_card = credit_card_num()
 
-# removing the last digit
-last_num_credit = credit_card.pop()
+credit_card_ex = [4,5,5,6,7,3,7,5,8,6,8,9,9,8,5,5] # using as an example
 
-# reversing the list
-credit_card[::-1]
+def credit_card_check(credit_card):
+    # removing the last digit
+    last_num_credit = credit_card.pop()
 
-# for num in credit_card[::2]:
+    # reversing the list
+    credit_card =credit_card[::-1]
 
-print(credit_card, last_num_credit)
+    # doubling every other number
+    for num, value in enumerate(credit_card): # num = index position and value = position value
+        if num % 2 == 0: # will check for odd and even, if it is even it will be 0.
+            credit_card[num] = value * 2
+
+    for num, value in enumerate(credit_card): 
+        if value > 9:
+            credit_card[num] = value - 9
+
+    sum_credit_card = sum(credit_card)
+    sum_credit_card = sum_credit_card % 10
+
+    if sum_credit_card == last_num_credit:
+        return True, print("valid")
+    else: 
+        return False, print('invalid')
+
+    
+credit_card_check(credit_card_ex)
+
 
 
 """
