@@ -40,7 +40,7 @@ def num_to_phrase(x: int ) -> str:
         else: # all other values of xxx
             return hundredth_str + tens[tens_digit] + '-' + numbers[ones_digit]
 
-print(num_to_phrase(1))
-print(num_to_phrase(20))
-print(num_to_phrase(156))
-print(num_to_phrase(87))
+# print(num_to_phrase(1))
+# print(num_to_phrase(20))
+# print(num_to_phrase(156))
+# print(num_to_phrase(87))
