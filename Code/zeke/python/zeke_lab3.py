@@ -37,45 +37,97 @@ numbers = {
     17: 'seventeen',
     18: 'eighteen',
     19: 'nineteen',
-    20: 'twenty',
-    30: 'thirty',
-    40: 'forty',
-    50: 'fifty',
-    60: 'sixty',
-    70: 'seventy', 
-    80: 'eighty',
-    90: 'ninety',
+}
+msc ={
+    0:'',
+    2: 'twenty',
+    3: 'thirty',
+    4: 'forty',
+    5: 'fifty',
+    6: 'sixty',
+    7: 'seventy', 
+    8: 'eighty',
+    9: 'ninety',
 }
 
+hundred = {
+    1 : 'onehundred',
+    2 : 'twohundred',
+    3 : 'threehundred',
+    4 : 'fourhundred',
+    5 : 'fivehundred',
+    6 : 'sixhundred',
+    7 : 'sevenhundred',
+    8 : 'eighthundred',
+    9 : 'ninehundred',
+    }
+num = int(input("Please enter a number here: " ))
 
-num = 84
+if num <= 19:
+    print(f'{numbers[num]}')
 
-print(num%100)
-print(num //100)
-hundreds = num //100
+elif num <100:
+    ones_digit = num%10#84 % 10 = 4      144 % 10 = 4
+    tens_digit = num//10#84 // 10 = 8     144 // 10 = 14    144 /10 =14.4
+    print(f'{msc[tens_digit]}{numbers[ones_digit]}')
 
-print(numbers[hundreds])
-units = num%10
-print( hundreds, units)
 
-if num <100:
+    # print(f'{msc[tens_digit]}{numbers[ones_digit]}')
+    if ones_digit == 0:
+        print(f'{msc[tens_digit]}')
+    else:
+        print(f'{msc[tens_digit]}{numbers[ones_digit]}')
+        
+#num = 569//100 = 5         569 % 100= 69 
+
+if num >= 100:
     tens_digits = num //10#8
     ones_digits = num%10#4
-    test_word = numbers[tens_digits] + " - " + numbers[ones_digits] # ones_digit[8],numbers [4]
-print(test_word)
+    hundred_digit = num // 100
+    x = tens_digits%10
+    print(f'{hundred[hundred_digit]}{msc[x]}{numbers[ones_digits]}')
+ 
 
 
-# print("test", numbers[14])
-# print("test", numbers[70])
-# print("test", numbers[80])
-# print("test", numbers[351])
+# if num >=100:
 
-# # print(zero_19[])
+   
+    # print(f'{msc[tens_digit]}{numbers[ones_digit]}')
+# print("x =", x) # 569 // 10
+# print("tens_digit", tens_digit)
+  
+# print(num%1000)
+# print(num //100)
+# hundreds = num //100
+
+# print(numbers[hundreds])
+
+
+    # elif num < 100:
+    #     print 
+
+    
+
+#################################################################################
+
+#convert a number(67) into its worded form 'sixty-seven' O-99
+# Handle numbers from 100-999.
+
+
+   
+# print(test_word)
+
+
+
+
+
+# print(zero_19[])
 # user_input =int(input(f'pick a number between 0-99? '))
 # print(numbers[user_input])
 # if user_input in numbers:
 #     a = user_input % 10
 #     print(a)
+
 
 
 
