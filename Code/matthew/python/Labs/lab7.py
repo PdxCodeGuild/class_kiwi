@@ -56,7 +56,7 @@ def rot13_encrypt(user_input):
     letters_list = []
     encryption = []
     encrypted = ''
-    for letter in letter_string: # separating the input into indavidual indexes in a list
+    for letter in user_input: # separating the input into indavidual indexes in a list
         letters_list.append(letter)
     for letter in letters_list: # encrypting the input using the translation dictionary
         encryption.append(translation[letter])
