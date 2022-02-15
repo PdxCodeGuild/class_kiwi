@@ -62,6 +62,13 @@ winning_nums = pick6()
 
 balance = int(0)
 
+variance_1 = 0
+variance_2 = 0
+variance_3 = 0
+variance_4 = 0
+variance_5 = 0 
+variance_6 = 0
+
 loop_var = int(0)
 while loop_var < 100000:
     player_nums = pick6()
@@ -70,18 +77,25 @@ while loop_var < 100000:
     lotto_count = lotto_check(winning_nums,player_nums)
     if lotto_count == 1:
         balance += 4
+        variance_1 += 1
     if lotto_count == 2:
         balance += 7
+        variance_2 += 1
     if lotto_count == 3:
         balance += 100
+        variance_3 += 1
     if lotto_count == 4:
         balance += 50000
+        variance_4 += 1
     if lotto_count == 5:
+        variance_5 += 1
         balance += 1000000
     if lotto_count == 6:
         balance += 25000000
-    
+        variance_6 += 1
 print(f"Your balance after playing the lottery is ${balance}.")
 roi = (balance / 200000)
 print (f'Your ROI is %{roi}')
 # print(winning_nums)
+
+print(f'Variance is as follows 1, {variance_1}. 2, {variance_2}. 3, {variance_3}. 4, {variance_4}. 5, {variance_5}. 6, {variance_6}')
