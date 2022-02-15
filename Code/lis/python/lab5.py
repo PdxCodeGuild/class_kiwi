@@ -60,7 +60,7 @@ for i in range(100000): # change 100000 to 5 for testing
     #print(f'The number of matches between tickets: {matches}')
 
     # match with dictionary amount
-    winning_match_amount = matching_ticket_amount[matches]
+    winning_match_amount = matching_ticket_amount.get(matches)
     #print('winning_match_amount: ', winning_match_amount)
 
     # Add to your balance of the winnings from your matches

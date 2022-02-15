@@ -32,21 +32,22 @@ digits = {
 
 # create function
 def nums_zero_to_ninetynine(input_number):
-
+    #get dictionary item is less than 20
     if 0 <= input_number <= 19:
 
-        digits_to_nineteen = digits[input_number]
+        digits_to_nineteen = digits.get(input_number)
 
         return(f'You entered: {digits_to_nineteen}')
 
     if 20 <= input_number <= 99:
-
+        # break apart digits and get corresponding dictionary items
         first_digit = input_number // 10
         first_digit_convert = first_digit * 10
-        first_digit_text = digits[first_digit_convert]
+        first_digit_text = digits.get(first_digit_convert)
 
         second_digit = input_number % 10
-        second_digit_text = digits[second_digit]
+        second_digit_text = digits.get(second_digit)
+        # manipulate text 
         if second_digit_text == 'zero':
             second_digit_text = ''
 

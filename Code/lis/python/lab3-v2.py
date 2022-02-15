@@ -36,19 +36,22 @@ digits = {
 def nums_100_to_999(input_number):
 
     if 100 <= input_number <= 999:
-
+        # break apart digits
         first_digit = input_number // 100
         second_digit = input_number // 10 % 10
         third_digit = input_number % 10
 
+        # manipulate digits to get correct dictionary item
         second_digit_convert = second_digit * 10
         if second_digit_convert == 10 and third_digit > 0:
             second_digit_convert = second_digit_convert + third_digit
 
-        first_digit_text = digits[first_digit]
-        second_digit_text = digits[second_digit_convert]
-        third_digit_text = digits[third_digit]
+        # get dictionary items
+        first_digit_text = digits.get(first_digit)
+        second_digit_text = digits.get(second_digit_convert)
+        third_digit_text = digits.get(third_digit)
 
+        # maipulate text
         if 10 < second_digit_convert < 20:
             third_digit_text = ''
         if second_digit == 0:
