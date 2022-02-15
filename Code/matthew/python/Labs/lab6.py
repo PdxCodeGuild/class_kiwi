@@ -59,16 +59,3 @@ def credit_card_check(credit_card):
 
     
 credit_card_check(credit_card_ex)
-
-
-
-"""
-# def credit_card_num():
-#     user_credit_card = ''
-#     credit_card_list = []
-#     user_credit_card = input('Enter your credit card num')
-
-#     for num in user_credit_card:
-#         credit_card_list.append(num)
-#     return(credit_card_list)
-# """
