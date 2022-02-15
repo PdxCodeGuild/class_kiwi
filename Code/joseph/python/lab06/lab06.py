@@ -29,7 +29,11 @@ def ccv(user_cc):
     #get second digit of sum
     second_dig_sum = sum_cc % 10
     print(f"Second digit of sum: {second_dig_sum}")
-    #compare second digit of sum to check digit, report validity
+    #compare second digit of sum to check digit as boolean
+    def cmpr(ss, cd):
+        return ss == cd
+    print(cmpr(second_dig_sum, check_digit[0]))
+    #return validity
     if second_dig_sum == check_digit[0]:
         print("\nValid")
     else:
