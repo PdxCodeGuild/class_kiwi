@@ -11,40 +11,23 @@ for number in number_list:
 check_digit = number_list2.pop(-1)
 number_list2.reverse()
 
-
-multiply_list = []
 check_list = []
 
-for i in number_list2[1::2]:
-    check_list.append(i)
+for index, number in enumerate(number_list2):
+    if index % 2 == 0:
+        double_number = number * 2
+        if double_number > 9:
+            sub_number = double_number -9
+            check_list.append(sub_number)
 
-multiply_list = [i*2 for i in number_list2[::2]]
-
-
-minus_list = []
-
-for i in multiply_list:
-    if i > 9:
-        new_num = i - 9
-        minus_list.append(new_num)
+        elif double_number <= 9:
+            check_list.append(double_number)
     else:
-        new_num = i
-        minus_list.append(new_num)
+        check_list.append(number)
 
-for i in minus_list:
-    if i <= 9:
-        check_list.append(i)
-test = sum(check_list)
 validation_number = sum(check_list) % 10
 
 if validation_number == check_digit:
     print("Credit card number is valid.")
 else:
     print("Credit card number is not valid.")
-
-print(number_list2)
-print(multiply_list)
-print(minus_list)
-print(check_list)
-print(test)
-print(validation_number)
