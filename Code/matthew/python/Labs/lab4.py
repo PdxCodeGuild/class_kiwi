@@ -3,24 +3,10 @@ Lab 4
 BlackJack Advice
 '''
 # --- Version 1
+
 # cards = { 
-#     'A': 1,
-#     'a': 1, 
-#     '2': 2,
-#     '3': 3,
-#     '4': 4,
-#     '5': 5,
-#     '6': 6,
-#     '7': 7,
-#     '8': 8,
-#     '9': 9,
-#     '10': 10,
-#     'J': 10,
-#     'j': 10,
-#     'Q': 10,
-#     'q': 10,
-#     'K': 10,
-#     'k':10
+#     'A': 1, 'a': 1,  '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
+#     '9': 9, '10': 10, 'J': 10, 'j': 10, 'Q': 10, 'q': 10, 'K': 10, 'k':1
 # }
 
 # total = 0
@@ -31,7 +17,7 @@ BlackJack Advice
 #     print('\nPlease enter three playing cards')
 #     user_cards.append(input("\nEnter your first card (A,1,2,3,4,5,6,7,8,9,J,Q,K) "))
 #     user_cards.append(input("\nEnter your second card (A,1,2,3,4,5,6,7,8,9,J,Q,K) "))
-#     user_cards.append(input("\nEnter your first card (A,1,2,3,4,5,6,7,8,9,J,Q,K) "))
+#     user_cards.append(input("\nEnter your third card (A,1,2,3,4,5,6,7,8,9,J,Q,K) "))
 #     if 'q' in user_cards:
 #         break
 #     for card in user_cards:
@@ -98,4 +84,4 @@ def blackjack_advice():
         return ('\n{total} Busted')
 
     
-print(blackjack_advice())
+# print(blackjack_advice())

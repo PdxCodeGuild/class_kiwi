@@ -17,7 +17,6 @@ def rot_cipher_encrypt(message:str,shift:int):
     14 : 'n', 15 : 'o', 16 : 'p', 17 : 'q', 18 : 'r', 19 : 's', 20 : 't',
     21 : 'u', 22 : 'v', 23 : 'w', 24 : 'x', 25 : 'y', 
 }
-
     encrypted_text = ''
     for letter in message:
         num = encrypt_dict[letter]
@@ -40,16 +39,15 @@ def rot_cipher_decrypt(message:str,shift:int):
     14 : 'n', 15 : 'o', 16 : 'p', 17 : 'q', 18 : 'r', 19 : 's', 20 : 't',
     21 : 'u', 22 : 'v', 23 : 'w', 24 : 'x', 25 : 'y', 
 } 
-
     decrypt_text = ''
     for letter in message:
         num = encrypt_dict[letter]
-        num = ((num - shift + 26) % 26)
+        num = ((num - shift) % 26)
         decrypt_text += decrypt_dict[num]
     return decrypt_text
 
-message = 'hello'
-shift = 16
+message = 'longstringofwords'
+shift = 19
 encrypted_message = rot_cipher_encrypt(message, shift)
 print(encrypted_message) # xubbe
 decypted_message = rot_cipher_decrypt(encrypted_message, shift)

@@ -45,12 +45,12 @@ def credit_card_check(credit_card):
         if num % 2 == 0: # will check for odd and even, if it is even it will be 0.
             credit_card[num] = value * 2
 
-    for num, value in enumerate(credit_card): 
+    for num, value in enumerate(credit_card): # using enumerate to check both position in list and value at the same position
         if value > 9:
-            credit_card[num] = value - 9
+            credit_card[num] = value - 9 # asining new value to credit_card[x] 
 
-    sum_credit_card = sum(credit_card)
-    sum_credit_card = sum_credit_card % 10
+    sum_credit_card = sum(credit_card) # adding all the numbers together
+    sum_credit_card = sum_credit_card % 10 # getting the last digit
 
     if sum_credit_card == last_num_credit:
         return True, print("valid")
