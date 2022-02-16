@@ -32,9 +32,9 @@ print(players_hand)
 
 # offer advice through if elif 
 
-if players_hand <= 13: 
+if players_hand <= 17: 
     print ('Hit')
-elif 13 <= players_hand <= 20:
+elif 17 <= players_hand <= 20:
     print ('Stay')
 elif players_hand == 21:
     print ('Black Jack!')
