@@ -81,8 +81,7 @@ rotated_phrase = []
 if rotation_amount < (number_of_encryptions - 1):   
     while rotation_amount < (number_of_encryptions - 1):
         rotated_phrase = encrypt_decrypt(encoded_letters)
-        rotated_phrase.append(more_encoded_letters)
-        more_encoded_letters.clear()
+        mencoded_letters.clear()
         more_encoded_letters = encrypt_decrypt(rotated_phrase)
         rotation_amount += 1
 
