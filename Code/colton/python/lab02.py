@@ -20,30 +20,34 @@ def average(numbers):
         x = round(x, 2) # round the result by two decimal points
     return x
 
+def main():
+    
+    nums = [5, 0, 8, 3, 4, 1, 6]
 
-nums = [5, 0, 8, 3, 4, 1, 6]
+    print(average(nums))
+    time.sleep(2)
 
-print(average(nums))
-time.sleep(2)
+    # Version 2
 
-# Version 2
+    # Get user input and give an average 
 
-# Get user input and give an average 
+    nums = []
 
-nums = []
+    while True:
+            user_input = input("Enter a number or 'done' to end equation:  ") # repeats question until user wants result
+            if user_input.isdigit():
+                nums.append(int(user_input)) # converts user input to an int and adds it to nums list
+                continue
+            elif user_input =="done":
+                print(f"You entered: {nums}")
+                print(f"Your average is {average(nums)}")
+                time.sleep(3)
+                break
+            else:
+                print("Enter valid input")
 
-while True:
-        user_input = input("Enter a number or 'done' to end equation:  ") # repeats question until user wants result
-        if user_input.isdigit():
-            nums.append(int(user_input)) # converts user input to an int and adds it to nums list
-            continue
-        elif user_input =="done":
-            print(f"You entered: {nums}")
-            print(f"Your average is {average(nums)}")
-            time.sleep(3)
-            break
-        else:
-            print("Enter valid input")
+    time.sleep(5)
 
-time.sleep(5)
 
+if __name__ == "__main__":
+    main()
