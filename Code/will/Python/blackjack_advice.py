@@ -81,34 +81,35 @@ def advice_calculator(card_one, card_two, card_three):
     card_one_value = card_values.get(card_one)
     card_two_value = card_values.get(card_two)
     card_three_value = card_values.get(card_three)
+    total = card_one_value + card_two_value + card_three_value
 
     while True:
 
-        if card_one_value + card_two_value + card_three_value < 17:
+        if total < 17:
             return 'Hit.'
 
-        elif card_one_value + card_two_value + card_three_value >= 17 and card_one_value + card_two_value + card_three_value < 21:
+        elif total >= 17 and total < 21:
             return 'Stay.'
     
-        elif card_one_value + card_two_value + card_three_value == 21:
+        elif total == 21:
             return 'Blackjack!'
 
-        elif card_one_value + card_two_value + card_three_value > 21 and card_one == 'A':
+        elif total > 21 and card_one == 'A':
             card_one_value = 1
 
-            if card_one_value + card_two_value + card_three_value > 21 and card_two == 'A':
+            if total > 21 and card_two == 'A':
                 card_two_value = 1
 
-                if card_one_value + card_two_value + card_three_value > 21 and card_three == 'A':
+                if total > 21 and card_three == 'A':
                     card_three_value = 1
 
-        elif card_one_value + card_two_value + card_three_value > 21 and card_two == 'A':
+        elif total > 21 and card_two == 'A':
             card_two_value = 1
 
-            if card_one_value + card_two_value + card_three_value > 21 and card_three == 'A':
+            if total > 21 and card_three == 'A':
                 card_three_value = 1
 
-        elif card_one_value + card_two_value + card_three_value > 21 and card_three == 'A':
+        elif total > 21 and card_three == 'A':
             card_three_value = 1
         else:
             return 'Already Busted.'
