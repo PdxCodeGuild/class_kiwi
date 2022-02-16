@@ -2,6 +2,9 @@
 
 # Convert given number to english representation
 # input for number
+from unicodedata import digit
+
+
 number = int(input("Please provide a number: "))
 
 # extraction of ones and tens digits
@@ -10,7 +13,6 @@ ones_digit = number % 10
 hundreds_digit = number//100
 
 
-# ones function
 def ones(num):
     """
     Function to extract ones digit name
@@ -113,21 +115,37 @@ def hundred(num):
 
 
 # If statement to test numbers used and provide output
-if 19 < number < 99:
-    total = tens(tens_digit), ones(ones_digit)
+if 19 < number <= 99:
+    if ones_digit == 0:
+        total = tens(tens_digit)
+    else:
+        total = tens(tens_digit) + " " + ones(ones_digit)
     print(total)
 elif 9 < number < 20:
     total = teens(ones_digit)
     print(total)
 elif number < 10:
-    total = ones(ones_digit)
+    if number == 0:
+        print("zero")
+    else:
+        total = ones(ones_digit)
+        print(total)
+elif 99 < number <= 109:
+    if ones_digit == 0:
+        total = hundred(hundreds_digit)
+    else:
+        total = hundred(hundreds_digit) + " " + ones(ones_digit)
     print(total)
-elif 99 < number < 109:
-    total = hundred(hundreds_digit), ones(ones_digit)
-    print(total)
-elif 110 < number < 120:
-    total = hundred(hundreds_digit), teens(ones_digit)
+elif 110 <= number < 120:
+    if ones_digit == 0:
+        total = hundred(hundreds_digit) + " " + teens(ones_digit)
+    else:
+        total = hundred(hundreds_digit) + " " + teens(ones_digit)
     print(total)
 elif number > 119:
-    total = hundred(hundreds_digit), tens(tens_digit % 10), ones(ones_digit)
+    if ones_digit == 0:
+        total = hundred(hundreds_digit) + " " + tens(tens_digit % 10)
+    else:
+        total = hundred(hundreds_digit) + " " + tens(tens_digit %
+                                                     10) + " " + ones(ones_digit)
     print(total)
