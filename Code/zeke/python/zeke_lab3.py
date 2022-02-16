@@ -14,7 +14,7 @@
 #     input(30)
 
 
-# while tewnty <
+# while twenty <
 
 numbers = {
     0: 'zero',
@@ -117,10 +117,6 @@ if num >= 100:
    
 # print(test_word)
 
-
-
-
-
 # print(zero_19[])
 # user_input =int(input(f'pick a number between 0-99? '))
 # print(numbers[user_input])
@@ -134,3 +130,10 @@ if num >= 100:
 # print(plus_twenty[user_input])
 # # print(plus_twenty[20])
 # # print(plus_twenty['twenty')
+
+
+
+#################################################################################
+
+# practice on lab
+
