@@ -12,42 +12,39 @@
 
 def peaks(data):
     """Gets peaks in a list"""
-  
+    list = []
     for i, num in enumerate(data):
         try:
             if data[i] > data[i+1] and data[i] > data[i-1]:
                 if data[i-1] == data[-1]:
                     continue
-                print("index", i, ':', num)
-                print("peaks")
+                list.append(i)
         except IndexError:
             continue
 
-    return
+    return list
 
 
 
 
 def valleys(data):
     """Gets valleys in a list"""
-
+    list = []
     for i, num in enumerate(data):
         try:
             if data[i] < data[i+1] and data[i] < data[i-1]: # data[i-1] is looping back to the last position 
                 if data[i-1] == data[-1]:
                     continue
-                print(data[i-1])
-                print("index", i, ':', num)
-                print("valleys")
+                list.append(i)
         except IndexError:
             continue
-    return
+    return list
 
 
 
 
 def peaks_and_valleys(data):
-    """Gets peaks and valleys of a list"""
+    """Gets peaks and valleys of a list and returns a list"""
     list = []
     for i, num in enumerate(data):
         try:
@@ -82,9 +79,9 @@ X""")
 
 data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 
-peaks(data)
-valleys(data)
-print(peaks_and_valleys(data))
+print(peaks(data), "Indices of Peaks")
+print(valleys(data), "Indices of Valleys")
+print(peaks_and_valleys(data),"Values of Peaks, and Valleys in order")
 
 
 
