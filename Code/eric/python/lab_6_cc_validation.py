@@ -20,7 +20,12 @@ number_broken.reverse()
 
 #double every other element
 for i in range(0, len(number_broken), 2):
-    number_broken[i] *= 2
+    number_broken[i] *= 2 
+    
+# from class
+# for index, value in enumerate(number):
+    # if index % 2 ==0:
+    #     number[index] = number_broken * 2
 
 #subtract 9 from numbers over 9
 for i in range(0, len(number_broken)):
