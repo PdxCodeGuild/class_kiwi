@@ -11,7 +11,7 @@ conversion = {
 user_input = int(input('What is the distance in feet? '))
 
 # convert
-convert_units = user_input * conversion['ft'] 
+convert_units = user_input * conversion.get('ft') 
 
 # output statement
 print(f'{user_input} ft is {round(convert_units, 4)} m')
@@ -36,7 +36,7 @@ while True:
         print(f'{units} is an invalid input')
         units = input('What are the units (choose: ft, mi, m, or km)? ').lower()
     # get dictionary item
-    unit = conversion[units]
+    unit = conversion.get(units)
     # convert
     convert_units = distance * unit
     # output statement
@@ -65,7 +65,7 @@ if units not in conversion:
     print(f'{units} is an invalid input')
     units = input('What are the units (choose: ft, mi, m, km, yd, or in)? ').lower()
 # get dictionary item
-unit = conversion[units]
+unit = conversion.get(units)
 # convert
 convert_units = distance * unit
 # output statement
@@ -97,11 +97,11 @@ if output_unit not in conversion:
     print(f'{output_unit} is an invalid input')
     output_unit = input('What are the output units (choose: ft, mi, m, or km)? ').lower()
 # get dictionary item
-unit_input = conversion[input_unit]
+unit_input = conversion.get(input_unit)
 # convert to meters
 convert_meters = distance * unit_input
 # convert meters to output unit
-convert_output = convert_meters / conversion[output_unit]
+convert_output = convert_meters / conversion.get(output_unit)
 # output statement
 print(f'{distance} {input_unit} is {round(convert_output, 7)} {output_unit}')  
 '''
