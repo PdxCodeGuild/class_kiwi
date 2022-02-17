@@ -50,7 +50,6 @@ valleys in order of appearance in the original data"""
     return sorted(peaks_valleys) # returning peaks and valleys in numerical order
 
 
-data = [1,2,3,4,5,6,7,6,5,4,5,6,7,8,9,8,7,6,7,8,9]
-
-
-print(peaks_and_valleys(data))
+if __name__ == '__main__':
+    data = [1,2,3,4,5,6,7,6,5,4,5,6,7,8,9,8,7,6,7,8,9]
+    print(peaks_and_valleys(data))
