@@ -56,6 +56,8 @@ answer(i)
 
 #  #  #                                      Version 2                           ###
 
+
+
 ones_dict = {
     "0": " ",
     "1": "one", 
@@ -80,6 +82,8 @@ ones_dict = {
 }
 
 tens_dict  = {
+    "0": "and",
+    "1": " ",
     "2": "twenty",
     "3": "thirty",
     "4": "fourty",
@@ -117,20 +121,24 @@ def answer(i):                                                # function to spli
         p = ones_dict[i]
         print(p)
     elif i > 99:
-        tens_digit = i//10
         ones_digit = i%10
+        tens_digit = i//10
+        
         hundreds_digit = tens_digit//10
         tens_digit = tens_digit%10
-        tens_digit = str(tens_digit)
+        
         ones_digit = str(ones_digit)
+        tens_digit = str(tens_digit)
         hundreds_digit = str(hundreds_digit)
-        k = hundreds_dict[hundreds_digit]
-        h = tens_dict[tens_digit]
+        if tens_digit == "1":
+            print(hundreds_dict[hundreds_digit] + ones_dict[tens_digit + ones_digit]) 
+                
         j = ones_dict[ones_digit]
-
-
-
+        h = tens_dict[tens_digit]
+        k = hundreds_dict[hundreds_digit]
+        #print(ones_dict, tens_dict, hundreds_digit )
+        #print(tens_digit + ones_digit )
+        #print(tens_digit)
+        #print(hundreds_digit)
         print(k,h,j)
-
-
 answer(i)
