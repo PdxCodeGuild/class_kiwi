@@ -3,6 +3,9 @@
 # Ask Player for cards (3 cards 3 inputs)
 
 
+from ast import Str
+
+
 card1 = input("What's your first card? ")
 card2 = input("What's your second card? ")
 card3 = input("What's your third card? ")
@@ -24,26 +27,30 @@ card_value = {
     "K": 10
 }
 
+# Function to retrieve card value
+
 
 def value(num, num2, num3):
     """
     Logic for advice based off total score of cards
     """
-    if num in card_value:
+    if num and num2 and num3 in card_value:
         value1 = card_value[num]
-
-    if num2 in card_value:
         value2 = card_value[num2]
-
-    if num3 in card_value:
         value3 = card_value[num3]
-
-    total = value1 + value2 + value3
+        total = value1 + value2 + value3
+    else:
+        total = (f"Please enter a valid value: {', '.join(card_value.keys())}")
 
     return total
 
+# Function for advice
 
-def advice(total):
+
+def advice(total: int):
+    """
+    function to provide advice based off totaled numbered cards
+    """
     if total < 17:
         answer = "Hit"
     elif 17 <= total < 21:
@@ -56,7 +63,21 @@ def advice(total):
     return answer
 
 
-final_value = value(card1, card2, card3)
-final_advice = advice(final_value)
+def logic(x, y):
+    if x == int:
+        output = x, y
+    else:
+        output = y
 
-print(final_value, final_advice)
+
+finish = logic(value, advice)
+print(finish)
+# final_value = value(card1, card2, card3)
+#     final_advice = advice(final_value)
+#     print(final_value, final_advice)
+#     print(value(card1, card2, card3))
+# else:
+#     print(final_value)
+
+
+output = logic(value, advice)
