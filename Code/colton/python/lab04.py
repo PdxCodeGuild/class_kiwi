@@ -33,13 +33,17 @@ card_values = {
 }
 
 
+def validate_card(prompt):
+    card = input(prompt).upper().strip()
+    while card not in card_values:
+        card = input(prompt).upper().strip()
+    return card
+
 dealer_hand = random.randint(15, 23) # Generates likely hands for dealer
 
 
 cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 random_card = random.choice(cards) # Generates card choice from list of cards
-
-
 
 
 total = 0 
