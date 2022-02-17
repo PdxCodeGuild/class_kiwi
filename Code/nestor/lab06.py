@@ -77,9 +77,10 @@ def credit_card_validator(credit_card):
     # if total_second_digit == sliced_cc:
     #     print(f"valid {total_second_digit} = {sliced_cc}")
     if two_split[-1] == sliced_cc:
-        return "card valid {two_split[-1]} == {sliced_cc}"
+        # return "card valid {two_split[-1]} == {sliced_cc}"
+        return True
     else:
-        return "card invalid"
+        return False
 
 
 print(credit_card_validator(current_card))
