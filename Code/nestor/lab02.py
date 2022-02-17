@@ -10,13 +10,13 @@ for num in range(len(numbers)):
 # creating variable to find average of list and printing results
 num_sum = sum(numbers) // len(numbers)
 print(f"Average: {num_sum}")
-   
 
-#Version 2
+
+# Version 2
 new_list = []
 # collecting user input for numbers in list
 while True:
-    user_input = input("Please enter in a number or type 'done' to exit: ") 
+    user_input = input("Please enter in a number or type 'done' to exit: ")
     if user_input == "done":
         break
     new_list.append(int(user_input))
@@ -26,6 +26,6 @@ total = 0
 for item in new_list:
     total += item
 
-# printing average of new number list 
-average = total / len(new_list) 
+# printing average of new number list
+average = total / len(new_list)
 print(average)
