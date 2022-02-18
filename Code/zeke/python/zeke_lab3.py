@@ -80,13 +80,16 @@ elif num <100:
         
 #num = 569//100 = 5         569 % 100= 69 
 
-if num >= 100:
-    tens_digits = num //10#8
-    ones_digits = num%10#4
+elif num >=100:
+    tens_digit = num //10
+    ones_digit = num % 10
     hundred_digit = num // 100
-    x = tens_digits%10
-    print(f'{hundred[hundred_digit]}{msc[x]}{numbers[ones_digits]}')
- 
+    x = tens_digit %10
+    if ones_digit == 0:
+        print(f'{hundred[hundred_digit]}{msc[x]}')
+    else:    
+        print(f'{hundred[hundred_digit]}{msc[x]}{numbers[ones_digit]}')
+
 
 
 # if num >=100:
