@@ -16,9 +16,8 @@ print("Peaks: ", peaks(data))
 
 def valleys(data):
 
-   # a good place to try list comprehensions and compare with peaks function, but too complicated... 
-   valleys_enum = [(i,v) for i,v in enumerate(data[0:-1]) if v < data[i - 1] and v < data[i + 1] and i != 0]
-   valleys = ([i[0] for i in valleys_enum])
+   # A good place to try list comprehensions and compare with peaks function since nearly identical. That's insane! 
+   valleys = ([i[0] for i in [(i,v) for i,v in enumerate(data[0:-1]) if v < data[i - 1] and v < data[i + 1] and i != 0]])
    return (valleys)
 
 print("Valleys: ", valleys(data))
