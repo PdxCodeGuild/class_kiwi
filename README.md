@@ -36,12 +36,12 @@ Presentation Day: June 10th, 2022
 | ----- | ---------------------- | ------------- | --------------------- | ------------- |
 | 01    | Unit Converter         | 03 Feb        | 08 Feb                | 17 Feb        |
 | 02    | Average Numbers        | 04 Feb        | 09 Feb                | 18 Feb        |
-| 03    | Number To Phrase       |               |                       |               |
-| 04    | Blackjack Advice       |               |                       |               |
-| 05    | Pick 6                 |               |                       |               |
-| 06    | Credit Card Validation |               |                       |               |
-| 07    | ROT13                  |               |                       |               |
-| 08    | Peaks And Valleys      |               |                       |               |
+| 03    | Number To Phrase       | 07 Feb        | 11 Feb                | 21 Feb        |
+| 04    | Blackjack Advice       | 08 Feb        | 11 Feb                | 22 Feb        |
+| 05    | Pick 6                 | 09 Feb        | 15 Feb                | 23 Feb        |
+| 06    | Credit Card Validation | 10 Feb        | 16 Feb                | 24 Feb        |
+| 07    | ROT13                  | 15 Feb        | 18 Feb                | 01 Mar        |
+| 08    | Peaks And Valleys      | 16 Feb        | 21 Feb                | 02 Mar        |
 | 09    | ARI                    |               |                       |               |
 | 10    | Contact List           |               |                       |               |
 | 12    | ATM                    |               |                       |               |

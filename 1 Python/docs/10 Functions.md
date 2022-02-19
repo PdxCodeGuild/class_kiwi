@@ -155,14 +155,6 @@ print(height)
 
 
 
-
-## Decorators
-
-
-TODO
-
-
-
 ## Recursion
 
 Functions can call other functions, producing a chain of invocation. Functions can even call themselves, this is called **recursion**. It's important to have a 'stop condition', otherwise this results in infinite recursion and you'll get a 'stack overflow'.
