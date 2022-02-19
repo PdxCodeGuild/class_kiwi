@@ -26,4 +26,5 @@ def numEng(n):
         return str(tens[n//10] + ' ' + ones[n % 10])
 
 
-print(numEng(23))
+n = int(input('Please input an integer 0-99 to convert to English: '))
+print(numEng(n))
