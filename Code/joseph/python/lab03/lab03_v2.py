@@ -40,5 +40,5 @@ def numEng(n):
         o = t % 10 #to get ones digit
         return str(hundo[h] + ' ' + tens[t//10] + ' ' + ones[o])
 
-
-print(numEng(645))
+n = int(input('Please input an integer 0-999 to convert to English: '))
+print(numEng(n))
