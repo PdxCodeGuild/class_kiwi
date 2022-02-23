@@ -3,12 +3,6 @@
 
 This lab will involve writing a program that allows the user to convert a number between units.
 
-Before we begin, let's run through our pre-lab checklist
-- Make sure you are on the main branch `git branch` or `git status`. If you are not on the main branch you can use `git checkout main` to move to the main branch.
-- Once on the main branch, run the command `git pull` to make sure you have the most up to date version of our repository.
-- Next we can create a branch for our lab. `git checkout -b yourname-lab1`. Replace yourname with your actual name :)
-- Now you should be all set to begin your lab.
-
 ## Version 1
 
 Ask the user for the number of feet, and print out the equivalent distance in meters. Hint: 1 ft is 0.3048 m. So we can get the output in meters by **multiplying the input distance by 0.3048**. Below is some sample input/output.

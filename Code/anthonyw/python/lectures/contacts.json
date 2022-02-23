@@ -1,0 +1,8 @@
+[
+  { "name": "Susan", "phone_number": "12312312", "fav_color": "Blue" },
+  { "name": "Bobby", "phone_number": "9832743892", "fav_color": "Red" },
+  { "name": "George", "phone_number": "983472432", "fav_color": "Green" },
+  { "name": "Tony", "phone_number": "1293821", "fav_color": "Yellow" },
+  { "name": "Ron", "phone_number": "2398473298", "fav_color": "Blue" },
+  { "name": "Brad", "phone_number": "2398472", "fav_color": "aqua" }
+]
