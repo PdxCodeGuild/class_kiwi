@@ -57,6 +57,6 @@ book = 'Pride and Predjudice'
 print(f"""
 The Ari for {book} is {score}
 This corresponds to a {ari_scale[score]['grade_level']} level of difficulty
-that is sutibale for an aver person {ari_scale[score]['ages']}
+that is sutibale for an average person {ari_scale[score]['ages']}
 """)
 
