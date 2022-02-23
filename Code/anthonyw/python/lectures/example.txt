@@ -1,0 +1,4 @@
+-- no edit
+This is file IO using Python
+Class Kiwi
+Feb 18, 2022
