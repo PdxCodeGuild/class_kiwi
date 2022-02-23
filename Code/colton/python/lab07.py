@@ -11,12 +11,30 @@
 # For each character, find the corresponding character, add it to an output string. 
 
 
+def encrypter(word): 
+    """Encrypt a word with alphabet rotation"""
+    import string
+    rotation = int(input("Enter rotation amount"))
+
+    output = ''
+    for letter in word:
+        if letter not in string.whitespace + string.punctuation:
+            if letter in string.ascii_uppercase:
+                position = string.ascii_lowercase.find(letter)
+                encrypted_letter = string.ascii_lowercase[(position + rotation) % 26]
+                output += encrypted_letter
+            else:
+                position = string.ascii_lowercase.find(letter)
+                encrypted_letter = string.ascii_lowercase[(position + rotation) % 26]
+                output += encrypted_letter
+        else:
+            output += letter
+
+
+    return output
 
 
 
-
-
-from string import ascii_letters, ascii_lowercase
 
 
 def rot13 (user_input, num):
