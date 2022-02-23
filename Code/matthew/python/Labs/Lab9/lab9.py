@@ -30,11 +30,15 @@ ari_scale = {
 
 with open('pride_and_prejudice.txt', encoding='utf-8') as file:
     pride_and_prejudice = file.read()
+
+# getting sentace count
 sentences_in_book =  len(pride_and_prejudice.split('.'))
+# removing periods and comas
 pride_and_prejudice = pride_and_prejudice.replace(',','')
 pride_and_prejudice = pride_and_prejudice.replace('.','')
+# splitting the string by any whitespace into a list
 pride_and_prejudice = pride_and_prejudice.split()
-
+# getting total word count
 word_count = len(pride_and_prejudice)
 
 character_count = 0
@@ -42,6 +46,7 @@ character_count = 0
 for word in pride_and_prejudice:
     for letter in word:
         if letter in string.ascii_letters:
+            # adding one for every letter in each word to get total character count
             character_count += 1
 
 score = (4.71 * (character_count/word_count) + .5 * (word_count/sentences_in_book) - 21.43)
