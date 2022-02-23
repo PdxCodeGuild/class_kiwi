@@ -56,3 +56,6 @@ The output should look something like the following:
     that is suitable for an average person 16-17 years old.
 
     --------------------------------------------------------
+
+
+You can choose your text from  [project gutenberg](https://www.gutenberg.org/browse/scores/top). Copy and paste the plain text version of your chosen book into a .txt file.
