@@ -27,15 +27,12 @@ user_choice2 = input("Whats Your Second Card 2: ")
 
 user_choice3 = input("Whats Your Third Card 3: ") 
 
-
-# print(user_choice)
-
-# print(card_value[user_choice, user_choice2, user_choice3])
-
-sum = (card_value[user_choice] + card_value[user_choice2] + card_value[user_choice3])
+#Define Sum
+sum = card_value[user_choice] + card_value[user_choice2] + card_value[user_choice3]
 
 print(sum)
 
+#Define Your Print Statements
 if sum <= 16:
     print("Hit")
     

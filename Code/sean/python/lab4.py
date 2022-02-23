@@ -18,7 +18,7 @@ cards_dict = {"a": 1,
               "7": 7,
               "8": 8,
               "9": 9,
-              "10": 10
+              "10": 10    
               }
 
 
@@ -32,7 +32,7 @@ def black_jack(card_1, card_2, card_3):
         print(f"You have {total}, thats Blackjack!")
     elif total < 17:
         print(f"You have {total}, You should Hit.")
-    elif total < 21:
+    elif total > 21:
         print(f"You have {total}, You already Busted.")
     elif total >= 17 and total < 21:
         print(f"You have {total}, You should Stay.")
