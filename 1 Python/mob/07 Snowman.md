@@ -8,15 +8,7 @@ Let's write a program to play a game of [Snowman](https://en.wikipedia.org/wiki/
 
 ## Loading the Words
 
-We can use the `requests` library to retreive a list of words from the internet, then split it into a list of strings. Then remove any strings that have 5 characters or fewer and randomly choose a word to start the game.
-
-```python
-import requests
-response = requests.get('https://raw.githubusercontent.com/PdxCodeGuild/class_mountain_goat/master/data/english.txt')
-print(response.text)
-```
-
-We can also download a file of english words and place it next our `.py` file and load it like so:
+Using `with open()` let's load a list of words from a file. This will be used to select our secret word.
 
 ```python
 with open('english.txt', 'r') as file:
