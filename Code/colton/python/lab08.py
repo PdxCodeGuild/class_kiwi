@@ -63,25 +63,37 @@ def peaks_and_valleys(data):
             continue
 
     return list
+
+
 # Ignore for now
 def draw_peaks_valleys(data):
-    for num in data:
-        if num == 1:
-            print("""
-X""")
-        if num == 2:
-            print("""
- X
- X""", end="")
-    return
+    pictoral = []
+    o = ''
+    for i, num in enumerate(data):
+        for i in range(num):
+            print("X")
+        
+
+        
+        
+            
+      
+            
+
+    return o
 
 
+def main():
 
-data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+    data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 
-print(peaks(data), "Indices of Peaks")
-print(valleys(data), "Indices of Valleys")
-print(peaks_and_valleys(data),"Values of Peaks, and Valleys in order")
+    print(peaks(data), "Indices of Peaks")
+    print(valleys(data), "Indices of Valleys")
+    print(peaks_and_valleys(data),"Values of Peaks, and Valleys in order")
+    print(draw_peaks_valleys(data))
 
+
+if __name__ == "__main__":
+    main()
 
 

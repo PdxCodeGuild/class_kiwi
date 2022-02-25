@@ -11,12 +11,30 @@
 # For each character, find the corresponding character, add it to an output string. 
 
 
+def encrypter(word): 
+    """Encrypt a word with alphabet rotation"""
+    import string
+    rotation = int(input("Enter rotation amount"))
+
+    output = ''
+    for letter in word:
+        if letter not in string.whitespace + string.punctuation:
+            if letter in string.ascii_uppercase:
+                position = string.ascii_lowercase.find(letter)
+                encrypted_letter = string.ascii_lowercase[(position + rotation) % 26]
+                output += encrypted_letter
+            else:
+                position = string.ascii_lowercase.find(letter)
+                encrypted_letter = string.ascii_lowercase[(position + rotation) % 26]
+                output += encrypted_letter
+        else:
+            output += letter
+
+
+    return output
 
 
 
-
-
-from string import ascii_letters, ascii_lowercase
 
 
 def rot13 (user_input, num):
@@ -68,57 +86,58 @@ def rot_decrypt (user_input, num):
 
 
 
+def main():
+
+
+    # Encrypt user_input to rot_13
+    while True: 
+
+        user_phrase = input("Enter word to convert\n").lower().strip().replace(" ", "") # ensures input is a valid number
+        if user_phrase.isalpha() == True:
+            break
+        else:
+            print("Enter a valid input")
+            continue
+
+
+    # Designate amount of rotations for encryption        
+    while True:
+        try:    
+            user_num = int(input("Enter number to determine starting letter for encryption\n"))
+            break
+        except ValueError:
+            print("Enter valid input, 1-26")
+            continue
+
+        
+
+    rot13(user_phrase, user_num)
+
+
+    # Decrypt back to ascii_lowercase
+    while True: 
+
+        user_phrase = input("Enter word to convert\n").lower().strip().replace(" ", "") # ensures input is a valid number
+        if user_phrase.isalpha() == True:
+            break
+        else:
+            print("Enter a valid input")
+            continue
+
+
+    # Enter amount of rotations to decrypt
+    while True:
+        try:    
+            user_num = int(input("Enter number to determine starting letter for encryption\n"))
+            break
+        except ValueError:
+            print("Enter valid input, 1-26")
+            continue
+
+
+    rot_decrypt(user_phrase, user_num)
 
 
 
-# Encrypt user_input to rot_13
-while True: 
-
-    user_phrase = input("Enter word to convert\n").lower().strip().replace(" ", "") # ensures input is a valid number
-    if user_phrase.isalpha() == True:
-        break
-    else:
-        print("Enter a valid input")
-        continue
-
-
-# Designate amount of rotations for encryption        
-while True:
-    try:    
-        user_num = int(input("Enter number to determine starting letter for encryption\n"))
-        break
-    except ValueError:
-        print("Enter valid input, 1-26")
-        continue
-
-    
-
-rot13(user_phrase, user_num)
-
-
-# Decrypt back to ascii_lowercase
-while True: 
-
-    user_phrase = input("Enter word to convert\n").lower().strip().replace(" ", "") # ensures input is a valid number
-    if user_phrase.isalpha() == True:
-        break
-    else:
-        print("Enter a valid input")
-        continue
-
-
-# Enter amount of rotations to decrypt
-while True:
-    try:    
-        user_num = int(input("Enter number to determine starting letter for encryption\n"))
-        break
-    except ValueError:
-        print("Enter valid input, 1-26")
-        continue
-
-
-rot_decrypt(user_phrase, user_num)
-
-
-
-
+if __name__ == "__main__":
+    main()
