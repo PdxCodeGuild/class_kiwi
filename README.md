@@ -43,13 +43,9 @@ Presentation Day: June 10th, 2022
 | 07    | ROT13                  | 15 Feb        | 18 Feb                | 01 Mar        |
 | 08    | Peaks And Valleys      | 16 Feb        | 21 Feb                | 02 Mar        |
 | 09    | ARI                    | 22 Feb        | 25 Feb                | 08 Mar        |
-| 10    | Contact List           |               |                       |               |
-| 12    | ATM                    |               |                       |               |
-| 13    | Tic-Tac-Toe            |               |                       |               |
+| 12    | ATM                    | 24 Feb        | 01 Mar                | 10 Mar        |
 | 14    | Dad Joke API           |               |                       |               |
-| Group | Jackalope              |               |                       |               |
 | 15    | Quotes API             |               |                       |               |
-| 16    | Mini-Capstone          |               |                       |               |
 
 
 ## Student Presentations
