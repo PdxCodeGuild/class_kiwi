@@ -1,6 +1,22 @@
 # # Lab 7: ROT Cipher
 
 import string
+#Prompt the user for a string.
+message = input('Please insert your message to encrypt: ' ).lower()
+
+def rot13 (message):
+    alphabet = string.ascii_lowercase
+    user_string = ''
+    for i in message:
+        if i in alphabet:
+            if alphabet.index(i) < 13:
+                user_string += alphabet[alphabet.index(i) + 13]
+            else: user_string += alphabet[alphabet.index(i) - 13]
+
+    return user_string 
+
+print(rot13(message))
+
 
 
 
@@ -18,21 +34,3 @@ import string
 
 # *** Resources used: https://www.askpython.com/python/built-in-methods/python-chr-and-ord-methods 
 # *** https://www.pythonprogramming.in/python-list-alphanumeric-characters.html
-
-message = input('Please insert your message to encrypt: ' ).lower()
-
-def rot13 (message):
-    alphabet = string.ascii_lowercase
-    user_string = ''
-    for i in message:
-        if i in alphabet:
-            if alphabet.index(i) < 13:
-                user_string += alphabet[alphabet.index(i) + 13]
-            else: user_string += alphabet[alphabet.index(i) - 13]
-    else: user_string += i 
-
-    return user_string 
-
-print(rot13(message))
-
-
