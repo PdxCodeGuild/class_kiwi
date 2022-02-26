@@ -8,6 +8,7 @@
 
 #word conversion dictionaries
 tens = {
+    1 : "Ten",
     2 : "Twenty",
     3 : "Thirty",
     4 : "Forty",
@@ -102,7 +103,7 @@ def hundos(num):
         elif tens_digit > 1 and ones_digit == 0:
             return hundreds[hundreds_digit] + ' and ' + tens[tens_digit]
         
-        elif tens_digit == 1:
+        elif tens_digit >= 0:
             return hundreds[hundreds_digit] + ' and ' + teens[ones_digit]
 
         elif tens_digit > 1 and ones_digit > 0:
@@ -121,6 +122,8 @@ def hundos(num):
 
         elif tens_digit == 0 and 0 <= ones_digit <=9:
             return ones[ones_digit]
+        
+    
 
 print("Please enter a number: ")
 print(hundos(int(input())))
