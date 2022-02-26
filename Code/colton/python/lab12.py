@@ -76,7 +76,7 @@ while True:
         print('transactions - print out all transactions')
         print('exit     - exit the program')
     elif command == 'transactions':
-        history = ATM.print_transactions(transactionlist) # call the print_transactions method
+        history = ATM.print_transactions(transactionlist) # call the print_transactions method.
         print(history)
     elif command == 'exit':
         break
