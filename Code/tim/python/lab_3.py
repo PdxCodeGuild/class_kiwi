@@ -1,5 +1,5 @@
 """
-Average Numbers
+Digit to English Converter
 Version 1
 Timothy Hampton
 Hampton12101@gmail.com 
@@ -81,7 +81,7 @@ if  user_input == 0:
 
 elif tens_digit == 1 and hundreds_digit < 1:
     print(f'{tens_english[tens_digit]}')
-elif tens_digit == 1 and hundreds_digit > 1:
+elif tens_digit == 1 and hundreds_digit >= 1:
     print(f'{hundreds_english[hundreds_digit]}{tens_english[tens_digit]}')
 # elif hundreds_digit == 0:
 #     print(f'{tens_english[tens_digit]}{ones_english[ones_digit]}')
