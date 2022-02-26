@@ -6,7 +6,7 @@
 
 # ![ARI Formula](https://en.wikipedia.org/api/rest_v1/media/math/render/svg/878d1640d23781351133cad73bdf27bdf8bfe2fd)
 
-# The score is computed by multiplying the number of characters divided by the number of words by 4.71,
+# The score is computed by multiplying the number of characters* divided by the number of words* by 4.71,
 # adding the number of words divided by the number of sentences multiplied by 0.5, and subtracting 21.43. 
 # **If the result is a decimal, always round up.** Scores greater than 14 should be presented as having the same age 
 # and grade level as scores of 14.
@@ -17,59 +17,84 @@
 beowolf_file = open('beowolf.txt', encoding ='utf-8')
 beowolf_text = beowolf_file.read()
 
-# print(beowolf_text)
-# create a variable to hold the total count of the txrt file 
-word_count = 0
-#iterate over each line of the file and open in read mode 
-for line in beowolf_text: 
-    words = line.split(" ") #use split function to create a list of strings after splitting the given string by " ".
-    word_count =+ len(words) # use len of words to count the words 
-beowolf_file.close() #ensure to close the .txt file 
-
-print("The number of words in the beowolf.txt file is: ", word_count)
 
 
-# Scores correspond to the following ages and grad levels:
 
-# ```
-#     Score  Ages     Grade Level
-#      1       5-6    Kindergarten
-#      2       6-7    First Grade
-#      3       7-8    Second Grade
-#      4       8-9    Third Grade
-#      5      9-10    Fourth Grade
-#      6     10-11    Fifth Grade
-#      7     11-12    Sixth Grade
-#      8     12-13    Seventh Grade
-#      9     13-14    Eighth Grade
-#     10     14-15    Ninth Grade
-#     11     15-16    Tenth Grade
-#     12     16-17    Eleventh grade
-#     13     17-18    Twelfth grade
-#     14     18-22    College
-# ```
+# Make a function to split text into sentences
+import string
+def break_sentences(text): 
+    num_sentences = 0 
+    for i in range(len(beowolf_text)):
+        if beowolf_text[i] == '.' or beowolf_text[i] == '?' or beowolf_text[i] == '!':
+            num_sentences += 1
+    return num_sentences
+num_sentences = break_sentences(beowolf_text)
+# Make a function to break text into words
+
+# print(num_sentences)
+ 
+def word_count(text):
+    # beowolf_text.replace(as)
+    words = 0
+    for character in string.punctuation + string.digits:
+        if character in text:
+            text = text.replace(character, '')
+    words = text.split()
+    #     words.append(str(i.lower))  
+    return len(words)
+
+# print(word_count(beowolf_text))
+
+# create a function to break up characters in the text
+
+def characters_counter(text):
+    num_characters = 0
+    for i in text:
+        if i.lower() in 'abcdefghijklmnopqrstuvwxyz0123456789':
+            num_characters += 1
+    return num_characters
+
+# print(characters_counter(beowolf_text))
+
+def ARI_score(text):
+    character_count = characters_counter(text)
+    words_num = word_count(text)
+    sent_count = break_sentences(text)
+    ari = 4.71*(character_count/words_num) + 0.5*(words_num/sent_count)-21.43
+   
+   
+    # char_div_words = ((characters_counter(text) / word_count(text)))
+    # words_div_sent = (word_count(text))/break_sentences(text)
+    # ari = 4.71*(char_div_words) + 0.5*(words_div_sent)-21.43
+
+    # # ARI = (((char_div_words * 4.71) + (words_div_sent * 0.5)) - 21.43)
+    return ari
+
+beowolf_ARI = round(ARI_score(beowolf_text))
+
+
 
 # Once you’ve computed the ARI score, you can use the following dictionary to look up the age range and grade level.
 
-# ```python
-# ari_scale = {
-#      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
-#      2: {'ages':   '6-7', 'grade_level':    '1st Grade'},
-#      3: {'ages':   '7-8', 'grade_level':    '2nd Grade'},
-#      4: {'ages':   '8-9', 'grade_level':    '3rd Grade'},
-#      5: {'ages':  '9-10', 'grade_level':    '4th Grade'},
-#      6: {'ages': '10-11', 'grade_level':    '5th Grade'},
-#      7: {'ages': '11-12', 'grade_level':    '6th Grade'},
-#      8: {'ages': '12-13', 'grade_level':    '7th Grade'},
-#      9: {'ages': '13-14', 'grade_level':    '8th Grade'},
-#     10: {'ages': '14-15', 'grade_level':    '9th Grade'},
-#     11: {'ages': '15-16', 'grade_level':   '10th Grade'},
-#     12: {'ages': '16-17', 'grade_level':   '11th Grade'},
-#     13: {'ages': '17-18', 'grade_level':   '12th Grade'},
-#     14: {'ages': '18-22', 'grade_level':      'College'}
-# }
-# ```
 
+ari_scale = {
+     1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
+     2: {'ages':   '6-7', 'grade_level':    '1st Grade'},
+     3: {'ages':   '7-8', 'grade_level':    '2nd Grade'},
+     4: {'ages':   '8-9', 'grade_level':    '3rd Grade'},
+     5: {'ages':  '9-10', 'grade_level':    '4th Grade'},
+     6: {'ages': '10-11', 'grade_level':    '5th Grade'},
+     7: {'ages': '11-12', 'grade_level':    '6th Grade'},
+     8: {'ages': '12-13', 'grade_level':    '7th Grade'},
+     9: {'ages': '13-14', 'grade_level':    '8th Grade'},
+    10: {'ages': '14-15', 'grade_level':    '9th Grade'},
+    11: {'ages': '15-16', 'grade_level':   '10th Grade'},
+    12: {'ages': '16-17', 'grade_level':   '11th Grade'},
+    13: {'ages': '17-18', 'grade_level':   '12th Grade'},
+    14: {'ages': '18-22', 'grade_level':      'College'}
+}
+
+print(f"The ARI for BeoWulf is {beowolf_ARI}. \nThis corresponds to {ari_scale[beowolf_ARI]['grade_level']} level of difficulty. \nThat is suitable for ages {ari_scale[beowolf_ARI]['ages']} years old.")
 # The output should look something like the following:
 
 #     --------------------------------------------------------
