@@ -220,11 +220,11 @@ For your capstone presentation, you should plan out what features of your projec
 
 ## Rough Timeline
 
-- Week 1, 2, 3: Python
-- Week 4: HTML + CSS
-- Week 5, 6, 7: JavaScript
+- Week 1, 2, 3, 4, 5: Python
+- Week 6, 7: HTML + CSS
 - Week 8, 9, 10, 11: Django
-- Week 12, 13, 14: Capstone
+- Week 12, 13, 14: JavaScript
+- Week 15, 16, 17, 18: Capstone
 
 ## Code of Conduct
 
