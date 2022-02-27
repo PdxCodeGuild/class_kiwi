@@ -8,7 +8,7 @@ class ATM:
 
     def deposit(self, amount):
         self.balance += amount
-        deposits.append(amount)
+        deposits_withdrawals.append(f"You deposited: ${amount}")
         return self.balance
 
     def check_withdrawal(self, amount):
@@ -19,7 +19,7 @@ class ATM:
 
     def withdraw(self, amount):
         self.balance -= amount
-        withdrawals.append(amount)
+        deposits_withdrawals.append(f"You withdrew: ${amount}")
         return self.balance
 
     def calc_interest(self):
@@ -27,13 +27,10 @@ class ATM:
         return interest_earned
 
     def print_transactions(self):
-        for x in deposits:
-            print(f"Deposited: ${x}")
-        for x in withdrawals:
-            print(f"Withdrew: $ {x}")
- 
-deposits = []
-withdrawals = []
+        for x in deposits_withdrawals:
+            print(x)
+  
+deposits_withdrawals = []
 
 atm = ATM() # create an instance of our class
 print('Welcome to the ATM')
