@@ -40,7 +40,7 @@ while True:
         joke = jokes_results['results'][i]['joke']
         print(joke)
         
-        next_joke = input('Do you want the next joke?: ')
+        next_joke = input('Do you want the next joke?: ').lower()
         if next_joke in in_valid and i + 1 <= jokes_results['total_jokes']:
             i += 1
             continue
