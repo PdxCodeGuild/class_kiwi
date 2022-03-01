@@ -81,9 +81,9 @@ def advice_calculator(card_one, card_two, card_three):
     card_one_value = card_values.get(card_one)
     card_two_value = card_values.get(card_two)
     card_three_value = card_values.get(card_three)
-    total = card_one_value + card_two_value + card_three_value
 
     while True:
+        total = card_one_value + card_two_value + card_three_value
 
         if total < 17:
             return 'Hit.'
