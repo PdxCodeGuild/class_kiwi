@@ -121,6 +121,12 @@ def joke_search():
 
 
 
-                    
-print(random_joke_generator())
-joke_search()
+def main():
+
+    print(random_joke_generator())
+    joke_search()
+
+
+
+if __name__ == "__main__":
+    main()
