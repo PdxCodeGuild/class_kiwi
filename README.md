@@ -24,28 +24,40 @@ M-F 6:00 pm – 9:30 pm pst
 
 Capstone proposal due: May 13th, 2022  
 Presentation Day: June 10th, 2022  
-## General Labs Assigned:
 
-| Lab   | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
-| ----- | ---------------------- | ------------- | --------------------- | ------------- |
-| 00    | Getting Started        | 01 Feb        | 04 Feb                | 14 Feb        |
+## Html/CSS/Flask Labs Assigned:
+| Lab | Name               | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | ------------------ | ------------- | --------------------- | ------------- |
+| 01  | Bio                |               |                       |               |
+| 02  | Company Home Page  |               |                       |               |
+| 03  | Blog               |               |                       |               |
+| 04  | Burrito Order Form |               |                       |               |
+| 05  | Flask Redo         |               |                       |               |
+| 06  | Personal Portfolio |               |                       |               |
 
 ## Python Labs Assigned:
 
-| Lab   | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
-| ----- | ---------------------- | ------------- | --------------------- | ------------- |
-| 01    | Unit Converter         | 03 Feb        | 08 Feb                | 17 Feb        |
-| 02    | Average Numbers        | 04 Feb        | 09 Feb                | 18 Feb        |
-| 03    | Number To Phrase       | 07 Feb        | 11 Feb                | 21 Feb        |
-| 04    | Blackjack Advice       | 08 Feb        | 11 Feb                | 22 Feb        |
-| 05    | Pick 6                 | 09 Feb        | 15 Feb                | 23 Feb        |
-| 06    | Credit Card Validation | 10 Feb        | 16 Feb                | 24 Feb        |
-| 07    | ROT13                  | 15 Feb        | 18 Feb                | 01 Mar        |
-| 08    | Peaks And Valleys      | 16 Feb        | 21 Feb                | 02 Mar        |
-| 09    | ARI                    | 22 Feb        | 25 Feb                | 08 Mar        |
-| 12    | ATM                    | 24 Feb        | 01 Mar                | 10 Mar        |
-| 14    | Dad Joke API           | 28 Feb        | 04 Mar                | 14 Mar        |
-| 15    | Quotes API             | 01 Mar        | 04 Mar                | 15 Mar        |
+| Lab | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | ---------------------- | ------------- | --------------------- | ------------- |
+| 01  | Unit Converter         | 03 Feb        | 08 Feb                | 17 Feb        |
+| 02  | Average Numbers        | 04 Feb        | 09 Feb                | 18 Feb        |
+| 03  | Number To Phrase       | 07 Feb        | 11 Feb                | 21 Feb        |
+| 04  | Blackjack Advice       | 08 Feb        | 11 Feb                | 22 Feb        |
+| 05  | Pick 6                 | 09 Feb        | 15 Feb                | 23 Feb        |
+| 06  | Credit Card Validation | 10 Feb        | 16 Feb                | 24 Feb        |
+| 07  | ROT13                  | 15 Feb        | 18 Feb                | 01 Mar        |
+| 08  | Peaks And Valleys      | 16 Feb        | 21 Feb                | 02 Mar        |
+| 09  | ARI                    | 22 Feb        | 25 Feb                | 08 Mar        |
+| 12  | ATM                    | 24 Feb        | 01 Mar                | 10 Mar        |
+| 14  | Dad Joke API           | 28 Feb        | 04 Mar                | 14 Mar        |
+| 15  | Quotes API             | 01 Mar        | 04 Mar                | 15 Mar        |
+
+## General Labs Assigned:
+
+| Lab | Name            | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | --------------- | ------------- | --------------------- | ------------- |
+| 00  | Getting Started | 01 Feb        | 04 Feb                | 14 Feb        |
+
 
 
 ## Student Presentations

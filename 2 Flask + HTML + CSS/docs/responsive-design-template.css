@@ -1,0 +1,43 @@
+/* EXTRA SMALL SCREEN WIDTH */
+/* smartphones in portrait-mode, devices less than 576px wide */
+
+/* 1. Use your browser's responsive design mode to view your webpage
+in smartphone-portrait mode.  Fill in the css below until it looks right. */
+
+@media (min-width: 576px) {
+	/* SMALL SCREEN WIDTH */
+	/* smartphones in landscape-mode, devices less than 768 px wide */
+	
+	/* 2.  Switch to smartphone-landscape mode on your browser.  Add any
+	necessary css changes for landscape-width here. */
+}
+	
+	
+@media (min-width: 768px) {
+	/* MEDIUM SCREEN WIDTH */
+	/* tablets, devices less than 992px wide */
+
+	/* 3.  Switch to tablet mode on your browser.  Add any necessary css
+	for tablet-width here. */
+}
+
+
+@media (min-width: 992px) {
+	/* LARGE SCREEN WIDTH */
+	/* laptops, desktops, devices less than 1200px wide */
+
+	/* 4. Turn off responsive design mode on your desktop.  Add any css
+	here to make your page look good on your desktop. */
+}
+
+
+@media (min-width: 1200px) {
+	/* EXTRA LARGE SCREEN WIDTH */
+	/* large desktops, devices 1200px or wider */
+
+	/* 5. Even smaller desktops can emulate extra-wide monitors
+	in responsive design mode.  Often desktop-width is sufficient
+	for ultra-wide screens, but as more and more internet users
+	have larger screens, developers are beginning to style websites
+	for those users. Add that css here. */
+}
