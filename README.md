@@ -44,8 +44,8 @@ Presentation Day: June 10th, 2022
 | 08    | Peaks And Valleys      | 16 Feb        | 21 Feb                | 02 Mar        |
 | 09    | ARI                    | 22 Feb        | 25 Feb                | 08 Mar        |
 | 12    | ATM                    | 24 Feb        | 01 Mar                | 10 Mar        |
-| 14    | Dad Joke API           |               |                       |               |
-| 15    | Quotes API             |               |                       |               |
+| 14    | Dad Joke API           | 28 Feb        | 04 Mar                | 14 Mar        |
+| 15    | Quotes API             | 01 Mar        | 04 Mar                | 15 Mar        |
 
 
 ## Student Presentations
