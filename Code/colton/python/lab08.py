@@ -70,7 +70,6 @@ def draw_peaks_valleys(data):
     """Draws peaks and valleys of a list"""
     rows = max(data)
     cols = len(data)
-    pictoral = ""
     for i in range(rows, 0, -1):
         for num in range(cols):
             if i > data[num]:
@@ -80,7 +79,7 @@ def draw_peaks_valleys(data):
         print()
     print(data)
         
-    return pictoral
+    return
 
 
 def main():
