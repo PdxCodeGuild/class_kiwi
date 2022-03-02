@@ -17,13 +17,21 @@ words = float(len(word))
 #Assign a variable for characters. spaces will be replace by blank and then character will be counted
 
 character = lab9_book.replace(' ', '')
+character = lab9_book.replace('\n','')
 characters = float(len(character))
-# print(characters)
+print(characters)
 
-# ari = 4.71(characters/words) + 0.5(words/sentences) - 21.43
-ari = 4.71*(characters/words) + 0.5*(words/sentences) - 21.43
-ari = math.ceil(ari)
-# print(ari)
+
+def ari():
+    ari = 4.71*(characters/words) + 0.5*(words/sentences) - 21.43
+    
+    ari = math.ceil(ari)
+    if ari > 14:
+        return 14
+    else:
+        return ari
+
+
 ari_scale = {
      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
      2: {'ages':   '6-7', 'grade_level':    '1st Grade'},
@@ -41,7 +49,7 @@ ari_scale = {
     14: {'ages': '18-22', 'grade_level':      'College'}
 }
 
-print(f"\nThe ARI for gettysburg-persuasion.txt is {ari}. This corresponds to the {ari_scale[ari].get('grade_level')} grade level of difficulty that is suitable for an average person {ari_scale[ari].get('ages')}. ")
+print(f"\nThe ARI for gettysburg-persuasion.txt is {ari()}. This corresponds to the {ari_scale[ari()].get('grade_level')} grade level of difficulty that is suitable for an average person {ari_scale[ari()].get('ages')}. ")
 
 
 

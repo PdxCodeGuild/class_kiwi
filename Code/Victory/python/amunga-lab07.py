@@ -19,8 +19,8 @@ def decipher_function(user, cipher_num):
     for t in range(len(user)):
         index_value = ord(user[t])
         if index_value + cipher_num > 122:
-            cipher_num -= (122-index_value)
-            new_shift = cipher_num % 26 # 26 is the range of characters from a to z
+            new_shift = (index_value + cipher_num) - 122
+            new_shift = new_shift % 26
             message += chr(96 + new_shift)
         else:
             message += chr(index_value + cipher_num)
@@ -45,8 +45,8 @@ def version2_cypher(user_msm, rot_user):
 
         index_val = ord(user_msm[j])
         if index_val + rot_user > 122:
-            rot_user -= (122-index_val)
-            new_rot = rot_user % 26
+            rot_us = (index_val+ rot_user) - 122
+            new_rot = rot_us % 26
             ver_2_msm += chr(96 + new_rot)
         else:
             ver_2_msm += chr(index_val + rot_user)

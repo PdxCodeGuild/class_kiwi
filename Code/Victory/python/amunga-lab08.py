@@ -1,34 +1,38 @@
 data =[1,2,3,4,5,6,7,6,5,4,5,6,7,8,9,8,7,6,7,8,9]
-index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+#index = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-def peaks(n):
+def peaks(data):
+    peak = []
 
-    for x in n:
-        if data[x-1]< data[x] > data[x+1]:
-            return [data[x],index[x]]
-            
-P=peaks(data)
+    for index in range(1, len(data)-1):
+        if data[index - 1] < data[index]> data[index + 1]:
+            peak.append(index)
+    
+    return peak
+print(peaks(data))
 
-def valleys(m):
+def valleys(data):
+    valley = []
 
-    for y in m:
+    for index in range(1, len(data)-1):
+        if data[index - 1] > data[index]< data[index + 1]:
+            valley.append(index)
+    
+    return valley
 
-        if data[y-1]> data[y] <data[y+1]:
-            return [index[y], data[y]]
+print(valleys(data))
 
-V=valleys(data)
-
-print(P)
-print(V)
 
 
 def peaks_and_valleys(n):
+    P=peaks(data)
+    V=valleys(data)
 
-    
-    for z in range(len(n)):
-        w = [P[z],V[z],P[z+1],V[z+1]]
-        return w
+    p_v = P + V
+
+    p_v.sort()
+
+    return p_v
 
 print(peaks_and_valleys(data))
-
 
