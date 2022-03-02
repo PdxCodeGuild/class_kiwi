@@ -1,4 +1,5 @@
 # ARI Calculator - Version 1
+import math
 
 ari_scale = {
      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
@@ -24,15 +25,18 @@ with open('beyond_good_evil.txt') as file:
 
 num_characters = 0
 for char in contents:
-    num_characters += 1
+    if char == ' ':
+        continue
+    else:
+        num_characters += 1
 
 # count common sentence ending punctuations. add ' ' after to ensure end of statement
-num_exclam = contents.count('! ')
-num_question = contents.count('? ')
+num_exclam = contents.count('! ') + contents.count('!\n')
+num_question = contents.count('? ') + contents.count('?\n')
 num_elipses = contents.count('... ')
 
 # subtract number of elipses from total periods so elipses aren't counted twice
-num_period = contents.count('. ') - num_elipses
+num_period = contents.count('. ') + contents.count('.\n') - num_elipses
 num_sentences = num_question + num_exclam + num_period + num_elipses
 
 
@@ -44,7 +48,7 @@ for word in contents_words:
 #The score is computed by multiplying the number of characters divided by the number of words by 4.71, ]
 # adding the number of words divided by the number of sentences multiplied by 0.5, and subtracting 21.43.
 # If the result is a decimal, always round up. 
-difficulty_score = round(4.71 * (num_characters / num_words) + 0.5 * (num_words / num_sentences) - 21.43)
+difficulty_score = math.ceil(4.71 * (num_characters / num_words) + 0.5 * (num_words / num_sentences) - 21.43)
 
 # Scores greater than 14 should be presented as having the same age and grade level as scores of 14.
 if difficulty_score > 14:
