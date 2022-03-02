@@ -1,0 +1,6 @@
+# Mac
+pip3 install requests
+# Windows
+pip install requests
+# Alternate windows
+python -m pip install requests

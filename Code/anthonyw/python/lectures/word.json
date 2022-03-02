@@ -1,0 +1,59 @@
+[
+  {
+    "word": "kiwi",
+    "phonetic": "/ˈkiːwi/",
+    "phonetics": [
+      {
+        "text": "/ˈkiːwi/",
+        "audio": "https://api.dictionaryapi.dev/media/pronunciations/en/kiwi-au.mp3",
+        "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=79218758",
+        "license": {
+          "name": "BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0"
+        }
+      }
+    ],
+    "meanings": [
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          { "definition": "A New Zealander.", "synonyms": [], "antonyms": [] }
+        ]
+      },
+      {
+        "partOfSpeech": "noun",
+        "definitions": [
+          {
+            "definition": "A flightless bird of the genus Apteryx native to New Zealand.",
+            "synonyms": [],
+            "antonyms": []
+          },
+          {
+            "definition": "A New Zealand dollar.",
+            "synonyms": [],
+            "antonyms": []
+          },
+          { "definition": "A kiwi fruit.", "synonyms": [], "antonyms": [] },
+          {
+            "definition": "A green-yellow colour, like that of kiwi flesh (also called kiwi green).",
+            "synonyms": [],
+            "antonyms": []
+          },
+          {
+            "definition": "A member of the air force who does not fly.",
+            "synonyms": [],
+            "antonyms": []
+          }
+        ]
+      }
+    ],
+    "license": {
+      "name": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    "sourceUrls": [
+      "https://en.wiktionary.org/wiki/Kiwi",
+      "https://en.wiktionary.org/wiki/kiwi"
+    ]
+  }
+]
