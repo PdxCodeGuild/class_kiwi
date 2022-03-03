@@ -27,7 +27,7 @@ joke = dad_jokes['joke']
 # print(dad_jokes_list['results'][1]['joke'])
 
 counter = 0
-break_loop = ['no', 'stop', 'quit', 'q', 'exit']
+break_loop = ['no', 'stop', 'quit', 'q', 'exit', 'n']
 yes = ['yes','yeah','yea','ya','y']
 
 while True:
@@ -40,12 +40,8 @@ while True:
         change_pg = input('Would you like to change the page your on?: \n')
         if change_pg in yes:
             page = input('What page do you want to start on? \n')
-            for i in page:
-                while True:
-                    if i.isdigit() == False:
-                        page = input('What page do you want to start on? \n')
-                    else:
-                        break
+            while page.isdigit() == False:
+                    page = input('What page do you want to start on? \n')
         response = requests.get(f'https://icanhazdadjoke.com/search?term=&page={page}', headers={
         'Accept': 'application/json',
         })
