@@ -65,22 +65,21 @@ def peaks_and_valleys(data):
     return list
 
 
-# Ignore for now
+# From the lab review
 def draw_peaks_valleys(data):
-    pictoral = []
-    o = ''
-    for i, num in enumerate(data):
-        for i in range(num):
-            print("X")
+    """Draws peaks and valleys of a list"""
+    rows = max(data)
+    cols = len(data)
+    for i in range(rows, 0, -1):
+        for num in range(cols):
+            if i > data[num]:
+                print("  ", end=" ")
+            else:
+                print(" X", end=" ")
+        print()
+    print(data)
         
-
-        
-        
-            
-      
-            
-
-    return o
+    return
 
 
 def main():
