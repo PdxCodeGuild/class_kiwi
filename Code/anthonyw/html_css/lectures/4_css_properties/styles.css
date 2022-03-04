@@ -1,0 +1,78 @@
+body {
+  background-color: slategray;
+}
+
+p {
+  /* font color */
+  color: tomato;
+  /* color: rgb(100, 100, 180); */
+  /* color: hsl(100, 80%, 50%); */
+  /* color: #e3dfc8; */
+
+  /* background color */
+  background-color: #b8b8b8;
+
+  /* font size */
+  font-size: 32px;
+}
+
+/* border size, type, color*/
+/* .parent {
+  border: 4px solid #e3dfc8;
+  width: 500px;
+  height: 300px;
+}
+
+.child {
+  width: 50vw;
+  border: 4px dashed tomato;
+  height: 50%;
+} */
+
+.parent {
+  /* border size, type, color*/
+  border: 4px solid #e3dfc8;
+}
+
+.child {
+  width: 200px;
+  border: 4px dashed tomato;
+  height: 200px;
+  /* margin: 10px 20px 40px 50px; */
+  /* margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  margin-left: 50px; */
+  margin: 20px;
+
+  padding: 20px;
+  /* padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 50px; */
+
+  text-align: center;
+
+  background-image: url("kiwi.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.parent-2 {
+  height: 300px;
+  width: 300px;
+  background-color: antiquewhite;
+}
+
+.child-2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.background {
+  height: calc(100% - 45px);
+  background-image: url("kiwi.jpeg");
+  background-size: 10%;
+}
