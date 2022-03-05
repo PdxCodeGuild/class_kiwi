@@ -31,8 +31,8 @@ class ATM:
 #withdraws the amount from the account and returns it  
     def withdraw(self, amount):
         self.transactions.append(f'User withdrew ${amount}')
-        amount = self.balance - amount 
-        return amount
+        self.balance = self.balance - amount 
+        return self.balance
 #returns the amount of interest calculated on the account
     def calc_interest(self):
         amount = self.interest_rate * self.balance
@@ -63,12 +63,16 @@ while True:
         amount = atm.calc_interest() # call the calc_interest() method
         atm.deposit(amount)
         print(f'Accumulated ${amount} in interest')
+    elif command == 'transactions':
+        transactions = atm.user_transaction() # call the user_transactions() method
+        print(transactions)
     elif command == 'help':
         print('Available commands:')
         print('balance  - get the current balance')
         print('deposit  - deposit money')
         print('withdraw - withdraw money')
         print('interest - accumulate interest')
+        print('transactions - transaction history')
         print('exit     - exit the program')
     elif command == 'exit':
         break
