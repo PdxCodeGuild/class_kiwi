@@ -28,7 +28,7 @@ Presentation Day: June 10th, 2022
 ## Html/CSS/Flask Labs Assigned:
 | Lab | Name               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------ | ------------- | --------------------- | ------------- |
-| 01  | Bio                |               |                       |               |
+| 01  | Bio                | 03 Mar        | 08 Mar                | 17 Mar        |
 | 02  | Company Home Page  |               |                       |               |
 | 03  | Blog               |               |                       |               |
 | 04  | Burrito Order Form |               |                       |               |
