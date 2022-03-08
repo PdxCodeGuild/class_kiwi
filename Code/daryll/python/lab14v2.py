@@ -7,7 +7,7 @@ response = requests.get(f"https://icanhazdadjoke.com/search?term={joke_search}",
 
 joke = response.json()
 joke_number = 0
-user_response = "yes"
+user_response = "yes" 
 while user_response == "yes":
     try:
         if user_response == "no":
