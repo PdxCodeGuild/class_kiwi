@@ -1,0 +1,20 @@
+.quote {font-family: fantasy; 
+font-style: italic;
+font-size: 22px;
+}
+
+body {text-align: center; 
+color: red;
+font-size: 12;
+}
+
+p {margin: 50px;
+padding: auto;
+font-family: monospace;
+
+}
+html{
+    background-image: url(https://getwallpapers.com/wallpaper/full/d/d/8/557330.jpg);
+}
+img {border-radius: 200px}
+
