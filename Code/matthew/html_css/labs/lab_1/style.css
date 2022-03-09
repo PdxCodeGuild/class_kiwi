@@ -64,10 +64,12 @@ blockquote {
 
 a {
     color: rgb(173, 173, 121);
+
 }
 
 ul {   
     list-style-type:circle;
+    
 }
 
 .ext {
