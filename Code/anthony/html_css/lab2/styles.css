@@ -1,0 +1,47 @@
+body {
+  background-color: grey;
+  color: black;
+  min-height: 100vh;
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  margin: 20px;
+}
+.box1 {
+  background-color: cadetblue;
+  color: black;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid black;
+}
+div {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.box2 {
+  border: 2px solid black;
+  background-color: cadetblue;
+  color: black;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  line-height: 4.5;
+  text-decoration: none;
+}
+section {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin-left: 100px;
+}
