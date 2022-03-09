@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    border: 6px solid teal;
+    text-align: center;
+}
+h3 {
+    margin-bottom: 0;
+}
+h6 {
+    margin-top: 0;
+
+}
+nav {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+a {
+    border-color: white;
+    border: solid 2px;
+    margin: 2px 50px 2px 50px
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 500px;
+}
+
+.box {
+    border: 2px double teal;
+    background-color: grey;
+    text-align: center;
+    font-size: 18px
+}
+
+footer {
+
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: auto;
+    position: fixed
+    bottom: 0;
+}

@@ -49,3 +49,22 @@ def peaks_and_valleys():
     return peaks_and_valleys
 
 print(peaks_and_valleys())
+
+# peaks_and_valleys function to return indices of both peaks and valleys in order of appearance
+
+def peaks_and_valleys_graphics():
+    rows = max(data)
+    cols = len(data)
+    for i in range(rows, 0, -1):
+        for j in range(cols):
+            if i > data[j]:
+                print('  ', end=" ")
+            else:
+                print(' X', end=" ")
+        print()
+    
+
+    print(data)
+
+print(peaks_and_valleys_graphics())
+
