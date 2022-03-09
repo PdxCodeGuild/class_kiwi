@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: slategray;
+    margin: 0;  
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+a {
+    font-size: larger;
+}
+
+
+/* used w3schools How TO - Fixed Sidebar https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+main {
+    display: grid;
+    justify-content: space-evenly;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+.box {
+    border: 2px solid black;
+    background-color: aqua;
+    text-align: center;
+    font-size: 32px;
+    width: 600px;
+    margin: 12px 0
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: slategray;
+    margin: 0;
+    
+}
+
+header {
+    /* display:flex is used for adjustments to multiple sizes of browsers, easier formatting */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+a {
+    font-size: larger;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    /* When in a column, justify-content is vertical spacing */
+    justify-content: space-between;
+    /* When in a column, align-items is horizontal positioning. */
+    align-items: center;
+    border: 2px solid red;
+    height: 500px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box {
+    border: 2px solid black;
+    background-color: aqua;
+    text-align: center;
+    font-size: 32px;
+    width: 600px;
+    margin: 12px 0
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
