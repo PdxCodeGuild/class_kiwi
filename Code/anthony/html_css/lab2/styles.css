@@ -3,6 +3,9 @@ body {
   color: black;
   min-height: 100vh;
   font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -14,7 +17,6 @@ nav {
   display: flex;
   justify-content: space-around;
   font-size: 40px;
-  margin: 20px;
 }
 .box1 {
   background-color: cadetblue;
@@ -27,14 +29,13 @@ nav {
 div {
   display: inline-flex;
   flex-direction: column;
-  margin-top: 50px;
 }
 .box2 {
   border: 2px solid black;
   background-color: cadetblue;
-  color: black;
   height: 75px;
   width: 75px;
+  color: black;
   text-align: center;
   line-height: 4.5;
   text-decoration: none;
@@ -42,6 +43,14 @@ div {
 section {
   display: inline-flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 75%;
   margin-left: 100px;
+}
+footer {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  color: whitesmoke;
 }
