@@ -29,8 +29,8 @@ Presentation Day: June 10th, 2022
 | Lab | Name               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------ | ------------- | --------------------- | ------------- |
 | 01  | Bio                | 03 Mar        | 08 Mar                | 17 Mar        |
-| 02  | Company Home Page  |               |                       |               |
-| 03  | Blog               |               |                       |               |
+| 02  | Blog               | 08 Mar        | 11 Mar                | 22 Mar        |
+| 03  | Company Home Page  |               |                       |               |
 | 04  | Burrito Order Form |               |                       |               |
 | 05  | Flask Redo         |               |                       |               |
 | 06  | Personal Portfolio |               |                       |               |
