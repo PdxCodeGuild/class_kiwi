@@ -1,0 +1,137 @@
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* container for main content of website */
+main {
+  min-height: 90vh;
+  min-width: 90vh;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(47, 104, 153, 0.603);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+h1 {
+  color: rgb(105, 128, 85);
+  font-size: 8vh;
+  text-align: center;
+  padding: 0.5vh;
+  font-family: "Kaushan Script", cursive;
+  text-shadow: 0.2vh 0.2vw black;
+}
+
+.toplinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav {
+  color: white;
+  border: 0.1vh solid beige;
+  width: 14vw;
+  height: 3.5vh;
+  text-align: center;
+  text-shadow: 0.15vh 0.15vw black;
+  background: #9bddeead;
+  background: linear-gradient(to top, #9bddeeb4, #154e3db9);
+  color: rgb(199, 219, 219);
+}
+
+nav:hover {
+  background: #468ccf;
+  background: linear-gradient(to top, #468dcfe7, #060c0fbe);
+}
+
+nav a:link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: "Kaushan Script", cursive;
+  height: 100%;
+  width: 100%;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+
+nav a:link:hover {
+  color: rgb(170, 166, 166);
+}
+
+/* container for blog and sidebar */
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 4vh;
+}
+
+.stories {
+  flex-direction: column;
+}
+
+header {
+  padding-left: 10vw;
+  font-size: 2.5vh;
+  font-family: "Kaushan Script", cursive;
+}
+
+.blog {
+  width: 55vw;
+  margin-bottom: 2vh;
+  text-shadow: 0.5px 0.5px rgb(97, 102, 95);
+  font-size: 19px;
+}
+
+/* sidebar container for external story links */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  border: 0.2vh solid white;
+  background-color: rgba(98, 214, 150, 0.295);
+  height: 35vh;
+  width: 20vw;
+  margin-bottom: 2vh;
+}
+
+.figure_text {
+  padding: 0.5vw;
+}
+
+/* image that links to an external website */
+img {
+  width: 20vw;
+  height: 20vh;
+}
+
+img:hover {
+  image-rendering: pixelated;
+}
+/* external share buttons */
+.shares {
+  display: flex;
+  justify-content: center;
+}
+
+/* source attributes */
+footer {
+  text-align: center;
+  color: white;
+}
+
+footer a:link {
+  color: rgb(167, 165, 164);
+}
+
+footer a:link:hover {
+  color: #468ccf;
+}
