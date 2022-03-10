@@ -57,6 +57,7 @@ aside {
 }
 
 .box {
+    margin: 10px;
     background-color: black;
 
 }
@@ -82,6 +83,7 @@ main {
 }
 
 .left {
+    margin-left: 10px;
     width: 200px;
     /* border: 2px solid green; */
     justify-content: flex-start;
@@ -104,6 +106,7 @@ main {
 }
 
 .right {
+    margin-right: 10px;
     width: 200px;
     /* border: 2px solid green; */
     justify-content: flex-start;
