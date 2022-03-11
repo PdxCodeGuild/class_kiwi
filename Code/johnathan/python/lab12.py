@@ -39,7 +39,7 @@ class ATM:
         return amount
 #print user transactions
     def user_transaction(self):
-        return self.transactions
+        return "\n".join(self.transactions)
 
 atm = ATM() # create an instance of our class
 print('Welcome to the ATM')
