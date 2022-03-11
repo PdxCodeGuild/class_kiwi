@@ -10,39 +10,120 @@
     <link rel="home" href="C:\Users\wmatt\class_kiwi\Code\matthew\html_css\labs\lab_3\home_page.html">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="home_page.html">Company Name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="home_page.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">about</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="financial.html">Financials</a>
-                </li>
-                
-                </ul>
-            </div>
-        </div>
-    </nav>   
 
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Company Name</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home_page.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="financial.html">Work for us</a>
+              
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li> -->
+            </ul>
+         </div>
+      </div>
+    </nav>    
+
+    <br>
+    <!--  -->
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-4 order-1">
+          <figure class="figure">
+            <img src="https://picsum.photos/500/500" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-4 order-2">
+          <header>
+            <h4 class="text-center">We want you</h4>
+            <p class="text-center">Here at ^Company^ we pride ourselves in things. Some random filler words  ~Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit aliquid vel perferendis! Voluptatibus, aliquam consequatur. Suscipit atque eaque rerum explicabo non officia, expedita modi unde, distinctio cumque minus inventore.</p>
+          </header>
+        </div>
+        <div class="col-2 order-3"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="container-xxl">
+
+      <h5 class="text-center">Apply now</h5>
+      
+      <br>
+
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <!-- <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div> -->
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <!-- <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div> -->
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+    
+    <!--Footer  -->
     <footer>
-        <table class="table">
-            
-            <tbody>
-              <tr>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        <p>Matthew Holmes &copy; 2022</p>
-    </footer>
-</body>
+      <table class="table">
+        
+        <tbody>
+          <tr>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+        <p class="text-center">Matthew Holmes &copy; 2022</p>
+      </footer>
+    </body>
 </html>
