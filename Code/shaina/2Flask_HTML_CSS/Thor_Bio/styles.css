@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1076/lightningbolts-1486410481.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+}
+
+warning img {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+}
+
+thor img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color:rgb(59, 40, 77);
+}
+
+header {
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    color: rgb(65, 65, 68);
+}
+
+intro {
+    display: inline-block;
+    border: 5px solid whitesmoke;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+}
+
+places {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(33, 133, 146);
+}
+ul {
+    text-align: left;
+}
+life {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(241, 33, 33);
+}
+
+life img {
+    display: block;
+    margin: auto;
+    width: 600px;
+    height: 400x;
+}
+
+quote {
+    display: block;
+    margin: auto;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
+
+a {
+    border-color: white;
+    border: solid 2px;
+    color: white;
+}
