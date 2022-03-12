@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://icanhazdadjoke.com/",
+        "name": "icanhazdadjoke",
+        "description": "The largest collection of dad jokes on the internet",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://icanhazdadjoke.com/search?term={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://icanhazdadjoke.com/",
+        "logo": "https://icanhazdadjoke.com/static/smile.png",
+        "name": "icanhazdadjoke",
+        "description": "The largest collection of dad jokes on the internet",
+        "email": "support@icanhazdadjoke.com"
+      }
+    </script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+      (adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-3200991035275362", enable_page_level_ads: true});
+    </script>
+</head>

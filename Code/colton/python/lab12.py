@@ -3,6 +3,7 @@ class ATM:
     def __init__(self, balance=0, interest=0.1):
         self.balance = balance
         self.interest = interest
+        self.transactions = []
 
     # Returns acount balance
     def check_balance(self):
@@ -14,6 +15,7 @@ class ATM:
     def deposit(self, amount):
         """Deposit into balance"""
         self.balance += amount
+        self.transactions.append(f'Deposited ${amount}')
         return 
     
     # Returns true if the withdrawn amount won't put the account in the negative
@@ -26,7 +28,8 @@ class ATM:
     def withdraw(self, amount):
         """Withdraw from balance"""
         self.balance -= amount
-        return
+        self.transactions.append(f'Withdrew ${amount}')
+        return self.balance
     
     # Returns the amount of interest calculated on the account
     def calc_interest(self):
@@ -34,13 +37,13 @@ class ATM:
         return round((self.balance * self.interest), 2)
     
     # Returns transaction history
-    def print_transactions(transactionlist):
+    def print_transactions(self):
         """Return history of transactions"""
         history = """
 Total Transactions
 ------------------
 """
-        for i in transactionlist:
+        for i in self.transactions:
             history += f"{i}\n"
         
 
@@ -49,7 +52,7 @@ Total Transactions
 
 
 
-transactionlist = []
+
 atm = ATM() # create an instance of our class
 print('Welcome to the ATM')
 while True:
@@ -60,13 +63,11 @@ while True:
     elif command == 'deposit':
         amount = float(input('How much would you like to deposit? '))
         atm.deposit(amount) # call the deposit(amount) method
-        transactionlist.append(f'Deposited ${amount}')
         print(f'Deposited ${amount}')
     elif command == 'withdraw':
         amount = float(input('How much would you like '))
         if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
-            transactionlist.append(f'Withdrew ${amount}')
             print(f'Withdrew ${amount}')
         else:
             print('Insufficient funds')
@@ -83,8 +84,7 @@ while True:
         print('transactions - print out all transactions')
         print('exit     - exit the program')
     elif command == 'transactions':
-        history = ATM.print_transactions(transactionlist) # call the print_transactions method.
-        print(history)
+        print(atm.print_transactions())
     elif command == 'exit':
         break
     else:
