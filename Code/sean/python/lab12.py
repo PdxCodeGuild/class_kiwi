@@ -4,7 +4,7 @@
 class ATM:
     def __init__(self):
         self.balance = 0        #setting base vaules with init
-        self.intrest = 0.1
+        self.intrest = .001
 
     def check_balance(self):    #returning balance amount
         return self.balance
@@ -22,8 +22,8 @@ class ATM:
         self.balance = self.balance - amount
         return self.balance
 
-    def calc_intrest(self):     #returns value of self.intrest
-        return self.intrest
+    def calc_intrest(self):     #returns value of self.intrest times self.amount
+        return (self.balance * self.intrest)
 
 
 atm = ATM() # create an instance of our class
@@ -72,7 +72,7 @@ while True:
 class ATM():
     def __init__(self):
         self.balance = 0
-        self.intrest = 0.1
+        self.intrest = .001
         self.transactions = []   #added a list to append transactions to
 
     def check_balance(self):
@@ -94,7 +94,7 @@ class ATM():
         return self.balance
 
     def calc_intrest(self):
-        return self.intrest
+        return (self.balance * self.intrest)
 
     def print_transactions(self):
         return self.transactions

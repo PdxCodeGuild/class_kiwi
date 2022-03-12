@@ -1,0 +1,8 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+        }
+
+.cards2 {
+    display: flex;
+}
