@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+    font-family: 'Syne Mono', monospace;
+    color: cornsilk;
+    
+  }
+
+body {
+     background-image: linear-gradient( 109.6deg,  rgba(48,207,208,1) 11.2%, rgba(51,8,103,1) 92.5% );
+     background-size: 100%;
+     font-family:'Hubballi', cursive;
+     font-size: larger;
+     color:cornsilk;
+     padding: 30px;
+     text-align: center;
+    }
+
+#first {
+    /* border: 2px solid yellow; */
+    width: 50%;
+    padding-top: 75px;
+    
+    
+}    
+img {
+    border-radius: 20%;
+    display: inline-block;
+    width: 300px;
+    margin-right: 0;
+    /* border: 2px solid red; */
+}
+
+q  {
+    font-family: 'Marck Script', cursive;
+}
+
+ul {
+    text-align: center;
+    list-style: circle;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+div {
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+}
