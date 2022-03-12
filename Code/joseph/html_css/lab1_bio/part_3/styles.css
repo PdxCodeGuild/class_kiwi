@@ -1,0 +1,89 @@
+hr.new {border: 10px solid green; border-radius: 5px;}
+li:not(:last-child) {margin-bottom: 5px;}
+img {display: block; width: 300px; margin-left: auto;
+    margin-right: auto; border-radius: 50%;}
+.container {display: flex; height: 70%; column-gap: 40px;
+    border: 10px solid blue;}
+.left {width: 40%;}
+.middle {width: flex;}
+.right {width: 40%;}
+.marquee {height: 50px; overflow: hidden; position: relative;
+    background: #fefefe; color: #333; border: 1px solid #4a4a4a;}
+.marquee p {position: absolute; font-family: "Communist Regular"; letter-spacing: 0.4em;
+    width: 100%; height: 100%; margin: 0; line-height: 50px; text-align: center;
+    -moz-transform: translateX(100%); -webkit-transform: translateX(100%);
+    transform: translateX(100%); -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 20s linear infinite;}
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+body {
+    text-align: center;
+    background-image: url("./images/bluecircle.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+p {
+    pad: 5px;
+    margin: auto;
+}
+@font-face {
+    font-family:"Communist Regular";
+    src: url("./fonts/communist.eot?") format("eot"), url("./fonts/communist.woff") format("woff"), url("./fonts/communist.ttf") format("truetype"), url("./fonts/communist.svg#Communist") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+.intro {
+    width: 100%;
+    height: 20%;
+    border: 5px solid purple;
+}
+.intro h1 {
+    letter-spacing: 1em;
+    color: red;
+}
+:root {
+    color-scheme: light dark;
+}
+ol.h {
+    list-style-type: hebrew;
+}
+.khm-theme-light {color:#000 !important; background-color:#f9fdfd !important}
+.khm-theme-dark {color:#fff !important; background-color:#288e95 !important}
+.khm-theme-action {color:#fff !important; background-color:#288e95 !important}
+
+.khm-theme {color:#000 !important; background-color:#95dee3 !important}
+.khm-text-theme {color:#95dee3 !important}
+.khm-border-theme {border-color:#95dee3 !important}
+
+a:link {color: midnightblue ;}
+a:visited {background-color: yellow; border-color: hotpink;
+    color: hotpink;}
+a:hover {color: #39ff14;}  
+a:active {color: blue;}
