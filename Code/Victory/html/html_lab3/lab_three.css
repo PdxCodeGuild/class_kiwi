@@ -1,0 +1,93 @@
+body{
+   
+    background-image: url('willy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    margin: 0px, 0px;
+    color: aquamarine;
+}
+header{
+    margin-top: 2px;
+    padding: 0px 20px;
+    display: flex;
+    font-size: 21px;
+    font-weight: bolder;
+    color: black;
+    height: 15%;
+
+
+}
+.div_head1{
+    background-image: url('Ushindi_Logo.jpg');
+    background-size: cover;
+    width: 8%;
+    margin-right: 7%;
+    font-size: 55px;
+
+}
+.div_head2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    width: 70%;
+    margin-right: 7%;
+    font-size: 20px;
+    overflow-wrap: break-word;
+      
+}
+.div_head3{
+    float: right;
+    width: 8%;
+    padding: 0px 20px;
+    font-size: 20px;
+    margin: 0.5rem;
+    
+}
+.links > a{
+    color: deepskyblue;
+    background-size: cover;
+    margin: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+.sect_div1{
+    padding:25% 2px 0px;
+    width: 50%;
+    font-size: 50px;
+    color: lime;
+
+}
+.sect_div2{
+    padding: 2% 2px 0px;
+    color:purple;
+    font-size: 40px;
+    
+}
+.sect_div3{
+    
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+button{
+    border-radius: 10px;
+    height: 30px;
+    background-color: skyblue;
+}
