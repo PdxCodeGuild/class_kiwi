@@ -1,0 +1,45 @@
+body {
+  background: #d4a300;
+  padding: 10px;
+  font-family: "Smooch Sans", sans-serif;
+}
+
+.header {
+  background: #dadada83;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+.card {
+  background: #dadada83;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  margin: 10px 0;
+}
+
+.navbar {
+  background-color: #dadada83;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  color: #fd0000;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+.leftnavbar {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  width: 90px;
+}
+.chunk {
+  display: flex;
+
+}
