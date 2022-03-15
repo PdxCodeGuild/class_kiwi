@@ -1,0 +1,15 @@
+body {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+.nav-wrapper {background-color: darkred;}
+
+.footer-copyright{
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }

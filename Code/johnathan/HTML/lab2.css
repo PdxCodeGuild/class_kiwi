@@ -16,7 +16,8 @@ body {
     /* align-items: center; */
   }
   
-b{ text-decoration: underline;}
+b{ text-decoration: underline;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 
   img {
     display: inline-block;
@@ -25,7 +26,7 @@ b{ text-decoration: underline;}
     width: 400px;
     margin: 0 auto;
     /* x-offset, y-offset, blur radius, spread, color */
-    box-shadow: 4px 4px 4px 0 rgb(192, 119, 36);}
+    box-shadow: 4px 4px 4px 0 rgb(224, 139, 42);}
 
   section {
     display: flex;
@@ -36,7 +37,7 @@ b{ text-decoration: underline;}
     align-items: normal;
   
     border: 2px solid orange;
-    height: 150px;
+    height: 200px;
   }
   
   main {
@@ -60,4 +61,5 @@ footer {
     text-align: center;
   }
 .container { text-align: center;
+    font-family: cursive;
 }
