@@ -1,0 +1,135 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #7cb342;
+  --primary-hover: #689f38;
+  --primary-focus: rgba(124, 179, 66, 0.125);
+  --primary-inverse: #FFF;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #7cb342;
+    --primary-hover: #8bc34a;
+    --primary-focus: rgba(124, 179, 66, 0.25);
+    --primary-inverse: #FFF;
+  }
+}
+
+[data-theme="dark"] {
+  --primary: #7cb342;
+  --primary-hover: #8bc34a;
+  --primary-focus: rgba(124, 179, 66, 0.25);
+  --primary-inverse: #FFF;
+}
+
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+
+  --spacing-company: 4rem;
+  --font-weight: 400;
+  --border-radius: 4px;
+}
+
+h2,
+hgroup> :last-child {
+  font-weight: 300;
+}
+
+small {
+  color: var(--muted-color);
+}
+
+.hero {
+  background-color: #394046;
+  background: linear-gradient(190deg, rgba(255, 255, 255, 0), rgba(18, 25, 31, .5)), url("https://source.unsplash.com/lP_FbBkMn1c/2000x1000");
+  background-position: center;
+  background-size: cover;
+  max-height: 500px;
+}
+
+.hero-text {
+  margin-top: 14rem;
+}
+
+header {
+  padding: var(--spacing-company) 0;
+}
+
+header hgroup> :last-child {
+  color: var(--h3-color);
+}
+
+header hgroup {
+  margin-bottom: 1rem;
+}
+
+main,
+section,
+svg,
+footer {
+  text-align: center;
+  align-content: center;
+}
+
+.title {
+  color: #374856;
+  margin-bottom: .5rem;
+}
+
+.sub-title {
+  font-weight: 300;
+  color: #73828C;
+  margin-bottom: 5rem;
+}
+
+.svg-text-title {
+  margin-top: .75rem;
+  margin-bottom: 1rem;
+}
+
+form.grid {
+  grid-row-gap: 0;
+}
+
+article {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-text {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    max-height: 600px
+  }
+
+  .hero-text {
+    margin-top: 14rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-height: 800px
+  }
+
+  .hero-text {
+    margin-top: 21rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    max-height: 800px
+  }
+
+  .hero-text {
+    margin-top: 22rem;
+  }
+}
