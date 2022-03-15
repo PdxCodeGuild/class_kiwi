@@ -1,0 +1,63 @@
+/* Center the entire content of the body
+Modify the padding and margins on your paragraphs to look better
+Use a custom font
+Add a background image */
+body {
+    text-align: center;
+    color: antiquewhite;
+    font-family: 'Syne Mono', monospace;
+    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/24/106956-Nepal-Himalayas-mountains.jpg);
+    background-size: auto;
+}
+
+body article {
+    text-align: left;
+    font-size: 20px;
+    color: rgb(189, 69, 69);
+}
+body article {
+    text-decoration: aliceblue wavy underline;
+}
+#origin {
+    text-decoration: none;
+    font-size: 50px;
+    padding-bottom: 25px;
+    color: rgb(248, 152, 240);
+}
+
+div {
+    font-size: 40px;
+    color: rgb(139, 214, 109);
+    padding-bottom: 40px;
+    margin-top: 0ch;
+}
+
+.item {
+    list-style-position: inside;
+    text-align: center;
+    font-size: 25px;
+    margin: 7px;
+    list-style-type: circle;
+}
+
+img {
+    border-radius: 50%;
+    /* width: 50%; */
+}
+
+p ul {
+    display: flex;
+    flex-direction: column;
+}
+
+q {
+    padding-bottom: 100px;
+    font-size: 27px;
+    font-style: italic;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Syne Mono', monospace;
+}
+
+
+
