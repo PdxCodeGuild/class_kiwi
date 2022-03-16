@@ -1,0 +1,73 @@
+/* Semantic Elements */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+header{
+    display: flex;
+    /* Horizontal Posistioning */
+    justify-content: space-between;
+    /* Vertical Posistioning */
+    align-items: center;
+}
+
+/* Row */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer {
+    text-align: center;
+    background-color: darkgray;
+    color:white;
+    border: 2px solid grey;
+}
+
+
+/* Children */
+
+h2 {
+    display: inline;
+    margin: 0;
+}
+
+a {
+  color: orange; 
+  padding-left: 10px; 
+}
+
+.box {
+    border: 2px solid grey;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    width: 300px;
+    margin: 12px 0px;
+}
+
+
+/* Colum */
+/* section {
+    display: flex;
+    flex-direction: column;
+    When in a colum, justify content is vert spacing and vice versa 
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid orange;
+    height: 500px;
+} */
+
+/* 
+.box {
+    border: 2px solid grey;
+    background-color: darkgray;
+    text-align: center;
+    font-size: 32px;
+    height: 80px;
+    width: 80px;
+} */

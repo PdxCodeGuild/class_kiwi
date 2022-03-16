@@ -1,0 +1,45 @@
+body {
+    background-color: darkolivegreen;
+    text-align: center;
+    color: whitesmoke;
+    font-family: "Noto Serif Display";
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(235, 229, 229);
+    font-family: "Noto Serif Display";
+}
+
+#third {
+    color: burlywood;
+}
+
+.secondary {
+    color: brown;
+}
+
+img {
+    border-radius: 600px;
+    display: block;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    /* x-offset, y-offset, blur radius, spread, color */
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.274);
+    
+}
+
+.center-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #e6883b;
+    font-weight: bolder;
+}
+
+a {
+
+    color: #e6883b;
+}

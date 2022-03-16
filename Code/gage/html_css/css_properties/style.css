@@ -1,0 +1,51 @@
+body {
+    background-color: slategray;
+}
+
+p {
+    /* font color */
+        color: whitesmoke;
+    /* back color */
+        background-color: rgb(88, 100, 112);
+    /* font size */
+        font-size: 20px;
+    
+   
+}
+
+/* widths and precentages between parent and child */
+
+/* 
+.parent {
+    /* border size, type, color 
+    border: 4px solid whitesmoke;
+    width: 500px;
+    height: 300px;
+}
+
+.child {
+    border: 4px dashed whitesmoke;
+    width: 50%;
+    height: 150px;
+} 
+*/
+
+
+.parent {
+    /* border size, type, color */
+    border: 4px solid whitesmoke;
+    
+}
+
+.child {
+    border: 4px dashed whitesmoke;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    /* margin: top, right, bottom, left -- changes outside space */
+    margin: 50px auto;
+    /* padding: top, right, bottom, left -- changes inner space */
+    padding: 20px;
+    /* background-image: url("either a link or local file name") -- gradientmagic.com for CSS gradients */
+    background-image: repeating-linear-gradient(135deg, rgb(88, 100, 112) 0px, rgb(88, 100, 112) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(88, 100, 112) 0px, rgb(88, 100, 112) 10px,transparent 20px, transparent 21px),linear-gradient(90deg, whitesmoke,whitesmoke,whitesmoke,whitesmoke,whitesmoke);
+}

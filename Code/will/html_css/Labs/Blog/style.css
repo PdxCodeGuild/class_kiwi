@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: slategray;
+  margin: 0;
+  background-image: url("https://images.pexels.com/photos/7527885/pexels-photo-7527885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  font-size: larger;
+}
+
+/* used w3schools How TO - Fixed Sidebar https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
+
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  font-size: 25px;
+  color: #818181;
+}
+
+main {
+  display: grid;
+  justify-content: space-evenly;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  font-family: Comic Neue;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  background-color: rgb(199, 226, 250);
+  display: inline;
+  margin-bottom: 60px;
+}
+.box {
+  border: 2px solid black;
+  background-color: aqua;
+  text-align: center;
+  font-size: 32px;
+  width: 600px;
+  margin: 32px 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}

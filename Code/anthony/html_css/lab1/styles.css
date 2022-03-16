@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: large;
+  background-image: url("https://images.pexels.com/photos/3189980/pexels-photo-3189980.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+p {
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+a {
+  font-size: 26px;
+  color: orange;
+}
+h1 {
+  font-family: "Syne Mono", monospace;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+li {
+  list-style: katakana inside;
+}

@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+  border: 2px solid cyan;
+  display: flex;
+  /* Horizontal positioning */
+  justify-content: space-between;
+  /* Vertical positioning */
+  /* align-items: flex-start; */
+}
+
+h2 {
+  margin: 0;
+  /* display: inline; */
+  /* float: left; */
+}
+a {
+  /* float: right; */
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box {
+  border: 2px solid black;
+  background-color: aqua;
+  text-align: center;
+  font-size: 16px;
+  width: 300px;
+  margin: 12px 0;
+}
+
+footer {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+section {
+  border: 2px solid red;
+  display: flex;
+  /* position children in a column */
+  flex-direction: column;
+  height: 400px;
+  /* When in a column, justify-content is vertical positioning */
+  justify-content: space-between;
+  /* When in a column, align-items is horizontal positioning */
+  align-items: center;
+}

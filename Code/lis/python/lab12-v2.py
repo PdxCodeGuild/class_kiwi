@@ -34,9 +34,9 @@ class ATM:
   def deposit(self, amount):
     # deposits the given amount in the account
     self.balance += amount
-
     deposit_transaction = "user deposited ${:.2f}".format(amount)
     self.transactions.append(deposit_transaction)
+    return amount
     
   def check_withdrawal(self, amount):
     # returns true if the withdrawn amount won't put the account in the negative
@@ -46,13 +46,13 @@ class ATM:
     # withdraws the amount from the account and returns it  
     if self.check_withdrawal(amount):
       self.balance -= amount
-
       withdraw_transaction = "user withdraw ${:.2f}".format(amount)
       self.transactions.append(withdraw_transaction)
+      return amount
 
   def calc_interest(self):
     # returns the amount of interest calculated on the account
-    return (self.balance * self.interest)
+    return self.balance * self.interest
 
   def print_transactions(self):
     # returns list of deposits and withdrawals

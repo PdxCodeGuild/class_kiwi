@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    background-color: darkblue;
+    background-image: url("https://i.makeagif.com/media/9-29-2015/OS_aF-.gif");
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.quote {
+    font-size: 22px;
+    background: white;
+    border: 2px solid black;
+    font-family: "Comic Neue";
+}
+
+.text {
+    border: 2px solid black;
+    padding: 1%;
+}
+
+#red {
+    background: red;
+}
+
+#blue {
+    padding: 1%;
+    border: 2px solid black;
+    background: rgb(33, 33, 153);
+    color: white;
+}
+
+ul {
+    list-style-type: upper-roman;
+}
+
+a {
+    color: turquoise
+}
+
+img {
+    border-radius: 25%;
+    margin-bottom: -1%;
+    margin-top: 5%;
+}

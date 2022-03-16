@@ -1,0 +1,53 @@
+body {
+    background-image: url("https://images7.alphacoders.com/749/thumb-1920-749807.png"); /* Background image */
+    background-size: 100% 100%; /* Background image */
+    background-position-y: 100%; /* Background image posistion*/
+    text-align: center; /* Centers content */
+    background-color: rgb(255, 0, 0);
+    color: whitesmoke;    
+}
+
+.lived {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0px 20px 5px 20px;
+    background-color: rgb(0, 0, 0, .75); /* Black text background with 75% opactiy */
+}
+
+.intro {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0px 20px 5px 20px;
+    background-color: rgb(0, 0, 0, .75); /* Black text background with 75% opactiy */
+}
+
+.quote {
+    margin-top: 100px;
+    font-style: italic; /* type face changed to italics */
+}
+
+img {
+    width: 45%;
+    border-radius: 2%; /* Image rounded cornors */
+    margin-top: 75px;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif; /* Custom font */
+}
+
+p {
+    font-family: 'Raleway', sans-serif; /* Custom font */
+}
+
+ul {
+    font-family: 'Raleway', sans-serif; /* Custom font */
+    list-style-type: square; /* New bullet points */
+}
+
+a {
+    color: rgb(134, 163, 211); /* Link color matches images shirt */
+    font-weight: bold; /* Bold text */
+}

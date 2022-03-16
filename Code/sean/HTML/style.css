@@ -1,0 +1,27 @@
+body {text-align: center;
+    font-family: Georgia;
+    color:white;
+    font-size: larger;}
+
+img {border-radius: 200px;
+    width: 400px;
+    height: auto;
+    margin: 30px}
+
+p {margin: 15px;
+   padding: 10px;}
+
+a {color: white;}
+
+ul {
+    display: table;
+    margin: 0 auto;
+  }
+
+ul {
+    list-style-type: square;
+  }
+
+  div {font-style: italic;}
+
+html {background-image: url(https://wallpaperaccess.com/full/95254.jpg);}
