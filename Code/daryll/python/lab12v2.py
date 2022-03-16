@@ -1,5 +1,5 @@
 class ATM:
-    def __init__(self, balance = 0, interest = 0.1):
+    def __init__(self, balance = 0, interest = .001):
         self.balance = balance
         self.interest = interest
 

@@ -1,0 +1,65 @@
+body {
+    /* background-image: url("Spacex Starship.jpg"); */
+    background-image: linear-gradient(219deg, rgba(246, 246, 246, 0.02) 0%, rgba(246, 246, 246, 0.02) 20%,rgba(225, 225, 225, 0.02) 20%, rgba(225, 225, 225, 0.02) 40%,rgba(136, 136, 136, 0.02) 40%, rgba(136, 136, 136, 0.02) 60%,rgba(216, 216, 216, 0.02) 60%, rgba(216, 216, 216, 0.02) 80%,rgba(35, 35, 35, 0.02) 80%, rgba(35, 35, 35, 0.02) 100%),linear-gradient(299deg, rgba(213, 213, 213, 0.02) 0%, rgba(213, 213, 213, 0.02) 20%,rgba(150, 150, 150, 0.02) 20%, rgba(150, 150, 150, 0.02) 40%,rgba(161, 161, 161, 0.02) 40%, rgba(161, 161, 161, 0.02) 60%,rgba(186, 186, 186, 0.02) 60%, rgba(186, 186, 186, 0.02) 80%,rgba(28, 28, 28, 0.02) 80%, rgba(28, 28, 28, 0.02) 100%),linear-gradient(50deg, rgba(157, 157, 157, 0.02) 0%, rgba(157, 157, 157, 0.02) 16.667%,rgba(147, 147, 147, 0.02) 16.667%, rgba(147, 147, 147, 0.02) 33.334%,rgba(42, 42, 42, 0.02) 33.334%, rgba(42, 42, 42, 0.02) 50.001000000000005%,rgba(214, 214, 214, 0.02) 50.001%, rgba(214, 214, 214, 0.02) 66.668%,rgba(34, 34, 34, 0.02) 66.668%, rgba(34, 34, 34, 0.02) 83.33500000000001%,rgba(211, 211, 211, 0.02) 83.335%, rgba(211, 211, 211, 0.02) 100.002%),linear-gradient(278deg, rgba(79, 79, 79, 0.03) 0%, rgba(79, 79, 79, 0.03) 20%,rgba(217, 217, 217, 0.03) 20%, rgba(217, 217, 217, 0.03) 40%,rgba(5, 5, 5, 0.03) 40%, rgba(5, 5, 5, 0.03) 60%,rgba(200, 200, 200, 0.03) 60%, rgba(200, 200, 200, 0.03) 80%,rgba(125, 125, 125, 0.03) 80%, rgba(125, 125, 125, 0.03) 100%),linear-gradient(274deg, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 12.5%,rgba(100, 100, 100, 0.03) 12.5%, rgba(100, 100, 100, 0.03) 25%,rgba(44, 44, 44, 0.03) 25%, rgba(44, 44, 44, 0.03) 37.5%,rgba(228, 228, 228, 0.03) 37.5%, rgba(228, 228, 228, 0.03) 50%,rgba(36, 36, 36, 0.03) 50%, rgba(36, 36, 36, 0.03) 62.5%,rgba(72, 72, 72, 0.03) 62.5%, rgba(72, 72, 72, 0.03) 75%,rgba(30, 30, 30, 0.03) 75%, rgba(30, 30, 30, 0.03) 87.5%,rgba(109, 109, 109, 0.03) 87.5%, rgba(109, 109, 109, 0.03) 100%),linear-gradient(90deg, hsl(28,0%,14%),hsl(28,0%,14%));
+    background-size: 100%;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.parent {
+    /* border: 4px solid cornflowerblue; */
+    /* width: 80vw;
+    height: 90vh; */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.child-1 {
+    color: whitesmoke;
+    font-size: 20px;
+    /* border: 4px solid orange; */
+    width: 90%;
+    padding: 10px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.child-2 {
+    /* border: 4px solid green; */
+    font-size: 28px;
+    color: whitesmoke;
+}
+.child-3 {
+    /* border: 4px solid green; */
+    font-size: 28px;
+    color: whitesmoke;
+    width: 55%;
+    height: 30%;
+    text-align: left;
+}
+li {
+    font-size: 18px;
+    padding: 10px;
+}
+img {
+    border-radius: 5%;
+    display: block;
+    width: 800px;
+    margin: 2px;
+    /* x-offset, y-offset, blur radius, spread, color */
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.274);
+
+}
+a {
+    color: whitesmoke;
+}
+q {
+    font: italic 22px Georgia;  
+}
+ul {
+    list-style-type: square;
+}
