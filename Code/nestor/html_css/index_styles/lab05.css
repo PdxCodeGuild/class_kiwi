@@ -1,0 +1,54 @@
+.body {
+    border: 2px solid yellow;
+    flex-direction: column;
+    text-align: center;
+}
+.title {
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Syne Mono', monospace;
+    background-color: darkcyan;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+.picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body img {
+    max-width: 50%;
+    max-height: 100%;
+    border: 2px rgba(0, 0, 0, 0.295);
+    border-radius: 2%;
+    box-shadow: 10px 5px 5px black;
+    margin: 10px;
+}
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Syne Mono', monospace;
+    background-color: darkcyan;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+.line {
+    display: block;
+    border: 2px solid grey;
+    padding: 2px;
+}
+.customize {
+    display: inline;
+    text-align: center;
+    background-color: rgb(139, 5, 5);
+    border: 5px solid goldenrod;
+}
