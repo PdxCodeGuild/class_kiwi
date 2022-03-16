@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
+    <title>Loco Burrito</title>
+</head>
+<body>
+    <header>Loco Burrito</header>
+    <form action="https://webhook.site/2c11f789-086a-4b40-9675-1b34adfb21e3" method="post">
+
+        <img src="https://dinnerthendessert.com/wp-content/uploads/2018/08/Beef-Burrito.jpg" alt="Picture of burrito" >
+        <main>
+            <h2>Customize Your Burrito</h2>
+        <input placeholder="Name for order" name="name" type="text" required>
+
+        <br>
+
+        <p>Tortilla: </p>
+        <label for="corn" class="first">Corn</label>
+        <input id="corn" name="tortilla" type="radio" value="corn">
+
+        <label for="flour">Flour</label>
+        <input id="flour" name="tortilla" type="radio" value="flour">
+
+        <label for="spinach">Spinach</label>
+        <input id="spinach" name="tortilla" type="radio" value="spinach">
+
+        <br>
+
+        <p>Meat: </p>
+        <label for="steak" class="first">Steak</label>
+        <input id="steak" name="meat" type="radio" value="steak">
+        <label for="chicken">Chicken</label>
+        <input id="chicken" name="meat" type="radio" value="chicken">
+        <label for="barbacoa">Barbacoa</label>
+        <input id="barbacoa" name="meat" type="radio" value="barbacoa">
+        <label for="sofritas">Sofritas(Tofu)</label>
+        <input id="sofritas" name="meat" type="radio" value="sofritas">
+        <label for="veggies">Fajita Veggies</label>
+        <input id="veggies" name="meat" type="radio" value="veggies">
+
+        <br>
+
+        <p>Rice: </p>
+        <label for="white" class="first">White Rice</label>
+        <input id="white" name="rice" type="radio" value="white">
+        <label for="brown">Brown Rice</label>
+        <input id="brown" name="rice" type="radio" value="brown">
+
+        <br>
+
+        <p>Beans: </p>
+        <label for="black" class="first">Black Beans</label>
+        <input id="black" name="beans" type="radio" value="black">
+        <label for="pinto">Pinto Beans</label>
+        <input id="pinto" name="beans" type="radio" value="pinto">
+
+        <br>
+
+        <p>Additional Options: </p>
+        <label for="cheese" class="first">Cheese</label>
+        <input id="cheese" name="otions1" type="checkbox" value="cheese">
+        <label for="pico">Pico de Gallo</label>
+        <input id="pico" name="options2" type="checkbox" value="pico">
+        <label for="sour_cream">Sour Cream</label>
+        <input id="sour_cream" name="options3" type="checkbox" value="sour_cream">
+        <label for="salsa">Salsa</label>
+        <input id="salsa" name="options4" type="checkbox" value="salsa">
+        <label for="guac">Guacamole</label>
+        <input id="guac" name="options5" type="checkbox" value="guac">
+
+        <br>
+        <br>
+
+        <textarea name="blog" id="" cols="30" rows="10" placeholder="Delivery instructions" class="first"></textarea>
+
+        <br>
+        <br>
+
+        <button type="submit" class="first">Submit</button>
+    </main>
+    <footer>
+        <p>Loco Burrito &copy; 2022</p>
+    </footer>
+    </form>
+
+</body>
+</html>
