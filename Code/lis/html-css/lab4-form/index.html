@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab4 Burrito Order Form</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
+</head>
+
+<body>
+  <main style="max-width: 500px;">
+    <article id="form">
+      <h1>🌯&nbsp; Burrito Order Form</h1>
+      <form action="https://webhook.site/c3dd2ac7-ea7c-4652-b178-7144f38ac11b" method="POST">
+
+        <input type="text" id="firstname" name="first name" placeholder="First Name" required />
+
+        <input type="text" id="lastname" name="last name" placeholder="Last Name" required />
+
+        <input type="password" id="password" name="password" placeholder="Password" pattern="[a-zA-Z0-9]{1,10}"
+          required />
+
+        <fieldset>
+          <legend><strong>Tortilla</strong></legend>
+          <label for="radio-1">
+            <input type="radio" id="radio-1" name="radio-tortilla" value="white flour" checked="">
+            White Flour
+          </label>
+          <label for="radio-2">
+            <input type="radio" id="radio-2" name="radio-tortilla" value="wheat flour">
+            Wheat Flour
+          </label>
+          <label for="radio-3">
+            <input type="radio" id="radio-3" name="radio-tortilla" value="spinach">
+            Spinach
+          </label>
+          <label for="radio-4">
+            <input type="radio" id="radio-4" name="radio-tortilla" value="corn">
+            Corn
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>Rice</strong></legend>
+          <label for="radio-5">
+            <input type="radio" id="radio-5" name="radio-rice" value="white rice" checked="">
+            White Rice
+          </label>
+          <label for="radio-6">
+            <input type="radio" id="radio-6" name="radio-rice" value="brown rice">
+            Brown Rice
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>Beans</strong></legend>
+          <label for="radio-7">
+            <input type="radio" id="radio-7" name="radio-beans" value="black beans" checked="">
+            Black Beans
+          </label>
+          <label for="radio-8">
+            <input type="radio" id="radio-8" name="radio-beans" value="pinto beans">
+            Pinto Beans
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>Protein</strong></legend>
+          <label for="radio-9">
+            <input type="radio" id="radio-9" name="radio-protein" value="carnitas" checked="">
+            Carnitas
+          </label>
+          <label for="radio-10">
+            <input type="radio" id="radio-10" name="radio-protein" value="chicken">
+            Chicken
+          </label>
+          <label for="radio-11">
+            <input type="radio" id="radio-11" name="radio-protein" value="sofritas">
+            Sofritas
+          </label>
+          <label for="radio-12">
+            <input type="radio" id="radio-12" name="radio-protein" value="none">
+            None
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>Additional Ingredients</strong></legend>
+          <label for="checkbox-1">
+            <input type="checkbox" id="checkbox-1" name="additional-cheese" value="cheese">
+            Cheese
+          </label>
+          <label for="checkbox-2">
+            <input type="checkbox" id="checkbox-2" name="additional-sour-cream" value="sour cream">
+            Sour Cream
+          </label>
+        </fieldset>
+
+        <textarea name="instructions" cols="30" rows="10" placeholder="Delivery Instructions"></textarea>
+
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Place Order">
+
+      </form>
+    </article>
+  </main>
+
+</body>
+
+</html>
