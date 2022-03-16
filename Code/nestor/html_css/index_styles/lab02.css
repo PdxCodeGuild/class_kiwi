@@ -1,0 +1,126 @@
+img {
+    border-radius: 25px;
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Syne Mono', monospace;
+    color: black;
+    background-color: lightcyan;
+    /* border: 5px solid red; */
+}
+
+header {
+    color: maroon;
+    background-image: url("http://beachesofaruba.com/wp-content/uploads/2019/03/Druif-Beach-Aruba.jpg");
+    background-size: cover; 
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    height: 300px;
+    text-align: justify;
+    padding-top: auto;
+}
+h1 {
+    text-align: center;
+    text-decoration: antiquewhite;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: darkcyan;
+}
+
+.top-nav a {
+    border: 2px solid yellow;
+    color: goldenrod;
+}
+.pup {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-self: flex-end; */
+    
+}
+.pup #img {
+    display: flex;
+    flex-direction: row;
+}
+.pup div img {
+    justify-content: left, center, right;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.adopt .dog {
+    color:black;
+}
+
+section p {
+    margin-bottom: 50px;
+}
+
+p {
+    background-color: rgb(226, 173, 173);
+    margin-top: auto;
+    margin-bottom: 100px;
+}
+
+
+.pic {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0; 
+    justify-content: space-evenly;
+}
+
+.pic img {
+    margin: 20px;
+    border-radius: 50%;
+}
+
+
+#info {
+    background-image: url("http://moneyinc.com/wp-content/uploads/2017/08/Aruba.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+}
+#history {
+    background-color: lightcyan;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-image: url("http://images.trvl-media.com/media/content/shared/images/travelguides/destination/601713/Aruba-52912.jpg");
+    background-size: cover;
+    height: 200px;
+    background-position: center;
+    color:aliceblue
+}
+
+#temperament {
+    background-image: url("https://img.theculturetrip.com/450x/smart/wp-content/uploads/2018/09/gfey6n.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: 25% 25%;
+    height: 200px;
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+}
+
+#adopt {
+    border: 3px solid goldenrod;
+    display: inline;
+}
+
+
+
+

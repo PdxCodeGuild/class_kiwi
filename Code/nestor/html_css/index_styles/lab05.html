@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 5: Burrito Order Form</title>
+    <link rel="stylesheet" href="lab05.css">
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Libre+Baskerville:ital@1&family=Lobster&family=Syne+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="body">
+        <header class="title">
+            <h1>El Burrito Supremo Order Form</h1>
+        </header>
+        <div class="picture">
+            <img src="https://dta0yqvfnusiq.cloudfront.net/elcharrito/2019/05/Untitled-69-1-5ceec238d6fe1.jpg" alt="burrito on plate">
+        </div>
+        <article class="order">
+            <nav>
+                <h2>Burrito's Details</h3>
+            </nav>
+        </div>
+        <br>
+        <h3 class="customize">Customize Your Burrito</h3> <br>
+        <br class="line">
+        <form action="https://webhook.site/e62a9139-6931-451f-b7b2-2c50370531c5" method="POST">
+                <input placeholder="Who's ordering" name="name" type="text" required/>
+                <br>
+                <input placeholder="Password" name="password" type="text" required/> <br>
+                <br>
+                Tortilla: <input id="white flour" name="tortilla" type="radio" value="white flour"/><label for="white flour">White Flour</label>
+                <input id="wheat flour" name="tortilla" type="radio" value="wheat flour"/><label for="wheat flour">Wheat Flour</label>
+                <input id="spinach" name="tortilla" type="radio" value="spinach"/><label for="spinach">Spinach</label>
+                <input id="corn" name="tortilla" type="radio" value="corn"/><label for="corn">Corn (gluten-free)</label><br>
+                <br>
+                Rice: <input id="white rice" name="rice" type="radio" value="white rice"/><label for="white rice">White Rice</label>
+                <input id="brown rice" name="rice" type="radio" value="brown rice"/><label for="brown rice">Brown Rice</label>
+                <input id="none" name="rice" type="radio" value="none"/><label for="none">None</label><br>
+                <br>
+                Bean: <input id="black beans" name="beans" type="radio" value="black beans"/><label for="black beans">Black Beans</label>
+                <input id="pinto beans" name="beans" type="radio" value="pinto beans"/><label for="pinto beans">Pinto Beans</label><br>
+                <br>
+                Meat: <input id="carnitas" name="meat" type="checkbox" value="carnitas"/><label for="carnitas">Carnitas</label>
+                <input id="chicken" name="meat" type="checkbox" value="chicken"/><label for="chicken">Chicken</label>
+                <input id="tofu" name="meat" type="checkbox" value="tofu"/><label for="tofu">Sofritas (tofu)</label>
+                <input id="none" name="meat" type="checkbox" value="none"/><label for="none">None</label><br>
+                <br>
+                Additional Ingredients (check boxes): <br>
+                <input id="cheese" name="cheese" type="checkbox" value="cheese"/><label for="cheese">Cheese</label> <br>
+                <input id="salsa" name="salsa" type="checkbox" value="salsa"/><label for="salsa">Salsa</label> <br>
+                <input id="sour cream" name="sour cream" type="checkbox" value="sour cream"/><label for="sour cream">Sour Cream</label> <br>
+                <input id="guac" name="guac" type="checkbox" value="guac"/><label for="guac">Guacamole</label> <br>
+                <br>
+                Delivery Instructions: <br>
+                <textarea name="delivery" id="delivery" cols="30" rows="10" placeholder="FedEx my burrito!"></textarea> <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </article>
+    </div>
+</body>
+</html>
