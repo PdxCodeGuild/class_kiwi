@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <form
+      action="https://webhook.site/5043cfb7-84c9-4bc7-8817-a5cf7cd357b1"
+      method="POST"
+    >
+      <input
+        placeholder="Enter a greeting"
+        name="greeting"
+        type="text"
+        required
+      />
+
+      <input
+        name="password"
+        placeholder="Enter password"
+        type="password"
+        required
+      />
+
+      <br />
+
+      <input type="date" name="date" />
+      <input type="time" name="time" />
+
+      <br />
+
+      <input type="color" name="color" />
+
+      <br />
+
+      <label for="red">Red</label>
+      <input id="red" name="rgb" type="radio" value="red" />
+
+      <label for="blue">Blue</label>
+      <input id="blue" name="rgb" type="radio" value="blue" />
+
+      <label for="green">Green</label>
+      <input id="green" name="rgb" type="radio" value="green" />
+
+      <br />
+
+      <h4>Select cool animals:</h4>
+      <label for="llama">Llama</label>
+      <input id="llama" name="llama" type="checkbox" value="llama" />
+
+      <label for="dog">Dog</label>
+      <input id="dog" name="dog" value="dog" type="checkbox" />
+
+      <br />
+
+      <textarea
+        name="blog"
+        cols="30"
+        rows="10"
+        placeholder="Hello there"
+      ></textarea>
+
+      <br />
+
+      <label for="carbrand">Enter fav car brand:</label>
+      <select name="carbrand" id="carbrand">
+        <option value="nissan">Nissan</option>
+        <option value="toyota">Toyota</option>
+        <option value="bmw">BMW</option>
+        <option value="ford">Ford</option>
+        <option value="subaru">Subuwu</option>
+        <option value="acura">Acura</option>
+      </select>
+
+      <br />
+      <input type="password" pattern="[a-zA-Z0-9]{1,10}" required />
+
+      <button type="submit">Click me</button>
+    </form>
+  </body>
+</html>
