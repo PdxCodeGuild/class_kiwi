@@ -8,8 +8,25 @@ body {
 
 .nav-wrapper {background-color: darkred;}
 
-.footer-copyright{
+.footer-copyrightn {
       display: flex;
       min-height: 100vh;
-      flex-direction: column;
-    }
+      flex-direction: column;}
+
+.row {justify-content: baseline;
+flex-direction: column;
+}
+
+footer.page-footer {background-color: aliceblue;}
+
+@media screen and (min-width: 768px) {
+  .links {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    display: flex;
+    justify-content: space-between;}}
