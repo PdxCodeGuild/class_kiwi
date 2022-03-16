@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Burrito Order Form</title>
+	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+	<header class="container" style="text-align:center; background-image: url('./images/burrito.jpg');
+        background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+        <h1>Welcome to Yusuf's Burrito Hut</h1>
+    </header>
+    <main class="container">
+        <form action="https://webhook.site/9efc5812-4337-4760-9345-ef1b1da949ec" method="POST">
+            <div class="grid">
+                <div>
+                    <input type="text" name="name" placeholder="Name"/>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password"/>
+                </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div>
+                    <fieldset>
+                    <legend>Which Tortilla do you want?</legend>
+                    <input type="radio" name="tortilla" value="whiteflour"/>White Flour
+                    <input type="radio" name="tortilla" value="wheatflour"/>Wheat Flour
+                    <input type="radio" name="tortilla" value="spinach"/>Spinach
+                    <input type="radio" name="tortilla" value="corn"/>Corn
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+		  <legend>Which Protein do you want?</legend>
+		  <input type="radio" name="protein" value="carnitas"/>Carnitas
+		  <input type="radio" name="protein" value="chicken"/>Chicken
+		  <input type="radio" name="protein" value="sofritas"/>Sofritas
+		  <input type="radio" name="protein" value="none"/>None
+                    </fieldset>
+          </div>
+            </div>
+            <div class="grid">
+                <div>
+                    <fieldset>
+          <legend>Which Beans do you want?</legend>
+		  <input type="radio" name="beans" value="blackbeans"/>Black Beans
+		  <input type="radio" name="beans" value="pintobeans"/>Pinto Beans
+                    </fieldset>
+          </div>
+          <div>
+              <fieldset>
+          <legend>Which Rice do you want?</legend>
+		  <input type="radio" name="rice" value="whiterice"/>White Rice
+		  <input type="radio" name="rice" value="brownrice"/>Brown Rice
+              </fieldset>
+          </div>
+            </div>
+            <div class="grid">
+                <div>
+                    <fieldset>
+          <legend>Which Additional Ingredients do you want?</legend>
+          <label for="cheese">
+          <input id="cheese" name="cheese" type="checkbox">
+          Cheese
+        </label>
+          <label for="sourcream">
+          <input id="sourcream" name="sourcream" type="checkbox">
+          Sour Cream
+        </label>            
+        </fieldset>
+                </div>
+                <div>
+          <textarea name="deliveryinstructions" cols="30" rows="5" placeholder="Delivery Instructions"></textarea>
+                </div>
+            </div>
+          <button type="submit">Submit</button>
+		</form>
+        </main>	
+</body>
+</html>
