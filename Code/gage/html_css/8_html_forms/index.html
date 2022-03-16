@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Forms</title>
+</head>
+<body>
+    <form action="https://webhook.site/dc87d463-5e9d-4980-9d08-f766b7c9d0d5" method="post" >
+        <input placeholder="username" name="user" type="text" required>
+        <input placeholder="password" name="pass" type="password" required>
+        <br>
+        <input name="date" type="date">
+        <br>
+        <input name="time" type="time">
+        <br>
+        <input name="color" type="color">
+        <br>
+        <!-- Radio Buttons -->
+        <input id="red" name="rgb" type="radio" value="red">
+        <label for="red">Red</label>
+        
+        <input id="blue" name="rgb" type="radio" value="blue">
+        <label for="blue">Blue</label>
+        
+        <input id="green" name="rgb" type="radio" value="green">
+        <label for="green">Green</label>
+        <br>
+
+        <!-- Check Boxes -->
+        <h4>Select your favorite animals</h4>
+        <label for="llama">Llama</label>
+        <input id="llama" type="checkbox" name="llama" value="llama">
+        <br>
+        <label for="lion">lion</label>
+        <input id="lion" type="checkbox" name="lion" value="lion">
+        <br>
+        <label for="dog">dog</label>
+        <input id="dog" type="checkbox" name="dog" value="dog">
+        <br>
+        <label for="cat">cat</label>
+        <input id="cat" type="checkbox" name="cat" value="cat">
+        <br>
+        <label for="kiwi">kiwi</label>
+        <input id="kiwi" type="checkbox" name="kiwi" value="kiwi">
+        <br>
+
+        <textarea placeholder="This is a textarea"name="blog" cols="30" rows="10"></textarea>
+        <br>
+        <label for="carbrand">Select your favorite car brand</label>
+        <br>
+        <select name="carbrand" id="carbrand">
+            <option value="BMW">BMW</option>
+            <option value="Honda">Honda</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Subie">Subie</option>
+        </select>
+        <br>
+        <button type="submit">Click Me</button>
+
+        
+    </form>
+</body>
+</html>
