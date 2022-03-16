@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <title>Burrito Order Form</title>
+  </head>
+
+  <h6>How Do You Like Your Burrito?</h6>
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6H-vvN2JBtc0cGoWcm0Gw7-HW7BIs4GOwmg&usqp=CAU"
+  />
+  <body>
+    <form
+      action="https://webhook.site/cc6dc398-d47d-4311-9246-6a6a87c2f9b3"
+      method="post"
+    >
+      <p><b>Tortilla:</b></p>
+      <input
+        type="radio"
+        id="White Flour"
+        name="Tortilla"
+        value="White Flour"
+      />
+      <label for="White Flour">White Flour</label>
+      <input
+        type="radio"
+        id="Wheat Flour"
+        name="Tortilla"
+        value="Wheat Flour"
+      />
+      <label for="Wheat Flour">Wheat Flour</label>
+      <input type="radio" id="Spinach" name="Tortilla" value="Spinach" />
+      <label for="Spinach">Spinach</label>
+      <input type="radio" id="Corn" name="Tortilla" value="Corn" />
+      <label for="Corn">Corn</label>
+
+      <p><b>Rice:</b></p>
+      <input type="radio" id="White Rice" name="Rice" value="White Rice" />
+      <label for="White Rice">White Rice</label>
+      <input type="radio" id="Brown Rice" name="Rice" value="Brown Rice" />
+      <label for="Brown Rice">Brown Rice</label>
+
+      <p><b>Beans:</b></p>
+      <input type="radio" id="Black Beans" name="Beans" value="Black Beans" />
+      <label for="Black Beans">Black Beans</label>
+      <input type="radio" id="Pinto Beans" name="Beans" value="Pinto Beans" />
+      <label for="Pinto Beans">Pinto Beans</label>
+
+      <p><b>Protein:</b></p>
+      <input type="radio" id="Carnitas" name="Protein" value="Carnitas" />
+      <label for="Carnitas">Carnitas</label>
+      <input type="radio" id="Chicken" name="Protein" value="Chicken" />
+      <label for="Chicken">Chicken</label>
+      <input type="radio" id="Sofritas" name="Protein" value="Sofritas" />
+      <label for="Sofritas">Sofritas</label>
+      <input type="radio" id="None" name="Protein" value="None" />
+      <label for="None">None</label>
+
+      <p><b>Additional Ingredients:</b></p>
+      <input type="checkbox" id="Cheese" name="Cheese" checked />
+      <label for="Cheese">Cheese</label>
+      <input type="checkbox" id="Sour Cream" name="Sour Cream" checked />
+      <label for="Sour Cream">Sour Cream</label>
+
+      <p><b>Delivery Instructions:</b></p>
+      <textarea
+        placeholder="Delivery Intstructions"
+        rows="5"
+        cols="25"
+        name="Delivery Intstructions"
+      ></textarea>
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
