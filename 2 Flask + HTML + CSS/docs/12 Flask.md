@@ -26,10 +26,25 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return 'Hello World!'
-
-app.run(debug=True)
 ```
 
+We will also need to tell Flask which file we want to run. We can do so by setting the FLASK_APP environment variable.
+
+Windows:
+> $env:FLASK_APP = "app.py"
+
+Mac:
+> export FLASK_APP=app.py
+
+If we want our server to auto reload we can set the FLASK_ENV environment variable to development.
+
+Windows:
+> $env:FLASK_ENV = "development"
+
+Mac:
+> export FLASK_ENV=development
+
+Finally we can run our server by using the `flask run` command.
 
 ## Routing
 
