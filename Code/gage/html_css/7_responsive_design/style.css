@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+}
+body > * { /*-- Targets all the first childs of the body --*/
+    /* border: 2px solid red; */
+    
+}
+h1 {
+    text-align: center;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.links > a {
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    margin: .25em;
+    border-radius: 5px;
+    border: 2px solid grey;
+    color: black;
+    background-color: burlywood;
+    
+}
+
+img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+main {
+    text-align: center;
+}
+section {
+    border-bottom: 2px solid grey;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+section > h1{
+    text-decoration: underline;
+}
+/* Tablet */
+@media screen and (min-width: 768px){
+    .links  {
+        flex-direction: row;
+        justify-content: space-evenly ;
+    }
+    .hero{
+        padding: 35px;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 70%;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section {
+        width: 65%;
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1440px){
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 0px 50px 0px 50px; */
+    }
+    
+    img {
+        max-width: 900px;
+    }
+    .links{
+        display: block;
+    }
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section{
+        width: 25%;
+    }
+}

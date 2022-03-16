@@ -1,0 +1,79 @@
+body {
+    overflow-x: hidden;
+}
+
+form > h1{
+    margin: 35px 0px 35px 0px;
+}
+
+form > h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    
+}
+label {
+    font-size: 20px;
+    margin-bottom: 20px; 
+     
+}
+form {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+input[type=text] {
+    border-radius: 20px;
+    border: 3px solid black;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+input[type=password] {
+    border-radius: 20px;
+    border: 3px solid black;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) { 
+    label{ font-size: 35px;}
+    #formcont > h4{
+        font-size: 35px;
+    }
+    form > h4 {
+        font-size: 35px;
+    }
+    form > h1 {
+        font-size: 40px;
+        margin: 100px 0px 100px 0px;
+    }
+    .specialdel{
+        font-size: 25px;
+        padding: 25px;
+        width: 750px;
+        margin: 0 auto;
+    }
+    input[type=text]{
+        padding: 15px 0px 15px 0px;
+        border-radius: 30px;
+        max-width: 550px;
+    }
+    input[type=password]{
+        padding: 15px 0px 15px 0px;
+        border-radius: 30px;
+        max-width: 550px;
+    }
+    #formcont {
+        margin: 0 auto;
+        padding-left: 250px;
+    }
+    #subbut {
+        max-width: 500px;
+    }
+ }
+
