@@ -5,22 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Caliente Burritos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
-<body>
-   <form action="https://webhook.site/5f2b85f6-1dde-446b-8f29-07ce5468ded5" method="POST">
 
+<figure class="image is-16by9">
+<img src="https://img.freepik.com/vector-gratis/burrito-logotipo-caliente-picante_1436-175.jpg?w=1380" alt="">
+</figure>
+
+<body >
+   <form action="https://webhook.site/5f2b85f6-1dde-446b-8f29-07ce5468ded5" method="POST">
+        <section class="section">
         <input 
-            name="order_name"
-            placeholder="What is the name on the order?"
-            type="text"
-            required 
+        class="input is-info is-medium is-rounded"
+        name="order_name"
+        placeholder="What is the name on the order?"
+        type="text"
+        required 
         >
 
         <input 
-            type="password"
-            name="password"
-            placeholder="enter a password">
+        class="input is-danger is-medium is-rounded"
+        type="password"
+        name="password"
+        placeholder="enter a password">
+        </section>
 <br>
+        <Div id="tortilla" class="section is-small">
+                <p>What kind of tortilla?</p>
         <label for="white flour">White Flour</label>
         <input id="white flour" name="tortilla" type="radio" value="White Flour" />
 
@@ -32,25 +43,28 @@
 
         <label for="corn">Corn</label>
         <input id="corn" name="tortilla" type="radio" value="Corn" />
-   
+        </div>
 <br> 
-
+        <div id="rice" class="section is-small">
+                <p>What kind of rice?</p>
         <label for="white rice">White Rice</label>
         <input id="white rice" name="rice" type="radio" value="White Rice" /> 
 
         <label for="brown rice">Brown Rice</label>
         <input id="brown rice" name="rice" type="radio" value="Brown Rice" />
-        
+        </div>
 <br>
-
+        <div id="beans" class="section is-small">
+                <p>What kind of beans?</p>
         <label for="black beans">Black beans</label>
         <input id="black beans" name="beans" type="radio" value="Black Beans" />
         
         <label for="pinto beans">Pinto beans</label>
         <input id="pinto beans" name="beans" type="radio" value="Pinto Beans" />
-
+        </div>
 <br>
-
+        <div id="proteins" class="section is-small">
+                <p>What kind of protein?</p>
         <label for="carnitas">Carnitas</label>
         <input id="carnitas" name="protein" type="radio" value="Carnitas" />
         
@@ -62,23 +76,26 @@
 
         <label for="none">None</label>
         <input id="none" name="protein" type="radio" value="None" />
-
+        </div>
 <br>
-
+        <div id="addon" class="section is-small">
+                <p>Would you like...</p>
         <label for="cheese">Cheese</label>
         <input id="cheese" name="cheese" type="checkbox" value="Cheese" />
 
         <label for="sour cream">Sour Cream</label>
         <input id="sour cream" name="sour cream" type="checkbox" value="Sour Cream" />
-
+        </div>
 <br>
-
+        <div>
         <textarea
+            class="textarea is-success has-fixed-size "
             name="delivery instructions"
             cols="30"
             rows="10"
             placeholder="Special Instructions"
         ></textarea>
+        </div>
     </form>
 
 
