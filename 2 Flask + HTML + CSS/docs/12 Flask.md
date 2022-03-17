@@ -15,7 +15,7 @@ Flask is a light-weight web application framework written in Python. It performs
 
 ## Setup
 
-You can install Flask with `pip install flask`. The [official flask quickstart](https://flask.palletsprojects.com/en/1.1.x/quickstart/) provides walkthrough of flask's major features.
+You can install Flask with `pip install flask`. The [official flask quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/) provides walkthrough of flask's major features.
 
 Below is a minimal Flask application, it receives a request at `localhost:5000/` and returns a response that simply contains "Hello World!". Copy-paste this code into a file `app.py`.
 
@@ -133,7 +133,7 @@ def index(username):
 
 ## Static Files
 
-Static files (css, js, images, etc) must be put in a folder called `static`. You can then render the url for them in the template with the code below. Read more about static files in the [official docs](https://flask.palletsprojects.com/en/1.1.x/tutorial/static/).
+Static files (css, js, images, etc) must be put in a folder called `static`. You can then render the url for them in the template with the code below. Read more about static files in the [official docs](https://flask.palletsprojects.com/en/2.0.x/tutorial/static/).
 
 ```html
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
