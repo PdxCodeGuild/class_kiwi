@@ -20,23 +20,29 @@
         href="C:\Users\Matthew\Documents\Code\class_kiwi\Code\matthew\html_css\labs\lab_4\order.html">
     <!-- home -->
     <link rel="home" href="C:\Users\Matthew\Documents\Code\class_kiwi\Code\matthew\html_css\labs\lab_4\index.html">
+    <!-- "playball" font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 
     <title>Login</title>
 </head>
 
-<body>
-    <div id="top-bar" class="container-fluid">
+<body id="login">
+    <div id="top-bar" class="container-fluid border-bottom border-dark ">
         <div class="row">
-            <header class="col-5 text-start">
-                <h1><a href="index.html">Seinor Burrito</a></h1>
+            <header class="col-9 text-start-center mt-2">
+                <h1><a id="burrito" href="index.html">Seinor Burrito</a></h1>
             </header>
-            <nav class="col-7 text-end">
-                <a type="button" class="btn btn-primary" href="menu.html">Menu</a>
-                <a type="button" class="btn btn-primary" href="order.html">Order</a>
-                <a type="button" class="btn btn-primary" href="login.html">login</a>
+            <nav class="col-3 text-end mt-2">
+                <!-- <a type="button" class="btn btn-outline-dark m-1" href="menu.html">Menu</a> -->
+                <a
+                    href="https://www.ubereats.com/?utm_source=AdWords_Brand&utm_campaign=CM2029619-search-google-brand_1_10_US-Seattle_e_web_acq_cpc_en_Generics_Exact_uber%20eats_kwd-125079392186_546346938373_101194215117_e_c&campaign_id=9983520607&adg_id=101194215117&fi_id=&match=e&net=g&dev=c&dev_m=&ad_id=546346938373&cre=546346938373&kwid=kwd-125079392186&kw=uber%20eats&placement=&tar=&gclid=CjwKCAjwlcaRBhBYEiwAK341jSZ4B-NUCT0gO67QE4lB4vLumbFqz-XwYCNthvpJ4MwMyimoPn3FnRoCGjAQAvD_BwE&gclsrc=aw.ds"><button
+                        type="button" class="btn btn-outline-dark">Uber Eats</button></a>
+                <a type="button" class="btn btn-outline-dark m-1" href="order.html">Order</a>
+                <a type="button" class="btn btn-outline-dark m-1" href="login.html">login</a>
             </nav>
         </div>
     </div>
+
     <br>
     <form action="" method="post">
 
@@ -49,9 +55,9 @@
             <div class="col-12 text-center m-1">
                 <input type="password" name="password" id="" placeholder="Password" required>
             </div>
-
+            <div class="col-12"><br> </div>
             <div class="col-12 text-center">
-                <button>Enter</button>
+                <button class="btn btn-outline-dark">Enter</button>
             </div>
         </div>
 
@@ -59,7 +65,7 @@
 
     <div class="col-12"><br></div>
     <div class="col-12"><br></div>
-    <footer class="border-top text-center">
+    <footer class="fixed-bottom border-top border-dark text-center">
         &copy;Matthew Holmes 2022
     </footer>
     </div>

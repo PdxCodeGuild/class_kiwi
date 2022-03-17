@@ -1,10 +1,47 @@
+body {
+    /* background-image: linear-gradient(45deg, rgba(56,120,78, 0.27),rgba(175,255,102, 0.49)); */
+    background-image: linear-gradient(224deg, transparent 0%, transparent 30%,rgba(249, 249, 249,0.02) 30%, rgba(249, 249, 249,0.02) 36%,transparent 36%, transparent 100%),linear-gradient(345deg, transparent 0%, transparent 53%,rgba(255,0,0, 0.02) 53%, rgba(255,0,0, 0.02) 63%,transparent 63%, transparent 100%),linear-gradient(284deg, transparent 0%, transparent 28%,rgba(255,255,255, 0.2) 28%, rgba(255,255,255, 0.2) 38%,transparent 38%, transparent 100%),linear-gradient(90deg, rgb(238,222,222),rgb(238,222,222));
+    min-height: 100vh;
+    color: black;
+    /* font-family: 'playball'; */
+    
+}
+
+/* Header */
+
 #top-bar {
-    /* border: 1px solid black; */
+    /* background-color: rgba(133, 185, 131, 0.548); */
+    background-color: rgba(194, 138, 138, 0.5);
+    font-family: 'playball';
 }
 a {
     text-decoration: none;
 }
+
+#name  {
+    font-size: 100px;
+    color: rgba(163, 6, 6, 0.959);
+}
+
+/* h1 for order and login */
+#burrito {
+    color: rgba(163, 6, 6, 0.959);
+}
 img {
     max-width: 100%;
 }
+
+/* index paragraph */
+
+#hook {
+    font-size: 20px;
+    font-family: 'playball';
+    
+}
+
+#location {
+    font-family: 'playball';
+}
+
+
 

@@ -20,35 +20,42 @@
         href="C:\Users\Matthew\Documents\Code\class_kiwi\Code\matthew\html_css\labs\lab_4\order.html">
     <!-- home -->
     <link rel="home" href="C:\Users\Matthew\Documents\Code\class_kiwi\Code\matthew\html_css\labs\lab_4\index.html">
+    <!-- "playball" font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 
     <title>Order</title>
 </head>
 
 <body>
-    <div id="top-bar" class="container-fluid">
+    <div id="top-bar" class="container-fluid border-bottom border-dark ">
         <div class="row">
-            <header class="col-5 text-start">
-                <h1><a href="index.html">Seinor Burrito</a></h1>
+            <header class="col-9 text-start-center mt-2">
+                <h1><a id="burrito" href="index.html">Seinor Burrito</a></h1>
             </header>
-            <nav class="col-7 text-end">
-                <a type="button" class="btn btn-primary" href="menu.html">Menu</a>
-                <a type="button" class="btn btn-primary" href="order.html">Order</a>
-                <a type="button" class="btn btn-primary" href="login.html">login</a>
+            <nav class="col-3 text-end mt-2">
+                <!-- <a type="button" class="btn btn-outline-dark m-1" href="menu.html">Menu</a> -->
+                <a
+                    href="https://www.ubereats.com/?utm_source=AdWords_Brand&utm_campaign=CM2029619-search-google-brand_1_10_US-Seattle_e_web_acq_cpc_en_Generics_Exact_uber%20eats_kwd-125079392186_546346938373_101194215117_e_c&campaign_id=9983520607&adg_id=101194215117&fi_id=&match=e&net=g&dev=c&dev_m=&ad_id=546346938373&cre=546346938373&kwid=kwd-125079392186&kw=uber%20eats&placement=&tar=&gclid=CjwKCAjwlcaRBhBYEiwAK341jSZ4B-NUCT0gO67QE4lB4vLumbFqz-XwYCNthvpJ4MwMyimoPn3FnRoCGjAQAvD_BwE&gclsrc=aw.ds"><button
+                        type="button" class="btn btn-outline-dark">Uber Eats</button></a>
+                <a type="button" class="btn btn-outline-dark m-1" href="order.html">Order</a>
+                <a type="button" class="btn btn-outline-dark m-1" href="login.html">login</a>
             </nav>
         </div>
     </div>
 
+
     <br>
-    <form action="" method="post">
+    <form action="" method="post" class="ms-4">
 
         <div class="row">
 
             <div class="col-12 text-center">
-                <h3>Customize your order</h3>
+                <h3 class="">Customize your order</h3>
             </div>
 
             <div class="col-12"><br></div>
             <!-- Type -->
+
             <div class="col-2">
                 <h4>Type:</h4>
             </div>
@@ -65,6 +72,7 @@
 
             <div class="col-12"><br></div>
             <!-- Tortilla -->
+
             <div class="col-2">
                 <h4>Tortilla:</h4>
             </div>
@@ -84,6 +92,7 @@
 
             <div class="col-12"><br></div>
             <!-- Rice -->
+
             <div class="col-2">
                 <h4>Rice:</h4>
             </div>
@@ -97,6 +106,7 @@
 
             <div class="col-12"><br></div>
             <!-- Beans -->
+
             <div class="col-2">
                 <h4>Beans:</h4>
             </div>
@@ -110,6 +120,7 @@
 
             <div class="col-12"><br></div>
             <!-- Protein -->
+
             <div class="col-2">
                 <h4>Protein:</h4>
             </div>
@@ -129,6 +140,7 @@
 
             <div class="col-12"><br></div>
             <!-- Additional Ingredients -->
+
             <div class="col-2">
                 <h4>Add ons:</h4>
             </div>
@@ -143,18 +155,25 @@
 
             <div class="col-12"><br></div>
             <!-- Delivery Instructions -->
+
             <div class="col-2">
                 <h4>Delivery Instructions</h4>
             </div>
             <div class="col-9 text-end">
-                <textarea name="delivery instructions" id="" cols="30" rows="10"
+                <textarea class="" name="delivery instructions" id="" cols="30" rows="10"
                     placeholder="Enter any delivery instructions"></textarea>
+            </div>
+
+            <div class="col-12"><br></div>
+
+            <div class="col-12 text-center">
+                <button class="btn btn-outline-dark">Submit</button>
             </div>
         </div>
     </form>
-    <div class="col-12"><br></div>
-    <div class="col-12"><br></div>
-    <footer class="border-top text-center">
+    <di class="col-12"><br></di>
+    <di class="col-12"><br></di>
+    <footer class="bottom border-top border-dark text-center">
         &copy;Matthew Holmes 2022
     </footer>
     </div>
