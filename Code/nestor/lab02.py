@@ -9,7 +9,7 @@ for num in range(len(numbers)):
 
 # creating variable to find average of list and printing results
 num_sum = sum(numbers) // len(numbers)
-print(f"Average: {num_sum}")
+print(f"Average: {num_sum}") 
 
 
 # Version 2
