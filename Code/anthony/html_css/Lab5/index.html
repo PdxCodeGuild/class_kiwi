@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans:ital@1&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Burrito Order Form</title>
+  </head>
+  <body class="bg-secondary">
+    
+      <!-- NAVIGATION BAR -->
+      <nav class="navbar">
+        <div class="container justify-content-center">
+          <img src="images/btown.png" class="img-fluid" alt="burrito town" />
+        </div>
+      </nav>
+
+      <!-- LOGIN INFORMATION -->
+      <div class="card container mt-5 bg-light py-2">
+        <h5
+          class="card-header text-center border border-dark bg-black text-white"
+        >
+          Login
+        </h5>
+        <div class="card-body">
+          <form
+            action="https://webhook.site/f7d6ae02-b2c9-4d1e-8156-40ca8717d9d6"
+            method="POST"
+          >
+            <div class="form-group container">
+              <label for="username">UserName</label>
+              <input
+                type="text"
+                name="username"
+                class="form-control"
+                id="username"
+                placeholder="UserName"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+            <div class="form-group container">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+        
+        </div>
+      </div>
+      <!-- MENU BAR -->
+
+      <section class="container p-4 text-center newtext">
+        <h1 class="display-1">Customize Your Burrito</h1>
+      </section>
+
+      <!-- MENU SELECTIONS -->
+      <!-- CARD ONE 1 -->
+
+      <section
+        class="container-fluid d-md-flex justify-content-center flex-wrap"
+      >
+        <div class="card" style="width: 16rem">
+          <img
+            src="images/tortillas.jpeg"
+            class="card-img-top img-fluid"
+            alt="tortillas"
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <div class="form">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Tortilla"
+                id="flexRadioDefault1"
+                value="White Flour"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                White Flour
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Tortilla"
+                id="flexRadioDefault2"
+                value="Wheat Flour"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Wheat Flour
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Tortilla"
+                id="flexRadioDefault1"
+                value="Spinach"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Spinach
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Tortilla"
+                id="flexRadioDefault2"
+                value="Corn"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Corn
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 RICE -->
+        <div class="card" style="width: 16rem">
+          <img
+            src="images/rice.webp"
+            class="card-img-top img-fluid"
+            alt="tortillas"
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <div class="form">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Rice"
+                id="flexRadioDefault1"
+                value="White Rice"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                White Rice
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Rice"
+                id="flexRadioDefault2"
+                value="Brown Rice"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Brown Rice
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 BEANS -->
+        <div class="card" style="width: 16rem">
+          <img
+            src="images/beans.jpeg"
+            class="card-img-top img-fluid"
+            alt="tortillas"
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <div class="form">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Beans"
+                id="flexRadioDefault1"
+                value="Black Beans"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Black Beans
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Beans"
+                id="flexRadioDefault2"
+                value="Pinto Beans"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Pinto Beans
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 PROTEIN -->
+        <div class="card" style="width: 16rem">
+          <img
+            src="images/protein.jpeg"
+            class="card-img-top img-fluid"
+            alt="tortillas"
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <div class="form">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Protein"
+                id="flexRadioDefault1"
+                value="Carnitas"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Carnitas
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Protein"
+                id="flexRadioDefault2"
+                value="Chicken"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Chicken
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Protein"
+                id="flexRadioDefault1"
+                value="Sofritas"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Sofritas
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="Protein"
+                id="flexRadioDefault2"
+                value="None"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                None
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 ADDITIONS  -->
+        <div class="card" style="width: 16rem">
+          <img
+            src="images/cheese.jpeg"
+            class="card-img-top img-fluid"
+            alt="tortillas"
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <div class="form">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="Additionals"
+                id="flexRadioDefault1"
+                value="Cheese"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Cheese
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="Additionals1"
+                id="flexRadioDefault2"
+                value="Sour Cream"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Sour Cream
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 
+DELIVERY INSTRUCTIONS -->
+      <section class="container text-center my-5 newtext">
+        <h5 class="my-3">Please Enter Additional Instructions</h5>
+        <textarea name="textarea" id="" cols="50" rows="5"></textarea>
+      </section>
+  
+      <!-- SUBMIT BUTTON -->
+    
+    <div class="container d-flex justify-content-center">
+    <button type="submit" class="btn btn-dark btn-lg"
+    input="submit">
+      Submit
+    </button>
+  </div>
+  </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
