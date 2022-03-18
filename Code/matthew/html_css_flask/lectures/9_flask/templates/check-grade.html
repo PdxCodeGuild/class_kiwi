@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')  }}">
+</head>
+
+<body>
+
+    <!-- Dynamic data: logic... ect -->
+    <h1>Grade Checker</h1>
+    {% if grade >= 90 %}
+    <h1>You got an A</h1>
+
+    {% elif grade >= 80 %}
+    <h2>You got a B</h2>
+
+    {% elif grade >= 70 %}
+    <h3>You got a C</h3>
+
+    {% elif grade >= 60 %}
+    <h4>You got a D</h4>
+
+    {% else %}
+    <h5>You got an F</h5>
+
+    {% endif %}
+
+</body>
+
+</html>
