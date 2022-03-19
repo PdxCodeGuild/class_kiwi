@@ -9,9 +9,11 @@
 </head>
 <body>
     <h1>Random Password Generator</h1>
-    <h3>Enter the amount of characters you'd like your password to have</h3>
+    <h3>Enter the amount of each type of characters you'd like your password to have</h3>
     <form action="/result" method="post">
-        <input name="char_count" type="text" placeholder="Amount">
+        <input name="abc_count" type="text" placeholder="Alphabet">
+        <input name="num_count" type="text" placeholder="Numbers">
+        <input name="pun_count" type="text" placeholder="Punctuation">
         <button type="submit">Enter</button>
     </form>
 </body>

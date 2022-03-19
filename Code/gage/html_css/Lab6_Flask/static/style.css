@@ -10,12 +10,13 @@ input {
 button {
     padding: 10px;
     border: 2px solid black;
+    background-color: rgb(98, 201, 98);
 }
 
 .pass_cont {
     display: inline;
     padding: 10px;
-    border: 2px solid red;
+    border: 2px solid rgb(98, 201, 98);
     margin-bottom: 100px;
 }
 
@@ -27,7 +28,7 @@ a {
     text-decoration: none;
     color: black;
     width: 150px;
-   
+   background-color: rgb(98, 201, 98);
 }
 
 section {
