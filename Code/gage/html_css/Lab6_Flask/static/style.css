@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+button {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.pass_cont {
+    display: inline;
+    padding: 10px;
+    border: 2px solid red;
+    margin-bottom: 100px;
+}
+
+a {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+   
+}
+
+section {
+    margin-top: 25px;
+}
