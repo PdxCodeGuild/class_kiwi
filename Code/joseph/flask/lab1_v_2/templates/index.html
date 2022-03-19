@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+    <title>Complex Random Password Generator</title>
+</head>
+<body class="container">
+    <main class="container">
+        <h1>Welcome to a Complex Random Password Generator</h1>
+        <progress value="50" max="100"></progress>
+        <form action="./password.html" method="POST">
+            <div class="grid">
+            <label for="upper">
+                How many uppercase letters would you like in the password?
+            <input type="text" id="upper" name="upper" placeholder="how many" required>
+            </label>
+            <label for="lower">
+                How many lowercase letters would you like in the password?
+            <input type="text" id="lower" name="lower" placeholder="how many" required>
+            </label>
+            </div>
+            <div class="grid">
+            <label for="numbers">
+                How many numbers would you like in the password?
+            <input type="text" id="numbers" name="numbers" placeholder="how many" required>
+            </label>
+            <label for="special">
+                How many special characters would you like in the password?
+            <input type="text" id="special" name="special" placeholder="how many" required>
+            </label>
+            </div>
+            <button type="submit">Generate</button>
+        </form>
+    </main>
+</body>
+</html>
