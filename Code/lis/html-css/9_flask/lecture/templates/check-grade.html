@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Checker</title>
+</head>
+<body>
+    <h1>Grade Checker</h1>
+    {% if grade >= 90 %}
+    <h2>You got an A</h2>
+    {% elif grade >= 80 %}
+    <h3>You got an B</h3>
+    {% elif grade >= 70 %}
+    <h4>You got an C</h4>
+    {% elif grade >= 60 %}
+    <h5>You got an D</h5>
+    {% else %}
+    <h6>You got an F</h6>
+    {% endif %}
+</body>
+</html>

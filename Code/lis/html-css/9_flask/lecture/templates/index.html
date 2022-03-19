@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio of a Koala</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Monda:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+
+<body>
+  <div class="container-main">
+    <h1>The {{ animal }}</h1>
+    <p>Hello {{ name }}</p>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+
+    <form action="/Llama" method="post">
+      <input name="username" type="text" placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
