@@ -1,0 +1,91 @@
+
+header {
+    display:flex ;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(36, 114, 97); 
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 70%;
+    background: rgb(39, 39, 104) ;
+    color: rgb(210, 224, 224);
+    
+}
+.sidebar header{
+   font-size: 22px; 
+   color: white;
+   text-align: center;
+   line-height: 70px;
+   background-color: rgb(12, 105, 105);
+   user-select: none;
+
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.topheader a {
+justify-content: space-between;
+color:blue;
+font-size: 25px;
+display: inline-block;
+
+}
+
+main{
+  min-height: calc(100vh - 100px);  
+  
+}
+
+body{
+    padding: 50px;
+    margin: 50;
+    min-height: calc(100vh -137px);
+    
+  
+}
+.grid {
+   display: flex; 
+   flex-direction: unset ;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   border: 4px solid black;
+   width: 89%;
+   height: 500px;
+   float: right;
+   
+}
+
+.grid div{
+    background-color: rgb(201, 127, 31);
+    border: 2px solid red;
+    flex-direction: column;
+    font-size: 16;
+    text-align: center;
+    margin: 8px;
+   width: 300px;
+   grid-template-columns: 1fr 1fr;
+}
+
+footer{
+    background-color: rgb(35, 85, 35);
+    color: gold; 
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
