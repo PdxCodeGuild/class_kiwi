@@ -1,0 +1,92 @@
+/* pop up menus */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 0.2ms ease-in-out;
+}
+
+.popup img {
+  width: 100%;
+}
+
+.popup .close {
+  position: absolute;
+  margin-top: -20px;
+  margin-right: -20px;
+  padding: 0;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #039640;
+}
+.popup .modifications-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: 30%;
+  overflow: scroll;
+}
+
+.order-wrapper {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  width: 100%;
+}
+
+.deliveryinfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#instructions {
+  width: 97.3%;
+}
+
+.burrito-wrapper {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+
+.notes-wrapper {
+  text-align: center;
+}
+
+#textinput {
+  resize: vertical;
+  width: 95%;
+}
+
+#done {
+  text-decoration: none;
+  color: black;
+}

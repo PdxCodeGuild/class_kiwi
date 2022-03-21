@@ -1,0 +1,221 @@
+@import url(popups.css);
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: yellow;
+  background-size: cover;
+  animation-duration: 1s;
+  animation-name: slidein;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ******Upper Navigation****** */
+
+.nav_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.top_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 6px solid black;
+  background-color: yellow;
+  padding-top: 8px;
+  position: fixed;
+  width: 95%;
+  margin-top: -8px;
+}
+
+.return img {
+  margin-bottom: -13px;
+}
+
+.return a {
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  /* width: 100vw; */
+  justify-content: center;
+}
+
+.logo > * {
+  justify-content: center;
+  height: 40px;
+  margin: -7px 0;
+  padding-right: 6vw;
+}
+
+.cart > * {
+  height: 25px;
+}
+
+.tabmenu-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
+  width: 95%;
+  padding-top: 70px;
+  margin-bottom: 10px;
+}
+
+.links {
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 28px;
+  margin-top: -30px;
+  background-color: rgb(0, 119, 128);
+}
+
+#burritos_box {
+  position: relative;
+  top: -1.8vh;
+  right: -21.8vw;
+  height: 80px;
+  width: 23vw;
+  opacity: 0;
+}
+
+#burrito-toggle {
+  visibility: hidden;
+}
+
+#burritos_box:checked + #burrito-toggle {
+  visibility: visible;
+}
+
+/* ^^^^^Upper Navigation^^^^^ */
+
+/* ******Burrito Menu******** */
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -80px;
+}
+
+.tabmenu-category-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.burrito-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Individual item windows */
+.option {
+  margin: 1px;
+  max-height: 300px;
+  max-width: 170px;
+  border: 2px solid rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(33, 223, 134, 0.398);
+  border-radius: 20px;
+  box-shadow: 2px 2px rgb(87, 82, 82);
+}
+
+.btn {
+  /* font-size: 1em; */
+  color: #55552f;
+  border-radius: 20px;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  cursor: grab;
+  transition: all 0.3ms ease-out;
+}
+
+.btn:hover {
+  background: #06d85f;
+}
+
+.food {
+  display: flex;
+  flex-direction: column;
+}
+
+.food img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 0;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 10px;
+  text-align: center;
+}
+
+.amountinputs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#quantity {
+  margin-top: 10px;
+  width: 80px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+}
+
+.cost {
+  font-size: 12px;
+  margin-top: 14px;
+  font-weight: bold;
+  color: #6ddd9c;
+  text-shadow: 1px 1px black;
+}
+/* ^^^Individual window items^^^ */
+
+/* Purchasers information address phone etc */
+#order-info-btn {
+  background-color: red;
+  height: 500px;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackbird Burritos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="import" href="component.html">
+
+</head>
+
+<form action="https://webhook.site/56780ed9-6419-4a0f-b9af-4c1f6da6fb36" method="post">
+
+
+    <body>
+
+        <!-- Top nav bar Return to Home page and Shopping Cart -->
+        <div class="nav-wrapper">
+            <nav class="top_nav">
+                <div class="return">
+                    <a href="index.html">
+                        <img src="outline_keyboard_return_black_24dp.png" alt=""></a>
+                </div>
+
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+
+                <!-- Shopping Cart    -->
+                <div class="cart">
+                    <a href="#current" class="cart"><img src="outline_shopping_cart_black_24dp.png" alt=""></a>
+                </div>
+
+                <!-- Shopping Cart Pop Up Menu -->
+                <div class="overlay" id="current">
+                    <div class="popup" id="items">
+                        <h2>Your Cart</h2>
+                        <p>****Under Construction****</p>
+                        <a href="#" class="close">&times;</a>
+
+                        <h3 style="text-decoration: underline; text-align: center;">Order Information
+                        </h3>
+                        <div class="order-wrapper">
+                            <div class="deliveryinfo">
+                                <input type="text" name="Name" id="" placeholder="Enter Name" required>
+                                <input type="tel" name="Telephone" id="" placeholder="Phone#" required>
+                                <input type="text" name="Address" id="" placeholder="Address" required>
+                                <input type="text" name="Zipcode" id="" placeholder="Zipcode" required>
+
+                            </div>
+                            <textarea name="Delivery Instructions" id="instructions" cols="50" rows="10"
+                                placeholder="Enter Delivery Instructions" required></textarea>
+                            <button type="submit">Submit Order</button>
+                            <input type="reset" value="Reset All">
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+        </div>
+
+
+        <div class="tabmenu-wrapper">
+            <div class="links">Ensaladas</div>
+            <div class="links">Burritos</div>
+            <div class="links">Enchiladas</div>
+            <div class="links">Tacos</div>
+        </div>
+
+        </div>
+
+        <!-- *****Menu Items***** -->
+
+        <!-- Option 1 -->
+
+        <div class="menu-wrapper">
+
+            <div class="tabmenu-category-wrapper">
+                <input type="checkbox" name="" id="burritos_box">
+                <div class="burritos_box" id="burrito-toggle">
+                    <div class="option_overlay" id="burrito_menu">
+                        <div class="burrito-wrapper" id="burritos">
+                            <div class="option">
+                                <a href="#popup1" class="btn">
+                                    <div class="food">
+                                        <img src="contodo.jpg" alt="">
+                                        <h3>Burrito Con Todo <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="B-ConTodo-amt" id="quantity" min="0"
+                                        placeholder="Quantity">
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 1 Pop up -->
+                            <div class="overlay" id="popup1">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Con Todo
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="contodolrg.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Tortilla" id="" value="Flour">
+                                            <label for="Tortilla">Flour</label>
+
+                                            <input type="radio" name="Tortilla" id="" value="Corn">
+                                            <label for="Tortilla">Corn</label>
+
+                                            <input type="radio" name="Tortilla" id="" value="In a Bowl">
+                                            <label for="Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="meat" id="" value="Pollo">
+                                            <label for="meat">Pollo</label>
+
+                                            <input type="radio" name="meat" id="" value="Carnitas">
+                                            <label for="meat">Carnitas</label>
+
+                                            <input type="radio" name="meat" id="" value="Sofritas">
+                                            <label for="meat">Sofritas</label>
+
+                                            <input type="radio" name="meat" id="" value="Lengua">
+                                            <label for="meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Bean Choice" id="" value="Black Beans">
+                                            <label for="Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Bean Choice" id="" value="Refried Beans">
+                                            <label for="Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Bean Choice" id="" value="No Beans">
+                                            <label for="Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="cheese" id="" value="Add Cheese">
+                                            <label for="cheese">Cheese</label>
+
+                                            <input type="checkbox" name="guac" id="" value="Add Guac">
+                                            <label for="cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="sourcream" id="" value="Add Sourcream">
+                                            <label for="cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="ConTodo Notes" id="textinput" cols="30" rows="1"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 2 -->
+                            <div class="option">
+                                <a href="#popup2" class="btn">
+                                    <div class="food">
+                                        <img src="burrito2.jpg" alt="">
+                                        <h3>Burrito Chile Verde <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Pork, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Chile Verde-amt" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 2 Pop up -->
+                            <div class="overlay" id="popup2">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Chile Verde
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito2.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Chile Verde-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Chile Verde-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Chile Verde-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-Tortilla" id=""
+                                                value="In a Bowl">
+                                            <label for="Burrito Chile Verde-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Chile Verde-meat" id="" value="Pollo">
+                                            <label for="Burrito Chile Verde-Burrito Chile Verde-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-meat" id="" value="Carnitas">
+                                            <label for="Burrito Chile Verde-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-meat" id="" value="Sofritas">
+                                            <label for="Burrito Chile Verde-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-meat" id="" value="Lengua">
+                                            <label for="Burrito Chile Verde-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Chile Verde-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Chile Verde-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Chile Verde-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Chile Verde-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Chile Verde-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Chile Verde-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Chile Verde-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Chile Verde-guac" id=""
+                                                value="Add Guac">
+                                            <label for="Burrito Chile Verde-guac">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Chile Verde-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Chile Verde-sourcream">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Chile Verde-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 3 -->
+                            <div class="option">
+                                <a href="#popup3" class="btn">
+                                    <div class="food">
+                                        <img src="burrito3.jpg" alt="">
+                                        <h3>Burrito Chili Relleno <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, Salsa Ranchera, Pico, Rice and Cheese
+                                        </h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Chile Relleno-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 3 Pop up -->
+                            <div class="overlay" id="popup3">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Con Todo
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito3.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Chili Relleno-Tortilla" id=""
+                                                value="Flour">
+                                            <label for="Burrito Chili Relleno-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-Tortilla" id=""
+                                                value="Corn">
+                                            <label for="Burrito Chili Relleno-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-Tortilla" id=""
+                                                value="In a Bowl">
+                                            <label for="Burrito Chili Relleno-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Chili Relleno-meat" id="" value="Pollo">
+                                            <label for="Burrito Chili Relleno-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-meat" id=""
+                                                value="Carnitas">
+                                            <label for="Burrito Chili Relleno-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-meat" id=""
+                                                value="Sofritas">
+                                            <label for="Burrito Chili Relleno-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-meat" id="" value="Lengua">
+                                            <label for="Burrito Chili Relleno-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Chili Relleno-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Chili Relleno-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Chili Relleno-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Chili Relleno-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Chili Relleno-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Chili Relleno-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Chili Relleno-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Chili Relleno-guac" id=""
+                                                value="Add Guac">
+                                            <label for="Burrito Chili Relleno-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Chili Relleno-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Chili Relleno-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Chili Relleno-Notes" id="textinput"
+                                                cols="30" rows="1" placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 4 -->
+                            <div class="option">
+                                <a href="#popup4" class="btn">
+                                    <div class="food">
+                                        <img src="burrito4.jpg" alt="">
+                                        <h3>Burrito Chorizo <br>(Chorizo, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Chorizo, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Chorizo-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 4 Pop up -->
+                            <div class="overlay" id="popup4">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Chorizo
+                                        (Chorizo,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito4.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Chorizo-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Chorizo-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Chorizo-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Chorizo-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Chorizo-Tortilla" id="" value="In a Bowl">
+                                            <label for="Burrito Chorizo-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Chorizo-meat" id="" value="Pollo">
+                                            <label for="Burrito Chorizo-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Chorizo-meat" id="" value="Carnitas">
+                                            <label for="Burrito Chorizo-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Chorizo-meat" id="" value="Sofritas">
+                                            <label for="Burrito Chorizo-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Chorizo-meat" id="" value="Lengua">
+                                            <label for="Burrito Chorizo-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Chorizo-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Chorizo-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Chorizo-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Chorizo-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Chorizo-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Chorizo-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Chorizo-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Chorizo-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Chorizo-guac" id="" value="Add Guac">
+                                            <label for="Burrito Chorizo-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Chorizo-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Chorizo-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Chorizo-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 5 -->
+                            <div class="option">
+                                <a href="#popup5" class="btn">
+                                    <div class="food">
+                                        <img src="burrito5.jpg" alt="">
+                                        <h3>Burrito Steak Picado<br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Steak Picado-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 5 Pop up -->
+                            <div class="overlay" id="popup5">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Steak Picado
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito5.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Steak Picado-Tortilla" id=""
+                                                value="Flour">
+                                            <label for="Burrito Steak Picado-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Steak Picado-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-Tortilla" id=""
+                                                value="In a Bowl">
+                                            <label for="Burrito Steak Picado-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Steak Picado-meat" id="" value="Pollo">
+                                            <label for="Burrito Steak Picado-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-meat" id="" value="Carnitas">
+                                            <label for="Burrito Steak Picado-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-meat" id="" value="Sofritas">
+                                            <label for="Burrito Steak Picado-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-meat" id="" value="Lengua">
+                                            <label for="Burrito Steak Picado-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Steak Picado-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Steak Picado-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Steak Picado-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Steak Picado-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Steak Picado-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Steak Picado-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Steak Picado-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Steak Picado-guac" id=""
+                                                value="Add Guac">
+                                            <label for="Burrito Steak Picado-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Steak Picado-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Steak Picado-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Steak Picado-Notes" id="textinput"
+                                                cols="30" rows="1" placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 6 -->
+                            <div class="option">
+                                <a href="#popup6" class="btn">
+                                    <div class="food">
+                                        <img src="burrito6.jpg" alt="">
+                                        <h3>Burrito Molida <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Molida-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 6 Pop up -->
+                            <div class="overlay" id="popup6">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Molida
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito6.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Molida-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Molida-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Molida-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Molida-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Molida-Tortilla" id="" value="In a Bowl">
+                                            <label for="Burrito Molida-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Molida-meat" id="" value="Pollo">
+                                            <label for="Burrito Molida-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Molida-meat" id="" value="Carnitas">
+                                            <label for="Burrito Molida-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Molida-meat" id="" value="Sofritas">
+                                            <label for="Burrito Molida-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Molida-meat" id="" value="Lengua">
+                                            <label for="Burrito Molida-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Molida-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Molida-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Molida-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Molida-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Molida-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Molida-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Molida-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Molida-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Molida-guac" id="" value="Add Guac">
+                                            <label for="Burrito Molida-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Molida-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Molida-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Molida-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 7 -->
+                            <div class="option">
+                                <a href="#popup7" class="btn">
+                                    <div class="food">
+                                        <img src="burrito7.jpg" alt="">
+                                        <h3>Burrito Pescado<br>(Pescado, Frijoles, And Queso)</h3>
+                                        <h4>Pescado, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Pescado-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 7 Pop up -->
+                            <div class="overlay" id="popup7">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Pescado
+                                        (Pescado,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito7.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Pescado-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Pescado-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Pescado-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Pescado-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Pescado-Tortilla" id="" value="In a Bowl">
+                                            <label for="Burrito Pescado-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Pescado-meat" id="" value="Pollo">
+                                            <label for="Burrito Pescado-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Pescado-meat" id="" value="Carnitas">
+                                            <label for="Burrito Pescado-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Pescado-meat" id="" value="Sofritas">
+                                            <label for="Burrito Pescado-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Pescado-meat" id="" value="Lengua">
+                                            <label for="Burrito Pescado-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Pescado-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Pescado-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Pescado-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Pescado-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Pescado-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Pescado-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Pescado-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Pescado-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Pescado-guac" id="" value="Add Guac">
+                                            <label for="Burrito Pescado-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Pescado-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Pescado-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Pescado-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 8 -->
+                            <div class="option">
+                                <a href="#popup8" class="btn">
+                                    <div class="food">
+                                        <img src="burrito8.jpg" alt="">
+                                        <h3>Burrito Oregon <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Oregon-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 8 Pop up -->
+                            <div class="overlay" id="popup8">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Oregon
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito8.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Oregon-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Oregon-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Oregon-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Oregon-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Oregon-Tortilla" id="" value="In a Bowl">
+                                            <label for="Burrito Oregon-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Oregon-meat" id="" value="Pollo">
+                                            <label for="Burrito Oregon-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Oregon-meat" id="" value="Carnitas">
+                                            <label for="Burrito Oregon-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Oregon-meat" id="" value="Sofritas">
+                                            <label for="Burrito Oregon-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Oregon-meat" id="" value="Lengua">
+                                            <label for="Burrito Oregon-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Oregon-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Oregon-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Oregon-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Oregon-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Oregon-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Oregon-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Oregon-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Oregon-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Oregon-guac" id="" value="Add Guac">
+                                            <label for="Burrito Oregon-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Oregon-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Oregon-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Oregon-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 9 -->
+                            <div class="option">
+                                <a href="#popup9" class="btn">
+                                    <div class="food">
+                                        <img src="burrito9.jpg" alt="">
+                                        <h3>Burrito Lengua <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Lengua-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 9 Pop up -->
+                            <div class="overlay" id="popup9">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Lengua
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrito9.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Lengua-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Lengua-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Lengua-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Lengua-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Lengua-Tortilla" id="" value="In a Bowl">
+                                            <label for="Burrito Lengua-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Lengua-meat" id="" value="Pollo">
+                                            <label for="Burrito Lengua-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Lengua-meat" id="" value="Carnitas">
+                                            <label for="Burrito Lengua-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Lengua-meat" id="" value="Sofritas">
+                                            <label for="Burrito Lengua-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Lengua-meat" id="" value="Lengua">
+                                            <label for="Burrito Lengua-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Lengua-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Lengua-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Lengua-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Lengua-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Lengua-Bean Choice" id=""
+                                                value="No Beans">
+                                            <label for="Burrito Lengua-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Lengua-cheese" id=""
+                                                value="Add Cheese">
+                                            <label for="Burrito Lengua-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Lengua-guac" id="" value="Add Guac">
+                                            <label for="Burrito Lengua-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Lengua-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Lengua-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Lengua-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Option 10 -->
+                            <div class="option">
+                                <a href="#popup10" class="btn">
+                                    <div class="food">
+                                        <img src="burrr.jpg" alt="">
+                                        <h3>Burrito Pollo <br>(Birria, Frijoles, And Queso)</h3>
+                                        <h4>Spiced Shredded Beef, Refried Beans, and Cheese</h4>
+
+                                    </div>
+                                </a>
+                                <div class="amountinputs">
+                                    <input type="number" name="Burrito Pollo-Amount" id="quantity" min="0"
+                                        placeholder="Quantity">
+
+                                    <div class="cost">
+                                        6.75$
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Option 10 Pop up -->
+                            <div class="overlay" id="popup10">
+                                <div class="popup">
+                                    <h3 style="text-decoration: underline; text-align: center;">Burrito Pollo
+                                        (Birria,
+                                        Frijoles, And
+                                        Queso)
+                                    </h3>
+                                    <a href="#" class="close">&times;</a>
+                                    <img src="burrr.jpg" alt="">
+                                    <div class="Modifications-wrapper">
+                                        <h3 style="text-decoration: underline; text-align: center;">Modifications:</h3>
+
+                                        <div class="burrito-wrapper">
+                                            <h3 style="text-decoration: underline;">Tortilla Type:</h3>
+                                            <br>
+
+                                            <input type="radio" name="Burrito Pollo-Tortilla" id="" value="Flour">
+                                            <label for="Burrito Pollo-Tortilla">Flour</label>
+
+                                            <input type="radio" name="Burrito Pollo-Tortilla" id="" value="Corn">
+                                            <label for="Burrito Pollo-Tortilla">Corn</label>
+
+                                            <input type="radio" name="Burrito Pollo-Tortilla" id="" value="In a Bowl">
+                                            <label for="Burrito Pollo-Tortilla">In a Bowl</label>
+
+                                        </div>
+
+
+                                        <div class="meat-wrapper">
+                                            <h3 style="text-decoration: underline;">Meat Type:</h3>
+
+
+                                            <input type="radio" name="Burrito Pollo-meat" id="" value="Pollo">
+                                            <label for="Burrito Pollo-meat">Pollo</label>
+
+                                            <input type="radio" name="Burrito Pollo-meat" id="" value="Carnitas">
+                                            <label for="Burrito Pollo-meat">Carnitas</label>
+
+                                            <input type="radio" name="Burrito Pollo-meat" id="" value="Sofritas">
+                                            <label for="Burrito Pollo-meat">Sofritas</label>
+
+                                            <input type="radio" name="Burrito Pollo-meat" id="" value="Lengua">
+                                            <label for="Burrito Pollo-meat">Lengua</label>
+
+                                        </div>
+
+                                        <div class="beans-wrapper">
+                                            <h3 style="text-decoration: underline;">Bean Type:</h3>
+
+                                            <input type="radio" name="Burrito Pollo-Bean Choice" id=""
+                                                value="Black Beans">
+                                            <label for="Burrito Pollo-Bean Choice">Black Beans</label>
+
+                                            <input type="radio" name="Burrito Pollo-Bean Choice" id=""
+                                                value="Refried Beans">
+                                            <label for="Burrito Pollo-Bean Choice">Refried Beans</label>
+
+                                            <input type="radio" name="Burrito Pollo-Bean Choice" id="" value="No Beans">
+                                            <label for="Burrito Pollo-Bean Choice">No Beans</label>
+
+
+
+                                        </div>
+
+                                        <div class="optional-wrapper">
+                                            <h3 style="text-decoration: underline;">Extra Items:</h3>
+
+                                            <input type="checkbox" name="Burrito Pollo-cheese" id="" value="Add Cheese">
+                                            <label for="Burrito Pollo-cheese">Cheese</label>
+
+                                            <input type="checkbox" name="Burrito Pollo-guac" id="" value="Add Guac">
+                                            <label for="Burrito Pollo-cheese">Guacamole</label>
+
+                                            <input type="checkbox" name="Burrito Pollo-sourcream" id=""
+                                                value="Add Sourcream">
+                                            <label for="Burrito Pollo-cheese">Sourcream</label>
+
+                                        </div>
+
+
+                                        <div class="notes-wrapper">
+                                            <input type="text" name="Burrito Pollo-Notes" id="textinput"
+                                                placeholder="Additional Notes">
+                                        </div>
+                                        <button class="done"><a href="#" id="done">Done</a></button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- <input type="checkbox" name="" id="checkbox"> -->
+                </div>
+            </div>
+        </div>
+        <!-- *********************** -->
+
+
+    </body>
+</form>
+
+</html>
