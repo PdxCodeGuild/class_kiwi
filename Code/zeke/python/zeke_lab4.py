@@ -13,10 +13,7 @@
 
 # Then, figure out the point value of each card individually.
 
-print('A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q','K')
-card1=input('please enter your card 1: ').upper()
-card2=input('please enter your card 2: ').upper()
-card3=input('please enter your card 3: ').upper()
+
 
 user_input ={
     'A': 1, 
@@ -34,6 +31,11 @@ user_input ={
     '9': 9,
     '10':10,
 }
+print('A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q','K')
+card1=input('please enter your card 1: ').upper()
+card2=input('please enter your card 2: ').upper()
+card3=input('please enter your card 3: ').upper()
+
 
 # card1 = user_input
 # card2 =
