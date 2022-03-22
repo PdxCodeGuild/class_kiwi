@@ -32,8 +32,8 @@ Presentation Day: June 10th, 2022
 | 02  | Blog               | 08 Mar        | 11 Mar                | 22 Mar        |
 | 03  | Company Home Page  | 10 Mar        | 15 Mar                | 24 Mar        |
 | 04  | Personal Portfolio | 14 Mar        | N/A                   | N/A           |
-| 05  | Buritto Order Form |               |                       |               |
-| 06  | Flask Redo         |               |                       |               |
+| 05  | Buritto Order Form | 15 Mar        | 18 Mar                | 29 Mar        |
+| 06  | Flask Redo         | 18 Mar        | 23 Mar                | 01 Apr        |
 
 ## Python Labs Assigned:
 
