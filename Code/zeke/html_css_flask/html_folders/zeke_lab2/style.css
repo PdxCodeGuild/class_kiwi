@@ -1,0 +1,60 @@
+ header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7px;
+    padding-right: 10px;
+    background-color: rgba(133, 56, 21, 0.781);
+ }
+ h2 {color: aliceblue;  
+}
+a {
+    color: aliceblue;
+}
+
+div {
+    margin-top: 26px;
+    justify-content: space-between;
+}
+.picsum{
+    background-image: url("https://picsum.photos/200/300");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+
+ 
+  
+}
+h3 {
+    font-style: italic;
+    font-size: medium;
+    font-display: bold;
+    text-align: center;
+    text-decoration: underline;   
+}
+div2 {
+
+    font-style:initial;
+    font-display: bold;
+    text-align: right;
+    flex-wrap: wrap;
+      
+}
+.side{
+    height: 100px;
+}
+.side a{
+    color:blue
+}
+.footer{
+background-color: aqua;
+text-align: center;
+padding: 1px;
+margin: 0;
+display: inline-block;
+text-align: center;
+
+}
+h5 {
+    text-align: center;
+    text-decoration: underline;
+}
