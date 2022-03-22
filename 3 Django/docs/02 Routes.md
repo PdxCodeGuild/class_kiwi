@@ -1,16 +1,17 @@
 
 # Routes
 
-- [Overview](#overview)
-- [Connecting the Project's `urls.py` to the App's `urls.py`](#connecting-the-projects-urlspy-to-the-apps-urlspy)
-- [Connecting an App's `urls.py` to a View](#connecting-an-apps-urlspy-to-a-view)
-- [Reverse URL Lookup](#reverse-url-lookup)
-- [Parameters in the Path](#parameters-in-the-path)
+- [Routes](#routes)
+  - [Overview](#overview)
+  - [Connecting the Project's `urls.py` to the App's `urls.py`](#connecting-the-projects-urlspy-to-the-apps-urlspy)
+  - [Connecting an App's `urls.py` to a View](#connecting-an-apps-urlspy-to-a-view)
+  - [Reverse URL Lookup](#reverse-url-lookup)
+  - [Parameters in the Path](#parameters-in-the-path)
 
 
 ## Overview
 
-Routes connect the **path** part of a URL to a **view**. The routes are stored in a `urls.py` file, which can be found in both the project folder and in each of the apps' folders. Routes are evaluated **in order**: whichever route matches first is the one used. You can visualize Django's routing system as a series of pipes, first the incoming request hits the project's `urls.py`, which the directs it to one of the app's `urls.py`, which then directs it to a view. You can read more about routes [here](https://docs.djangoproject.com/en/3.2/topics/http/urls/) and [here](https://docs.djangoproject.com/en/3.2/ref/urls/).
+Routes connect the **path** part of a URL to a **view**. The routes are stored in a `urls.py` file, which can be found in both the project folder and in each of the apps' folders. Routes are evaluated **in order**: whichever route matches first is the one used. You can visualize Django's routing system as a series of pipes, first the incoming request hits the project's `urls.py`, which the directs it to one of the app's `urls.py`, which then directs it to a view. You can read more about routes [here](https://docs.djangoproject.com/en/4.0/topics/http/urls/) and [here](https://docs.djangoproject.com/en/4.0/ref/urls/).
 
 
 ## Connecting the Project's `urls.py` to the App's `urls.py`

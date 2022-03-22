@@ -30,12 +30,12 @@ In order to have your web application accessible on the web, you'll have to find
 
 ### SaaS vs PaaS vs IaaS
 
-|    | description | examples |
-|--- |---          |---       |
-| SaaS | Software as a Service: they provide nearly everything through an interface of their web application | Wordpress, Squarespace |
-| PaaS | Platform as a Service:  they provide the software and hardware, you copy files over and configure | PythonAnywhere, NearlyFreeSpeech, Windows Azure, AWS |
-| IaaS | Infrastructure as a Service: they provide the hardware, you install software | Digital Ocean, AWS |
-| Self-hosted | You manage all the software and hardware |    |
+|             | description                                                                                         | examples                                             |
+| ----------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| SaaS        | Software as a Service: they provide nearly everything through an interface of their web application | Wordpress, Squarespace                               |
+| PaaS        | Platform as a Service:  they provide the software and hardware, you copy files over and configure   | PythonAnywhere, NearlyFreeSpeech, Windows Azure, AWS |
+| IaaS        | Infrastructure as a Service: they provide the hardware, you install software                        | Digital Ocean, AWS                                   |
+| Self-hosted | You manage all the software and hardware                                                            |                                                      |
 
 [read more](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
 
@@ -49,12 +49,12 @@ Most hosting services will give your website a default domain name, but if you w
 
 ### DNS
 
-|Type|Description|Function|
-|--- |--- |--- |
-|A|Address record|Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host, but it is also used for DNSBLs, storing subnet masks in RFC 1101, etc.|
-|AAAA|IPv6 address record|Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host.|
-|CNAME|Canonical name record|Alias of one name to another: the DNS lookup will continue by retrying the lookup with the new name.|
-|TXT|Text record|Originally for arbitrary human-readable text in a DNS record. Since the early 1990s, however, this record more often carries machine-readable data, such as specified by RFC 1464, opportunistic encryption, Sender Policy Framework, DKIM, DMARC, DNS-SD, etc.|
+| Type  | Description           | Function                                                                                                                                                                                                                                                        |
+| ----- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A     | Address record        | Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host, but it is also used for DNSBLs, storing subnet masks in RFC 1101, etc.                                                                                         |
+| AAAA  | IPv6 address record   | Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host.                                                                                                                                                               |
+| CNAME | Canonical name record | Alias of one name to another: the DNS lookup will continue by retrying the lookup with the new name.                                                                                                                                                            |
+| TXT   | Text record           | Originally for arbitrary human-readable text in a DNS record. Since the early 1990s, however, this record more often carries machine-readable data, such as specified by RFC 1464, opportunistic encryption, Sender Policy Framework, DKIM, DMARC, DNS-SD, etc. |
 
 
 
@@ -76,7 +76,7 @@ from django.core.management.utils import get_random_secret_key
 print(get_random_secret_key())
 ```
 
-https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/
+https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/
 
 ### Deploying with PythonAnywhere
 

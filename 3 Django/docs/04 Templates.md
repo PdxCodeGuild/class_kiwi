@@ -1,19 +1,20 @@
 # Templates
 
-- [Overview](#overview)
-- [Passing a Value to the Template](#passing-a-value-to-the-template)
-- [Template Rendering Syntax](#template-rendering-syntax)
-  - [Rendering a Value](#rendering-a-value)
-  - [Conditionals](#conditionals)
-  - [Looping](#looping)
-- [Reverse URL Lookup](#reverse-url-lookup)
-- [Static Files](#static-files)
-- [Template Inheritance: `block` and `extend`](#template-inheritance-block-and-extend)
-- [Filters](#filters)
+- [Templates](#templates)
+  - [Overview](#overview)
+  - [Passing a Value to the Template](#passing-a-value-to-the-template)
+  - [Template Rendering Syntax](#template-rendering-syntax)
+    - [Rendering a Value](#rendering-a-value)
+    - [Conditionals](#conditionals)
+    - [Looping](#looping)
+  - [Reverse URL Lookup](#reverse-url-lookup)
+  - [Static Files](#static-files)
+  - [Template Inheritance: `block` and `extend`](#template-inheritance-block-and-extend)
+  - [Filters](#filters)
 
 ## Overview
 
-Templates are like blueprints for your HTML pages. They contain plain HTML/CSS/JavaScript, but also additional syntax for generating HTML/CSS/JavaScript using variables from your Python view. You can read more about Templates [here](https://docs.djangoproject.com/en/3.2/topics/templates/) and [here](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/)
+Templates are like blueprints for your HTML pages. They contain plain HTML/CSS/JavaScript, but also additional syntax for generating HTML/CSS/JavaScript using variables from your Python view. You can read more about Templates [here](https://docs.djangoproject.com/en/4.0/topics/templates/) and [here](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/)
 
 
 ## Passing a Value to the Template
@@ -112,8 +113,8 @@ urlpatterns = [
 
 To load static files into a page, create a folder in your app called `static`. Inside that folder, create a folder with the same name as your app (just as you did with templates). In your template, you then must add `{% load static %}` before you load your static file.
 
-- [Managing Static Files](https://docs.djangoproject.com/en/3.2/howto/static-files/)
-- [Polls Tutorial: Part 6](https://docs.djangoproject.com/en/3.2/intro/tutorial06/)
+- [Managing Static Files](https://docs.djangoproject.com/en/4.0/howto/static-files/)
+- [Polls Tutorial: Part 6](https://docs.djangoproject.com/en/4.0/intro/tutorial06/)
 
 ```html
 {% load static %}

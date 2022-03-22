@@ -18,12 +18,12 @@
 
 The caveat with class-based views is that while they provide much for you, you must know how to customize them, they reflect the balance of convenience and control you find elsewhere in programming.
 
-- [Reference Documentation](https://docs.djangoproject.com/en/3.2/ref/class-based-views/)
-- [Introduction to Class-Based Views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/intro/)
-- [Polls Tutorial: Part 4](https://docs.djangoproject.com/en/3.2/intro/tutorial04/#use-generic-views-less-code-is-better)
-- [Built-in class-based generic views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/)
-- [Form handling with class-based views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/)
-- [Using mixins with class-based views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/mixins/)
+- [Reference Documentation](https://docs.djangoproject.com/en/4.0/ref/class-based-views/)
+- [Introduction to Class-Based Views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/)
+- [Polls Tutorial: Part 4](https://docs.djangoproject.com/en/4.0/intro/tutorial04/#use-generic-views-less-code-is-better)
+- [Built-in class-based generic views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-display/)
+- [Form handling with class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-editing/)
+- [Using mixins with class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/mixins/)
 - [simpleisbetterthancomplex.com's overview](https://simpleisbetterthancomplex.com/article/2017/03/21/class-based-views-vs-function-based-views.html)
 
 
@@ -49,7 +49,7 @@ urlpatterns = [
 
 ## Base Views
 
-- [Base Views: View, TemplateView, RedirectView](https://docs.djangoproject.com/en/3.2/ref/class-based-views/base/)
+- [Base Views: View, TemplateView, RedirectView](https://docs.djangoproject.com/en/4.0/ref/class-based-views/base/)
 
 ### View
 
@@ -99,7 +99,7 @@ urlpatterns = [
 
 ## Display Views
 
-- [Display Views: DetailView,List View](https://docs.djangoproject.com/en/3.2/ref/class-based-views/generic-display/)
+- [Display Views: DetailView,List View](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-display/)
 
 ### ListView
 
@@ -151,7 +151,7 @@ class MyDetailView(generic.DetailView):
 
 ## Editing Views
 
-- [Editing Views: FormView, CreateView, UpdateView, DeleteView](https://docs.djangoproject.com/en/3.2/ref/class-based-views/generic-editing/)
+- [Editing Views: FormView, CreateView, UpdateView, DeleteView](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-editing/)
 
 
 

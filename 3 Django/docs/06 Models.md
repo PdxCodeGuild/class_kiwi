@@ -29,15 +29,15 @@
 
 ## Overview
 
-Models are Python classes that parallel tables in the database. The ORM (object-relational mapping) manages this dual representation, translating statements in Python to queries on the database. You can read more about models [here](https://docs.djangoproject.com/en/3.2/topics/db/models/), and more about the ORM [here](https://docs.djangoproject.com/en/3.2/ref/models/querysets/). For ORM practice, check out the [Polls Tutorial - Part 2](https://docs.djangoproject.com/en/3.2/intro/tutorial02/).
+Models are Python classes that parallel tables in the database. The ORM (object-relational mapping) manages this dual representation, translating statements in Python to queries on the database. You can read more about models [here](https://docs.djangoproject.com/en/4.0/topics/db/models/), and more about the ORM [here](https://docs.djangoproject.com/en/4.0/ref/models/querysets/). For ORM practice, check out the [Polls Tutorial - Part 2](https://docs.djangoproject.com/en/4.0/intro/tutorial02/).
 
 Database tables are like spreadsheets: they have headers and rows. Tables can also be thought of as Python classes, where the headers are class attributes, and the rows are class instances. All models are automatically given an `id` field as a primary key, which is used to uniquely identifies a row.
 
-| id | email_address | first_name | last_name |
-| --- | --- | --- | --- |
-| 1 | wendy@gmail.com | Wendy | Carson |
-| 2 | alyssa@gmail.com | Alyssa	 | Lyons |
-| 3 | brian@gmail.com | Brian | Barber |
+| id  | email_address    | first_name | last_name |
+| --- | ---------------- | ---------- | --------- |
+| 1   | wendy@gmail.com  | Wendy      | Carson    |
+| 2   | alyssa@gmail.com | Alyssa     | Lyons     |
+| 3   | brian@gmail.com  | Brian      | Barber    |
 
 ```python
 from django.db import models
@@ -60,17 +60,17 @@ contact_new.save() # save it to the database
 
 ## Field Types
 
-The fields of a model create represent both the attribute of a class and the column of a table. You can read more about the field types [here](https://docs.djangoproject.com/en/3.2/ref/models/fields/). Below are some of the common fields used with a model.
+The fields of a model create represent both the attribute of a class and the column of a table. You can read more about the field types [here](https://docs.djangoproject.com/en/4.0/ref/models/fields/). Below are some of the common fields used with a model.
 
 - `BooleanField` represents a boolean (true/false) value
 - `IntegerField` represents an integer
 - `FloatField` represents a floating-point number
 - `CharField` represents a string, requires `max_length` parameter indicating the number of characters
 - `TextField` like `CharField` but has unlimited length
-- `DateTimeField` represents a datetime (more [here](https://docs.djangoproject.com/en/3.2/topics/i18n/timezones/))
-- `OneToOneField` represents a [one-to-one relationship](https://docs.djangoproject.com/en/3.2/topics/db/examples/one_to_one/)
-- `ForeignKey` represents a [many-to-one relationship](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_one/)
-- `ManyToManyField` represents a [many-to-many relationship](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_many/)
+- `DateTimeField` represents a datetime (more [here](https://docs.djangoproject.com/en/4.0/topics/i18n/timezones/))
+- `OneToOneField` represents a [one-to-one relationship](https://docs.djangoproject.com/en/4.0/topics/db/examples/one_to_one/)
+- `ForeignKey` represents a [many-to-one relationship](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/)
+- `ManyToManyField` represents a [many-to-many relationship](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/)
 
 
 ### Blankable Fields
@@ -129,17 +129,17 @@ A many-to-one relationship means that for every row in table A, there may be mul
 In the following example, `city_id` on `Contact` is a **foreign key**, `id` on `Contact` and `id` on `City` are **Primary Keys**. This is an example of a **many-to-one relationship**.
 
 **Contacts**
-| id | first_name | last_name | email_address | city_id |
-| --- | --- | --- | --- | --- |
-| 1 | Wendy | Carson | wendy@gmail.com | 1 |
-| 2  | Alyssa | Lyons | alyssa@gmail.com | 1 |
-| 3  | Brian | Barber | brian@gmail.com | 2 |
+| id  | first_name | last_name | email_address    | city_id |
+| --- | ---------- | --------- | ---------------- | ------- |
+| 1   | Wendy      | Carson    | wendy@gmail.com  | 1       |
+| 2   | Alyssa     | Lyons     | alyssa@gmail.com | 1       |
+| 3   | Brian      | Barber    | brian@gmail.com  | 2       |
 
 **Cities**
-| id | name |
-| --- | --- |
-| 1 | Portland |
-| 2 | Eugene |
+| id  | name     |
+| --- | -------- |
+| 1   | Portland |
+| 2   | Eugene   |
 
 
 ```python
@@ -177,24 +177,24 @@ print(contacts) # Wendy, Alyssa
 
 ### One-to-One
 
-A one-to-one relationship means that for every row in table A, there will be a single corresponding row in table B. An example might be between [counties and capital cities](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/CPT-Databases-OnetoOne.svg/460px-CPT-Databases-OnetoOne.svg.png). A country only has one capital. A capital only pretains to one country. You can read more about one-to-one relationships [here](https://docs.djangoproject.com/en/3.2/topics/db/examples/one_to_one/). Normally a one-to-one relationship is unnecessary, because one could just take the fields from both models and put them onto one model. But you may have to associate new fields with an old model without changing the old model, or need to restrict access to certain data [more info](https://stackoverflow.com/questions/25206447/when-to-use-one-to-one-relationships-in-django-models).
+A one-to-one relationship means that for every row in table A, there will be a single corresponding row in table B. An example might be between [counties and capital cities](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/CPT-Databases-OnetoOne.svg/460px-CPT-Databases-OnetoOne.svg.png). A country only has one capital. A capital only pretains to one country. You can read more about one-to-one relationships [here](https://docs.djangoproject.com/en/4.0/topics/db/examples/one_to_one/). Normally a one-to-one relationship is unnecessary, because one could just take the fields from both models and put them onto one model. But you may have to associate new fields with an old model without changing the old model, or need to restrict access to certain data [more info](https://stackoverflow.com/questions/25206447/when-to-use-one-to-one-relationships-in-django-models).
 
 
 
 **Capital**
-| id | name |
-| --- | --- |
-| 1 | Washington DC |
-| 2 | Mexico City |
-| 3 | Ottawa |
+| id  | name          |
+| --- | ------------- |
+| 1   | Washington DC |
+| 2   | Mexico City   |
+| 3   | Ottawa        |
 
 
 **Country**
-| id | name |
-| --- | --- |
-| 1 | The United States |
-| 2 | Mexico |
-| 3 | Canada |
+| id  | name              |
+| --- | ----------------- |
+| 1   | The United States |
+| 2   | Mexico            |
+| 3   | Canada            |
 
 
 ```python
@@ -233,34 +233,34 @@ country.save()
 
 ### Many-to-Many
 
-An example of many-to-many relationships might be between [authors and books](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/CPT-Databases-ManytoMany.svg/460px-CPT-Databases-ManytoMany.svg.png). One book may have multiple authors. One author may have multiple books. A many-to-many relationship can be created in Django using a [ManyToManyField](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_many/). To maintain such a relationship in SQL, Django creates a [junction table](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Databases-ManyToManyWJunction.jpg/800px-Databases-ManyToManyWJunction.jpg) with two many-to-one relationships.
+An example of many-to-many relationships might be between [authors and books](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/CPT-Databases-ManytoMany.svg/460px-CPT-Databases-ManytoMany.svg.png). One book may have multiple authors. One author may have multiple books. A many-to-many relationship can be created in Django using a [ManyToManyField](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/). To maintain such a relationship in SQL, Django creates a [junction table](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Databases-ManyToManyWJunction.jpg/800px-Databases-ManyToManyWJunction.jpg) with two many-to-one relationships.
 
 
 
 **Books**
-| id | title |
-| --- | --- |
-| 1 | Good Omens |
-| 2 | The Odyssey |
-| 3 | The Illiad |
+| id  | title       |
+| --- | ----------- |
+| 1   | Good Omens  |
+| 2   | The Odyssey |
+| 3   | The Illiad  |
 
 
 **Authors**
 
-| id | name |
-| --- | --- |
-| 1 | Homer |
-| 2 | Terry Pratchett |
-| 3 | Neil Gaiman |
+| id  | name            |
+| --- | --------------- |
+| 1   | Homer           |
+| 2   | Terry Pratchett |
+| 3   | Neil Gaiman     |
 
 
 **Book-Authors**
 
-| id | book_id | author_id |
-| --- | --- | --- |
-| 1 | 2 | 1 |
-| 2 | 1 | 2 |
-| 3 | 1 | 3 |
+| id  | book_id | author_id |
+| --- | ------- | --------- |
+| 1   | 2       | 1         |
+| 2   | 1       | 2         |
+| 3   | 1       | 3         |
 
 
 
@@ -295,7 +295,7 @@ print(books) # The Odyssey, The Illiad
 
 ### The On-Delete Parameter: `on_delete`
 
-The `on_delete` parameter lets you control what to do with other rows when a connected row is deleted. You can read more about `on_delete` [here](https://docs.djangoproject.com/en/3.2/ref/models/fields/#arguments). The important options are:
+The `on_delete` parameter lets you control what to do with other rows when a connected row is deleted. You can read more about `on_delete` [here](https://docs.djangoproject.com/en/4.0/ref/models/fields/#arguments). The important options are:
 
 - `CASCADE` deleted this row when the other is deleted
 - `PROTECT` throws an exception when the other is deleted, this forces the developer re-assign the relationship when they want to delete a row
@@ -305,17 +305,17 @@ The `on_delete` parameter lets you control what to do with other rows when a con
 For example, consider the following models and data:
 
 **Contacts**
-| id | first_name | last_name | email_address | city_id |
-| --- | --- | --- | --- | --- |
-| 1 | Wendy | Carson | wendy@gmail.com | 1 |
-| 2  | Alyssa | Lyons | alyssa@gmail.com | 1 |
-| 3  | Brian | Barber | brian@gmail.com | 2 |
+| id  | first_name | last_name | email_address    | city_id |
+| --- | ---------- | --------- | ---------------- | ------- |
+| 1   | Wendy      | Carson    | wendy@gmail.com  | 1       |
+| 2   | Alyssa     | Lyons     | alyssa@gmail.com | 1       |
+| 3   | Brian      | Barber    | brian@gmail.com  | 2       |
 
 **Cities**
-| id | name |
-| --- | --- |
-| 1 | Portland |
-| 2 | Eugene |
+| id  | name     |
+| --- | -------- |
+| 1   | Portland |
+| 2   | Eugene   |
 
 
 ```python
@@ -349,17 +349,17 @@ city.delete() # also deletes the Contacts Wendy and Alyssa
 The `related_name` parameter controls what the name of the related class's attribute is. For example, consider the following models and data:
 
 **Contact**
-| id | first_name | last_name | email_address | city_id |
-| --- | --- | --- | --- | --- |
-| 1 | Wendy | Carson | wendy@gmail.com | 1 |
-| 2  | Alyssa | Lyons | alyssa@gmail.com | 1 |
-| 3  | Brian | Barber | brian@gmail.com | 2 |
+| id  | first_name | last_name | email_address    | city_id |
+| --- | ---------- | --------- | ---------------- | ------- |
+| 1   | Wendy      | Carson    | wendy@gmail.com  | 1       |
+| 2   | Alyssa     | Lyons     | alyssa@gmail.com | 1       |
+| 3   | Brian      | Barber    | brian@gmail.com  | 2       |
 
 **Cities**
-| id | name |
-| --- | --- |
-| 1 | Portland |
-| 2 | Eugene |
+| id  | name     |
+| --- | -------- |
+| 1   | Portland |
+| 2   | Eugene   |
 
 
 ```python
@@ -397,23 +397,23 @@ print(contacts) # Wendy, Alyssa
 
 ## ORM Operations
 
-The ORM 'object relational mapping' provides functions in Python that perform operations on the database. To read more about ORM operations, look [here](https://docs.djangoproject.com/en/3.2/topics/db/queries/). Note that `__init__`, `get`,  and `filter` take `**kwargs` (which turns named parameters into a dictionary), whereas `order_by` takes `*args` (which turns arguments into a list).
+The ORM 'object relational mapping' provides functions in Python that perform operations on the database. To read more about ORM operations, look [here](https://docs.djangoproject.com/en/4.0/topics/db/queries/). Note that `__init__`, `get`,  and `filter` take `**kwargs` (which turns named parameters into a dictionary), whereas `order_by` takes `*args` (which turns arguments into a list).
 
 ### Example Models and Data
 
 **Contact**
-| id | first_name | last_name | email_address | city_id |
-| --- | --- | --- | --- | --- |
-| 1 | Wendy | Carson | wendy@gmail.com | 1 |
-| 2  | Alyssa | Lyons | alyssa@gmail.com | 1 |
-| 3  | Brian | Barber | brian@gmail.com | 2 |
-| 2  | Wendy | Clark | alyssa@gmail.com | 1 |
+| id  | first_name | last_name | email_address    | city_id |
+| --- | ---------- | --------- | ---------------- | ------- |
+| 1   | Wendy      | Carson    | wendy@gmail.com  | 1       |
+| 2   | Alyssa     | Lyons     | alyssa@gmail.com | 1       |
+| 3   | Brian      | Barber    | brian@gmail.com  | 2       |
+| 2   | Wendy      | Clark     | alyssa@gmail.com | 1       |
 
 **Cities**
-| id | name |
-| --- | --- |
-| 1 | Portland |
-| 2 | Eugene |
+| id  | name     |
+| --- | -------- |
+| 1   | Portland |
+| 2   | Eugene   |
 
 
 ```python

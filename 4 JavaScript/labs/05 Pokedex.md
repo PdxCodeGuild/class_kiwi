@@ -52,7 +52,7 @@ Add an input and button at the top to search for pokemon. When the user hits 'en
 
 ## Part 7: Add Types (optional)
 
-Instead of storing our types as comma-separated strings we must parse every time we want to display it, it's much beter to store types as a [many-to-many](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_many/) field.
+Instead of storing our types as comma-separated strings we must parse every time we want to display it, it's much beter to store types as a [many-to-many](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/) field.
 
 - PokemonType
   - name (CharField)
@@ -63,7 +63,7 @@ Instead of storing our types as comma-separated strings we must parse every time
 
 ## Part 8: Add Pagination (optional)
 
-Use pagination to only show 20 pokemon at a time, allow the user to switch between pages. This can be accomplished by allowing the `pokemon` view to take additional query parameters, `page` and `limit`. Use the [Django paginator](https://docs.djangoproject.com/en/3.2/topics/pagination/) to separate the query set into pages and return only the requested page in JSON.
+Use pagination to only show 20 pokemon at a time, allow the user to switch between pages. This can be accomplished by allowing the `pokemon` view to take additional query parameters, `page` and `limit`. Use the [Django paginator](https://docs.djangoproject.com/en/4.0/topics/pagination/) to separate the query set into pages and return only the requested page in JSON.
 
 ## Part 9: More Pokemon (optional)
 

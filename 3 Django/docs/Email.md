@@ -1,7 +1,7 @@
 
 # Email
 
-Email is simple to set up in Django. You can read more about setting up email in the [official docs](https://docs.djangoproject.com/en/3.2/topics/email/). You may also consider using [anymail](https://github.com/anymail/django-anymail).
+Email is simple to set up in Django. You can read more about setting up email in the [official docs](https://docs.djangoproject.com/en/4.0/topics/email/). You may also consider using [anymail](https://github.com/anymail/django-anymail).
 
 Add the following fields to your `settings.py`.
 

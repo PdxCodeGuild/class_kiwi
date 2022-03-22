@@ -1,16 +1,17 @@
 
 # Django Overview
 
-- [Overview](#overview)
-- [Management Commands](#management-commands)
-  - [Custom Management Commands](#custom-management-commands)
-- [Resources](#resources)
-  - [General](#general)
-  - [Tutorials](#tutorials)
-  - [Videos](#videos)
-  - [Forums](#forums)
-  - [Libraries](#libraries)
-  - [Tools](#tools)
+- [Django Overview](#django-overview)
+  - [Overview](#overview)
+  - [Management Commands](#management-commands)
+    - [Custom Management Commands](#custom-management-commands)
+  - [Resources](#resources)
+    - [General](#general)
+    - [Tutorials](#tutorials)
+    - [Videos](#videos)
+    - [Forums](#forums)
+    - [Libraries](#libraries)
+    - [Tools](#tools)
 
 
 
@@ -33,18 +34,18 @@ Django applications are contained in a **project** which can have multiple **app
 
 ## Management Commands
 
-Management commands are executed in a terminal to perform operations on a django project. You can view a full list of the management commands [here](https://docs.djangoproject.com/en/3.2/ref/django-admin/)
+Management commands are executed in a terminal to perform operations on a django project. You can view a full list of the management commands [here](https://docs.djangoproject.com/en/4.0/ref/django-admin/)
 
-| Command | Description |
-| ---     | ---         |
-| `django-admin startproject myproject` | create a Django project |
-| `python manage.py startapp myapp` | create an app |
-| `python manage.py runserver` | run the server |
-| `python manage.py makemigrations` | stage changes to the database |
-| `python manage.py migrate` | apply changes to the database |
-| `python manage.py createsuperuser` | create an admin (which has access to the admin panel) |
-| `python manage.py collectstatic` | collects static files from each app and puts them into one folder, used for deployment |
-| `python manage.py shell` | open an interactive session, often used to do database operations |
+| Command                               | Description                                                                            |
+| ------------------------------------- | -------------------------------------------------------------------------------------- |
+| `django-admin startproject myproject` | create a Django project                                                                |
+| `python manage.py startapp myapp`     | create an app                                                                          |
+| `python manage.py runserver`          | run the server                                                                         |
+| `python manage.py makemigrations`     | stage changes to the database                                                          |
+| `python manage.py migrate`            | apply changes to the database                                                          |
+| `python manage.py createsuperuser`    | create an admin (which has access to the admin panel)                                  |
+| `python manage.py collectstatic`      | collects static files from each app and puts them into one folder, used for deployment |
+| `python manage.py shell`              | open an interactive session, often used to do database operations                      |
 
 ### Custom Management Commands
 
@@ -80,12 +81,12 @@ Now you can execute this function using `python manage.py <command name>`. Any p
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 - [Wikipedia](https://en.wikipedia.org/wiki/Django_(web_framework))
-- [Official Docs](https://docs.djangoproject.com/en/3.2/)
-  - [Table of Contents](https://docs.djangoproject.com/en/3.2/contents/)
+- [Official Docs](https://docs.djangoproject.com/en/4.0/)
+  - [Table of Contents](https://docs.djangoproject.com/en/4.0/contents/)
 
 ### Tutorials
 
-- [Official Tutorial](https://docs.djangoproject.com/en/3.2/intro/tutorial01/)
+- [Official Tutorial](https://docs.djangoproject.com/en/4.0/intro/tutorial01/)
 - [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
 - [Real Python](https://realpython.com/tutorials/django/)
 - [Simple is Better Than Complex](https://simpleisbetterthancomplex.com/archive/)
