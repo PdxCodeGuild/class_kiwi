@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>
+                Burrito Order Form
+            </h1>
+        </div>
+    </header>
+    <div>
+        <main>
+            <img src="burrito.jpg" alt="">
+            <form action="https://webhook.site/bd6aab8b-e91c-4fef-af71-19edc786abbb" method="POST">
+
+                <br>
+                <input placeholder="Name" name="name" type="text" pattern="[a-zA-Z]{1,20}" required>
+                <br>
+                <br>
+                <input placeholder="Enter Password" name="password" type="password" required>
+
+                <h3>Pick Your Tortilla: </h3>
+                <label for="white">White Flour</label>
+                <input id="white" name="tortilla" type="radio" value="white">
+
+                <label for="wheat">Wheat Flower</label>
+                <input id="wheat" name="tortilla" type="radio" value="wheat">
+
+                <label for="spinach">Spinach</label>
+                <input id="spinach" name="tortilla" type="radio" value="spinach">
+
+                <label for="corn">Corn</label>
+                <input id="corn" name="tortilla" type="radio" value="corn">
+
+                <h3>Pick Your Rice: </h3>
+                <label for="white">White Rice</label>
+                <input id="white" name="rice" type="radio" value="white">
+
+                <label for="brown">Brown Rice</label>
+                <input id="brown" name="rice" type="radio" value="brown">
+                
+                <h3>Pick Your Protein: </h3>
+                <label for="carnitas">carnitas</label>
+                <input id="carnitas" name="protein" type="radio" value="carnitas">
+
+                <label for="chicken">chicken</label>
+                <input id="chicken" name="protein" type="radio" value="chicken">
+
+                <label for="sofritas">Sofritas</label>
+                <input id="sofritas" name="protein" type="radio" value="sofritas">
+
+                <label for="none">None</label>
+                <input id="none" name="protein" type="radio" value="none">
+                
+                <h3>Additional Ingredients:</h3>
+                <label for="cheese">Cheese</label>
+                <input id="cheese" name="cheese" type="checkbox" value="yes">
+                
+                <label for="sour cream">Sour Cream</label>
+                <input id="sour cream" name="sour cream" type="checkbox" value="yes">
+                
+                <label for="guacamole">Guacamole</label>
+                <input id="guacamole" name="guacamole" type="checkbox" value="yes">
+                <br>
+                <br>
+                <h4>Delivery Instructions</h4>
+                <textarea name="delivery" cols="50" rows="10"></textarea>
+                <br>
+                <br>
+                <button type="submit">Submit Order</button>
+            </form>
+        </main>
+    </div>
+
+</body>
+
+</html>
