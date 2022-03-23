@@ -13,12 +13,10 @@ M-F 6:00 pm – 9:30 pm pst
 
 ### Staff
 
-- Anthony Wallace, Instructor
+- Irron Williams, Instructor
+  - irron@pdxcodeguild.com 
 
-  - anthony@pdxcodeguild.com
-
-- Irron Williams, TA
-- Ian Davis, TA
+- Dustin Olsen, TA
 
 ## Capstone Dates:
 
