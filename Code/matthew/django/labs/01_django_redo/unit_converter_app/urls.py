@@ -10,7 +10,7 @@ urlpatterns = [
     path('', views.index, name='index'),
 
 
-    path('result/', views.forms, name='forms')
+    path('/result/', views.forms, name='forms')
 
     # 8000/rps/result
     # path('result/', views.result, name='result'),

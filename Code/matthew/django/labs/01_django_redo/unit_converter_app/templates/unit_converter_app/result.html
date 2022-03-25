@@ -9,6 +9,12 @@
   <body>
     <h1>Results</h1>
 
-    {{% distance %}}
+    <p>
+      You converted {{distance}}{{units}} into
+      {{converted_output}}{{units_to_convert}}
+    </p>
+
+    distance {{ distance }} units {{units}} converted units {{converted_output}}
+    units to convert {{units_to_convert}}
   </body>
 </html>

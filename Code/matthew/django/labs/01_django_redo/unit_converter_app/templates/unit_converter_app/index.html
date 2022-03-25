@@ -9,7 +9,7 @@
   <body>
     <h1>Unit Converter</h1>
 
-    <form action="" method="post">
+    <form action="ucp/result/" method="post">
       {% csrf_token %}
       <!--  -->
 
@@ -28,26 +28,26 @@
         <h3>Enter the units you are using</h3>
 
         <label for="km">Kilometers:</label>
-        <input type="radio" name="user_units" id="" />
+        <input type="radio" name="user_units" id="" value="km" />
 
         <label for="m">Meters:</label>
-        <input type="radio" name="user_units" id="" />
+        <input type="radio" name="user_units" id="" value="m" />
 
         <label for="ft">Feet:</label>
-        <input type="radio" name="user_units" id="" />
+        <input type="radio" name="user_units" id="" value="ft" />
       </div>
 
       <div class="conversion_units">
         <h3>Enter the units you wish to convert to</h3>
 
         <label for="km">Kilometers:</label>
-        <input type="radio" name="conversion_units" id="" />
+        <input type="radio" name="conversion_units" id="" value="km" />
 
         <label for="m">Meters:</label>
-        <input type="radio" name="conversion_units" id="" />
+        <input type="radio" name="conversion_units" id="" value="m" />
 
         <label for="ft">Feet:</label>
-        <input type="radio" name="conversion_units" id="" />
+        <input type="radio" name="conversion_units" id="" value="ft" />
       </div>
 
       <button type="submit">submit</button>
