@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <h1>Unit Converter</h1>
+
+    <form action="" method="post">
+      {% csrf_token %}
+      <!--  -->
+
+      <div class="distance">
+        <!-- Name is the variable name -->
+        <textarea
+          name="distance"
+          id=""
+          cols="30"
+          rows="1"
+          placeholder="Enter the distance"
+        ></textarea>
+      </div>
+
+      <div class="user_units">
+        <h3>Enter the units you are using</h3>
+
+        <label for="km">Kilometers:</label>
+        <input type="radio" name="user_units" id="" />
+
+        <label for="m">Meters:</label>
+        <input type="radio" name="user_units" id="" />
+
+        <label for="ft">Feet:</label>
+        <input type="radio" name="user_units" id="" />
+      </div>
+
+      <div class="conversion_units">
+        <h3>Enter the units you wish to convert to</h3>
+
+        <label for="km">Kilometers:</label>
+        <input type="radio" name="conversion_units" id="" />
+
+        <label for="m">Meters:</label>
+        <input type="radio" name="conversion_units" id="" />
+
+        <label for="ft">Feet:</label>
+        <input type="radio" name="conversion_units" id="" />
+      </div>
+
+      <button type="submit">submit</button>
+    </form>
+
+    <!--  -->
+  </body>
+</html>
