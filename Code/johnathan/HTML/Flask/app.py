@@ -24,9 +24,9 @@ def check_grade(grade):
 
 @app.route('/llama', methods=['POST'])
 def display_name():
-    return render_template('contact.html')
-    
+    name = request.form['username']
+    return render_template('contact.html', name=name)
+
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
-
