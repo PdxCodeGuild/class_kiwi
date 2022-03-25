@@ -26,7 +26,7 @@ Presentation Day: June 10th, 2022
 ## Django Labs Assigned:
 | Lab | Name        | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ----------- | ------------- | --------------------- | ------------- |
-| 01  | Django Redo |               |                       |               |
+| 01  | Django Redo | 24 Mar        | 29 Mar                | 07 Apr        |
 | 02  | Todo        |               |                       |               |
 | 03  | Blog        |               |                       |               |
 
