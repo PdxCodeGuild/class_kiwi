@@ -13,17 +13,23 @@ M-F 6:00 pm – 9:30 pm pst
 
 ### Staff
 
-- Anthony Wallace, Instructor
+- Irron Williams, Instructor
+  - irron@pdxcodeguild.com 
 
-  - anthony@pdxcodeguild.com
-
-- Irron Williams, TA
-- Ian Davis, TA
+- Dustin Olsen, TA
 
 ## Capstone Dates:
 
 Capstone proposal due: May 13th, 2022  
 Presentation Day: June 10th, 2022  
+
+## Django Labs Assigned:
+| Lab | Name        | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | ----------- | ------------- | --------------------- | ------------- |
+| 01  | Django Redo | 24 Mar        | 29 Mar                | 07 Apr        |
+| 02  | Todo        |               |                       |               |
+| 03  | Blog        |               |                       |               |
+
 
 ## Html/CSS/Flask Labs Assigned:
 | Lab | Name               | Date Assigned | Due By Start Of Class | Hard Due Date |
