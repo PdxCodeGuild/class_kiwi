@@ -11,10 +11,7 @@ def home(request):
     results = Kiwi.objects.all()
     
     context = {
-        
         'results' : results
-    
-        
     }
     
     #return HttpResponse('<h3>Testing testing page</h3>')
