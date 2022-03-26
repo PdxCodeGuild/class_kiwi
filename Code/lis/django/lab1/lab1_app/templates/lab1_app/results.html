@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROT Cipher Results</title>
+  <link rel="stylesheet" href="{% static 'lab1_app/styles/base.css' %}">
+</head>
+<body>
+  <main>
+    <h1>ROT Cipher Results</h1>
+    <p>Original message: {{ cipher }}</p>
+    <p>Rotation number: {{ rotation }}</p>
+    <p>Ciphered text: {{ ciphered_results }}</p>
+    <br>
+    <a class="button" href="{% url 'lab1_app:index' %}">Another Cipher?</a>
+  </main>
+</body>
+</html>
