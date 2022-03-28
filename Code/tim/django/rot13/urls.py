@@ -21,7 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     #8000/stringname
-    path('<str:name>', views.encode, name ="encode"),
+    path('encode', views.encode, name ="encode"),
+
+    path('', views.input_page,)
 ]
 
 
