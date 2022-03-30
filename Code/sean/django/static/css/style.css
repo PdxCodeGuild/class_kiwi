@@ -1,0 +1,74 @@
+body {
+    display:flex;
+    flex-direction: column;
+    height: 750px;
+    font-family: 'Permanent Marker', cursive;
+    background-color: rgb(255, 255, 255);
+    color: rgb(60, 60, 61);
+}
+
+header {
+    text-align: center;
+    color:white;
+    height: 110px;
+    padding: 30px;
+    background-color: rgb(197, 100, 100);
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section {
+    flex-basis: 100%;
+    padding: 20px;
+}
+
+.menu {
+    flex-shrink: 3;
+    background-color: rgb(85, 83, 83);
+    color: white;
+
+}
+
+.center {
+    padding: 4% 10%;
+    flex-shrink: 1;
+
+}
+
+.right {
+    flex-shrink: 3;
+    background-color: rgb(85, 83, 83);
+    color: white;
+
+}
+
+footer {
+    text-align: center;
+    color:white;
+    height: 60px;
+    padding-top: 15px;
+    background-color: rgb(197, 100, 100);
+}
+
+#head {
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 35px;
+}
+
+a {
+    text-decoration: none;
+    color: white;}
+
+a:hover {
+    color: rgb(197, 100, 100);
+}
+
+button {
+    margin-right: 25px;
+}
