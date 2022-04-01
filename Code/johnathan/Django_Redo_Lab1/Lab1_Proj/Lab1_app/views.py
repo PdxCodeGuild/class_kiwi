@@ -19,10 +19,9 @@ def Lab1_view(request):
 
 def rot13(request):
     import string
-    lab1_field = request.POST['lab1_field']
-    lab1model = Lab1_Model
-    lab1model.save()
-    user_data = result['blog']
+    user_data = request.POST['blog']
+    # lab1model = Lab1_Model
+    # lab1model.save()
     alphabet = string.ascii_lowercase
     user_string = ''
     for i in user_data:
@@ -30,5 +29,5 @@ def rot13(request):
             if alphabet.index(i) < 13:
                 user_string += alphabet[alphabet.index(i) + 13]
             else: user_string += alphabet[alphabet.index(i) - 13]
-    print(request.POST)
+    print(user_data)
     return render(request, 'Lab1/encrypt.html', {'user_string':user_string})

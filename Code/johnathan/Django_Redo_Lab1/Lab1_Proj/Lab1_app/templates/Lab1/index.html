@@ -15,6 +15,7 @@
     <h1> Welcome to ROT Cipher</h1>
     <form action = "{% url 'Lab1_app:rot13' %}" method ="POST">
         {% csrf_token %}
+        {{form}}
         <h3>Enter your message to be encrypted below: </h3>
                 <br>
 
