@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery list</title>
+</head>
+<body>
+    <div>
+        <!-- {{new}}: adds item to grocery list  -->
+        <form action="{% url 'save' %}" method="POST">
+            {{new}}
+            {% csrf_token %}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        {% for i in folder  %}
+        <ul>
+            {% comment %} {{i}} {% endcomment %}
+            {% if i.delete == False %}
+            <form action="">
+                <label for="1">{{i}}</label>
+                <input type="radio" name="1" id="">
+            </form>
+            <!-- {{i}} -->
+            {% endif %}
+        </ul>
+        {% endfor %}
+    </div>
+</body>
+</html>
