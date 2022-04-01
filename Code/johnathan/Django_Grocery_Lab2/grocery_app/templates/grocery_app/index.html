@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{% url 'grocery_app:grocery_order' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="grocery_field"/>
+        <button type="submit">submit</button>
+    </form>
+    <ul>
+        {% for groceryitems in groceryitems %}
+        <li>{{ groceryitems.grocery_field }}</li>
+        {% endfor %}
+      </ul>
+  </body>
+</html>
