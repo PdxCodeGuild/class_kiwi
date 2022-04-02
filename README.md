@@ -27,8 +27,9 @@ Presentation Day: June 10th, 2022
 | Lab | Name        | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ----------- | ------------- | --------------------- | ------------- |
 | 01  | Django Redo | 24 Mar        | 29 Mar                | 07 Apr        |
-| 02  | Todo        |               |                       |               |
+| 02  | Grocery List| 30 Mar        | 08 Apr                | 12 Apr        |
 | 03  | Blog        |               |                       |               |
+| 04  | Blog        |               |                       |               |
 
 
 ## Html/CSS/Flask Labs Assigned:
