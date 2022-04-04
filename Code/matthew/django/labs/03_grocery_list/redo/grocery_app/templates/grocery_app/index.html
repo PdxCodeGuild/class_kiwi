@@ -21,7 +21,6 @@
         
         <form action="{% url 'delete' item.id %}" method="GET">
             <label for="del">{{item}}</label>
-            <input type="checkbox" name="del" id="del">
             <button type="submit" name="del">Delete</button>
         </form>
     </ul>

@@ -1,4 +1,4 @@
-"""grocery_proj URL Configuration
+"""sessions_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -17,9 +17,8 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+app_name= 'tasks'
 urlpatterns = [
-    # home/
-    path('home/', views.home, name='home'),
-    path('save/', views.save, name='save'),
-    path('delete/<int:id>/', views.delete, name='delete'),
+    path('', views.index, name='index'),
+    path('add/', views.add, name='add')
 ]
