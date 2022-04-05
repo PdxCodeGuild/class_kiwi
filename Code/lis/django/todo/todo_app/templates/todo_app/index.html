@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+<body>
+  <h2>Todo</h2>
+
+  {% comment %} from forms.py file{% endcomment %}
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.title }}
+  </form>
+
+  {% for task in tasks %}
+    <div>
+      <p>{{ task }}</p>
+    </div>
+
+    <a href="{% url 'update' task.id %}">Update</a>
+    <a href="{% url 'delete' task.id %}">Delete</a>
+
+    {% if task.complete %}
+        <s>{{ task }}</s>  
+        {% else %}
+        <span>{{ task }}</span>
+    {% endif %}
+
+  {% endfor %}
+
+</body>
+</html>
