@@ -1,0 +1,12 @@
+{% extends 'todo_app/index.html' %}
+
+    {% block content %}
+
+<p>Do you want to delete "{{item}}"</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="Submit" name="Confirm">
+</form>
+<br>
+<a href="{% url 'index' %}">Cancel</a>
+    {% endblock content %}
