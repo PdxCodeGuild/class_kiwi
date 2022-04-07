@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div>
+        <div>
+            <h3>Edit Shopping List:</h3>
+            <h5>{{ shop_list.title | upper }}</h5>
+        </div>
+        <ul>
+            {% for item in object_list %}
+            {% if item.purchased is not True %}
+            <li>
+                <div>
+                    <div
+                        role="button"
+                        onclick="location.href=
+                        '{% url "item-update" shop_list.id item.id %}'">
+                        {{ item.title }}
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+            {% if item.purchased is True %}
+            <s>
+            <li>
+                <div>
+                    <div
+                        role="button"
+                        onclick="location.href=
+                        '{% url "item-update" shop_list.id item.id %}'">
+                        {{ item.title }}
+                    </div>
+                </div>
+            </li>
+            </s>
+            {% endif %}
+            {% empty %}
+            <p>There are no shopping items in this shopping list.</p>
+            {% endfor %}
+        </ul>
+        <p>
+            <input
+                value="Add a new item"
+                type="button"
+                onclick="location.href='{% url "item-add" shop_list.id %}'" />
+            <input
+                value="delete this list"
+                type="button"
+                onclick="location.href='{% url "list-delete" shop_list.id %}'" />
+        </p>
+    </div>
+</div>
+{% endblock %}
