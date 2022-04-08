@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    {% block title %} {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+
+  <body>
+    <h1>Welcome</h1>
+    <nav>
+      <a href="{% url 'grocery:about' %}" class="nav_btn">About</a>
+      <a href="{% url 'grocery:create' %}" class="nav_btn">Store</a>
+      <a href="{% url 'grocery:contact' %}" class="nav_btn">Contact</a>
+    </nav>
+    {% block 'content' %} {% endblock 'content' %}
+  </body>
+</html>
