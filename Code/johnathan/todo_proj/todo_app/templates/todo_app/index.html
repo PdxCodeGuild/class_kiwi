@@ -9,25 +9,31 @@
 <body>
     <h1> Todo </h1>
 
-    <form method="POST" action=" ">
+    <form method="POST" action="/">
         {% csrf_token %}
         {{form.title}}
+        <input type="submit" name="create task">
     </form>
-    {% for task in tasks %}
+        {% for task in tasks  %}
         <div>
+        
+        {% comment %}
         <a href="{% url 'update' task.id %}">Update</a>
-        <a href="{% url 'delete' task.id %}">Delete</a>
-
+        <a href="{% url 'delete' task.id %}">Delete</a> 
+        {% endcomment %}
+            
+        
+        {% for x in task.todo.all %}
+            {{x}}
+        {% endfor %}
+            
         {% if task.complete %}
             <strike> {{task}}</strike>
         {% else %}
             <span> {{task}}</span>
         {% endif %}
-
-
         </div>
-        
+        {% endfor %}
 
-    {% endfor %}
 </body>
 </html>

@@ -1,43 +1,42 @@
-from pdb import post_mortem
-from django.shortcuts import render, redirect
-from .models import *
 
-from todo_app.forms import TaskForm
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
+from .models import *
+from todo_app.forms import TodoForm
 
 # Create your views here.
 
 def index(request):
+    tasks = Todo.objects.all()
+    form = TodoForm()
 
-
-    tasks = Task.objects.all()
-    form = TaskForm()
-
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            form.save()
-        return redirect('/')
+    # if request.method == 'POST':
+    #     form = TodoForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #     return redirect('/')
 
     context = {'tasks': tasks, 'form': form }
     
     return render(request, 'todo_app/index.html', context)
 
-def updateTask(request, pk):
-    task = Task.objects.get(id=pk)
-    form = TaskForm(instance = task)
+def updateTodo(request, pk):
+    task = Todo.objects.get(id=pk)
+    form = TodoForm(instance = task)
 
     context = {'form': form}
 
     if request.method == 'POST':
-        form = TaskForm(request.POST, instance=task)
+        form = TodoForm(request.POST, instance=task)
         if form.is_valid():
             form.save()
             return redirect('/')
 
     return render(request, 'todo_app/update.html', context)
 
-def deleteTask(request, pk):
-    item = Task.objects.get(id=pk)
+def deleteTodo(request, pk):
+    item = Todo.objects.get(id=pk)
 
     if request.method == 'POST':
         item.delete()
