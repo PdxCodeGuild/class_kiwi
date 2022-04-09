@@ -13,8 +13,9 @@
         <a href="{% url 'home' %}">Home</a>
     </nav>
 </head>
+
+
 {% block content %}
-  
 <body>
     <form action="" method="POST">
         {% csrf_token %}
@@ -24,21 +25,62 @@
         <input type="submit" value="Submit">
     </form>
     <br>
-    {% for task in tasks %}
+    <div class='logic'>
+        <div class="task_list">
+            {% for task in tasks  %}
+            {% if task.complete == False %}
+                {% if task.priority == 3 %}
+                <div class="high">
+                    <a href="{% url 'edit' task.id %}">Edit</a>
+                    <a href="{% url 'delete' task.id %}">Delete</a>
+                    <br>
+                    <ul>
+                        {{task}}
+                    </ul>
+                </div>
+                {% elif task.priority == 2 %}
+                <div class="medium">
+                    <a href="{% url 'edit' task.id %}">Edit</a>
+                    <a href="{% url 'delete' task.id %}">Delete</a>
+                    <br>
+                    <ul>
+                        {{task}}
+                    </ul>
+                </div>
+                {% elif task.priority == 1 %}
+                <div>
+                        <a href="{% url 'edit' task.id %}">Edit</a>
+                        <a href="{% url 'delete' task.id %}">Delete</a>
+                        <br>
+                        <ul>
+                            {{task}}
+                        </ul>
+                    </div>
+                    
+                    {% endif %}
+                    
+            {% elif task.complete == True %}
+                    <a href="{% url 'edit' task.id %}">Edit</a>
+                    <a href="{% url 'delete' task.id %}">Delete</a>
+                    <br>
+                    <div class="complete">
+                        <ul>
+                   <strike>{{task}}</strike>
+                        </ul>
+                    </div>
+            {% endif %}
+            {% endfor %}
+                </div>
+    </div>
+</div>
+        
+        
+    </body>
+    {% endblock content %}
 
+{% comment "" %}
+<div>
     <a href="{% url 'edit' task.id %}">edit</a>
-    <a href="{% url 'delete' task.id %}">delete</a>
-    <ul>
-        {{task}}
-    </ul>
-    
-    
-</body>
-{% endblock content %}
-
-    {% comment "" %}
-    <div>
-        <a href="{% url 'edit' task.id %}">edit</a>
         <a href="{% url 'delete' task.id %}">delete</a>
         <br>
         <ul class="over5">

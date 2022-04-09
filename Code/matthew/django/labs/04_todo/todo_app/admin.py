@@ -3,4 +3,4 @@ from .models import *
 
 # Register your models here.
 admin.site.register(NewTask)
-admin.site.register(Priority)
+# admin.site.register(Priority)

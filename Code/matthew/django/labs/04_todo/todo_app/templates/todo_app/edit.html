@@ -7,15 +7,13 @@
 {% block content %}
 <body>
     <h1>Edit</h1>
-    <p>ToDo list sorts by Value please set Value to -1 when complete to move to the bottom of the list. 
-        Like wise if the task is important please change value to a higher value. <mark>Any value over 5
-        </mark> will be highlighted
-    </p>
+    <p>ToDo list is sorted by Priority "High" all<mark> High Priority items</mark> will be highlighted</p>
 
     <form action="" method="POST">
         {% csrf_token %}
-        {{form}}
-        {% comment %} {{imp_form}} {% endcomment %}
+        <span>Task:{{form.task}}</span>
+        <span>Priority:{{form.priority}}</span>
+        <span>Complete:{{form.complete}}</span>
         <input type="submit" value="edit">
     </form>
 </body>

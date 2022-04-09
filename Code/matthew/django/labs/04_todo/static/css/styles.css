@@ -1,5 +1,21 @@
+.logic{
 
+}
+.task_list {
+display: flex;
+flex-direction: column;
+
+}
 .high {
+    /* justify-content: start; */
+}
+.high > ul {
+    
     background-color: #FFFF00;
+    /* color: #FFFF00; */
     display: inline-flex;
+}
+.medium {
+   color: aquamarine;
+
 }
