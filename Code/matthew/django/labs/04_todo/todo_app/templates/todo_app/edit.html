@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'todo_app/index.html' %}
+{% block title %}
+<title>Edit</title>
+{% endblock title %}
+
+{% block content %}
+<body>
+    <h1>Edit</h1>
+    <p>ToDo list sorts by Value please set Value to -1 when complete to move to the bottom of the list. 
+        Like wise if the task is important please change value to a higher value. <mark>Any value over 5
+        </mark> will be highlighted
+    </p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        {% comment %} {{imp_form}} {% endcomment %}
+        <input type="submit" value="edit">
+    </form>
+</body>
+{% endblock content %}
