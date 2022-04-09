@@ -7,6 +7,19 @@
     <title>Home</title>
 </head>
 <body>
-    Yo
+
+    <form action="{% url 'save_task' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Create Task">
+    </form>
+
+
+    <h1>To Do List: </h1>
+    {% for task in tasks %}
+    <div>
+        <h5>{{task.text}}  {{task.priority}} </h5>
+    </div>
+    {% endfor %}
 </body>
 </html>

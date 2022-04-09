@@ -1,7 +1,8 @@
 from django import forms
-from django_labs.todo_proj.todo_app.models import Priority
+
+priority_choices = (('high', 'High'), ('medium', 'Medium'), ('low', 'Low'))
 
 
 class NewTodoForm(forms.Form):
-    text = forms.CharField(label='todo', max_length=120)
-    priority = Priority()
+    text = forms.CharField(max_length=120)
+    priority = forms.ChoiceField(choices=priority_choices)
