@@ -1,0 +1,97 @@
+{% extends 'todo_app/base.html' %}
+
+{% block content %}
+
+<style type="text/css">
+  #form {
+    margin-top: 30px; 
+    padding: 40px;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  } 
+  
+  .btn {
+    max-width: 80px;
+  }
+
+  .todo_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+  }
+
+  .form-delete {
+    margin: .0;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .High,
+  #High {
+    color:#E53834;
+  }
+
+  .Medium,
+  #Medium {
+    color:#FB8C00;
+  }
+
+  .Low,
+  #Low {
+    color:#0F95C1;
+  }
+
+  :is(input[type=submit]).outline {
+    --background-color: transparent;
+    --border-color: transparent;
+    --line-height: .4;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+</style>
+
+<article id="form">
+
+  <h1>Todo List</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label for="id_text">Todo item:</label>
+    <div>{{ form.text }}</div>
+    <label for="id_priority">Priority:</label>
+    <div>{{ form.priority }}</div>
+    <div class="add-btn-container">
+      <input type="submit" value="Add" class="btn">
+    </div>
+  </form>
+
+  <div class="todo_item">
+    <label for="id_text">Todo tasks:</label>
+    {% for todo in todos %}
+    <form action="{% url 'delete_todo' todo.id %}" method="POST" class="form-delete">
+      <div class="{{todo.priority}}">{{ todo.text }}</div>
+      {% csrf_token %}
+      <input type="submit" value="&#10005;" class="outline" id="{{todo.priority}}">
+    </form>
+    {% endfor %}
+  </div>
+
+</article>
+
+{% endblock %}
