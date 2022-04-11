@@ -9,6 +9,7 @@ M-F 6:00 pm – 9:30 pm pst
 ### Holidays
 
 - February 21st (Presidents Day)
+- April 15th (Good Friday)
 - May 30th (Memorial Day)
 
 ### Staff
