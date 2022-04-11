@@ -28,7 +28,7 @@ Presentation Day: June 10th, 2022
 | --- | ----------- | ------------- | --------------------- | ------------- |
 | 01  | Django Redo | 24 Mar        | 29 Mar                | 07 Apr        |
 | 02  | Grocery List| 30 Mar        | 08 Apr                | 12 Apr        |
-| 03  | ToDo        |               |                       |               |
+| 03  | ToDo        | 07 Apr        | 14 Apr                | 21 Apr        |
 | 04  | Pending     |               |                       |               |
 
 
