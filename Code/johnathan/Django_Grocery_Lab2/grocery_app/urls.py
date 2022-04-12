@@ -3,7 +3,11 @@ from . import views
 
 app_name = 'grocery_app'
 urlpatterns = [
-    path('view/', views.grocery_view, name='grocery_view'),
+    # path('', views.index, name='index'),
+    path('', views.grocery_list, name = ' grocery_list'),
 
-    path('order/', views.grocery_order, name='grocery_order')
+    path('', views.grocery_list, name ='grocery_list_by_category'),
+
+    path('<int:id>/<slug:slug>/', views.grocery_details, name= 'grocery_detail')
+
 ]

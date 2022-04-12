@@ -12,21 +12,20 @@
     <form method="POST" action="/">
         {% csrf_token %}
         {{form.title}}
-        <input type="submit" name="create task">
+        <input class="btn btn-info" type="submit" name="create task">
     </form>
-        {% for task in tasks  %}
-        <div>
+    
+    {% for task in tasks  %}
+        {{task}}
+        {{task.prioritychoice}}
+    {% endfor %}
+        
+        <div class="center-column">
         
         {% comment %}
         <a href="{% url 'update' task.id %}">Update</a>
         <a href="{% url 'delete' task.id %}">Delete</a> 
-        {% endcomment %}
-            
-        
-        {% for x in task.todo.all %}
-            {{x}}
-        {% endfor %}
-            
+
         {% if task.complete %}
             <strike> {{task}}</strike>
         {% else %}
@@ -34,6 +33,13 @@
         {% endif %}
         </div>
         {% endfor %}
+        {% endcomment %}
+            
+        
+        {{priority}}
+        
+            
+        
 
 </body>
 </html>

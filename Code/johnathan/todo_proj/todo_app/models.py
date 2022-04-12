@@ -1,14 +1,14 @@
-
 from django.db import models
+
 
 
 PRIORITY_CHOICES = ( 
 
-  ('1', 'Low'), 
+  ('Low', 'Low'), 
 
-  ('2', 'Medium'), 
+  ('Medium', 'Medium'), 
 
-  ('3', 'High'), 
+  ('High', 'High'), 
 
 ) 
 # Create your models here.
@@ -24,7 +24,8 @@ class Todo(models.Model):
     title = models.CharField(max_length=250) 
     complete = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now=True) 
-    priority = models.ForeignKey(Priority, on_delete=models.CASCADE, related_name='todo') 
+    #priority = models.ForeignKey(Priority, on_delete=models.CASCADE, related_name='todo')
+    prioritychoice = models.CharField(max_length=10, choices=PRIORITY_CHOICES) 
 
 
     def __str__(self): 
@@ -40,20 +41,3 @@ class Todo(models.Model):
 
 
 
-
-
-#     class Meta: 
-
-#         ordering = ['-priority', 'title'] 
-
-#     class Admin: 
-
-#         pass
-
-# class Meta:
-# #         ordering = ['title']
-# # # The class Admin bit allows us to set options for Django’s 
-# # # automatic administrative interface, which we’ll see later. 
-# # # The pass keyword tells Django to just use its defaults.
-# #     class Admin:
-# #         pass
