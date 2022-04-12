@@ -1,16 +1,11 @@
 from django.contrib import admin
-from .models import Category, GroceryItem
+from .models import Item
+
+
 # Register your models here.
 
-@admin.register(Category)
-class CategoryAdmin(admin. ModelAdmin):
-    list_display = ['name', 'slug']
-    prepopulated_fields = {'slug': ('name', )}
-
-@admin.register(GroceryItem)
-class GroceryItemAdmin(admin.ModelAdmin):
-    list_display = ['name', 'slug', 'price', 'available', 'created', 'updated']
-    list_filter = ['available', 'created', 'updated']
-    list_editable = ['price', 'available']
-    
-    prepopulated_fields = {'slug': ('name', )}
+@admin.register(Item)
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'status', 'quantity', 'date',)
+    ordering = ('-id',)
+    search_fields = ('name',)

@@ -1,13 +1,10 @@
 from django.urls import path
-from . import views
 
-app_name = 'grocery_app'
+from grocery_app.views import add_item, delete_item, index, update_item
+
 urlpatterns = [
-    # path('', views.index, name='index'),
-    path('', views.grocery_list, name = ' grocery_list'),
-
-    path('', views.grocery_list, name ='grocery_list_by_category'),
-
-    path('<int:id>/<slug:slug>/', views.grocery_details, name= 'grocery_detail')
-
+    path('', index, name='index'),
+    path('add-item', add_item, name='add-item'),
+    path('update-item/<int:item_id>', update_item, name='update-item'),
+    path('delete-item/<int:item_id>', delete_item, name='delete-item'),
 ]

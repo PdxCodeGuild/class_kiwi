@@ -1,18 +1,60 @@
-from pickle import NONE
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect
-from .models import Category, GroceryItem
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from .models import Item
 
-def grocery_list(request, category_slug=None):
-    category = None
-    categories = Category.objects.all()
-    groceryitems = GroceryItem.objects.filter(available = True)
-    if category_slug:
-        category = get_object_or_404 (Category, slug = category_slug)
-        groceryitems = groceryitems.filter(category=category)
-        return render(request, 'grocery_app\list.html', {'category': category, 'categories': categories, 'groceryitems': groceryitems})
+
 # Create your views here.
 
-def grocery_details (request, id, slug):
-    product= get_object_or_404(GroceryItem, id=id, slug=slug, available=True )
-    return render(request, ' grocery_app/index.html', {'groceryitem': groceryitem} )
+@login_required
+def index(request):
+    date = request.GET.get('date')
+    if date:
+        items = Item.objects.filter(user=request.user, date=date).order_by('-id')
+    else:
+        items = Item.objects.filter(user=request.user).order_by('-id')
+    context = {
+        'items': items
+    }
+    return render(request, "grocery_app/index.html", context)
+
+
+@login_required
+def add_item(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        quantity = request.POST.get("quantity")
+        status = request.POST.get("status")
+        date = request.POST.get("date")
+        if name and quantity and status and date:
+            new_item = Item(name=name, quantity=quantity,
+                            status=status, date=date, user=request.user)
+            new_item.save()
+            messages.success(request, 'Item added successfully!')
+            return redirect('index')
+        messages.error(request, "One or more field(s) is missing!")
+        return redirect('add-item')
+    return render(request, "add.html")
+
+
+@login_required
+def update_item(request, item_id):
+    item = Item.objects.get(id=item_id)
+    date = item.date.strftime("%d-%m-%Y")
+    if request.method == 'POST':
+        item.name = request.POST.get("name")
+        item.quantity = request.POST.get("quantity")
+        item.status = request.POST.get("status")
+        item.date = request.POST.get("date")
+        item.save()
+        messages.success(request, 'Item updated successfully!')
+        return redirect('index')
+    return render(request, "update.html", {'item': item, 'date': date})
+
+
+@login_required
+def delete_item(request, item_id):
+    item = Item.objects.get(id=item_id)
+    item.delete()
+    messages.error(request, 'Item deleted successfully!')
+    return redirect('index')
