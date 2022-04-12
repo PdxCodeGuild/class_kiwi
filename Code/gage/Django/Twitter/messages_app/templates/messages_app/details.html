@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+</head>
+
+<body>
+
+    <h2>Tweet: {{tweet.text}}</h2>
+    {% if request.user == tweet.user %}
+    <a href="{% url 'delete_tweet' tweet.id %}">🗑️ Delete</a> {% endif %} User: {{tweet.user}} {% if not request.user.is_anonymous %}
+    <p><a href="{% url 'like_tweet' tweet.id %}">👍Likes: {{tweet.likes}}</a> <a href="{% url 'dislike_tweet' tweet.id %}">👎Dislikes: {{tweet.dislikes}}</a></p>
+    {% endif %}
+    <p>Posted: {{tweet.published_date}}</p>
+</body>
+
+</html>
