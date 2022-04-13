@@ -21,6 +21,8 @@
         {% csrf_token %}
         
         <h1>ToDo</h1>
+        <p>Tasks will be sorted by level of Priority, <mark>High</mark>,<span class="middle">Medium</span> 
+            and low</p>
         {{form.task}} 
         <input type="submit" value="Submit">
     </form>
@@ -30,27 +32,36 @@
             {% for task in tasks  %}
             {% if task.complete == False %}
                 {% if task.priority == 3 %}
+
                 <div class="high">
+                    <div>
                     <a href="{% url 'edit' task.id %}">Edit</a>
                     <a href="{% url 'delete' task.id %}">Delete</a>
+                    </div>
                     <br>
                     <ul>
-                        {{task}}
+                        <mark>{{task}}</mark>
                     </ul>
                 </div>
+
                 {% elif task.priority == 2 %}
+
                 <div class="medium">
                     <a href="{% url 'edit' task.id %}">Edit</a>
                     <a href="{% url 'delete' task.id %}">Delete</a>
                     <br>
                     <ul>
-                        {{task}}
+                        <span class="middle">{{task}}</span>
                     </ul>
                 </div>
+
                 {% elif task.priority == 1 %}
-                <div>
+
+                <div class="low">
+                    <div>
                         <a href="{% url 'edit' task.id %}">Edit</a>
                         <a href="{% url 'delete' task.id %}">Delete</a>
+                    </div>
                         <br>
                         <ul>
                             {{task}}
@@ -60,17 +71,20 @@
                     {% endif %}
                     
             {% elif task.complete == True %}
-                    <a href="{% url 'edit' task.id %}">Edit</a>
-                    <a href="{% url 'delete' task.id %}">Delete</a>
-                    <br>
-                    <div class="complete">
-                        <ul>
-                   <strike>{{task}}</strike>
-                        </ul>
-                    </div>
+            <div>
+                
+                <a href="{% url 'edit' task.id %}">Edit</a>
+                <a href="{% url 'delete' task.id %}">Delete</a>
+                <br>
+                <div class="complete">
+                    <ul>
+                        <strike>{{task}}</strike>
+                    </ul>
+                </div>
+            </div>
             {% endif %}
             {% endfor %}
-                </div>
+        </div>
     </div>
 </div>
         

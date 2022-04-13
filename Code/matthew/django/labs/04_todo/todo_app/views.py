@@ -11,7 +11,8 @@ from .forms import NewTaskForm, NewPriority
 
 # Create your views here.
 def home(request):
-    tasks= NewTask.objects.order_by("complete")
+    # tasks= NewTask.objects.order_by("complete")
+    tasks= NewTask.objects.all()
     form= NewTaskForm()
 
     if request.method == 'POST':

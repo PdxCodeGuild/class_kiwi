@@ -1,4 +1,6 @@
 .logic{
+    display: flex;
+    flex-direction: column;
 
 }
 .task_list {
@@ -7,15 +9,25 @@ flex-direction: column;
 
 }
 .high {
-    /* justify-content: start; */
+    order: 1;
+    display: flex;
+    flex-direction: column;
 }
 .high > ul {
-    
-    background-color: #FFFF00;
-    /* color: #FFFF00; */
-    display: inline-flex;
+
 }
 .medium {
-   color: aquamarine;
-
+    order: 2;
+}
+.medium > ul {
+   /* color: aquamarine; */
+   /* background-color: black; */
+   font-family: 'Times New Roman', Times, serif;
+}
+.middle {
+    background-color: chartreuse;
+    padding: .01em .1em;
+}
+.low {
+    order: 3;
 }

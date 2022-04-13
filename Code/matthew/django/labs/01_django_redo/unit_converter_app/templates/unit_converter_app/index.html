@@ -8,13 +8,16 @@
   </head>
   <body>
     <h1>Unit Converter</h1>
-
-    <form action="ucp/result/" method="post">
+  {% comment %} 
+  try action=" {% url APP_NAME:result %}"
+  action="ucp/result/"
+  {% endcomment %}
+    <form action="result/" method="post">
       {% csrf_token %}
       <!--  -->
 
       <div class="distance">
-        <!-- Name is the variable name -->
+        <!-- name='' is the variable Name -->
         <textarea
           name="distance"
           id=""

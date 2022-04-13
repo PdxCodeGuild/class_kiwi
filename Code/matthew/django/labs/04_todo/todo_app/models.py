@@ -11,7 +11,7 @@ class NewTask(models.Model):
     task= models.CharField(max_length=25)
     complete= models.BooleanField(default=False)
     date= models.DateTimeField(auto_now=True)
-    priority= models.IntegerField(default=0, blank=True, choices=LVL)
+    priority= models.IntegerField(default=1, blank=True, choices=LVL)
 # trying to join priority and Newtask 
     # content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, default=0)
     # object_id = models.PositiveIntegerField(default=False)
