@@ -1,0 +1,8 @@
+<h5>Are you sure you want to delete {{grocery}}</h5>
+<a href="{% url 'home' %}">No</a>
+<br>
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" name="Delete">
+</form>
