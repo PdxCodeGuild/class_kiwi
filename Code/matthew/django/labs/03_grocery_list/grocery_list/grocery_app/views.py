@@ -18,24 +18,30 @@ def home(request):
     
     return render(request, 'grocery_app/index.html', context)
 
+# add new item. Must be logged into a user
 def save(request):
     if request.method == "POST":
         form= NewItem(request.POST)
         if form.is_valid():
             text= form.cleaned_data['item']
-            user= request.user
             # 
             list=List()
             list.new= text
-            list.user= user
+            list.user= request.user
             list.save()
     return HttpResponseRedirect(reverse('home'))
 
 def delete(request, id):
-    if request.method == 'GET':
-        List.objects.filter(id=id).delete()
-        # list= get_object_or_404(List, id=id)
-        # list.delete
+    List.objects.filter(id=id).delete()
+
+           
     return HttpResponseRedirect(reverse('home'))
 
-    
+def edit(request, id):
+    item= List.objects.filter(id=id)
+
+    context= {
+        'item': item,
+    }
+
+    return render(request, 'grocery_app/edit.html', context)

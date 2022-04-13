@@ -16,11 +16,15 @@ Including another URLconf
 
 from django.urls import path
 from . import views
-
+app_name= 'grocery_list'
 urlpatterns = [
-    # home/
-    path('home/', views.home, name='home'),
-    path('save/', views.save, name='save'),
-    path('delete/<int:id>/', views.delete, name='delete'),
-    path('edit/<int:id>/', views.edit, name='edit')
+    # /grocery/
+    path('', views.index, name='index'),
+    # grocery/add_item
+    path('add_item', views.add_item, name='add'),
+    # grocery/view/"dynamic item id"
+    path('complete_item/<int:item_id>', views.complete_item, name='complete'),
+    # 
+    path('delete/<int:item_id>', views.delete_item, name='delete'),
+
 ]

@@ -1,0 +1,30 @@
+body {
+
+}
+.department {
+    text-decoration: underline;
+    margin-bottom: .5em;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+.list {
+    border: 1px solid black;
+    width: 15em; 
+    text-align: center;
+}
+.item {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+.item > a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+.delete {
+    text-decoration: none;
+}
