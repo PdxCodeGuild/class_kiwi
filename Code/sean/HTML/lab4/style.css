@@ -1,0 +1,65 @@
+body {
+    font-family:'Permanent Marker', cursive;
+}
+
+header h1 {
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    
+}
+
+div {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+h2 {
+    display: inline;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 3px 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: red;
+    color: white;
+}
+
+p {
+    display: inline;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+img.Burrito2 {
+    margin-right: 100px;
+    margin-top:70px;
+    width: 500px;
+    height: 400px;
+    float: right;
+    border-radius: 15%;
+    box-shadow: 9px 7px 17px 7px rgba(255,0,0,0.78);
+}
+
+form {
+    display: inline-block;
+    clear: left;}
+
+footer {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+}
+
