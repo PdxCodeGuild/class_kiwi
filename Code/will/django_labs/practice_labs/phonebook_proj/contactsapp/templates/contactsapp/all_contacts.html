@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+    <h1>All Contacts</h1>
+
+    <form action="{% url 'contactsapp:save_contact' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="number" name="phone_number" placeholder="Phone Number">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="address" placeholder="Address">
+        <label for="cool">
+            <input type="checkbox" name="is_cool">
+        </label>
+        <input type="submit" value="Submit">
+
+    </form>
+    
+    {% for contact in contacts %}
+       <div>{{contact.full_name}} is {{contact.coolness}}</div>
+    {% endfor %}
+</body>
+</html>
