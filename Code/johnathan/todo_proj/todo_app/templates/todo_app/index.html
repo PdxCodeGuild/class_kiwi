@@ -9,16 +9,21 @@
 <body>
     <h1> Todo </h1>
 
-    <form method="POST" action="/">
-        {% csrf_token %}
-        {{form.title}}
-        <input class="btn btn-info" type="submit" name="create task">
-    </form>
     
-    {% for task in tasks  %}
-        {{task}}
-        {{task.prioritychoice}}
-    {% endfor %}
+    <ul> 
+            {% for task in tasks  %}
+                {{task}}
+                {{task.prioritychoice}}
+            {% endfor %}
+
+    </ul>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" name="button">Submit</button>
+        </form>
+    </div>
         
         <div class="center-column">
         
