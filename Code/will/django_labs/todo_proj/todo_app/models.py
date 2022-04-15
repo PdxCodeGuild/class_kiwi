@@ -3,16 +3,18 @@ from django.db import models
 
 
 class Priority(models.Model):
-
     name = models.CharField(
-        max_length=6, choices=(('high', 'High'), ('medium', 'Medium'), ('low', 'Low')), default='low')
+        max_length=6, choices=(('High', 'High'), ('Medium', 'Medium'), ('Low', 'Low')))
+
+    def __str__(self):
+        return f'{self.name}'
 
 
 class TodoItem(models.Model):
     text = models.CharField(max_length=120)
     priority = models.ForeignKey(
-        Priority, on_delete=models.CASCADE)
+        Priority, on_delete=models.CASCADE, related_name='items')
     created_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.text} {self.priority} {self.created_date.day}'
+        return f'{self.text} {self.created_date.month}/{self.created_date.day}'

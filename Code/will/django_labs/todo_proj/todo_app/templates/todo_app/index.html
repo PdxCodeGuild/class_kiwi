@@ -8,17 +8,30 @@
 </head>
 <body>
 
-    <form action="{% url 'save_task' %}" method="POST">
+    <form action="{% url 'todo_app:save_task' %}" method="post">
         {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Create Task">
-    </form>
+        <input type="text" name="item">
+        <select name="priority">
+            <option value="">Select a priority: </option>
+
+            {% for priority in priorities %}
+                <option value="{{priority.id}}">{{priority.name}}</option>
+            {% endfor %}
+        </select>
+        <button>Add Task</button>
 
 
     <h1>To Do List: </h1>
-    {% for task in tasks %}
+    
+    {% for priority in priorities %}
     <div>
-        <h5>{{task.text}}  {{task.priority}} </h5>
+        <h2>{{priority.name}}</h2>
+        
+        {% for task in priority.items.all %}
+        <div>
+            <h5>{{task.text}}  {{task.created_date.month}}/{{task.created_date.day}}</h5>
+        </div>
+        {% endfor %}
     </div>
     {% endfor %}
 </body>
