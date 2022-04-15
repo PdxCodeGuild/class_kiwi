@@ -23,21 +23,15 @@
     max-width: 80px;
   }
 
-  .todo_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: flex-start;
+  ul {
+    padding-left: 0;
   }
-
-  .form-delete {
-    margin: .0;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
+  
+  li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .High,
@@ -79,19 +73,24 @@
     <div class="add-btn-container">
       <input type="submit" value="Add" class="btn">
     </div>
+  
+    <div class="todo-items">
+      <label for="id_text">Todo tasks:</label>
+      <ul>
+        {% for todo in todos %}
+        <li style="list-style-type: none;">
+          {% if todo.complete %}
+          <a id="line_through"style="color:#c9d2db; text-decoration: line-through" class="{{todo.priority}}"
+          href="{% url 'todo_app:strike_item' todo.id %}">{{ todo.text }}</a>
+          {% else %}
+          <a class="{{todo.priority}}" href="{% url 'todo_app:strike_item' todo.id %}">{{ todo.text}}</a> 
+          <a href="{% url 'todo_app:delete_todo' todo.id %}" class="outline" id="{{todo.priority}}">&times;</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </form>
-
-  <div class="todo_item">
-    <label for="id_text">Todo tasks:</label>
-    {% for todo in todos %}
-    <form action="{% url 'delete_todo' todo.id %}" method="POST" class="form-delete">
-      <div class="{{todo.priority}}">{{ todo.text }}</div>
-      {% csrf_token %}
-      <input type="submit" value="&#10005;" class="outline" id="{{todo.priority}}">
-    </form>
-    {% endfor %}
-  </div>
-
 </article>
 
 {% endblock %}
