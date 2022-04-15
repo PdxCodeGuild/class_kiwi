@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Contact</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  
+  <style text="text/css">
+    main {
+      max-width: 375px;
+    }
+
+    .list-items {
+      padding: 0; 
+      margin: 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <main>
+    <article>
+      <h1>All Contacts</h1>
+      
+      <form action="{% url 'contacts:save_contact' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="text" name="phone_number" placeholder="Phone #">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="address" placeholder="Address">
+        <label for="cool">Is cool?&ensp;   
+          <input type="checkbox" name="is_cool">
+        </label>
+        <input type="submit" value="Submit">
+      </form>
+
+      {%  for contact in contacts %}
+        <div>
+          <article>
+          {{ contact.full_name}} is {{ contact.coolness}}
+          </article>
+        </div>
+      {% endfor %}
+    </article>
+  </main>
+</body>
+</html>
+
