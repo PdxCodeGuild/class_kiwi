@@ -51,13 +51,13 @@
 // console.log(numbers)
 // console.log(numbers.lastIndexOf(2))
 
-const courses = [
-    {id: 1, name: 'apple'},
-    {id: 2, name: 'banana'},
-    {id: 3, name: 'pear'}
-]
+// const courses = [
+//     {id: 1, name: 'apple'},
+//     {id: 2, name: 'banana'},
+//     {id: 3, name: 'pear'}
+// ]
 
-const course = courses.find(function(course){
-    return course.name === 'apple'
-})
-console.log(course.name)
+// const course = courses.find(function(course){
+//     return course.name === 'apple'
+// })
+// console.log(course.name)
