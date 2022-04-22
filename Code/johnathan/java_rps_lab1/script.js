@@ -1,20 +1,22 @@
 // get selection buttons
 const selectionButtons = document.querySelectorAll('[data-selection]')
+
+const finalColumn = document.querySelector('[data-final-column]')
 // create an array of all possible selections
 const SELECTIONS = [
     {
         name:'rock',
-        emjoi: '🗿',
+        emoji: '🗿',
         beats: 'scissors'
     },
     {
         name:'paper',
-        emjoi: '📜',
+        emoji: '📜',
         beats: 'rock'
     },
     {
         name:'scissors',
-        emjoi: '✂️',
+        emoji: '✂️',
         beats: 'paper'
     },
     
@@ -37,14 +39,21 @@ function makeSelection(selection){
     addSelectionResult(computerSelection, computerWinner)
     addSelectionResult(selection, yourWinner)
 
-    console.log(selection)
+    if(yourWinner) incrementscore(yourscorespan)
+    if(computerWinner) incrementscore(computerscorespan)
+    // console.log(selection)
 }
 
+// function to increment score
+
+function incrementscore (scorespan) {
+    scorespan.innerText = parseInt(scorespan.innerText) +1
+}
 
 // automate computer selection 
 
 function randomSelection() {
-    const randomIndex = Math.random() * SELECTIONS.length // provide an index from our array 
+    const randomIndex = Math.floor(Math.random() * SELECTIONS.length) // provide an index from our array 
     return SELECTIONS[randomIndex]
 }
 
@@ -55,4 +64,10 @@ function isWinner(selection, opponentSelection){
 
 // create a function to provide results
 
-function addSelectionResult (selection, winner)
+function addSelectionResult (selection, winner) { 
+    const div = document.createElement('div')
+    div.innerText = selection.emoji
+    div.classList.add('result-selection')
+    if (winner) div.classList.add('winner')
+    finalColumn.after(div)
+}
