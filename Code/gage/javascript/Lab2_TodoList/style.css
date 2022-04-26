@@ -1,0 +1,22 @@
+body {
+    background-color: #F5F9E9 !important;
+    color: black !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+input {
+    padding: 10px;
+    margin: 25px 0px 25px 0px !important;
+}
+button {
+    background-color: #8ACB88;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin: 25px 10px 25px 10px !important;
+}
+#list-todo {
+    font-size: 25px;
+}
