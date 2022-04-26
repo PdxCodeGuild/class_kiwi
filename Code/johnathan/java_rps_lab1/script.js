@@ -41,13 +41,7 @@ function makeSelection(selection){
 
     if(yourWinner) incrementscore(yourscorespan)
     if(computerWinner) incrementscore(computerscorespan)
-    // console.log(selection)
-}
-
-// function to increment score
-
-function incrementscore (scorespan) {
-    scorespan.innerText = parseInt(scorespan.innerText) +1
+    console.log(selection)
 }
 
 // automate computer selection 
@@ -56,6 +50,13 @@ function randomSelection() {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length) // provide an index from our array 
     return SELECTIONS[randomIndex]
 }
+
+// function to increment score
+
+function incrementscore (scorespan) {
+    scorespan.innerText = parseInt(scorespan.innerText) +1
+}
+
 
 // create logic for determining the winner 
 function isWinner(selection, opponentSelection){
