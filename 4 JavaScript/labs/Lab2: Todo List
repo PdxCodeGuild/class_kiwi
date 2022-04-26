@@ -1,0 +1,6 @@
+Let's make a simple todo-list which supports the following operations:
+  a. Add an item to the list
+  b. Remove an item from the list
+  c. Mark an item as completed
+  
+ Removed items should disappear entirely. Completed items should appear with a line through them. 
