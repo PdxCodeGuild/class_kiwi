@@ -25,7 +25,7 @@ function addTodo(){
 
     //b. Remove an item from the list -- delete todo
     delBtn.addEventListener('click', function(){
-            paragraph.removeChild(delBtn.parentElement) // remove button from parent
+            TodoContainer.removeChild(delBtn.parentElement) // remove button from parent
 
     })
 
@@ -34,3 +34,4 @@ function addTodo(){
         paragraph.style.textDecoration = "line-through";
     })
 }
+
