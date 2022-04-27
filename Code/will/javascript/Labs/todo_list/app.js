@@ -8,11 +8,13 @@ button.addEventListener('click', function(e){
     e.preventDefault()
     const newItem = document.createElement('li')
     newItem.classList.add('item')
-    // newItem.innerText = `Item ${todoItems.length + 1}`
     newItem.innerText = nameInput.value
     todoList.appendChild(newItem)
-    todoNum.innerText = todoItems.length
     nameInput.value = ''
+
+    var button = document.createElement('button')
+    button.innerText = 'x'
+    todoList.appendChild(button)
 
     newItem.addEventListener('click', deleteItem)
 })
@@ -28,5 +30,4 @@ function deleteItem(e){
     // console.log(e.target)
     e.stopPropagation()
     e.target.remove()
-    todoNum.innerText = todoItems.length
 }

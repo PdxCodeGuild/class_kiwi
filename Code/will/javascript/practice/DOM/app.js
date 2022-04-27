@@ -47,7 +47,6 @@ button.addEventListener('click', function(e){
     // newItem.innerText = `Item ${todoItems.length + 1}`
     newItem.innerText = nameInput.value
     todoList.appendChild(newItem)
-    todoNum.innerText = todoItems.length
     nameInput.value = ''
 
     newItem.addEventListener('click', deleteItem)
