@@ -12,10 +12,6 @@ button.addEventListener('click', function(e){
     todoList.appendChild(newItem)
     nameInput.value = ''
 
-    var button = document.createElement('button')
-    button.innerText = 'x'
-    todoList.appendChild(button)
-
     newItem.addEventListener('click', deleteItem)
 })
 
