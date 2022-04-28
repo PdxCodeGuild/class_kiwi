@@ -1,0 +1,28 @@
+{% extends 'todo_app/base.html' %}
+{% load static %}
+    
+    
+    {% block title %}
+        Home
+    {% endblock title %}
+        
+    
+    {% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.title}}
+        {{form.priority}}
+        {{form.cool}}
+        <button type="submit">Add item</button>
+    </form>
+    
+    
+    {% for todo in todos %}
+    
+    <p>{{todo.title}}
+        <a href="{% url 'todo_app:delete' todo.id %}" class="contentlinks">Delete</a>
+        <a href="{% url 'todo_app:update' todo.id %}" class="contentlinks">Update</a>
+    </p>
+    
+    {% endfor %}
+    {% endblock content %}
