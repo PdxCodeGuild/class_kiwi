@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Page</title>
+</head>
+<body>
+    <h1>Delete Page</h1>
+    <p>Are you sure you would like to delete {{item}}?</p> 
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="submit" name="Confirm">
+    </form>
+        <a href="{% url 'index' %}">Cancel</a>
+</body>
+</html>

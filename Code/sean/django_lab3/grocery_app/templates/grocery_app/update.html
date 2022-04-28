@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Page</title>
+</head>
+<body>
+    <H1>Update Page</H1>
+    <p>
+        Are you sure you would like to update {{item}}?
+    </p> 
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" name="update">
+    </form>    
+    <a href="{% url 'index' %}">Cancel</a>
+</body>
+</html>
