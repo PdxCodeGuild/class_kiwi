@@ -2,6 +2,7 @@ const button = document.querySelector("#submit")
 const todoList = document.querySelector('#todo-list')
 const todoItems = todoList.children
 const nameInput = document.querySelector('.name-input')
+const taskList = document.getElementsByTagName('li')
 
 //LISTENERS
 button.addEventListener('click', function(e){
@@ -12,7 +13,7 @@ button.addEventListener('click', function(e){
     todoList.appendChild(newItem)
     nameInput.value = ''
 
-    newItem.addEventListener('click', deleteItem)
+    newItem.addEventListener('dblclick', deleteItem)
 })
 
 todoList.addEventListener('click', function(){
@@ -20,10 +21,18 @@ todoList.addEventListener('click', function(){
 
 })
 
+todoList.addEventListener('click', function(){
+    
+})
+
+todoList.addEventListener('click', markComplete)
 
 function deleteItem(e){
-    // console.log(e)
-    // console.log(e.target)
     e.stopPropagation()
     e.target.remove()
+}
+
+function markComplete(e){
+    e.stopPropagation()
+    e.target.style.setProperty("text-decoration", "line-through")
 }
