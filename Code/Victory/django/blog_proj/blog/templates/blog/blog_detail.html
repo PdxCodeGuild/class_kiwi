@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="card text-center">
+    
+    <img src="" alt="">
+    <h5>{{blogpost.title}} by: {{blogpost.author}} </h5>
+    <p>{{blogpost.body}}</p>
+   
+{% if request.user == post.author %}
+    
+<div class="d-grid gap-2 d-md-block">
+<a href="{% url 'edit' post.id %}" class="btn btn-primary">Update Blog</a>
+<a href="{% url 'delete' post.id %}" class="btn btn-primary">Delete Blog</a>
+</div>
+    {% endif %}
+
+    <div class="d-grid gap-2 d-md-block">
+        <a href="{% url 'profile' %}" class="btn btn-primary">Go Back</a>
+    </div>
+
+</div>
+{% endblock content %}
+    
+
+
+

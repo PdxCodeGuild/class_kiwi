@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+    <br>
+    <br>
+    {% if not request.user.is_anonymous %}
+    <div class="d-grid gap-2 d-md-block text-center">
+        <a href="{% url 'create' %}" class="btn btn-primary">Add Blog</a>
+    </div>
+    {% endif %}
+    
+    
+    {% for post in posts  %}
+    <div class="card text-center">
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        <img src="" alt="">
+        <h5>{{post.title}} by: {{post.author}} </h5>
+        <p>{{post.body |truncatewords:10 }}</p>
+        <a href="{% url 'blog_detail' post.id %}">Read More</a>
+    </form>
+
+    
+    {% if request.user == post.author %}
+        
+    <div class="d-grid gap-2 d-md-block">
+    <a href="{% url 'edit' post.id %}" class="btn btn-primary">Update Blog</a>
+    <a href="{% url 'delete' post.id %}" class="btn btn-primary">Delete Blog</a>
+        </div>
+        {% endif %}
+    </div>
+    <br>
+    {% endfor %}
+    
+<br><br>
+
+    {% endblock content %}
+
+</p>
+    
+</body>
+</html>
+
