@@ -1,9 +1,9 @@
 const computerChoiceDisplay = document.getElementById('computer-choice')
-const userChoiceDisplay = document.getElementById('uesr-choice')
+const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelector('button')
+const possibleChoices = document.querySelectorAll('button')
 let userChoice
-
+// listeners
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e)=> {
     userChoice = e.target.id
     userChoiceDisplay.innerHTML = userChoice
@@ -47,7 +47,8 @@ function getResult(){
     if (computerChoice === 'paper' && userChoice === 'scissors'){
         result = 'you win!'
     }
-    if (computerChoice === 'paper' && userChoice === 'rock'){
-        result = 'you lost!'
+    if (computerChoice === 'rock' && userChoice === 'scissors'){
+        result = 'you lose!'
     }
+    resultDisplay.innerHTML = result
 }
