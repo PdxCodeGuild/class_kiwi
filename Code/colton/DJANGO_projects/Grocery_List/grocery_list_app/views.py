@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.shortcuts import redirect, render
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django import forms

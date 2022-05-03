@@ -38,7 +38,6 @@ function getResult(userChoice, compAns){
         return 'You Lose'
     }
 
-
     return 
 }
 
