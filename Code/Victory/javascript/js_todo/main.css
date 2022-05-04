@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: azure;
+    
+}
+
+
+ul > li {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    font-weight: 3rem;
+    flex-wrap: wrap;
+}
