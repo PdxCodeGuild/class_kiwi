@@ -11,10 +11,47 @@
 <body>
     <header>
         <h1>El Burrito</h1>
+        <form>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Username" required> 
+        </div> 
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required min="1" max="200" step="5">
+        </div>
+        <div>
+           <label for="phone">Phone</label>
+           <input type="tel" name="phone" id="phone"> 
+        </div>
+        <div>
+            <label for="date">Birthdate
+                <input type="date" name="date" id="date" min="2019-06-10">
+            </label>
+        </div>
+        <div>
+            <label for="age"> Age
+            <input type="number" name="age" id="age">
+            </label>
+        </div>
+
+        <div>
+          <label for="password">
+              Password
+            <input type="password" id="password" placeholder="Password" required>
+          </label>
+        </div>  
+        <button type="reset">Reset</button>
+            <button type="submit" >Submit</button>         
+        </form>
+
+
         <div class="link">
             <a href="">Home</a>
             <a href="">Menu</a>
             <a href="">Place Order</a>
+          
+    
         </div>
     </header>
     <div class="pic">
@@ -27,7 +64,53 @@
         </section>
         <section>
             <h1>Place Order</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque et quaerat praesentium quos ex perferendis sapiente, id, velit hic nobis sunt corrupti soluta minima. Vero aliquid dolorem nobis autem?</p>
+            
+            <div>
+                <div>Tortilla:
+                    <label for="White Flour">White Flour</label>
+                    <input type="radio" name="tortilla" id="White Flour" value="White Flour">
+                    <label for="Wheat Flour">Wheat Flour</label>
+                    <input type="radio" name="tortilla" id="Wheat Flour" value="Wheat Flour">
+                </div> 
+                <div>Meat:   
+
+                    <label for="Carnitas">Carnitas
+                        <input type="checkbox" name="Carnitas" id="Carnitas">
+                    </label>
+                    <label for="Chicken">Chicken
+                        <input type="checkbox" name="Chicken" id="Chicken">
+                    </label>
+                    <label for="Tofu">Tofu
+                        <input type="checkbox" name="Tofu" id="Tofu">
+                    </label>
+                </div> Toppings:  
+                <label for="beans">Beans
+                    <input type="checkbox" name="beans" id="beans">
+                </label>
+                <label for="cheese">Cheese 
+                    <input type="checkbox" name="cheese" id="cheese">
+                </label>
+                <label for="salsa">Salsa
+                    <input type="checkbox" name="salsa" id="salsa">
+                </label>
+                <label for="Sour Cream">Sour Cream
+                    <input type="checkbox" name="sour cream" id="sour cream">
+                </label>
+            </div>
+            <div>
+                <label for="Cup Size"> Cup Size</label>
+                <select name="Cup Size" id="Cup Size">
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="S">S</option>
+                    <option value="">No Drink</option>
+                </select>
+            </div>
+            <div>
+            <label for="comment">Leave a Comment:</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            </div>
+    
         </section>
     </main>
     <footer>&copy;2022 El Burrito</footer>
