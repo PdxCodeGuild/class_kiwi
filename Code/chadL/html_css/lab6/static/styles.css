@@ -1,15 +1,18 @@
-form{
+.code{
     justify-content: center;
-    border: solid red;
+    border: 3px solid red;
     width: 100%;
     display: inline-block;
 }
 
 body{
     align-items: center;
-    border: solid blue;
+    border:3px solid blue;
+    background-size: cover;
 }
 
 img{
-    border: solid purple;
+    border:px solid purple;
+    background-size: cover;
+    float: right;
 }
