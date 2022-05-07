@@ -88,11 +88,12 @@ def peak():
 
 # loop over data
         elif data_list[i -1] <data_list[i]> data_list[i +1]:
+           # print(i,data_list[i])
             list_of_peaks.append(i)
 
     return list_of_peaks
 peak()
-
+print('the peaks', peak())
 
 def valley():
     list_of_valley = []
@@ -107,23 +108,23 @@ def valley():
     return list_of_valley
 valley()
 
+print('the valley', valley())
+
 # peaks_and_valleys - uses the above two functions to compile 
 # a single list of the peaks and valleys in order of appearance in the original data.
 # def single_list():
 def peaks_and_valleys(): 
     peaks = peak()
     valleys = valley()
-    a = peaks + valleys
+    a = peaks + valleys #adding to list together
     a.sort()
-    final_list = []
-    for num in a:
-        final_list.append(data_list[num])
-
-    return final_list
    
-        
-    
-    
+    return a 
+
+    # for num in a:
+    #     final_list.append(data_list[num])
+
+    # return final_list
 
 print(peaks_and_valleys())
 
