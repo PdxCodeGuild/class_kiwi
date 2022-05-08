@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <h1>Here is your Grocery List</h1>
+    <form action="{%url 'add_item'%}" method="POST">
+      {% csrf_token %} {{form}}
+      <input type="submit" value="Add Item" />
+    </form>
+    {% for groceryitem in groceryitems %}
+    <div>
+      {{groceryitem.groceryitem}} - {{groceryitem.completed}}
+
+      <form href="{%url 'update-item' groceryitem.id %}" method="POST">
+        {% csrf_token %}
+        
+        <button type="submit">[Change?]</button>
+      </form> 
+
+      <a href="{%url 'del-item' groceryitem.id %}"> Delete </a>
+
+    </div>
+    {% endfor %}
+  </body>
+</html>
