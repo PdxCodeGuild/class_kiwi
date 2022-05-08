@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "chance": "^1.1.8"
+  },
+  "dependencies": {
+    "require.js": "^1.0.0"
+  }
+}

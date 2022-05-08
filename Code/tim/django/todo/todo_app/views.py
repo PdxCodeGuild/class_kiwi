@@ -1,7 +1,5 @@
 from django.http import  HttpResponseRedirect
 from django.shortcuts import render
-
-from django.contrib.auth.models import User
 from django.urls import reverse
 from .forms import *
 # Create your views here.
@@ -18,6 +16,7 @@ def new_todo(request):
         form = ToDoForm(request.POST)
         if form.is_valid():
             todo = ToDo()
+            todo.completed = form.cleaned_data['completed']
             todo.priority = form.cleaned_data['priority']
             todo.text = form.cleaned_data['text']
             todo.save()
