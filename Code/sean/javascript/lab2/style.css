@@ -1,0 +1,22 @@
+h1 {
+    margin: 30px 0 55px 10px;
+}
+
+h3 {
+    margin-top: 45px;
+    margin-left: 10px;
+}
+
+input {
+    margin-left: 25px;
+}
+
+li button  {
+    margin-left: 12px;
+    
+}
+
+li {
+    font-style: italic;
+    margin-bottom: 15px;
+}

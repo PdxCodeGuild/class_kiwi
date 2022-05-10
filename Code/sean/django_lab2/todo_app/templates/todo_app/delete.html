@@ -1,0 +1,19 @@
+{% extends 'todo_app/base.html' %}
+{% load static %}
+    
+    
+{% block title %}
+        Delete
+{% endblock title %}
+        
+    
+{% block content %}
+    <h1>Delete</h1>
+    <P>Are you sure you would like to delete {{todo.title}}</P>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{% url 'todo_app:index' %}" class="contentlinks">Cancel</a>
+    
+{% endblock content %}
