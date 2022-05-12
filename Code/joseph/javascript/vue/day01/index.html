@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Vue</h1>
+    <div id="app">{{ message }}
+        <button v-on:click="increaseCount">++</button>
+        <button v-on:click="decreaseCount"> - -</button>
+        The number is {{ counter }}
+        <span v-if="counter % 2 ===0">Even</span>
+        <span v-if="counter % 2 ===1">Odd</span>
+        <div>
+            <button v-on:click="generateRandomNumber">Random</button>
+            {{ randomNumber }} is
+            <span v-if="randomNumber<5">Less Than 5</span>
+            <span v-else-if="randomNumber ===5">Equal To 5</span>
+            <span v-else>Greater Than 5</span>
+        </div>
+        <div><hr></div>
+        <div>
+            <h4>Previous Odd Numbers</h4>
+            <ol>
+                <!-- <li>
+                    {{ generateNumbers }}
+                </li> -->
+                <li v-for="number in generateNumbers">{{number}}</li>
+            </ol>
+        </div>
+        <div>
+            <input v-model="message" type="text">
+        </div>
+    </div>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        message: 'Hello',
+        counter: 0,
+        randomNumber: Math.round(1 + Math.random() *10),
+        generateNumbers: [],
+        oddOrEven: []
+      }
+    },
+      methods: {
+          increaseCount: function(){
+              this.counter +=1
+            },
+          decreaseCount: function(){
+              if(this.counter > 0){
+                  this.counter --
+                }
+            },
+          generateRandomNumber: function(){
+              this.randomNumber = Math.round(1 + Math.random() *10 )
+              //add random to list
+              this.generateNumbers.push(this.randomNumber)
+            }
+      },
+      //lifecycle methods
+      created: function(){
+          console.log('hello world')
+        },
+        updated: function(){
+            console.log('updated app')
+        }
+  }).mount('#app')
+</script>
+</body>
+</html>
