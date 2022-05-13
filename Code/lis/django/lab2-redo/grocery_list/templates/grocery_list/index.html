@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery List</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <link rel="stylesheet" href="{% static '/css/base.css' %}" >
+</head>
+
+<body>
+  <main>
+    <article id="form">
+      <h1>🍎&nbsp; Grocery List</h1>
+      <section class="section-form">
+        <form action="{% url 'grocery_list:save' %}" method="POST">
+          {% csrf_token %}
+          {{ form }}
+          <div class="add-btn-container">
+            <input type="submit" class="btn" role="button" value="Add"></input>
+          </div>
+        </form>
+      </section>
+      <section>
+        <legend>Need:</legend>
+        <ul class="grocery-needed">
+
+          {% for grocery_item in needed %}
+
+            <li style="list-style-type: none;" >
+              
+              <form action="update_true/{{grocery_item.id}}/" method = "POST" class="form-update">
+                {% csrf_token %}
+                <input type="submit" value="&#10003;" class="outline" id="update-btn"/>
+              </form> 
+
+              <label>{{ grocery_item }}</label>
+              <form action="delete/{{grocery_item.id}}/" method="POST" class="form-delete">
+                {% csrf_token %}
+                <input type="submit" value="&#10005;" class="outline" id="delete-btn"/>
+              </form> 
+
+            </li>
+          {% endfor %} 
+        </ul>
+      </section>
+      <section>
+        <legend>Completed:</legend>
+        <ul class="grocery-have">
+
+          {% for grocery_item in completed %}
+
+            <li style="list-style-type: none;">
+
+              <form action="update_false/{{grocery_item.id}}/" method = "POST" class="form-update">
+                {% csrf_token %}
+                <input type="submit" value="&#10003;" class="outline" id="update-btn-completed"/>
+              </form>
+             
+              <label>{{ grocery_item }}</label>
+              <form action="delete/{{grocery_item.id}}/" method="POST" class="form-delete">
+                {% csrf_token %}
+                <input type="submit" value="&#10005;" class="outline" id="delete-btn"/>
+              </form> 
+
+            </li>
+          {% endfor %} 
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+
