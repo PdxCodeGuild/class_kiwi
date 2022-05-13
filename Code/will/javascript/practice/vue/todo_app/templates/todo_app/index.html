@@ -9,7 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         .strikeThrough{
             text-decoration: line-through;
@@ -25,7 +27,7 @@
 
         <div class="row">
             <div class="col-4 offset-4 d-flex mb-5 justify-content-center">
-                <input class="form-control" type="text" v-model="newTodoText">
+                <input class="form-control" type="text" v-model="newTodoText" required>
                 <button class="btn btn-success" v-on:click="addTodo">Add</button>
             </div>
 
@@ -48,7 +50,7 @@
                 <div v-for="todo in completeTodo"
                     class="card p-2 mt-3 flex-row justify-content-between"
                     >
-                    <span v-bind:class="{strikeThrough: todo.complete}">
+                    <span v-bind:class="{strikeThrough: todo.completed}">
                         [[todo.id]] [[todo.text]]
                     </span>
                     <div class="buttons">
@@ -65,10 +67,10 @@
         const BASE_URL = 'http://127.0.0.1:8000/index/'
         const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0]
 
-        axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN'
+        axios.defaults.xsrfHeaderName = 'X-CSRFToken'
         axios.defaults.headers = {
             'Content-Type': 'application/json',
-            'X-CSRFTOKEN' : csrfToken.value,
+            'X-CSRFToken' : csrfToken.value,
         }
 
         const app = new Vue({
@@ -95,8 +97,8 @@
             methods: {
 
                 updateTodos: function(todos){
-                    this.completeTodo = todos.filter(todo=>todo.complete)
-                    this.incompleteTodo = todos.filter(todo=>!todo.complete)
+                    this.completeTodo = todos.filter(todo=>todo.completed)
+                    this.incompleteTodo = todos.filter(todo=>!todo.completed)
                 },
                 // addTodo: function(){
                 //     this.incompleteTodo = this.incompleteTodo.concat({
@@ -109,35 +111,60 @@
                 // },
                 addTodo: function(){
                     axios({
-                        url: BASE_URL + '/create',
+                        url: BASE_URL + 'create/',
                         method: "POST",
                         data: {
-                            'new_todo_text' : 'hello_world'
+                            'new_todo_text' : this.newTodoText
                         }
                     })
-                    .then(response=>console.log(repsonse))
+                    //.then(response=>console.log(repsonse))
+                    .then(response=>{
+                        this.updateTodos(response.data.todos)
+                        this.newTodoText = ''
+                    })
                     .catch(error=>console.log(error.response))
                 },
                 //toggle complete value
+                // toggleComplete: function(todoId){
+                //     //combine complete & incomplete
+                //     let todos = this.completeTodo.concat(this.incompleteTodo)
+
+                //     //change complete value
+                //     todos = todos.map((todo)=>todo.id !== todoId ? todo : {... todo, complete:!todo.complete})
+
+                //     //split todos by status
+                //     this.updateTodos(todos)
+                // },
                 toggleComplete: function(todoId){
-                    //combine complete & incomplete
-                    let todos = this.completeTodo.concat(this.incompleteTodo)
-
-                    //change complete value
-                    todos = todos.map((todo)=>todo.id !== todoId ? todo : {... todo, complete:!todo.complete})
-
-                    //split todos by status
-                    this.updateTodos(todos)
+                    axios({
+                        url: BASE_URL + `toggle-complete/${todoId}`,
+                        method: 'post',
+                    })
+                    //.then(response=>console.log(response.data))
+                    .then(response=>{
+                        this.updateTodos(response.data.todos)
+                    })
+                    .catch(error=>console.log(error))
                 },
+                // deleteTodo: function(todoId){
+                //      //combine
+                //      let todos = this.completeTodo.concat(this.incompleteTodo)
+
+                //     //loop thru & remove selected
+                //     todos = todos.filter(todo=>todo.id !== todoId)
+
+                //     //split 
+                //     this.updateTodos(todos)
+                // }
                 deleteTodo: function(todoId){
-                     //combine
-                     let todos = this.completeTodo.concat(this.incompleteTodo)
-
-                    //loop thru & remove selected
-                    todos = todos.filter(todo=>todo.id !== todoId)
-
-                    //split 
-                    this.updateTodos(todos)
+                    axios({
+                        url: BASE_URL + `delete/${todoId}`,
+                        method: 'post',
+                    })
+                    .then(response=>{
+                        this.updateTodos(response.data.todos)
+                    })
+                    .catch(error=>console.log(error))
                 }
             }
         })
