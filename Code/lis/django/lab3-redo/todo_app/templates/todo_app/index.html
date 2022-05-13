@@ -1,0 +1,96 @@
+{% extends 'todo_app/base.html' %}
+
+{% block content %}
+
+<style type="text/css">
+  #form {
+    margin-top: 30px; 
+    padding: 40px;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  } 
+  
+  .btn {
+    max-width: 80px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+  
+  li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .High,
+  #High {
+    color:#E53834;
+  }
+
+  .Medium,
+  #Medium {
+    color:#FB8C00;
+  }
+
+  .Low,
+  #Low {
+    color:#0F95C1;
+  }
+
+  :is(input[type=submit]).outline {
+    --background-color: transparent;
+    --border-color: transparent;
+    --line-height: .4;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+</style>
+
+<article id="form">
+
+  <h1>Todo List</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label for="id_text">Todo item:</label>
+    <div>{{ form.text }}</div>
+    <label for="id_priority">Priority:</label>
+    <div>{{ form.priority }}</div>
+    <div class="add-btn-container">
+      <input type="submit" value="Add" class="btn">
+    </div>
+  
+    <div class="todo-items">
+      <label for="id_text">Todo tasks:</label>
+      <ul>
+        {% for todo in todos %}
+        <li style="list-style-type: none;">
+          {% if todo.complete %}
+          <a id="line_through"style="color:#c9d2db; text-decoration: line-through" class="{{todo.priority}}"
+          href="{% url 'todo_app:strike_item' todo.id %}">{{ todo.text }}</a>
+          {% else %}
+          <a class="{{todo.priority}}" href="{% url 'todo_app:strike_item' todo.id %}">{{ todo.text}}</a> 
+          <a href="{% url 'todo_app:delete_todo' todo.id %}" class="outline" id="{{todo.priority}}">&times;</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </form>
+</article>
+
+{% endblock %}
