@@ -7,23 +7,24 @@
             <h3>Edit Shopping List:</h3>
             <h5>{{ shop_list.title | upper }}</h5>
         </div>
-        <ul>
-            {% for item in object_list %}
+        <div>
+            <h3>Not Purchased</h3>
+            {% for item in object_list %}            
             {% if item.purchased is not True %}
-            <li>
-                <div>
-                    <div
-                        role="button"
-                        onclick="location.href=
-                        '{% url "item-update" shop_list.id item.id %}'">
-                        {{ item.title }}
-                    </div>
+            <div>
+                <div
+                    role="button"
+                    onclick="location.href=
+                    '{% url "item-update" shop_list.id item.id %}'">
+                    {{ item.title }}
                 </div>
-            </li>
+            </div>            
             {% endif %}
+            {% endfor %}
+            <h3>Purchased</h3>
+            {% for item in object_list %}
             {% if item.purchased is True %}
             <s>
-            <li>
                 <div>
                     <div
                         role="button"
@@ -31,14 +32,15 @@
                         '{% url "item-update" shop_list.id item.id %}'">
                         {{ item.title }}
                     </div>
-                </div>
-            </li>
+                </div>            
             </s>
             {% endif %}
-            {% empty %}
-            <p>There are no shopping items in this shopping list.</p>
             {% endfor %}
-        </ul>
+        </div>
+        {% for item in object_list %}
+        {% empty %}
+        <p>There are no shopping items in this shopping list.</p>
+        {% endfor %}
         <p>
             <input
                 value="Add a new item"
