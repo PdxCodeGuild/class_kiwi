@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROT Cipher</title>
+  <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-darken10">
+  <div id="app">
+    <div class="wmax300 round bg-white shadow-darken10 my36 mx36 px36 pt36 pb30">
+      <div class="prose  px12 py12">
+        <h3>{{ headerText }}</h3>
+      </div>
+      <div class="flex px12 py12">
+        <label for="cipher-tex">Enter text to cipher
+          <input v-on:focus="hide = !hide" id="cipher-text" class="input border-r--0 round-l cipher-text form-control"
+            placeholder="abc" v-model="cipherText" type="text">
+        </label>
+      </div>
+      <div class="flex px12 py12">
+        <label for="rotation">Enter rotation number
+          <input id="rotation" class="input border-r--0 round-l rotation form-control" placeholder="2"
+            v-model="rotation" type="text">
+        </label>
+      </div>
+      <div class="flex px12 py12">
+        <button v-on:click="hide = !hide" class=" btn round">Cipher</button>
+      </div>
+      <div class="prose px12 py12">
+        <h5 v-if="hide" class="color-pink">{{ cipherUserInput() }}</h5>
+
+      </div>
+    </div>
+  </div>
+
+  <script async src="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        hide: true,
+        headerText: 'Lab3 Rot Cipher',
+        cipherText: '',
+        rotation: '',
+        cipherResult: '',
+      },
+      methods: {
+        cipherUserInput: function () {
+          let cipherResult = this.cipherResult
+          const letters = 'abcdefghijklmnopqrstuvwxyz'
+          const cipherText = (this.cipherText).toLowerCase()
+          const rotation = parseInt(this.rotation)
+
+          for (i = 0; i < cipherText.length; i++) {
+            const index = letters.indexOf(cipherText[i])
+            cipherResult += letters[(index + rotation) % 26]
+          }
+          return cipherResult
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>
