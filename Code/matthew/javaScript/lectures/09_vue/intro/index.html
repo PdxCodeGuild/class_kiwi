@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Vue Intro</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <h1>Welcome to Vue</h1>
+
+    <!-- vue -->
+    <div id="app">{{ message }}
+        <br>
+        <!--  v-on:click="" is calling the function within the methods of the vue import -->
+        <button v-on:click="increaseCount">+</button>
+        <button v-on:click="decreaseCount">-</button>
+        The number {{ counter }} is
+        <span v-if="counter % 2 === 0">Even</span>
+        <span v-if="counter % 2 === 1">Odd</span>
+        
+        <!-- generate random number --------------------------------------------->
+        <div>
+            <button v-on:click="generateRandomNumber">Random</button>
+            {{randomNumber}} is
+            <span v-if="randomNumber<5">less than 5</span>
+            <span v-else-if="randomNumber==5">equal to 5</span>
+            <span v-else>greater than 5</span>
+        </div>
+
+        <!-- show random number array ------------------------------------------->
+        <div>
+            <h4>Previous numbers</h4>
+            <ul>
+                <!-- <li>{{generateNumbers}}</li> -->
+                <li v-for="x in generateNumbers">{{x}}</li
+            </ul>
+        </div>
+
+        <!-- data binding ------------------------------------------------------->
+        <input v-model="message" type="text"> <!--Changes the "message" variable-->
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            message: "Vue, intro",
+            counter: 0,
+            // Math.round() round to the nearest whole
+            // Math.random() generates random number .01-.99
+            randomNumber: Math.round(1+ Math.random() * 10), // will provide random number 10-10
+            generateNumbers: []
+          };
+        }, methods: {
+            increaseCount: function(){
+                this.counter ++
+            },
+            decreaseCount: function(){
+                // this.counter --
+                if(this.counter > 0){ 
+                    this.counter --
+                }
+            },
+            generateRandomNumber: function(){
+                this.randomNumber = Math.round(Math.random() * 10)
+                // add random numbers to array
+                this.generateNumbers.push(this.randomNumber)
+            }
+        },
+        // lifecycle methods
+        created: function(){
+            console.log("hello world")
+        },
+        updated: function(){
+            console.log("updated App")
+        }
+      }).mount("#app");
+    </script>
+
+  </body>
+</html>

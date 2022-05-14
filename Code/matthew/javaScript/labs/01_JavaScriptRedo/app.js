@@ -5,7 +5,7 @@ const random= Math.floor(Math.random() * options.length)
 
 // results h2
 const results= document.querySelector('.results')
-// comp h2
+// comp h4
 const comp= document.querySelector('.comp')
 
 const rock= document.querySelector('.rock')
@@ -31,10 +31,10 @@ paper.addEventListener('click',function(){
     let computer= options[Math.floor(Math.random() * options.length)]
     // let human= "paper"
     if(computer == 'rock'){
-        results.innerText= 'you win'
+        results.innerText= 'You win'
         comp.innerText= `Computer chose ${computer}`
     }else if(computer == 'paper'){
-        results.innerText= 'tie'
+        results.innerText= 'Tie'
         comp.innerText= `Computer chose ${computer}`
     }else{
         results.innerText= 'You loose'
@@ -47,10 +47,10 @@ scissors.addEventListener('click',function(){
     let computer= options[Math.floor(Math.random() * options.length)]
     // let human= "scissors"
     if(computer == 'rock'){
-        results.innerText= 'you loose'
+        results.innerText= 'You loose'
         comp.innerText= `Computer chose ${computer}`
     }else if(computer == 'paper'){
-        results.innerText= 'you win'
+        results.innerText= 'You win'
         comp.innerText= `Computer chose ${computer}`
     }else{
         results.innerText= 'Tie'

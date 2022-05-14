@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'messages_app/index.html' %}
+{% block content %}
+<body>
+    <h1>Sign Up</h1>
+    <form action="{% url 'user:signup' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Sign up</button>
+    </form>
+</body>
+{% endblock content %}

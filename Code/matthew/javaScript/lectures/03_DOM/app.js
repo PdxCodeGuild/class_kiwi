@@ -68,6 +68,9 @@ button.addEventListener('click',function(){
     num.innerText= items.length
 
 })
+// --------------------------------------------------
+
+//change main-title class from black to blue
 // Selector
 const mainTitle= document.querySelector('.main-title')
 // listener
@@ -80,6 +83,7 @@ colorChange.addEventListener('click',function(){
         mainTitle.style.color = 'black'
     }
 })
+// ----------
 
 const test= document.querySelector('.thing')
 const testButton= document.querySelector('.css')
@@ -89,3 +93,12 @@ testButton.addEventListener('click',function(){
         test.classList.add('test')
     }
 })
+
+// DOM day 2 ------------------------------------------------------------------------------
+
+for(items of items)
+
+
+function deleteItem(){
+    console.log('delete')
+}

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Montserrat&family=Playfair+Display&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box{
+    background-color: lightblue;
+    height: 200px;
+    width: 200px;
+}
+
