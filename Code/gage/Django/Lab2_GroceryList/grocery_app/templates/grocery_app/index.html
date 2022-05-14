@@ -18,15 +18,31 @@
         <input type="submit" value="Add" name="Add">
     </form>
 
-
+    <h1>Need</h1>
     {% for item in items %}
-    <div id="list_cont">
-        {% if item.complete %}
-        <strike>{{item}}</strike> {% else %}
-        <span>{{item}}</span> {% endif %}
-        <a id="update_button" href="{% url 'grocery:update' item.id %}">Update</a>
-        <a id="remove_button" href="{% url 'grocery:remove' item.id %}">Remove</a>
-    </div>
+        {% if item.complete != True %}
+        <div id="need">
+            <ul>
+                <li><span>{{item}}</span>
+                <a id="update_button" href="{% url 'grocery:update' item.id %}">Update</a>
+                <a id="remove_button" href="{% url 'grocery:remove' item.id %}">Remove</a>
+                </li>
+            </ul>
+        </div>
+         {% endif %}
+    {% endfor %}
+    <h1>Bought</h1>
+    {% for item in items %}
+        {% if item.complete%}
+        <div id="bought">
+            <ul>
+                <li><span>{{item}}</span>
+                <a id="update_button" href="{% url 'grocery:update' item.id %}">Update</a>
+                <a id="remove_button" href="{% url 'grocery:remove' item.id %}">Remove</a>
+            </li>
+            </ul>
+        </div>
+         {% endif %}
     {% endfor %}
 
 </body>

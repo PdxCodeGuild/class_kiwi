@@ -13,7 +13,7 @@ input {
 #id_item {
     background-color: white;
     border: 2px solid black;
-    color: black
+    color: black;
 }
 
 #remove_button {
@@ -33,4 +33,11 @@ input {
 
 #list_cont {
     margin-top: 25px;
+}
+
+li{
+    margin-bottom: 25px;
+}
+#bought{
+    margin-top: 10px;
 }
