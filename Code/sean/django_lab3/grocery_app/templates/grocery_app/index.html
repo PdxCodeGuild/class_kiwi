@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    <h1>Seans Grocery Tracker</h1>
+    <h3>Add an item below:</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.item}}
+        <button type="submit">Add Item</button>
+    </form>
+    <h3>Items you still need:</h3>
+    
+    {% for item in items %}
+    
+        {% if item.complete == False %}
+                <ul>
+                    <li>
+                    {{item}}
+                    <a href="{% url 'update' item.id %}">Update</a>
+                    <a href="{% url 'delete' item.id %}">Delete</a>
+                </li>
+                </ul>  
+        {% endif %}
+    {% endfor %}
+    
+
+    <h3>Items you have:</h3>
+    {% for item in items %}
+    
+        {% if item.complete == True %}
+            <ul>
+                <li>
+                    {{item}} ✔
+                    <a href="{% url 'update' item.id %}">Update</a>
+                    <a href="{% url 'delete' item.id %}">Delete</a>
+                </li>
+            </ul>      
+        {% endif %}
+
+    {% endfor %}
+        
+</body>
+</html>

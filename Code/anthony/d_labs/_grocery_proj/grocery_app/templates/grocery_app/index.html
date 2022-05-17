@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <h1>My Grocery List</h1>
+    <form action="{%url 'grocery_list:add'%}" method="POST">
+      {% csrf_token %}
+      <input type="text" name="item">
+      <select name="department">
+        <option value="">Select a Department</option>
+        {% for department in departments  %}
+          <option value="{{department.id}}">{{department.name}}</option>
+        {% endfor %}
+      </select>
+      <button>Add Item</button>
+
+
+      {% for department in departments %} 
+      <div>
+     <h2>{{department.name}} </h2> 
+     <ul>
+      {% for grocery in department.items.all  %}
+      <div>{{grocery}}</div>
+        
+      {% endfor %}
+  
+     </ul>
+      
+      {% endfor %}
+
+
+
+      
+    </form>
+
+    
+  </body>
+</html>

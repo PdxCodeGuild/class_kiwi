@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content%}
+{% if object_list %}
+<h3>My Todo Items</h3>
+{% endif %}
+<table role="grid">
+    <thead>
+        <tr>
+            <th scope="col">Task Name</th>
+            <th scope="col">Created Date</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Update?</th>
+        </tr>
+    </thead>
+<tbody>    
+    {% for todoitem in object_list %}
+    <tr>
+        <td>{{ todoitem.title }}</td>
+        <td>{{ todoitem.created_date | date:"l, F j" }}</td>
+        <td>{{ todoitem.priority }}</td>
+        <td><input type="button" value="Update" onclick="location.href='{% url "item-update" todoitem.id %}'"></td>        
+    </tr>
+    {% empty %}
+    <h4>Lucky You!  You have no todo items!</h4>
+    {% endfor %}
+</tbody>
+</table>
+<p>
+    <input
+    value="Add a new todo item?"
+    type="button"
+    onclick="location.href='{% url "item-add" %}'"/>
+</p>
+{% endblock %}

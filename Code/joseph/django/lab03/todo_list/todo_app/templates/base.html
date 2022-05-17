@@ -1,0 +1,24 @@
+<!-- Base Template-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'todo_app/css/pico.min.css' %}">
+    <title>Simple Todo List</title>
+</head>
+<body>
+    <header class="container" onclick="location.href='{% url "index" %}'">
+        Simple Todo List
+    </header>
+    <main class="container">
+        {% block content %}
+        This will be replaced
+        {% endblock %}
+    </main>
+    <footer class="container">
+        © 2022 BroMack Design
+    </footer>
+</body>
+</html>

@@ -29,7 +29,7 @@ class ATM:
             return False
     
     def withdraw(self, amount):
-        self.balance - amount
+        self.balance -= amount
         self.transactions.append(f'User withdrew ${amount}')
         return amount
     

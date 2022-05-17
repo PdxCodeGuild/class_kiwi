@@ -1,0 +1,17 @@
+.buyproduct {
+    margin-left: auto;
+    
+}
+.navbar {
+    padding: 0.5rem 1rem;
+}
+.puppypics {
+    display:flex;
+    flex-direction: column;
+
+}
+.homebutton {
+    height:auto;
+    width: 60px;
+    border-radius: 100%;
+}

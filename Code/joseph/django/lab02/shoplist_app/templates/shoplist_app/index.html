@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<!--index.html-->
+{% if object_list %}
+<h3>All my shopping lists</h3>
+{% endif %}
+<ul>
+    {% for shoplist in object_list %}
+    <li>
+        <div
+            role="button"
+            onclick="location.href='{% url "list" shoplist.id %}'">
+            {{ shoplist.title }}
+        </div>
+    </li>
+    {% empty %}
+    <h4>You have no shopping lists!</h4>
+    {% endfor %}
+</ul>
+<p>
+    <input
+    value="Add a new shopping list"
+    type="button"
+    onclick="location.href='{% url "list-add" %}'"/>
+</p>
+
+{% endblock %}

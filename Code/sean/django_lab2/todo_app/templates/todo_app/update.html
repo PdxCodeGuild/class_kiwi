@@ -1,0 +1,21 @@
+
+{% extends 'todo_app/base.html' %}
+{% load static %}
+    
+    
+{% block title %}
+        Update
+{% endblock title %}
+        
+    
+{% block content %}
+    <h1>Update</h1>
+    <p>Would you like to update {{todo.title}}</p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'todo_app:index' %}" class="contentlinks">Cancel</a>
+{% endblock content %}

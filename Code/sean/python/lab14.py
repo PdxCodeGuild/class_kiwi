@@ -58,5 +58,4 @@ while game:
             continue
         else:
             game = False
-        
-
+            break
