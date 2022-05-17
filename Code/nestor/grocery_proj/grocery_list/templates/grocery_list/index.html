@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+</head>
+<body>
+    <h1>Create a grocery list</h1>
+    <h2>Add your items below.</h2>
+    <form action="{% url 'grocery_list:add' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="item">
+        <select name="department">
+            <option value="">Select A Department</option>
+            {% for department in departments %}
+              <option value="{{department.id}}">{{department.name}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Add Item</button>
+
+        {% for department in departments %}
+        <div>
+            <h2>{{department.name}}</h2>
+            <ul>
+                {% for grocery in department.items.all %}
+                <li>
+                    
+                    {% if grocery.completed %}
+                    <a style="text-decoration: line-through"
+                    href="{% url 'grocery_list:buy' grocery.id %}">
+                        {{grocery.item}}
+                    </a>
+                    {% else %}
+                    <a href="{% url 'grocery_list:buy' grocery.id %}">{{grocery.item}}</a>
+                    <a href="{% url 'grocery_list:delete' grocery.id %}">&times;</a>
+                    {% endif %}
+
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </form>
+
+    
+
+
+
+    <!-- <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="items">
+        <button name='item' type="submit">Add Item</button>
+    </form>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <a href="grocery_list: add">{{database}}</a>
+        <input type="text">
+    </form> -->
+</body>  
+</html> 
