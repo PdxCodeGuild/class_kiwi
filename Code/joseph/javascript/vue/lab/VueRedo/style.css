@@ -1,0 +1,148 @@
+body {
+    background: #E5E0BE;
+    font-family: 'Slabo 27px', serif;
+}
+
+.title {
+    font-size: 36px;
+    font-family: 'Creepster', cursive;
+}
+
+.options div {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 120px;
+    margin: 20px 0px;
+    transition: transform 0.2s;
+    transform: scale(1);
+    width: 120px;
+}
+
+.options div:hover {    
+    background-size: 65%;
+}
+
+.options div.r {
+    transform: rotate(90deg);
+    background-image: url("./assets/rock.jpg");
+    background-size: 50%;
+}
+
+.options div.r:hover {
+    background-size: 55%;
+}
+
+.options div.p {
+    transform: rotate(90deg);
+    background-image: url("./assets/paper.jpg");
+}
+
+.options div.s {
+    transform: rotate(90deg);
+    background-image: url("./assets/scissors.jpg");
+}
+
+.options div.checked {    
+    transform: scale(1.2);
+}
+
+.it {
+    height: 120px;
+    width: 120px;    
+}
+
+.it div {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    background-size: 60%;
+    border-radius: 50%;
+    height: 120px;
+    transform: scale(1.25);
+    width: 120px;
+}
+
+.it div.bird {
+    background-image: url("./assets/computer.jpg");    
+}
+
+.it div.r {
+    transform: rotate(-90deg);
+    background-image: url("./assets/rock.jpg");
+    background-size: 50%;
+}
+
+.it div.p {
+    transform: rotate(-90deg);
+    background-image: url("./assets/paper.jpg");
+}
+
+.it div.s {
+    transform: rotate(-90deg);
+    background-image: url("./assets/scissors.jpg");
+}
+
+.game {
+    border-radius: 50%;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    z-index: 10;
+}
+
+.game .chooseWeapon, .game .fight, .game .fighting, .game .result {
+    align-items: center;
+    background: #A39F8C;
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.game .fight {
+    background: #A48132;
+    cursor: pointer;
+}
+
+.game .result.won {
+    background: #32A836;
+}
+.game .result.lost {
+    background: #F55858;
+}
+.game .result.draw {
+    background: #E6DB64;
+}
+
+.controls{
+    background-color: #eae5c4;
+    margin: 20px;
+}
+
+.controls div{
+    width: 120px;
+    padding: 10px;
+}
+
+.you .text, .computer .text{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.you .score, .computer .score{
+    font-size: 36px;
+    align-content: space-between;
+}

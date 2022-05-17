@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Redo - VUE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="title">Rock . Paper . Scissors .</div>
+            </div>            
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <div class="options">
+                            <div class="r" :class="yourWeapon == 'Rock' ? 'checked' : ''" @click="changeWeapon('Rock')"></div>
+                            <div class="p" :class="yourWeapon == 'Paper' ? 'checked' : ''" @click="changeWeapon('Paper')"></div>
+                            <div class="s" :class="yourWeapon == 'Scissors' ? 'checked' : ''" @click="changeWeapon('Scissors')"></div>
+                        </div>
+                        <div class="game">
+                            <div class="chooseWeapon" v-if="!yourWeapon">Pick your Weapon</div>
+                            <div class="fight" v-if="yourWeapon && !result" v-show="!fighting" @click.once="fight" v-if="fig">FIGHT</div>
+                            <div class="fighting" v-if="fighting">
+                                <div class="spinner-border text-danger" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="result" :class="result" v-if="result">{{result.toUpperCase()}}</div>
+                        </div>
+                        <div class="it">
+                            <div v-show="computerWeapon === ''" class="bird"></div>
+                            <div v-show="computerWeapon === 'Rock'" class="r"></div>
+                            <div v-show="computerWeapon === 'Paper'"class="p"></div>
+                            <div v-show="computerWeapon === 'Scissors'"class="s"></div>                            
+                        </div>
+                    </div>
+                    <div class="d-flex scores flex-row">
+                        <div class="d-flex align-items-center you mr-3 justify-content-between">
+                            <span class="text">You</span><span class="score font-weight-bold" :class="yourScore >= computerScore ? 'text-success' : 'text-danger'"> {{yourScore}}</span>
+                        </div>
+                        <div class="d-flex align-items-center computer">
+                            <span class="text">Computer</span><span class="score font-weight-bold" :class="computerScore >= yourScore ? 'text-success' : 'text-danger'"> {{computerScore}}</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center text-center controls shadow rounded">
+                        <div class="flex-fill">
+                            <button type="button" class="btn btn-info">
+                                Rounds <span class="badge badge-light">{{totalRounds}}</span>
+                            </button>
+                        </div>
+                        <div class="flex-fill"><button @click="reset" class="btn btn-warning">Reset</button>
+                        </div>
+                    </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const { createApp } = Vue
+    createApp({
+        data() {
+            return {
+                options: ['Rock', 'Paper', 'Scissors'],
+                yourWeapon: '',
+                computerWeapon: '',
+                result: '',
+                yourScore: 0,
+                computerScore: 0,
+                totalRounds: 0,
+                fighting : false,
+            }
+        },
+        methods:{
+            chooseWeapon(weapon){
+                this.yourWeapon = weapon;
+            },
+
+            fight(){
+                this.fighting = true;
+                this.fightProcessing();
+            },
+
+            _fight(){
+                this.computerWeapon = this.options[Math.floor(Math.random() * this.options.length)]; 
+                if(this.yourWeapon === this.computerWeapon)
+                    this._draw();
+                if(this.computerWeapon === 'Rock'){
+                    if(this.yourWeapon === 'Paper'){
+                        this._win();
+                    }
+                    if(this.yourWeapon === 'Scissors'){
+                        this._lost();
+                    }
+                }
+                if(this.computerWeapon === 'Paper'){
+                    if(this.yourWeapon === 'Rock'){
+                        this._lost();
+                    }
+                    if(this.yourWeapon === 'Scissors'){
+                        this._win();
+                    }
+                }
+                if(this.computerWeapon === 'Scissors'){
+                    if(this.yourWeapon === 'Rock'){
+                        this._win();
+                    }
+                    if(this.yourWeapon === 'Paper'){
+                        this._lost();
+                    }
+                }                
+            },
+
+            fightProcessing(){
+                var x = 0;
+                var intervalID = setInterval(() =>{            
+                    this.computerWeapon = this.options[Math.floor(Math.random() * this.options.length)];            
+                    if (++x === 10) {
+                        window.clearInterval(intervalID);
+                        this._fight();
+                        this.fighting = false;
+                    }
+                }, 100);
+            },
+
+            changeWeapon(weapon){
+                if(this.fighting)
+                    return;                    
+                this.yourWeapon = weapon;
+                this.result = '';
+                this.computerWeapon = '';
+            },
+
+            _draw(){
+                this.result = 'draw',
+                this.totalRounds++;
+            },
+    
+            _win(){
+                this.result = 'won';
+                this.yourScore++;
+                this.totalRounds++;
+            },
+            
+            _lost(){
+                this.result = 'lost';
+                this.computerScore++;
+                this.totalRounds++;
+            },
+
+            reset(){
+                this.computerScore = 0;
+                this.yourScore = 0;
+                this.result = '';
+                this.yourWeapon = '';
+                this.computerWeapon = '';
+                this.totalRounds= 0;
+            }
+        }
+    }).mount('#app')
+</script>
+</html>
