@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&family=Poppins:wght@200&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box{
+    background-color: lightblue;
+    height: 200px;
+    width: 200px;
+}
+/* .box.two{
+    background-color: cadetblue;
+}
+
+.box.three{
+    background-color: aquamarine;
+} */
