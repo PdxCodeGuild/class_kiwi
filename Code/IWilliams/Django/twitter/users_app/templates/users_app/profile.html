@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'users_app/base.html' %}
+
+    
+    {% block content %}
+        
+    <h1 class="mt-3">Welcome {{request.user}}</h1>
+    
+    {% for tweet in tweets  %}
+    <div class="mx-auto" style="width: 200px">
+        <p>{{tweet.text}}</p>
+        
+        {% if request.user == tweet.user %}
+            <a href="{% url 'delete_tweet' tweet.id%}">❌</a>
+        {% endif %}
+        <h6>{{tweet.user}}</h6>
+       
+        <div class="d-flex flex-column">
+            {% if not request.user.is_anonymous %}
+                    <a href="{%url 'like' tweet.id%}">👍Likes: {{tweet.likes}}</a>
+                    <a href="{%url 'dislike' tweet.id%}">👎Dislikes:{{tweet.dislikes}}</a>
+                    <a href="{%url 'detail' tweet.id%}">↪️</a>
+            {% endif %}
+            
+            <div>
+                {{tweet.published_date}}
+
+            </div>
+            
+
+
+        </div>
+                    
+       
+    </div>
+    {% endfor %}
+    <a href="{%url 'logout'%}">Logout</a>
+    <button type="button" class="btn btn-dark">Dark</button>
+    {% endblock content %}
+        
+

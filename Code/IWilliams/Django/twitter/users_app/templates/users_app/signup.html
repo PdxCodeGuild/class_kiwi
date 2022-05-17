@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'users_app/base.html' %}
+{% block title%}
+    {{request.user}}
+{% endblock title %}
+
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Signup</button>
+</form>
+    
+{% endblock content %}
+    
+

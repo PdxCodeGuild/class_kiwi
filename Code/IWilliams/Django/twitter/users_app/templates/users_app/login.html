@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'users_app/base.html' %}
+{% block title%}
+    {{request.user}}
+{% endblock title %}
+
+
+{% block content %}
+
+    <form action="" method="POST"  class="mx-auto" style="width: 200px">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Login">
+    </form>
+
+    
+{% endblock content %}
+    
