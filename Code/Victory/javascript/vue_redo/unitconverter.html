@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Unit Converter</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="app" style="padding: 10px 0 0 30px">
+            <h1 style="text-align:center;">Unit Conversion</h1>
+            <p>
+                Enter the Number: <input type="number" placeholder="Converted Number" v-model="convNumber">
+            </p>
+            <p>
+                <span>Convert From: </span>
+                <select v-model="convertFrom">
+                    <option v-for="(item, index) in convUnits" v-bind:value="item.unit">{{item.fullName}}</option>
+                </select>
+
+                <span>Convert To: </span>
+                <select v-model="convertTo">
+                    <option v-for="(item, index) in convUnits" v-bind:value="item.unit">{{item.fullName}}</option>
+                </select>
+            </p>
+
+            <p>{{convNumber}}{{convertFrom}} is equal to {{finalResult}}{{convertTo}}</p>
+
+            {{ unit }}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    unit: '',
+                    convUnits: [
+                        {unit: 'm', fullName: 'Meter'},
+                        {unit: 'km', fullName: 'Kilometer'},
+                        {unit: 'mi', fullName: 'Miles'},
+                        {unit: 'ft', fullName: 'Feet'}
+                    ],
+                    convertFrom: 'm',
+                    convertTo: 'km',
+                    convNumber: '',
+                },
+                computed:{
+                    finalResult:function(){
+                        var conFrom = this.convertFrom;
+                        var conTo = this.convertTo;
+                        var result;
+                        switch(conFrom){
+                            case 'm': 
+                        if (conTo == 'm'){
+                            result = this.convNumber;
+                        }
+                        else if(conTo == 'km'){
+                            result = this.convNumber / 1000;
+                            
+                        }
+                        else if(conTo == 'mi'){
+                            result = this.convNumber / 1609;
+                            
+                        }
+                        else if(conTo == 'ft'){
+                            result = this.convNumber * 3.2;
+                            
+                        }
+                        break;
+                        case 'km': 
+                        if (conTo == 'm'){
+                            result = this.convNumber * 1000;
+                        }
+                        else if(conTo == 'km'){
+                            result = this.convNumber;
+                            
+                        }
+                        else if(conTo == 'mi'){
+                            result = this.convNumber * 0.62;
+                            
+                        }
+                        else if(conTo == 'ft'){
+                            result = this.convNumber * 3280;
+                            
+                        }
+                        break;
+                        case 'mi': 
+                        if (conTo == 'm'){
+                            result = this.convNumber * 1609;
+                        }
+                        else if(conTo == 'km'){
+                            result = this.convNumber * 1.6;
+                            
+                        }
+                        else if(conTo == 'mi'){
+                            result = this.convNumber;
+                            
+                        }
+                        else if(conTo== 'ft'){
+                            result = this.convNumber / 5280;
+                            
+                        }
+                        break;
+                        case 'ft': 
+                        if (conTo== 'm'){
+                            result = this.convNumber * 3.28;
+                        }
+                        else if(conTo== 'km'){
+                            result = this.convNumber * 3280;
+                            
+                        }
+                        else if(conTo== 'mi'){
+                            result = this.convNumber / 5280;
+                            
+                        }
+                        else if(conTo== 'ft'){
+                            result = this.convNumber;
+                            
+                        }
+                        break;  
+                        }
+                        return result;
+                    },
+                }
+            });
+        </script>
+
+        <!-- Below is Code helped develop the project -->
+        <!-- https://www.youtube.com/watch?v=nqT-RM8skcY    --> 
+    </body>
+</html>
