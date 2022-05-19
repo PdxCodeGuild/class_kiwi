@@ -9,34 +9,41 @@
 # #ask the user enter distance
 
 
-# ##Version1
+##Version1
 
-# distance = int(input("what is the distance? "))
-#ask the user enter units
+distance = int(input("what is the distance? "))
+# ask the user enter units
 
-# units = input("what is the units? ")
+units = input("what is the units? ")
 
-#convert the distance into meters
+# convert the distance into meters
 
-# print(distance)
-# print(units)
+print(distance)
+print(units)
 
-# # # Version 2
-# if units == "ft":
-#     print(f"{distance} {units} is {distance * 0.348} m")
-# elif units == "mi":
-#     print(f"{distance} {units} is {distance * 1609.34} m")
-# elif units == "m":
-#     print(f"{distance} {units} is {distance * 1} m")
-# elif units == "km":
-#     print(f"{distance} {units} is {distance * 1000} m")
+# # Version 2
+if units == "ft":
+    print(f"{distance} {units} is {distance * 0.348} m")
+elif units == "mi":
+    print(f"{distance} {units} is {distance * 1609.34} m")
+elif units == "m":
+    print(f"{distance} {units} is {distance * 1} m")
+elif units == "km":
+    print(f"{distance} {units} is {distance * 1000} m")
 
-# # # Version 3
+# # Version 3
 
 # elif units == "yard":
 #     print(f"{distance} {units} is {distance * 0.9144} m")
 # elif units == "inch":
 #     print(f"{distance} {units} is {distance * 0.0254} m")
 
+<<<<<<< HEAD
+######################################################
+
+
+
+=======
 #######################################################
+>>>>>>> 9fe83ea97a8674bb3c4a7885a36bc3846a10dcb1
 

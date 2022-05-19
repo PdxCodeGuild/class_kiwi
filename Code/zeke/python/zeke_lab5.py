@@ -17,14 +17,12 @@ import random
 
 def pick6():
     tickets = [ ]
-
-
     for i in range(6):
         tickets.append((random.randint(1, 99)))
         # print(random.randint(1, 99))
         
     return tickets
-# player_ticket=pick6()
+player_ticket=pick6()
 # Another function could be num_matches(winning, ticket) which returns the number of matches between the winning numbers
 #  and the ticket.
 ####################################################################
@@ -33,7 +31,7 @@ def pick6():
 # for i in range(6):
 #     winning_ticket.append(random.randint(1,99))
 # winning_ticket = pick6()
-winning_ticket = [1,2,4,2,5,6]
+winning_ticket = pick6()
 print(winning_ticket)
 #####################################################################
 # print(winning_ticket)
@@ -48,11 +46,11 @@ total_earnnings = 0
 money_spent = 0
 earnings = 0
 
-for i in range(100,000):
+for i in range(100000):
     player_ticket = pick6()
     balance = balance -2 
     money_spent = money_spent +2
-    counter = 0
+    matches = 0
     print(player_ticket)
     
     # while balance <10:
@@ -63,23 +61,23 @@ for i in range(100,000):
 
     if winning_ticket[0] == player_ticket[0]:
         print(f'you win')
-        counter = counter +1
+        matches = matches +1
     # checks if winning and player ticket matches in spot 0
     if winning_ticket[1]== player_ticket[1]:
         print(f'you win')
-        counter = counter +1
+        matches = matches +1
     if winning_ticket[2]== player_ticket[2]:
         print(f'you win')
-        counter = counter +1
+        matches = matches +1
     if winning_ticket[3]== player_ticket[3]:
         print(f'you win')
-        counter = counter +1
+        matches = matches +1
     if winning_ticket[4]== player_ticket[4]:
         print(f'you win')
-        counter = counter +1  
+        matches = matches +1  
     if winning_ticket[5]== player_ticket[5]:
         print(f'you win')
-        counter = counter +1  
+        matches = matches +1  
 
     # print(counter)
     #printing (counter) prints the total 
@@ -94,31 +92,31 @@ for i in range(100,000):
 
     }
 
-    if counter == 1:
+    if matches == 1:
         print(f'you have earned ${total_earnings[1]}')
         balance = total_earnings[1] + balance 
         earnings = total_earnings[1]
-    if counter == 2:
+    if matches == 2:
         print(f'you have earned ${total_earnings[2]}')
         balance = total_earnings[2] + balance 
         earnings = total_earnings[2]
-    if counter == 3:
+    if matches == 3:
         print(f'you have earned ${total_earnings[3]}')
         balance = total_earnings[3] + balance 
         earnings = total_earnings[3]
-    if counter == 4:
+    if matches == 4:
         print(f'you have earned ${total_earnings[4]}')
         balance = total_earnings[4] + balance 
         earnings = total_earnings[4]
-    if counter == 5:
+    if matches == 5:
         print(f'you have earned ${total_earnings[5]}')
         balance = total_earnings[5] + balance 
         earnings = total_earnings[5]
-    if counter == 6:
+    if matches == 6:
         print(f'you have earned ${total_earnings[6]}')
         balance = total_earnings[6] + balance 
         earnings = total_earnings[6]
-    if counter == 0:
+    if matches == 0:
         print(f'you have no matches')
 print(f'your balance ${balance}')
 print(f'your earnings: {earnings}')

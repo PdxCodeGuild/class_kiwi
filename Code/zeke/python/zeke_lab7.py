@@ -36,6 +36,7 @@ letters_list = {
 'z':'m',
 }
 
+
 user_input = input(f'Please tell enter your first and last name: ')
 
 encrypted_string = ''
@@ -45,3 +46,20 @@ for letter in user_input:
 print(encrypted_string)
 
 #####################################################################
+# import string 
+# original_input = input("please enter a string: ").lower()
+# shift = int(input('enter amount of rotation: '))
+
+# output = ''
+# # for each charcter find corresponding character
+# for letter in original_input:
+#     if letter in string.ascii_lowercase:
+#         position = string.ascii_lowercase.find(letter)
+#         encrypted_letter = string.ascii_lowercase[(position + 13) % 26]
+#     # add to output string
+#         output += encrypted_letter
+#     else: 
+#         output += letter
+
+#     #show the user the encrypted message
+# print(output)
