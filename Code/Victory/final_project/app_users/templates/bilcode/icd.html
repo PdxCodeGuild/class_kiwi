@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- The fields are 'code' and 'name' -->
+            <h1>Codes</h1>
+            <!-- <div
+            v-for="code in codes"
+            >
+    
+              {{codes}}
+            </div> -->
+            {{codes}}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data(){
+                    return {
+                      codes:[],
+                    }
+                },
+                mounted(){
+                  axios
+                  .get("https://clinicaltables.nlm.nih.gov/api/icd10cm/v3/search?sf=code,name&terms=Streptococcal pharyngitis")
+                  .then(response=> response)
+                  .then(response=>(this.codes = response.data))
+                  
+
+                },
+                created: function() {
+
+                }
+            })
+        </script>
+    </body>
+</html>

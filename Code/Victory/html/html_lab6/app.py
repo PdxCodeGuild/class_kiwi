@@ -27,4 +27,7 @@ def code_cyph():
     return render_template('result.html', user_mess=user_mess, rot_num=rot_num, new_message=new_message )
 
 
+if __name__ == "__main__":
+    app.run(debug=True)
+
 
