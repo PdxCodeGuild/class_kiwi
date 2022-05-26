@@ -1,0 +1,68 @@
+<!DOCTYPE html> {% extends 'grocery_list_app/base.html' %} {% block title %}
+<title>Grocery List</title> {% endblock title %} {% block 'content' %}
+
+<div class="form">
+  <form action="{% url 'grocery:save' %}" method="POST" role="form">
+    {% csrf_token %}{{form}}
+
+    <button>Add Item</button>
+  </form>
+</div>
+
+
+<h1>Incomplete</h1>
+<div class="create_list">
+  {% for item in items %}
+
+  {% if not item.completed %}
+
+  <div class="checkbox">
+    <form action="{% url 'grocery:check' item.id %}" method="post">
+      {% csrf_token %}
+      {{check}}
+      <input type="submit" value="save" id="" />
+    </form>
+    <div class="ifs">
+
+      {{item}}
+    </div>
+
+
+    <form action="{% url 'grocery:delete' item.id %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Delete" />
+    </form>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+
+
+<h1>Completed</h1>
+<div class="create_list">
+  {% for item in items %}
+  {% if item.completed %}
+  <div class="">
+    <div class="checkbox">
+      <div class="ifs">
+
+        {{item}}
+      </div>
+
+
+      <form action="{% url 'grocery:delete' item.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete" />
+      </form>
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% endfor %}
+</div>
+
+
+{% endblock 'content' %}
