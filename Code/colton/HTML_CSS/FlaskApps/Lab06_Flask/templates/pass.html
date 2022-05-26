@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <nav class="topnav">
+        <a href="#">Home</a>
+        <img src="" alt="">
+        <nav class="tabs">
+            <a href="pass.html"></a>
+            <div class="generator">Password Generator</div>
+
+        </nav>
+
+    </nav>
+
+    <main>
+
+        <h1>Welcome to the Password Generator</h1>
+        <form action="/generate" method="post">
+
+            <div class="choices">
+                <label for="lowercase">How many lowercase letters? 0 -26</label>
+                <input type="number" name="lowercase" id="" max="26" min="0" value="0">
+            </div>
+
+            <div class="choices">
+                <label for="uppercase">How many uppercase letters? 0 - 26</label>
+                <input type="number" name="uppercase" id="" max="26" min="0" value="0">
+            </div>
+
+            <div class="choices">
+                <label for="special">How many special case characters? 0 - 32</label>
+                <input type="number" name="special" id="" max="32" min="0" value="0">
+            </div>
+
+            <div class="choices">
+                <label for="number">How many numbers? 0 - 9</label>
+                <input type="number" name="number" id="" max="9" min="0" value="0">
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </main>
+
+</body>
+
+</html>

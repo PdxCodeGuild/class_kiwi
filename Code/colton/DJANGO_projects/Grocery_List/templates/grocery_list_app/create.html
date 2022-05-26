@@ -1,0 +1,37 @@
+<!DOCTYPE html> {% extends 'grocery_list_app/base.html' %} {% block title %}
+<title>Grocery List</title> {% endblock title %} {% block 'content' %}
+<div class="form">
+  <form action="{% url 'grocery:save' %}" method="POST" role="form">
+    {% csrf_token %}{{form}}
+
+    <button>Add Item</button>
+  </form>
+</div>
+
+<div class="create_list">
+  {% for item in items %}
+
+  <ul>
+    <div class="checkbox">
+      <form action="{% url 'grocery:check' item.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="save" id="" />
+        {{check}}
+      </form>
+      <div class="ifs">
+        {% if item.completed %}
+        <s>{{item}}</s>
+
+        {% else %} {{item}} {% endif %}
+      </div>
+
+      <form action="{% url 'grocery:delete' item.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete" />
+      </form>
+    </div>
+  </ul>
+
+  {% endfor %}
+</div>
+{% endblock 'content' %}

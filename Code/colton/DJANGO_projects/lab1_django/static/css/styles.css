@@ -1,0 +1,43 @@
+body {
+  background-color: aquamarine;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  width: 95vw;
+  justify-content: space-between;
+}
+
+h1 {
+  color: rgb(117, 46, 46);
+  text-shadow: 2px 2px rgb(232, 231, 231);
+  text-decoration: underline;
+}
+
+h3 {
+  color: rgb(81, 109, 135);
+  text-shadow: 0.5px 0.5px black;
+}
+
+input[type="url"] {
+  min-width: fit-content;
+  width: 80vw;
+  max-width: 450px;
+}
+
+a {
+  margin-top: 25px;
+  padding: 8px;
+  border: 2px solid rgb(46, 42, 42);
+  background-color: rgb(58, 27, 27);
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: rgba(97, 36, 36, 0.445);
+}

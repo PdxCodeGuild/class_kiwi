@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'todo_app\css\styles.css' %}" />
+    {% block title %} {% endblock title %}
+</head>
+
+<body>
+    <div class="navigation">
+
+        <input type="search" name="" id="" placeholder="Search Todo's"><button type="submit" id='search'>Search</button>
+        <a href=""></a>
+    </div>
+    {% block content %}{% endblock content %}
+</body>
+
+</html>

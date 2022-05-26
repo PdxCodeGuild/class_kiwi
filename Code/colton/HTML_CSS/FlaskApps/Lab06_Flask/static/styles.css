@@ -1,0 +1,49 @@
+body {
+  background-color: yellow;
+  text-align: center;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+label {
+  padding: 5px 20px;
+}
+
+/* PASSWORD_GEN.html */
+
+h1 {
+  text-decoration: underline;
+}
+
+h3 {
+  border-left: 10px solid rgb(138, 19, 19);
+  border-right: 10px solid rgb(138, 19, 19);
+  width: fit-content;
+  padding: 10px 15px;
+  animation: fadein 10s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Rock - Paper - Scissors</h1>
+        <div class="selection-wrap">
+            <button class="btnChoice" @click="gameChoice('Rock')">Rock</button>
+            <button class="btnChoice" @click="gameChoice('Paper')">Paper</button>
+            <button class="btnChoice" @click="gameChoice('Scissors')">Scissors</button>
+        </div>
+
+        <div class="result">
+            <h2>Computer chose {{computerAns}}, {{result}}</h2>
+
+        </div>
+
+        <div class="score">
+            <h3>User Score: {{userScore}}</h3>
+            <h3>Computer Score: {{computerScore}}</h3>
+        </div>
+
+    </div>
+
+    <script>
+        const { createApp } = Vue
+        const choices = ['Rock', 'Paper', 'Scissors']
+        createApp({
+            data() {
+                return {
+                    userChoice: '?',
+                    computerAns: '',
+                    computerScore: 0,
+                    userScore: 0
+                }
+            },
+            computed: {
+
+                result() {
+                    const computerAns = this.computerAns
+                    const userChoice = this.userChoice
+                    if (userChoice == computerAns) {
+                        return "it's a tie"
+                    }
+                    else {
+                        if ((userChoice == 'Scissors' && computerAns == 'Paper') || (userChoice == 'Rock' && computerAns == 'Scissors') || (userChoice == 'Paper' && computerAns == 'Rock')) {
+                            this.userScore++
+                            return 'You Win'
+                        }
+                        else if ((userChoice == 'Scissors' && computerAns == 'Rock') || (userChoice == 'Rock' && computerAns == 'Paper') || (userChoice == 'Paper' && computerAns == 'Scissors')) {
+                            this.computerScore++
+                            return 'You Lose'
+                        }
+
+                    }
+
+                }
+            },
+            methods: {
+                gameChoice(choice) {
+                    this.userChoice = ''
+                    this.computerAns = choices[Math.floor(Math.random() * 3)]
+                    this.userChoice = choice
+                }
+            },
+
+        }).mount('#app')
+    </script>
+
+</body>
+
+</html>

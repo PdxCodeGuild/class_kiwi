@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>Result ARI</title>
+  </head>
+  <body>
+    <main>
+      <h1>{{book_title}}</h1>
+      <h3>
+        This title is at a {{ grade_level }} reading level, <br />
+        and suited for ages {{age}}.
+      </h3>
+      <a href="/">Anaylize Another?</a>
+    </main>
+  </body>
+</html>

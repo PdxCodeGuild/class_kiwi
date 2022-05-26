@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Dancing+Script:wght@500&display=swap');
+
+
+body {
+    background-color: rgb(128, 99, 62);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.selection-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.btnChoice {
+    width: 90px;
+    height: 60px;
+    font-size: 20px;
+}
+
+
+.result {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgba(250, 235, 215, 0.626);
+}
