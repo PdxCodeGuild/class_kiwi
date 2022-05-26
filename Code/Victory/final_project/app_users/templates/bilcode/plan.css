@@ -1,0 +1,39 @@
+body {
+    background-color: whitesmoke;
+}
+
+.assessment_tabs{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.assessment_tabs input[type="radio"]{
+    display: none;
+}
+
+.assessment_tabs label{
+    padding:30px;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+.assessment_tabs .tab {
+    width: 100%;
+    padding: 22px;
+    background-color: white;
+    order:1;
+    display: none;
+}
+
+.assessment_tabs .tab h3{
+    font-size: 30px;
+}
+
+.assessment_tabs input[type='radio']:checked + label + .tab{
+    display: block;
+}
+
+.assessment_tabs input[type='radio']:checked + label{
+    background-color: white;
+}
