@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROT Cipher</title>
+  <link rel="stylesheet" href="{% static 'lab1_app/styles/base.css' %}">
+</head>
+<body>
+  <main>
+    <h1>ROT Cipher</h1>
+    <form action="{% url 'lab1_app:results' %}" method='POST' >
+      {% csrf_token %}
+      <input type="text" name="cipher" placeholder="enter cipher text"><br><br>
+      <input type="text" name="rotation" placeholder="enter rotation"><br><br>
+      <input type="submit" value="Submit" class="button">
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+main {
+  max-width: 375px;
+}
+
+#form {
+  margin-top: 30px; 
+  padding: 40px;
+}
+
+.section-form {
+  margin-bottom: 0px;
+}
+
+.add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+} 
+
+.btn {
+  max-width: 80px;
+}
+
+legend {
+  margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-update {
+  margin: 0
+}
+
+.form-delete {
+  margin: 0;
+  margin-left: auto
+}
+
+:is(input[type=submit]).outline {
+  --background-color: transparent;
+  --border-color: transparent;
+  --line-height: .4;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#update-btn {
+  color: #dcdcdc;
+  padding: 0;
+  margin-right: 8px;
+}
+
+#update-btn:hover{
+  color: #32CD30;
+} 
+
+#update-btn-completed {
+  color: #32CD30;
+  padding: 0;
+  margin-right: 8px;
+}
+
+#delete-btn {
+  color: #f52323;
+  padding: 0;
+}
+
+#delete-btn:hover{
+  color: #cc0303;
+}
