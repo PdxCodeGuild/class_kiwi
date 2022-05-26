@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vue Redo Lab</title>
+    </head>
+    <body>
+        <noscript>
+            <strong>You gots ta have javascript enabled for this to work!</strong>
+            <img src="./assets/computer.jpg">
+        </noscript>
+        <script type="importmap">
+            {
+              "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+              }
+            }
+          </script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+        <!-- <script type="module" src="./main.js"></script> -->
+        <div id="app"></div>
+        <script type="module">
+            import { createApp } from 'vue'
+            import RPS from './app.vue'
+
+            createApp(RPS).mount('#app')
+        </script>
+    </body>
+</html>
