@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+    <div class="btns">
+        <button id="shuffle-btn">Shuffle Deck</button>
+        <button id="deal-btn">Deal Cards</button>
+        <button id="fish">Fish</button>
+    </div>
+
+    <div id="deck"></div>
+    
+    <div id="dealer"><h1>Dealer</h1></div>
+    
+    <div id="user-display">
+        <p>you would like to see if the other player has </p>
+        <!-- <span class="gofish"></span> -->
+        <div id="user-options"></div>
+        <button onclick="goFish()">Gofish</button>
+    </div>
+
+    <div id="player"><h1>Player</h1></div>
+    <!-- ----------------------------------------------------- -->
+
+<!-- stolen -->
+    <!-- <select id="select1">
+        <option value="free">Free</option>
+        <option value="basic">Basic</option>
+        <option value="premium">Premium</option>
+    </select>
+    <p> The value of the option selected is:
+        <span class="output"></span>
+    </p>
+    <button onclick="getOption()">Check option</button>
+     -->
+</body>
+</html>

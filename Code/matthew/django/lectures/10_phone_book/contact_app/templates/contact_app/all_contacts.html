@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "contact_app/index.html" %}
+
+{% block title %}
+<title>All Contacts</title>
+{% endblock title %}
+
+{% block content %}
+<body>
+
+    <h1>All Contacts</h1>
+
+    <form action="{% url 'contacts:save' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="First_name">
+        <input type="text" name="last_name" placeholder="Last_name"> 
+        <input type="text" name="phone_number" placeholder="Phone_number">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="address" placeholder="Address">
+       
+        <label for="favorite">
+            Favorite
+            <input type="checkbox" name="fav">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+
+    {% for contact in contacts %}
+
+    <div>
+    {{contact.full_name}} is {{contact.favorite}} and contact.fav= {{contact.fav}}
+    </div>
+
+    <br>
+    {% endfor %}
+
+</body>
+{% endblock content %}
+</html>

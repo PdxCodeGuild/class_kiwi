@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- static -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Grocery List</title>
+</head>
+<body>
+    {% block content %}
+      
+    <h1>Home</h1>
+    <form action="{% url 'save' %}" method="POST">
+        {% csrf_token %}
+        {{new_item}}
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% for item in show_items  %}
+    
+    <ul>
+        {{item}} 
+        <a href="{% url 'edit' item.id %}">Edit</a>
+        <a href="{% url 'delete' item.id %}">Delete</a>
+    </ul>
+    
+    {% endfor %}
+   
+    
+    {% endblock content %}
+</body>
+</html>
+
+
+
+
+
+{% comment %} <form action="{% url 'delete' item.id %}" method="GET">
+    <label for="del">{{item}}</label>
+    <input type="checkbox" name="del" id="del">
+    <button type="submit" name="del">Delete</button>
+</form> {% endcomment %}
