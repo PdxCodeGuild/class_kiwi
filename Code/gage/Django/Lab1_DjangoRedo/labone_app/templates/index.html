@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTP</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <h1>Welcome to the number to word converter!</h1>
+    <h2>Enter a number below</h2>
+
+    <form action="{% url 'ntp:result' %}" method="post">
+        {% csrf_token %}
+        <input id="num" name="num" type="text">
+        <button type="submit">Enter</button>
+    </form>
+
+</body>
+
+</html>

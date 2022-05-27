@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(108, 192, 182);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a {
+    color: black;
+    text-decoration: none;
+    border: 2px solid white;
+    background-color: rgb(237, 237, 237);
+    padding: 15px;
+    margin-top: 50px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+h2 {
+    border: 2px solid white;
+    padding: 15px;
+}
+h3{
+    margin-top: 25px;
+}

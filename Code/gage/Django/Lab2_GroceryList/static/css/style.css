@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background-color: rgb(62, 195, 62);
+    border: 2px solid rgb(62, 195, 62);
+    color: white;
+}
+
+#id_item {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+#remove_button {
+    background-color: rgb(227, 80, 80);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#update_button {
+    background-color: rgb(161, 161, 161);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 25px;
+}
+
+#list_cont {
+    margin-top: 25px;
+}
+
+li{
+    margin-bottom: 25px;
+}
+#bought{
+    margin-top: 10px;
+}

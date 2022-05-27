@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        border: 0px;
+        background-color: rgb(82, 171, 82);
+    }
+    
+    div {
+        border: 2px solid white;
+        background-color: rgb(231, 231, 231);
+        padding: 10px;
+        width: 35%;
+    }
+    
+    h1 {
+        margin-bottom: 50px;
+    }
+    
+    h2 {
+        margin-top: 50px;
+    }
+    
+    #container_todo {
+        width: 75%;
+    }
+</style>
+
+<body>
+    <div id="container_todo">
+        <h1>Todo List</h1>
+        <h2>Add a task</h2>
+        <form action="{% url 'add_item' %}" method="POST">
+            <label for="id_name">Task</label> {% csrf_token %} {{form.name}} {{pform}}
+
+            <button type="submit">Add</button>
+        </form>
+
+        <h2>Tasks:</h2>
+        <h6>* means a high priority task</h6>
+        {% for item in list %}
+        <div>
+            {% if item.is_pri %} {{item}}* {% else %} {{item}} {% endif %}
+
+
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

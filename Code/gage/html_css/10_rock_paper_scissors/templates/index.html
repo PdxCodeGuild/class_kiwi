@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <h1>Welcome to Rock Paper Scissors</h1>
+    <form action="/final_result" method="post">
+    
+    <input value="rock" name="rps" id="rock" type="radio" required> <!-- ROCK -->
+    <label for="rock">Rock</label>
+    
+    <input value="paper" name="rps" id="paper" type="radio"> <!-- PAPER -->
+    <label for="paper">Paper</label>
+
+    <input value="scissors" name="rps" id="scissors" type="radio"> <!-- SCISSORS -->
+    <label for="scissors">Scissors</label>
+        <br>
+    <button type="submit">Shoot!</button>
+    </form>
+</body>
+</html>

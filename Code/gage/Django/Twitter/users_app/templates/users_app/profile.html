@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{request.user}}'s Profile</title>
+</head>
+
+<body>
+    <h1>Welcome to your profile {{request.user}}</h1>
+    <h2>Users tweets:</h2>
+
+
+    {% for tweet in tweets %}
+    <div>
+
+        <h6>{{tweet.user}}</h6>
+        <p>{{tweet.text}}</p>
+        {% if not request.user.is_anonymous %}
+        <p><a href="{% url 'like_tweet' tweet.id %}">👍Likes: {{tweet.likes}}</a> <a href="{% url 'dislike_tweet' tweet.id %}">👎Dislikes: {{tweet.dislikes}}</a></p>
+        {% if request.user == tweet.user %}
+        <a href="{% url 'delete_tweet' tweet.id %}">🗑️Delete</a> {% endif %}
+        <a href="{% url 'detail' tweet.id %}">💎 Details</a> {% endif %}
+        <p>Posted: {{tweet.published_date}}</p>
+        <p>---------------------------------------------------------------</p>
+
+    </div>
+    {% endfor %}
+
+
+
+
+
+    <a href="{% url 'users:logout' %}">Logout</a>
+</body>
+
+</html>

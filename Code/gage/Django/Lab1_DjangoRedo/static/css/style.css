@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(87, 175, 87);
+    border: 2px solid rgb(87, 175, 87);
+    color: white;
+}
