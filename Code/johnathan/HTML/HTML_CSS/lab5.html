@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script src="https://kit.fontawesome.com/03a227aeed.js" crossorigin="anonymous"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+  </head>
+
+    <body>
+        <header>
+            
+        </header>
+        <!--Section: Nav-->
+        <style> 
+            body {
+                background-color: orange;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 100vh;
+                }
+        </style>
+
+        <!-- <section> 
+            <div class= "navbar-fixed">
+                <nav class="teal">
+                    <div class ="container">
+                        <div class="nav-wrapper">
+                            <a href="#" class="brand-logo"> Your Burrito Co.</a>
+                            <a href="#" data-target="mobile-nav"
+                            class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                            </a>
+                            <ul class ="right hide-on-med-and-down">
+                                <li>
+                                    <a href="">Home</a>
+                                </li>
+                                <li>
+                                    <a href="">Search</a>
+                                </li>
+                                <li>
+                                    <a href="">Popular</a>
+                                </li>
+                                <li>
+                                    <a href="">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>  
+                    </div>
+                  </nav>
+                </nav>
+            </div>        
+        </section> -->
+        
+        <!--Section: Menu Gallery-->
+
+        <style type="text/css">
+            *{
+                box-sizing: border-box;
+            }
+            .gallery{ 
+                border:1px solid #ccc;
+            }
+            .gallery img{
+                width: 50%;
+                height: 50%;
+                display: flex;
+            }
+            .des{
+                padding: 15px;
+                text-align: center;
+            }
+            /* .responsive{
+                padding: 0 6px;
+                float: left;
+                width: 25% */
+            /* } */
+            h1{text-align: center;}
+        </style>
+
+        <section class="responsive">
+
+            <div class="gallery">
+
+                <h1 class="center"> <span class="white-text">Burrito Menu</span> </h1>
+
+                <div class="responsive">
+                    <div class="gallery">
+                        <span title = "Black Bean Burrito">The Vegan-ito </span>
+                        <label for="blackbeanburrito">Number 1</label>
+                        <input id="blackbeanburrito" name="burritos" type="radio"value="blackbeanburrito"/>
+                        <img src="https://images.unsplash.com/photo-1574343635105-4cf2ea136b8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1cnJpdG9zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="">
+                    <div>Burrito Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, eaque? </div>
+                </div>
+                
+                <div class="responsive">
+                    <div class="gallery">
+                        <span title = "Beef, Rice, and Bean Burrito">Tex Mex </span>
+                        <label for="Beef, Rice, and Bean Burrito">Number 2</label>
+                        <input id="Beef, Rice, and Bean Burrito" name="burritos" type="radio"value="Beef, Rice, and Bean Burrito"/>
+                      <img src="https://media.istockphoto.com/photos/burrito-picture-id117179418?b=1&k=20&m=117179418&s=170667a&w=0&h=BPP5hTC8tELbNaUM42ee1Q7OVUY_nsCo2CeuZfA3dK4=" alt="" >
+                    <div>Burrito Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, inventore.</div>
+                </div>
+                
+                <div class="responsive">
+                    <div class="gallery">
+                        <span title = "Chicken, Rice, and Bean Burrito">Chicken Chile </span>
+                        <label for="Chicken, Rice, and Bean Burrito">Number 3</label>
+                        <input id="Chicken, Rice, and Bean Burrito" name="burritos" type="radio"value="Chicken, Rice, and Bean Burrito"/>
+                      <img src="https://media.istockphoto.com/photos/mexican-rice-and-chorizo-sausage-wrap-picture-id1313361282?b=1&k=20&m=1313361282&s=170667a&w=0&h=voxT5ZO8GU28MQn5XZ2TGXy8uK0jKfXicv0oO4JncqI=" alt="" >
+                    <div>Burrito Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, possimus.
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+    <!--Lab 5 Forms: 
+            Name (text input)
+            Password (password input)
+            Tortilla (radio buttons)
+            White Flour
+            Wheat Flour
+            Spinach
+            Corn
+            Rice (radio buttons)
+            White Rice
+            Brown Rice
+            Beans (radio buttons)
+            Black Beans
+            Pinto Beans
+            Protein (radio buttons)
+            Carnitas
+            Chicken
+            Sofritas
+            None
+            Additional Ingredients (check boxes)
+            Cheese
+            Sour Cream
+            Delivery Instructions (textarea)    -->
+
+            <style type="text/css" > 
+            *{box-sizing: border-box;
+            }
+
+            .forms{border:2px solid rgb(49, 49, 49);
+                padding: 25px;   
+                background-color: whitesmoke; 
+            }
+            
+            
+            
+            
+            
+            </style>
+        <section> 
+            <div class="forms"> 
+                <form
+                    action="https://webhook.site/1b835ba5-13ac-43bc-a39e-bb83097248a8"
+                    method="post"
+                >
+                <input placeholder="Enter the name associated with your order" name="greeting" type="text" required/>
+
+                <h3>Modify your order below: </h3>
+                <br/>
+
+                <textarea name="blog" cols="30" rows="10"></textarea>
+
+
+        <!-- Tortillas (Radio Buttons)-->
+                <br /> 
+
+                    <label for="white">White</label>
+                    <input id="white" name="tortillas" type="radio"value="white"/>
+
+                    <label for="wheat">Wheat</label>
+                    <input id="wheat" name="tortillas" type="radio"value="wheat"/>
+
+                    <label for="corn">Corn</label>
+                    <input id="corn" name="tortillas" type="radio"value="corn"/>
+
+                <br />
+        <!-- Rice (Radio Buttons)-->        
+                <br /> 
+
+                    <label for="white">Whited</label>
+                    <input id="white" name="rice" type="radio"value="white"/>
+
+                    <label for="brown">brown</label>
+                    <input id="brown" name="rice" type="radio"value="brown"/>
+
+                <br />
+        <!-- Beans (Radio Buttons)-->        
+                <br /> 
+
+                    <label for="black">Black</label>
+                    <input id="black" name="beans" type="radio"value="black"/>
+
+                    <label for="pinto">Pinto</label>
+                    <input id="pinto" name="beans" type="radio"value="pinto"/>
+
+                <br />
+
+        <!-- Protein (Radio Buttons)-->
+                <br /> 
+
+                    <label for="Carnitas">Carnitas</label>
+                    <input id="Carnitas" name="meats" type="radio"value="Carnitas"/>
+
+                    <label for="Chicken">Chicken</label>
+                    <input id="Chicken" name="meats" type="radio"value="Chicken"/>
+
+                    <label for="Sofritas">Sofritas</label>
+                    <input id="Sofritas" name="meats" type="radio"value="Sofritas"/>
+
+                    <label for="Non-meat Altv">Non-meat Altv</label>
+                    <input id="Non-meat Altv" name="meats" type="radio"value="Non-meat Altv"/>
+
+                <br />
+
+
+
+                </div> 
+
+
+
+
+
+
+            </section>
+        <!-- Section: Footer-->
+            <style> 
+                .page-footer {
+                    display: flex;
+                    min-height: 100vh;
+                    flex-direction: column;
+                    }
+            </style>
+
+            <footer class="page-footer">
+                <div class="container">
+                  <div class="row">
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h3 class="white-text">Links:</h3>
+                      <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright">
+                  <div class="container">
+                  © Burrito Town USA
+                  <a class="grey-text text-lighten-4 right" href="#!">Contact Info</a>
+                  </div>
+                </div>
+              </footer>
+            
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+</html>
