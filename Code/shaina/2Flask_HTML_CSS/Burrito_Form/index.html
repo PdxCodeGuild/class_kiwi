@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrito Order Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="bg-success p-2 text-white bg-opacity-75 text-center">
+    <h1>BURRITO ORDER FORM</h1>
+    </div>
+    <img src="https://res.cloudinary.com/unclejulios/image/upload/f_auto,q_90,w_1600/savage-burrito/Hero-1.jpg" class="img-fluid" alt="...">
+    <form action="https://webhook.site/c1e4a491-95f4-41a9-b1d3-f25954115675" method="POST">
+        <div class="p-3 mb-2 bg-danger text-warning text-center"><h3>Customer Information</h3></div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Customer Name</label>
+            <input
+            placeholder="Enter Name"
+            name="name"
+            type="text"
+            class="form-control"
+            required
+            />
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Password</label>
+            <input
+            name="password"
+            placeholder="Enter password"
+            type="password"
+            class="form-control"
+            required
+            />
+      <br />
+      <hr>
+      
+      <h3>Tortilla Selection:</h3>
+      <label for="White">White Flour</label>
+      <input id="white" name="Totilla" type="radio" value="white" />
+      <br />
+
+      <label for="wheat">Wheat Flour</label>
+      <input id="wheat" name="Totilla" type="radio" value="wheat" />
+      <br>
+
+      <label for="spinach">Spinach</label>
+      <input id="spinach" name="Totilla" type="radio" value="spinach" />
+      <br />
+      <label for="corn">Corn</label>
+      <input id="corn" name="Totilla" type="radio" value="corn" />
+      <br />
+
+      <h3>Rice Selection:</h3>
+      <label for="white">White</label>
+      <input id="white" name="Rice" type="radio" value="white" />
+      <br>
+
+      <label for="brown">Brown</label>
+      <input id="brown" name="Rice" type="radio" value="brown" />
+      <br>
+
+      <h3>Bean Selection:</h3>
+      <label for="black">Black Beans</label>
+      <input id="black" name="Beans" type="radio" value="black" />
+      <br />
+      <label for="pinto">Pinto Beans</label>
+      <input id="pinto" name="Beans" type="radio" value="pinto" />
+      <br />
+
+      <h3>Protein Selection:</h3>
+      <label for="carnitas">Carnitas</label>
+      <input id="carnitas" name="Protein" type="radio" value="carnitas" />
+      <br />
+      <label for="chicken">Chicken</label>
+      <input id="chicken" name="Protein" type="radio" value="chicken" />
+      <br />
+      <label for="sofritas">Sofritas</label>
+      <input id="sofritas" name="Protein" type="radio" value="sofritas" />
+      <br />
+      <label for="none">None</label>
+      <input id="none" name="Protein" type="radio" value="none" />
+      <br />
+
+      <h4>Additional Ingredients:</h4>
+      <label for="cheese">Cheese</label>
+      <input id="cheese" name="cheese" type="checkbox" value="cheese" />
+
+      <label for="sour cream">Sour Cream</label>
+      <input id="sour cream" name="sour cream" value="sour cream" type="checkbox" />
+
+      <br />
+      <hr>
+      <h4>Delivery Instructions:</h4>
+      <textarea
+        name="Delivery Instructions"
+        cols="30"
+        rows="10"
+        placeholder="Please enter delivery instructions here ..."
+      ></textarea>
+
+      <br />
+
+      <button type="submit">Submit Order</button>
+    </form>
+    
+</body>
+</html>
