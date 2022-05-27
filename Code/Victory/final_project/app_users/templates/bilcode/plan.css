@@ -1,7 +1,10 @@
-body {
+.plan {
+    
     background-color: whitesmoke;
+    display: flex;
+    margin-left: 10px;
+   
 }
-
 .assessment_tabs{
     display: flex;
     flex-wrap: wrap;

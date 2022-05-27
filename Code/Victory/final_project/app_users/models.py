@@ -52,10 +52,16 @@ class CodeSpecialist(models.Model):
     def __str__(self):
         return "{} ({})".format(self.user.first_name, self.hospital_departments)
 
+
 class Patient(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     user_img = models.ImageField(upload_to='profile_img/PatientImg', null=True, blank=True)
-    date_seen = models.DateTimeField(auto_now_add=True)
+    pt_address=models.CharField(max_length=50, default=False)
+    city=models.CharField(max_length=30, default="San Diego")
+    state =models.CharField(max_length=2, default='CA')
+    zip_code=models.IntegerField(max_length=6, default='92109')
+    phone=models.IntegerField(max_length=50,default=False)
+    email=models.EmailField(max_length=50,default=False)
     notes = models.TextField()
     assessment = models.CharField(max_length=50)  #this is what the api will be fetching data for
     status = models.BooleanField(default=False)
@@ -69,6 +75,25 @@ class Patient(models.Model):
         return self.user.id
     def __str__(self):
         return self.user.first_name+"("+self.assessment+")"
+
+
+# class Patient(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     user_img = models.ImageField(upload_to='profile_img/PatientImg', null=True, blank=True)
+#     date_seen = models.DateTimeField(auto_now_add=True)
+#     notes = models.TextField()
+#     assessment = models.CharField(max_length=50)  #this is what the api will be fetching data for
+#     status = models.BooleanField(default=False)
+
+#     @property
+#     def name_info(self):
+#         self.user.first_name+' '+self.user.last_name
+
+#     @property
+#     def id_info(self):
+#         return self.user.id
+#     def __str__(self):
+#         return self.user.first_name+"("+self.assessment+")"
 
 
 

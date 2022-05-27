@@ -1,0 +1,28 @@
+.demo{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+
+.pt_pic {
+    border: 2px solid black;
+    margin-right: 10px;
+    
+}
+.demo_info{
+    border: 2px solid black;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+
+.hedi_meas{
+    border: 2px solid black;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+.chron_hx{
+    border: 2px solid black;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
