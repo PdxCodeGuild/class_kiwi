@@ -1,4 +1,4 @@
-"""scanner URL Configuration
+"""backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from scanner import views
+
+router = routers.DefaultRouter()
+router.register(r'scans', views.ScanView, 'scan')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    path('', include('frontend.urls')),
+    path('api/', include(router.urls)),
 ]
-
