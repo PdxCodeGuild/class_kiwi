@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
+
 def index():
     return render_template('index.html')
 
@@ -22,6 +23,7 @@ def code_cyph():
             new_message += chr(new_rot + 96)
         else:
             new_message += chr(value_index + rot_num)
+    print(user_mess,rot_num,new_message)
     
 
     return render_template('result.html', user_mess=user_mess, rot_num=rot_num, new_message=new_message )
