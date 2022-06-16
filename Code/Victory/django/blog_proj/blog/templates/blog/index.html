@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+
+      <div class="card text-center">
+        <div class="card-header">
+          <h1>WELCOME</h1>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">To The Blog Of Champions</h3>
+          <h4 class="card-text">Welcome Back Champion or Join other Champions</h4>
+        </div>
+        <div class="d-grid gap-2 d-md-block">
+        <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        </div>
+      </div>
+        
+    {% endblock content %}
+        
+    
+</body>
+</html>
+
+
+
+  h1>Welcome to The Blog of Champions</h1>
+    <a href="">Register</a>
+    <p class="text-center">Login here if you already have an account, <a href="">Login</a></p>

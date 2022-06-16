@@ -1,0 +1,148 @@
+body{
+    display: flex;
+    background-image: url('acitrezza.jpg');
+    background-size: cover;
+    height: 10vh;
+    
+    
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /**/
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    padding: 5% 0px 5% 0%;
+    
+}
+
+.logo > img{
+    width: 3em;
+    border-radius: 50%;
+}
+
+.logo > h2{
+    display: flex;
+    font-family: 'Tangerine', serif;
+    font-size: 26px;
+    align-items: center;
+    color: #FFA900;
+    
+    
+}
+
+.pages{
+    justify-content: space-evenly;
+    height:70vh;
+}
+
+.pages > a{
+    
+    background-color: #F76E11;
+    padding: 5px 7px 2px 3px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 30%;
+    
+    
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.section_div1{
+    
+    color: #55B3B1;
+}
+.section_div1 > h3{
+    text-align: center;
+    font-size: 3rem;
+}
+.section_div1 > p{
+    padding: 25% 0% 5% 10%;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 1.45rem;
+}
+
+.section_div3 > h3{
+    display: flex;
+    justify-content: center;
+    text-decoration: #11999E underline;
+    box-shadow: 0px 1px 3px #3DB2FF;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #3DB2FF;
+}
+
+.section_div3 > table{
+    color:#FC4F4F;
+    background-color: #3DB2FF;
+}
+
+.section_tab {
+    display: flex;
+    justify-content: left;
+    border:#11999E;
+}
+
+
+.foot_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+}
+
+button {
+    color: #185ADB;
+    border-radius: 28px;
+    margin-left: 15%;
+    margin-right: 10%;
+    background-color: #F98404;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+
+.foot_div > a{
+    border: 3px solid red;
+    background-color: #3DB2FF;
+    border-radius: 16px;
+    color: #11999E;
+    padding: 0% 25% 0% 25%;
+}
+.cont_div{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50%;
+}
+
+footer{
+    height:95vh;
+    justify-content: space-around;
+}
+
+footer > h5 {
+    padding-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+
+

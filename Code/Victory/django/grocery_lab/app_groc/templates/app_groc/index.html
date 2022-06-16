@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    {% load crispy_forms_tags %}
+    
+</head>
+<body>
+
+        <h2 class="text-center">Grocery List</h2>
+        <div class="text-center">
+            <form action="{% url 'app_groc:add' %}" method="POST">
+                {% csrf_token %}
+        
+                <input type="text" name="item" placeholder="Produce To Add">
+                <select name="section" id="">
+                    <option value="">Select the Section</option>
+        
+                    {% for section in stores  %}
+                        <option value="{{section.id}}">{{section.store}}</option>
+                    {% endfor %}   
+
+                </select>
+                <button>Add Produce</button>
+                
+
+                <h1 style="text-decoration:underline ;">Incomplete</h1>
+                <h4>Please select completed or delete item</h4>
+                {% for section in stores  %}
+                <tr>
+                    
+                    <td><h1>{{section.store}}</h1></td>
+                    
+
+                    {% for produce in section.products.all  %}
+                    <p>
+                        {% if produce.done == False %}
+                            <a  href="{% url 'app_groc:complete' produce.id %}">{{produce.item}}</a>
+                            <a href="{% url 'app_groc:delete' produce.id %}">🚮</a>
+                        
+                        {% endif %}
+                            
+                    </p>
+                    {% endfor %}  
+                </tr>
+                {% endfor %}
+
+                <br><br><br>
+                <h1 style="text-decoration:underline ;">Complete</h1>
+                {% for section in stores  %}
+                <tr>
+                    <td><h1>{{section.store}}</h1></td>
+                       <td>   
+                            {% for produce in section.products.all  %} 
+                            <p>
+                            {% if produce.done == True %}
+                                <a style="text-decoration:line-through" href="{% url 'app_groc:complete' produce.id %}">{{produce.item}}</a>
+                                <a href="{% url 'app_groc:delete' produce.id %}">🚮</a>
+                            
+                            {% endif %}
+                            </p>
+                        </td>
+                                
+                        
+                    {% endfor %} 
+                        
+                </tr>
+                {% endfor %}
+                    
+                    
+                
+            
+        </form>
+        </div>         
+           
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+header{
+    font-family: 'Inspiration', cursive;
+    background-color: #FFCC1D;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+
+}
+
+section{
+    background-color: #FFCE45;
+    
+}
+
+.sect_div1 > h3{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.sect_div1 > form{
+    display: flex;
+    justify-content: center;
+    
+}
+.sect_div1{
+    margin-bottom: 20px;
+
+}
+
+.sect_div2{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin: 2px 45% 0px 44%;
+}
+
+
+.sect_div5{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFCE45;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #B2EA70;
+}

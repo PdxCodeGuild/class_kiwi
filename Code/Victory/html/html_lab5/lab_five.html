@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrito Order</title>
+    <link rel="stylesheet" href="lab_five.css">
+</head>
+<body>
+    <header>
+        <h2>Fake Burrito Shop</h2>
+    </header>
+    <section>
+        <div class="sect_div1">
+            <h3>Customer Information</h3>
+            <form action="">
+                <label for="Uname">UserName</label>
+                <input type="text" name="Uname" id="Uname">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </form>
+        </div>
+        <div class="sect_div2">
+            <img src="burrit.jpg" alt="">
+        </div>
+        <div>
+            <h3>Make Own Burrito(Select one per category)</h3>
+            <div class="own_bur1"></div>
+            <form action="" method="post">
+                <h4>Tortilla</h4>
+                <input type="radio" name="tortilla" value="White Flour" >White Flour
+                <input type="radio" name="tortilla" value="Wheat Flour">Wheat Flour
+                <input type="radio" name="tortilla" value="Spinach">Spinach
+                <input type="radio" name="tortilla" value="Corn">Corn
+            </form>
+            <div >
+                <h4>Rice</h4>
+                <form action="" method="post">
+                    <input type="radio" name="rice" value="White Rice">White rice
+                    <input type="radio" name="rice" value="Brown Rice">Brown Rice
+                </form>
+            </div>
+            <div>
+                <h4>Beans</h4>
+                <form action="" method="post">
+                    <input type="radio" name="beans" value="Black Beans">Black Beans
+                    <input type="radio" name="beans" value="Pinto Beans">Pinto Beans
+                </form>
+            </div>
+            <div>
+                <h4>Protein</h4>
+                <form action="" method="post">
+                    <input type="radio" name="protein" value="Carnitas">Carnitas
+                    <input type="radio" name="protein" value="Chicken">Chicken
+                    <input type="radio" name="protein" value="Sofritas">Sofritas
+                    <input type="radio" name="protein" value="None">None
+                </form>
+            </div>
+        </div>
+        <div>
+            <h3>Additional Ingredients(Check all that apply)</h3>
+            <form action="">
+                <label for="addi_inc">Cheese</label>
+                <input type="checkbox" name="addi_inc">
+                <label for="addi_inc">Sour Cream</label>
+                <input type="checkbox" name="addi_inc">
+            </form>
+        </div>
+        
+    </section>
+
+    <div class="sect_div5">
+        <form action="">
+        <textarea name="comment" id="commnent" cols="30" rows="5">Delivery Instruction</textarea>
+        </form>
+        <form action="">
+            <h4>Press Submit to complete the order</h4>
+            <label for="Submit"></label>
+            <input type="submit">
+        </form>
+    </div>
+
+    <footer>
+        <h4>Copyright &copy; 2022| All Rights Reserved</h4>
+    </footer>
+    
+</body>
+</html>

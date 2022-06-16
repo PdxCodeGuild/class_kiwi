@@ -1,0 +1,10 @@
+body{
+    background-color:aliceblue;
+}
+h1{
+    text-align: center;
+}
+.passyw{
+    display: flex;
+    justify-content: center;
+}
