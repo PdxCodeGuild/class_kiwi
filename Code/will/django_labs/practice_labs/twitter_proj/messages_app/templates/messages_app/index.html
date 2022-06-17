@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome 2 Twitter</h1>
+    {% if not request.user.is_anonymous %}
+    <form action="{% url 'new_tweet' %}", method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Tweet">
+    </form>
+    {% endif %}
+
+
+    {% for tweet in tweets %}
+        <div>
+            <p>{{tweet.text}}</p>
+
+            {% if request.user == tweet.user %}
+                <a href=""> X </a>
+            {% endif %}
+
+
+            <h6>{{tweet.user}}</h6>
+
+            <p>Likes: {{tweet.likes}} Dislikes: {{tweet.dislikes}}</p>
+            <p>{{tweet.published.date}}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

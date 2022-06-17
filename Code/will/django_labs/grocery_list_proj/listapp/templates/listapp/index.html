@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+</head>
+<body>
+    <h1>My Grocery List</h1>
+    <form action="{% url 'listapp:add' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="item">
+        <select name="department">
+            <option value="">Select a department: </option>
+
+            {% for department in departments %}
+                <option value="{{department.id}}">{{department.name}}</option>
+            {% endfor %}
+        </select>
+        <button>Add Item</button>
+
+        {% for department in departments %}
+        <div>
+            <h2>{{department.name}}</h2>
+            <ul>
+                {% for grocery in department.items.all %}
+                <li>
+                    {% if grocery.completed %}
+                        <a style="text-decoration: line-through"
+                        href="{% url 'listapp:buy' grocery.id %}">{{grocery.item}}
+                    </a>
+                    {% else %}
+                    <a href="{% url 'listapp:buy' grocery.id %}">{{grocery.item}}</a>
+                    <a href="{% url 'listapp:delete' grocery.id %}">&times;</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </form>
+
+</body>
+</html>
