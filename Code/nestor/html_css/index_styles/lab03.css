@@ -1,0 +1,142 @@
+.donut {
+    background-image: url("http://sesamedonuts.com/images-occassions/valentine2.jpg");
+    min-height: 75%;
+    background-position: center;
+    background-size: cover;
+    
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    /* background-position: center; */
+    background-position: center;
+    width: 50%;
+    height: 100%;
+    max-height: 300px;
+    margin: 70px;
+    /* background-repeat: no-repeat; */
+}
+.deal {
+    display: flex;
+    justify-content: row;
+}
+.promotion img {
+    max-width: 100%;
+    max-height: 100%;
+    border: solid white 4px;
+    vertical-align: middle;
+    box-sizing: content-box;
+    object-fit: cover;
+}
+.valentine img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    box-sizing: content-box;
+    border: solid white 4px
+}
+.promotion, .valentine {
+    width: 50%;
+}
+.locations h1 {
+    font-size: 2.5rem;
+    color: white;
+    background-color: #FFCCFF;
+    text-align: center;
+    margin: 0px;
+    padding: 10px 10px;
+}
+.locations {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+.portland-locations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0%;
+    margin: 0%;
+}
+.portland-locations div {
+    max-width: 33%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#raleigh img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#tigard-scholls img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#tigard  img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#sherwood img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#aloha img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#downtown img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#east img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#hillsboro img {
+    border: 1px solid pink;
+    max-width: 100%;
+}
+#join-team {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFCCFF;
+}
+#join-team img {
+    justify-content: start;
+    max-width: 30%;
+    max-height: 30%;
+    padding: 30px;
+}
+#application {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: 30px;
+    align-items: center;
+    margin-left: 25%;
+}
+#application p {
+    align-items: center;
+    margin-top: 30%;
+}
+#application form button {
+    background-color: whitesmoke;
+    color: #FFCCFF;
+    border: #FFCCFF;
+}
+.redirect {
+    display: flex;
+    text-decoration: none;
+    text-size-adjust: 20px;
+    background-color: #FFCCFF;
+    justify-content: space-evenly;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Todo Project</h1>
+    <h2>Items to complete</h2>
+    {% comment %}
+    {% for todo in todos %}
+    <div>
+        {{todo}}
+    </div>
+    {% endfor %}
+    {% endcomment %}
+      
+    {% for priority in priorities %}
+    <div>
+        <h2>{{priority.item}}</h2>
+        <ul>
+            {% for x in priority.related.all %}
+            <div>
+                {{x}}
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+
+   
+
+    <form action="{% url 'todo_app:save' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name='text' > 
+        <select name="priority">
+            <option value="">Select something</option>
+            {% for priority in priorities %}
+                <option value="{{priority.id}}">{{priority.item}}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

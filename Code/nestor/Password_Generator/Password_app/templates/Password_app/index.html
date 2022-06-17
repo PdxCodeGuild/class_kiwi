@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <title>Password Generator</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div>
+        <form action="result/" method="POST">
+        <h1>Enter in the amount of characters you want your password to be</h1><br>
+        <h2>Don't forget to follow the guidelines below:</h2><br>
+        <h3>Password must be a minimum of 8 characters</h3>
+        <h3>Password must not exceed 16 characters</h3>
+        <br>
+        {% csrf_token %}
+            <input type="password" name="name" placeholder="Enter the length of password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
