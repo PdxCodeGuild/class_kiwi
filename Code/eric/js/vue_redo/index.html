@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Set up the html with Vue and Bulma -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue ReDo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<!-- Create the html inputs -->
+<body>
+    <div id="app">
+        <h1>Rock, Paper, Scissors</h1>
+        <div >
+            <button class="button is-small is-primary" @click="gameSelect('Rock')">Rock</button>
+            <button class="button is-small is-link" @click="gameSelect('Paper')">Paper</button>
+            <button class="button is-small is-danger" @click="gameSelect('Scissors')">Scissors</button>
+        </div>
+<!-- Answer return  -->
+        <div>
+            <h2>Computer chose {{computerSelect}}. The winner is {{result}}</h2>
+        </div>
+    </div>
+<!-- create the logic -->
+    <script>
+        const { createApp } = Vue
+        const selects = ['Rock', 'Paper', 'Scissors']
+        createApp({
+            data() {
+                return {
+                    userSelect: '',
+                    computerSelect: '',
+                }
+            },
+            computed: {
+                result() {
+                    const computerSelect = this.computerSelect
+                    const userSelect = this.userSelect
+
+                    if (userSelect == computerSelect) {
+                        return "no one. It is a Tie."
+                    }
+
+                    else {
+                        if ((userSelect == 'Scissors' && computerSelect == 'Paper') || (userSelect == 'Rock' && computerSelect == 'Scissors') || (userSelect == 'Paper' && computerSelect == 'Rock')) {
+                            return 'you'
+                        }
+                        else if ((userSelect == 'Scissors' && computerSelect == 'Rock') || (userSelect == 'Rock' && computerSelect == 'Paper') || (userSelect == 'Paper' && computerSelect == 'Scissors')) {
+                            return 'computer'
+                        }
+                    }
+                }
+            },
+            methods: {
+                gameSelect(select) {
+                    this.userSelect = ''
+                    this.computerSelect = selects[Math.floor(Math.random() * 3)]
+                    this.userSelect = select
+                }
+            },
+        }).mount('#app')
+    </script>
+
+</body>
+
+</html>
