@@ -1,0 +1,106 @@
+<template>
+    <div id="app">
+          <!-- Header -->
+          <div class="header-container">
+            <h1>Rock Paper Scissors</h1>
+          </div>
+          <!-- ScoreBoard -->
+          <div class="scoreboard">
+        <div class="scorecontainer">
+          <h2 class="score_text">ScoreBoard</h2>
+          <div class="float-child">
+            <div class="player">
+              <h3>You</h3>
+              <h3 class="score">{{player_score}}</h3>
+            </div>
+          </div>
+          <div class="float-child">
+            <div class="oponent">
+              <h3>Opponent</h3>
+              <h3 class="score">{{opponent_score}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="instructions">
+        <h3 >Press on your chosen image and then press PLAYGAME!</h3>
+      </div>
+          <!-- Game -->
+        <div class="float-child1">
+          <Player v-on:getChoice="updatePlayerChoice($event)" v-bind:choice="player_choice" />
+          <h2 style="color:white">You chose: {{player_choice}}</h2>
+        </div>
+        <div class="float-child2">
+          <Opponent @click="play" v-on:getChoice="updateOpponentScore($event)" v-bind:choice="opponent_choice"/>
+          
+          <img type="button" v-if="!opponent_choice" src="./assets/vue_question.jpeg" /> 
+          <img class="opponent_img" type="button" v-if="!!opponent_choice" :src="require('./assets/'+ImgSrc())" />
+          
+          <h2 style="color:white">Opponents choice: {{opponent_choice}}</h2>
+        </div>
+        <h1 class="winner" v-if="winner">
+          {{ winner }}
+        </h1>
+      </div>
+       
+    </template>
+    <script>
+    import Player from './components/Player.vue'
+    import Opponent from './components/Opponent.vue'
+    const choices = ["rock", "paper", "scissors"];
+    export default {
+      name: 'App',
+      components: {
+        Player,
+        Opponent,
+      },
+      data() {
+        return {
+          player_choice: "",
+          opponent_choice: "",
+          player_score: 0,
+          opponent_score: 0,
+          winner: ""
+        };
+      },
+      methods: {
+        updatePlayerChoice(choice) {
+            this.player_choice = choice;
+          },
+        updateOpponentScore(choice) {
+            this.opponent_choice = choice;
+          }, 
+        ImgSrc() {
+          if (this.opponent_choice == "rock") {
+            return "rock.jpeg"
+          }
+          else if (this.opponent_choice == "paper") {
+            return "paper.jpeg"
+          }
+          else  {
+            return "scissors.jpeg"
+          }
+        },
+        play() {
+          const {player_choice, opponent_choice } = this;
+        
+        if (player_choice === opponent_choice) {
+          this.winner = "It is a tie!";
+        } else if (
+            (opponent_choice === "scissors" && player_choice === "paper") ||
+             (opponent_choice === "paper" && player_choice === "rock") ||
+             (opponent_choice === "rock" && player_choice === "scissors")
+          ) {
+              this.opponent_score++;
+              this.winner = "Opponent won :(";
+        } else if (player_choice === "") {
+          alert("You have to select your choise!")
+        }
+        else {
+          this.player_score++;
+          this.winner = "You won!";
+            }
+          }
+        }
+    }
+    </script>

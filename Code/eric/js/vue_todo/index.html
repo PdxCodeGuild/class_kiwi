@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <style>
+        .strikeThrough{
+            text-decoration: line-through;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="app">
+        <h1>{{headerText}}</h1>
+
+        <div>
+            <div >
+                <input type="text" v-model="newTodoText">
+                <button  v-on:click="addTodo">Add</button>
+            </div>
+
+        <div>
+            <h3>Incomplete</h3>
+            <div v-for="todo in incompleteTodo">
+
+                {{todo.id}} {{todo.text}}
+                <div>
+                    <button v-on:click="toggleComplete(todo.id)">Complete</button>
+                    <button v-on:click="deleteTodo(todo.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+
+         <div>
+            <h3>Complete</h3>
+            <div v-for="todo in completeTodo">
+                
+                <span v-bind:class="{strikeThrough: todo.complete}">
+                    {{todo.id}} {{todo.text}}
+                </span>
+                <div>
+                    <button v-on:click="toggleComplete(todo.id)">Complete</button>
+                    <button v-on:click="deleteTodo(todo.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+
+
+        </div>      
+
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data :{
+                headerText : 'Vue To Do',
+                completeTodo: [],
+                incompleteTodo: [],
+                newTodoText: '',
+                idCount: 1,
+            },
+            methods: {
+                addTodo: function(){
+                    this.incompleteTodo = this.incompleteTodo.concat({
+                        id: this.idCount,
+                        text: this.newTodoText,
+                        complete: false
+                    })
+                    this.idCount +=1
+                    this.newTodoText = ''
+                },
+                toggleComplete: function(todoId){
+                    let todos = this.completeTodo.concat(this.incompleteTodo)
+
+                    todos = todos.map((todo)=>todo.id !==todoId ? todo : {...todo, complete:!todo.complete })
+
+                    this.completeTodo = todos.filter(todo=>todo.complete)
+                    this.incompleteTodo = todos.filter(todo=>!todo.complete)
+                },
+                deleteTodo: function(todoId){
+                        
+                        let todos = this.completeTodo.concat(this.incompleteTodo)
+
+                        todos = todos.filter(todo=>todo.id !== todoId) 
+
+                    this.completeTodo = todos.filter(todo=>todo.complete)
+                    this.incompleteTodo = todos.filter(todo=>!todo.complete)
+                }
+            }
+        })
+    </script>
+
+
+</body>
+</html>
