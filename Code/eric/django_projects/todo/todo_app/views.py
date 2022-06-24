@@ -1,30 +1,44 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
-from django.urls import reverse
-from .forms import *
-# Create your views here.
+from django.shortcuts import render, redirect
 
+from todo_app.forms import TaskForm
+from .models import *
+
+# Create your views here.
 def index(request):
-    if request.method == "GET":
-        todos = ToDo.objects.all()
-    return render(request, 'index.html',{
-        'todos':todos,
-        'form': ToDoForm,}
-        )
-
-
-# Create your views here.
-def new_todo(request):
-    if request.method == "POST":
-        form = ToDoForm(request.POST)
+    
+    tasks = Task.objects.all()
+    form = TaskForm()
+    
+    if request.method =='POST':
+        form = TaskForm(request.POST)
         if form.is_valid():
-            todo = ToDo()
-            todo.priority = form.cleaned_data['priority']
-            todo.text = form.cleaned_data['text']
-            todo.save()
-        return HttpResponseRedirect(reverse('index'))
-    if request.method == "GET":
-        form = ToDoForm()
+            form.save()
+        return redirect('/')
+            
+    context = {'tasks': tasks, 'form':form}
+    
+    return render(request, 'todo_app/index.html', context)
 
-        return render(request,'saved_todos.html', {'form': form} )
+def updateTask(request, pk):
+    task = Task.objects.get(id=pk)
+    form = TaskForm(instance=task)
+    
+    context = {'form': form}
+    
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    return render(request, 'todo_app/update.html', context )
+    
+def deleteTask(request, pk):
+    item = Task.objects.get(id=pk)
+    
+    if request.method == 'POST':
+        item.delete()
+        return redirect('/')
+    
+    context = {'item': item}
+    
+    return render(request, 'todo_app/delete.html', context)

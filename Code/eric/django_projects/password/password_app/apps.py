@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Lab1RedoAppConfig(AppConfig):
+class PasswordAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'lab1redo_app'
+    name = 'password_app'

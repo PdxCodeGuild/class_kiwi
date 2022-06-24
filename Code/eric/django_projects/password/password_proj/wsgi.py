@@ -1,5 +1,5 @@
 """
-WSGI config for lab1redo_proj project.
+WSGI config for password_proj project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab1redo_proj.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'password_proj.settings')
 
 application = get_wsgi_application()

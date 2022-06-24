@@ -1,8 +1,10 @@
 from django import forms
-from .models import ToDo
+from django.forms import ModelForm
+from .models import *
 
-
-class ToDoForm(forms.ModelForm):
+class TaskForm(forms.ModelForm):
     class Meta:
-        model = ToDo
-        fields = ('text', 'priority')
+        model = Task
+        fields = '__all__'
+        
+    
