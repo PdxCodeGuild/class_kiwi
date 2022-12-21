@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django_Lab1_ROT_CIPHER</title>
+    {% comment %}
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"
+    /> -->
+    {% endcomment %}       
+</head>
+
+<body>
+    <h1> Welcome to ROT Cipher</h1>
+    <form action = "{% url 'Lab1_app:rot13' %}" method ="POST">
+        {% csrf_token %}
+        {{form}}
+        <h3>Enter your message to be encrypted below: </h3>
+                <br>
+
+                <textarea name="blog" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+
+                <br/>
+
+    </form>
+    <ul>
+        {% for Lab1_instance in Lab1_instances %}
+        <li>{{ Lab1_instance.Lab1_field }}</li>
+        {% endfor %}
+      </ul>
+
+</body>
+</html>
