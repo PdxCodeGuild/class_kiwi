@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  padding: 2px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  background-color: rgba(37, 36, 36, 0.295);
+}

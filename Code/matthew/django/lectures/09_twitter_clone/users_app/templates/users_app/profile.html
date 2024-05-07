@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'messages_app/index.html' %}
+
+{% block content %}
+<h1>welcome {{request.user}}</h1>
+
+{% if not request.user.is_anonymous %}
+{% for tweet in tweets  %}
+<div>
+    <p>{{tweet.text}}</p>
+{% if request.user == tweet.user %}
+    <p>{{tweet.pub_date}}</p>
+{% endif %}
+        <a href="{% url 'messages:like' tweet.id %}">👍Likes: {{tweet.likes}}</a>
+        <a href="{% url 'messages:dislike' tweet.id %}">👎Dislikes: {{tweet.dislikes}}</a>
+        <br>
+        <a href="{% url 'messages:detail' tweet.id %}">edit</a>
+        <a href="{% url 'messages:del_tweet' tweet.id %}">delete</a>
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+
+{% endblock content %}
+</body>
+</html>

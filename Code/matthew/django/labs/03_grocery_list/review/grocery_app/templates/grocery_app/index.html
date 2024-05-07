@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block title %}
+    <title>Document</title>
+    {% endblock title %}
+</head>
+<nav>
+    <a href="{% url 'grocery_list:index' %}">Home</a>
+</nav>
+{% block content %}
+  
+<body>
+    <h1>My List</h1>
+    <form action="{% url 'grocery_list:add' %}" method="POST">
+        {% csrf_token %}
+        
+        <input type="text" name="item">
+        <select name="department" id="">
+            <option value="">Select a department</option>
+            {% for department in departments %}
+            <option value="{{department.id}}">{{department.name}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    {% for department in departments  %}
+    <div class="list">
+        
+        <h3 class="department">{{department.name}}</h3>
+
+        {% for x in department.item.all %}
+
+            {% if x.completed == True %}
+
+            <ul class="item">
+                <a style="text-decoration: line-through;" href="{% url 'grocery_list:complete' x.id %}">{{x.item}}</a>
+                <a class="delete" href="{% url 'grocery_list:delete' x.id %}">&times;</a>
+                <br>
+            </ul>
+
+            {% else %}
+
+            <ul class="item">
+                <a href="{% url 'grocery_list:complete' x.id %}">{{x.item}}</a>
+                <br>
+            </ul>
+
+            {% endif %}
+
+        {% endfor %}
+
+    </div> 
+    <br> 
+    {% endfor %}
+    <br>
+    
+    <!--  -->
+    {% comment %} {% for department in departments %}
+    
+    <h3>{{department}}</h3>
+    <br>
+    <div class="list">
+        {% for item in grocery_list %}
+        {% if item.department == department %}
+        <ul>{{item.item}}</ul>
+        {% endif %}
+    </div>
+    <br>
+    
+    {% endfor %}
+    {% endfor %} {% endcomment %}
+    
+    
+    
+</body>
+    {% endblock content %}
+    </html>

@@ -1,0 +1,17 @@
+{% extends 'messages_app/index.html' %}
+{% block content %}
+  
+<p>{{tweet.text}}</p>
+
+
+{% if not request.user.is_anonymous %}
+<a href="{% url 'messages:like' tweet.id %}">👍Likes: {{tweet.likes}}</a>
+<a href="{% url 'messages:dislike' tweet.id %}">👎Dislikes: {{tweet.dislikes}}</a>
+{% endif %}
+
+{% if request.user == tweet.user %}
+<a href="{% url 'messages:del_tweet' tweet.id %}">Delete</a>
+{% endif %}
+<br>
+<p>{{tweet.pub_date}}</p>
+{% endblock content %}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    {% block title %}
+    <title>Home</title>
+    {% endblock title %}
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+</head>
+
+
+{% block content %}
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        <h1>ToDo</h1>
+        <p>Tasks will be sorted by level of Priority, <mark>High</mark>,<span class="middle">Medium</span> 
+            and low</p>
+        {{form.task}} 
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <div class='logic'>
+        <div class="task_list">
+            {% for task in tasks  %}
+            {% if task.complete == False %}
+                {% if task.priority == 3 %}
+
+                <div class="high">
+                    <div>
+                    <a href="{% url 'edit' task.id %}">Edit</a>
+                    <a href="{% url 'delete' task.id %}">Delete</a>
+                    </div>
+                    <br>
+                    <ul>
+                        <mark>{{task}}</mark>
+                    </ul>
+                </div>
+
+                {% elif task.priority == 2 %}
+
+                <div class="medium">
+                    <a href="{% url 'edit' task.id %}">Edit</a>
+                    <a href="{% url 'delete' task.id %}">Delete</a>
+                    <br>
+                    <ul>
+                        <span class="middle">{{task}}</span>
+                    </ul>
+                </div>
+
+                {% elif task.priority == 1 %}
+
+                <div class="low">
+                    <div>
+                        <a href="{% url 'edit' task.id %}">Edit</a>
+                        <a href="{% url 'delete' task.id %}">Delete</a>
+                    </div>
+                        <br>
+                        <ul>
+                            {{task}}
+                        </ul>
+                    </div>
+                    
+                    {% endif %}
+                    
+            {% elif task.complete == True %}
+            <div>
+                
+                <a href="{% url 'edit' task.id %}">Edit</a>
+                <a href="{% url 'delete' task.id %}">Delete</a>
+                <br>
+                <div class="complete">
+                    <ul>
+                        <strike>{{task}}</strike>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+        
+        
+    </body>
+    {% endblock content %}
+
+{% comment "" %}
+<div>
+    <a href="{% url 'edit' task.id %}">edit</a>
+        <a href="{% url 'delete' task.id %}">delete</a>
+        <br>
+        <ul class="over5">
+            {{task}}:IMPORTANT
+        </ul>
+    </div>
+    {% elif task.complete == False and task.value <= 4 %}
+    <a href="{% url 'edit' task.id %}">edit</a>
+    <a href="{% url 'delete' task.id %}">delete</a>
+    <br>
+    <ul>
+        {{task}}
+    </ul>
+    <br>
+    {% else %}
+    <a href="{% url 'edit' task.id %}">edit</a>
+    <a href="{% url 'delete' task.id %}">delete</a>
+    <br>
+    <ul>
+        <strike>{{task}}</strike>
+    </ul>
+    {% endif %}
+    
+    {% if task.complete == False and task.value >= 5 %}
+    {% endcomment %}
+</html>

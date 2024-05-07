@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add Task</h1>
+    <!-- was working with blank action="" -->
+    <form action="{% url 'tasks:add' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit">
+
+    </form>
+    <!-- app_name=tasks on urls.py -->
+    <!-- app name of tasks and url path name="index" -->
+
+    <a href="{% url 'tasks:index' %}">View Task</a>
+</body>
+</html>

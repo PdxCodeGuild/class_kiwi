@@ -1,0 +1,30 @@
+body {
+    background-color: aqua;
+}
+.all_tasks {
+    width: 400px;
+    
+}
+.user_controls {
+    /* display: flex;
+    flex-direction: column; */
+    text-align: end;
+}
+.tasks {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    margin: 5px;
+}
+.item {
+    text-decoration: underline;
+}
+.done {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 5px;
+
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <div>
+        <ul>
+            <li>No spaces</li>
+            <li>Do not change shift by</li>
+        </ul>
+        <h2>Encrypt</h2>
+        <span>Shift by:</span>
+        <!-- onchange="val()" -->
+        <select name="dropDown" id="dropDown" default="26" v-on:onchange="val()" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13" selected>13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+        </select>
+    </div>
+    <br>
+
+    <div id="app">
+        <input type="text" v-model="message" @keyup.enter="encryptMessage(message)">
+        <div v-if="newMessage">
+            <span>your encripted message is {{newMessage}}</span>
+        </div>
+        <div class="buttons">
+            <button v-on:click="encryptMessage(message)" >Submit</button>
+        </div>
+
+        <!-- ------------------------------------------------------------ -->
+        <br>
+        <!-- ------------------------------------------------------------ -->
+    <h2>Decrypt</h2>
+        
+        <input type="text" v-model="decrypt" @keyup.enter="decryptMessage(decrypt)" >
+        <div class="buttons">
+            <button id="btn" v-on:click="decryptMessage(decrypt)">Submit</button>
+        </div>
+        <div v-if="decryptedMessage">
+            <span>your decrypted message is {{decryptedMessage}}</span>
+            
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
+</body>
+</html>

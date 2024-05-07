@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'todo_app/index.html' %}
+{% block title %}
+<title>Edit</title>
+{% endblock title %}
+
+{% block content %}
+<body>
+    <h1>Edit</h1>
+    <p>ToDo list is sorted by Priority "High" all<mark> High Priority items</mark> will be highlighted</p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <span>Task:{{form.task}}</span>
+        <span>Priority:{{form.priority}}</span>
+        <span>Complete:{{form.complete}}</span>
+        <input type="submit" value="edit">
+    </form>
+</body>
+{% endblock content %}

@@ -1,0 +1,17 @@
+#player{
+    display: flex;
+    justify-content: center;
+
+}
+img {
+    width: auto;
+    height: 225px;
+}
+#user-display{
+    display: flex;
+    justify-content: center;
+}
+#user-options {
+    display: flex;
+    justify-content: center;
+}

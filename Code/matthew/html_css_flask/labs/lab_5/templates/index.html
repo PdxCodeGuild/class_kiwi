@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css')  }}"
+    />
+    <title>Rot13</title>
+  </head>
+  <body>
+    <h1>Rot13 Encryption</h1>
+    <br />
+    <header>
+      <form action="/encrypt" method="post">
+        <div>
+          <input
+            type="text"
+            name="user_string"
+            placeholder="Enter the text you would like to Encrypt"
+          />
+        </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            name="shift"
+            value="{{shift}}"
+            placeholder="Enter the shift key"
+            required
+          />
+        </div>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </header>
+  </body>
+</html>

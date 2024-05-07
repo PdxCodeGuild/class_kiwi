@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">home</a>
+    </nav>
+    <br>
+    {% block content %}
+      
+    <h1>Todo List</h1>
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <!-- {% comment %} .title is pulled from title in models.py {% endcomment %} -->
+            {{form.title}}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <div class="all_tasks">
+        
+        
+        <div class="tasks">
+            <h3>ToDo</h3>
+            {% for task in tasks  %}
+            <div class="user_controls">
+                <a href="{% url 'update' task.id %}">Edit</a>
+                <a href="{% url 'delete' task.id %}">Delete</a>
+            </div>
+            
+            <div class="">
+                <span class="item">{{task}}</span>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+            
+            
+        <div class="done">
+            <h3>Completed</h3>
+            {% for d_task in done_tasks  %}
+            <strike>{{d_task}}</strike>
+            {% endfor %}
+        </div>
+</div>
+    
+    {% endblock content %}
+</body>
+</html>

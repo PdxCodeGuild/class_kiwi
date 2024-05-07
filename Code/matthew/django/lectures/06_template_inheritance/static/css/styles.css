@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+    
+}
+
+.alert{
+    color: orange;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}

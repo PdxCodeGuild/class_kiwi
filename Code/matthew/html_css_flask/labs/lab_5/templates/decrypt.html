@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css')  }}"
+    />
+    <title>Decrypt</title>
+  </head>
+  <body>
+    <h3>Your decrypted text is {{decrypt_string}}</h3>
+    <br />
+    <a href="/">Click here to encrypt another text</a>
+  </body>
+</html>

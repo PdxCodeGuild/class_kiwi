@@ -1,0 +1,16 @@
+nav > div > h1 > a {
+    text-decoration: none;
+}
+body {
+    background-color: rgb(154, 178, 194);
+}
+
+.tweet {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+}
+.tweet > a {
+    text-decoration: none;
+}
