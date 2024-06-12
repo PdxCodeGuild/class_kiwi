@@ -12,12 +12,11 @@
 ########################################################
 
 # Version 1
-def average_list(num):
-    total=0
-    for number in num:
-        total = total + number 
-    return(total/len(num))
-
+# def average_list(num):
+#     total=0
+#     for number in num:
+#         total = total + number 
+#     return(total/len(num))
 
 # a = [1,2,3]
 # print(average_list(a))

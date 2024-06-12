@@ -1,0 +1,31 @@
+body {
+    background-color: slategray;
+    color: whitesmoke;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    font-family:'Raleway', sans-serif;
+}
+
+img {
+    border-radius: 50%;
+    display: block;
+    width: 110px;
+    margin: 0 auto;
+}
+
+.center-link {
+    display: block;
+    text-align: center;
+    border: 1px solid yellow;
+    margin-bottom: 16px
+}
+a{
+    color: orange
+}
+.header{
+    text-decoration: underline
+}

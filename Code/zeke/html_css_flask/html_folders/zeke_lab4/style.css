@@ -1,0 +1,91 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+    list-style: none;
+    font-family:'Times New Roman', Times, serif;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+}
+.menu {
+    width: 20%;
+    background-color:rgb(25, 60, 112);
+}
+
+#logo {
+    background-color: black;
+    font-size: 15px;
+    border: black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 3px solid black;
+    color: ghostwhite;
+ 
+
+}
+.menu a {
+    text-decoration: none;
+    color:ghostwhite;
+    font-size: 15px;
+    letter-spacing: 2px;
+    display: list-item;
+    padding: 15px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+.menu a:hover{
+    background-color: rgb(218, 33, 33);
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+}
+
+img {
+    
+    border: solid;
+    border-radius: 25%;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    
+}
+
+
+.body {
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(194, 206, 218);
+
+}
+/* .columns {
+    justify-content:center;
+    display: flex;
+    margin: 4rem;
+    padding: 4rem;
+    gap: 4rem; 
+} */
+.footer {
+    background-color: rgb(173, 182, 190);
+   
+
+}
+.row {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display:flex;
+    gap: 4rem;
+    justify-content: center;
+    
+    
+
+}
+

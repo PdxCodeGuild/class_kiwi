@@ -1,0 +1,40 @@
+
+header{
+    text-align: center;
+}
+
+.nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap
+
+}
+  
+.BIO{
+    display: flex;
+    gap: 2rem;
+  
+}
+.BIO-text{
+    background-color: ghostwhite;
+    margin: ;
+    padding: ;
+
+}
+.skills {
+
+    display: flex;
+    gap: 2rem;
+
+    flex-shrink: 1;
+    display: flex;
+    margin:0;
+    padding: 0;
+    list-style: none;
+    gap: 10rem;
+    justify-content: center;
+    background-color: ghostwhite;
+}
