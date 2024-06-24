@@ -1,0 +1,40 @@
+body{
+    background-color: slategray;
+    color:whitesmoke;
+    font-family: 'Yanone Kaffeesatz';
+
+}
+h1 {
+
+    text-align: center;
+    font-family: raleway;
+}
+
+
+img{
+    border-radius: 50%;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    /* x-offset, y-offset, blur radius, spread, color */
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.226);
+    
+}
+
+.center-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+
+}
+
+a {
+    color: orange;
+
+}
+
+.header {
+text-decoration: underline;
+
+}

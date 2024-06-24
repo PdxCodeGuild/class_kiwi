@@ -9,6 +9,7 @@ def get_number():
     num = int(input("What Number: "))  
     
     one_dict= {
+        0: " ",
         1: "One",
         2: "Two",
         3: "Three",
@@ -30,6 +31,7 @@ def get_number():
         19: "Nineteen",  
     }     
     ten_dict= {
+        0: " ",
         1: "One",
         2: "Twenty",
         3: "Thrity",
@@ -43,6 +45,7 @@ def get_number():
     
   
     tens_digit = num // 10 #If using 143 = 14
+    teens_digit = num % 100
     ones_digit = num % 10 # IF using 143 = 3 = one_dict[3]
     hnds_digit = num // 100 #if using 143 =  one_dict[1]
     
@@ -55,6 +58,9 @@ def get_number():
     elif 20 < (num) <= 99:
          print(ten_dict[tens_digit] +" " + one_dict[ones_digit]) 
          
+    elif 11 <= (teens_digit) <= 19:
+        print(one_dict[hnds_digit] + " hundred " + one_dict[teens_digit])
+    
     elif 100 < (num) <= 999:
          print(one_dict[hnds_digit] + " hundred " + " " + ten_dict[alternative] + " " + one_dict[ones_digit])
          
