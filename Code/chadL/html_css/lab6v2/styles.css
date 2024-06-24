@@ -1,0 +1,10 @@
+body{
+    border: 2px solid blue;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+img{
+    background-image: cover;
+}

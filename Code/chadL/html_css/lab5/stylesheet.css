@@ -1,0 +1,57 @@
+body{
+    padding: 20px 20px;
+}
+
+header{
+    justify-items: center;
+    border: 2px solid red;
+    text-align: left;
+    background-color: rgb(235, 176, 48);
+    padding: 20px 20px 20px 20px ;
+
+}
+
+header h1 {
+    font-family:monospace;
+    
+    color: rgb(51, 119, 96);
+    font-size: 130px;
+    font-weight: bold ;
+    padding: 5vh;
+    text-decoration: double;
+    text-shadow: 1px 1px 1px red,
+               2px 2px 1px red;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+img{
+    max-width: 200px;
+    float: center;
+    
+}
+
+.img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+
+  
