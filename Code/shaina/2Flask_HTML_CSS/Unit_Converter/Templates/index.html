@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+</head>
+<body>
+    <form action="/converter" method="POST">
+      <h1>UNIT CONVERTER</h1>
+
+      <input
+        placeholder="Enter starting measurement"
+        name="distance"
+        type="integer"
+        required
+      />
+
+        <h3>Select Starting Unit</h3>
+        <label for="ft">Feet</label>
+        <input id="ft" name="s_unit" type="radio" value="ft" />
+        <br />
+
+        <label for="mi">Miles</label>
+        <input type="radio" name="s_unit" id="mi" value="mi" />
+        <br />
+
+        <label for="m">Meters</label>
+        <input id="m" name="s_unit" type="radio" value="m" />
+        <br />
+
+        <label for="km">Kilometers</label>
+        <input type="radio" name="s_unit" id="km" value="km" />
+        <br />
+
+        <label for="yd">Yards</label>
+        <input type="radio" name="s_unit" id="yd" value="yd" />
+        <br />
+
+        <label for="in">Inches</label>
+        <input type="radio" name="s_unit" id="in" value="in" />
+        <br />
+<hr>
+
+        <h3>Select Ending Unit</h3>
+        <label for="ft">Feet</label>
+        <input id="ft" name="e_unit" type="radio" value="ft" />
+        <br />
+
+        <label for="mi">Miles</label>
+        <input type="radio" name="e_unit" id="mi" value="mi" />
+        <br />
+
+        <label for="m">Meters</label>
+        <input id="m" name="e_unit" type="radio" value="m" />
+        <br />
+
+        <label for="km">Kilometers</label>
+        <input type="radio" name="e_unit" id="km" value="km" />
+        <br />
+
+        <label for="yd">Yards</label>
+        <input type="radio" name="e_unit" id="yd" value="yd" />
+        <br />
+
+        <label for="in">Inches</label>
+        <input type="radio" name="e_unit" id="in" value="in" />
+        <br />
+
+        <button type="submit">Conversion</button>
+      </form>
+</body>
+</html>
