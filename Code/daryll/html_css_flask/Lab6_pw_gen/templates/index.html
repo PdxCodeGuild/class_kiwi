@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1>Random Password Generator</h1>
+
+    <form action="/password" method="POST">
+        <input name="pwu" type="text" placeholder="# of Uppercase Letters">
+        <br>
+        <br>
+        <input name="pwl" type="text" placeholder="# of Lowercase Letters">
+        <br>
+        <br>
+        <input name="pwn" type="text" placeholder="# of Digits">
+        <br>
+        <br>
+        <input name="pws" type="text" placeholder="# of Special Characters">
+        <br>
+        <br>
+        <button type="submit"submit>Generate Password</button>
+    </form>
+</body>
+</html>

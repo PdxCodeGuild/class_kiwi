@@ -1,0 +1,17 @@
+header {
+    background-color: lightblue;
+    height: 150px;
+    text-align: center;
+    font-size: 45px;
+}
+h1 {
+    color: rgb(95, 71, 40);
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow, 1px 1px 0 yellow, -2px 0 0 yellow, 2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow;
+    text-align: center;
+    padding: 4px;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+}
